@@ -128,3 +128,55 @@ body:not(.home-page) .brand{text-shadow:0 2px 12px #102213cc}
 #foundations>.sol-pile:first-child{grid-column:4}
 .sol-top .sol-pile{width:auto}
 @media(max-width:650px){.view{padding:16px 12px}.sol-wrap{padding:10px}.sol-top,.sol-table{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.sol-pile,.card{height:58px}.card .pip{font-size:1.15rem}.card .pip.face{font-size:1rem}.card .idx{font-size:.7rem}}
+
+/* timer activities: countdown on a softly lit stage */
+.timer-stage{position:relative;isolation:isolate;overflow:hidden;min-height:min(62vh,560px);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:30px 16px}
+.timer-time{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(3.2rem,11vw,5.8rem);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:#f6efdf;text-shadow:0 2px 24px #1a2c1f99;transition:opacity .6s}
+.timer-finished{font-size:clamp(2rem,6vw,3rem);color:#efe6cf}
+.timer-peek{display:none;border:0;background:none;color:#f1eedf88;font-size:1rem;padding:6px 10px;border-radius:999px}
+.timer-peek:hover{color:#f1eedf}
+.time-hidden .timer-time{opacity:0;position:absolute;pointer-events:none}
+.time-hidden .timer-peek{display:inline-block}
+.time-hidden.peek .timer-time{opacity:1;position:static}
+.time-hidden.peek .timer-peek{display:none}
+.timer-stage .controls{justify-content:center}
+.timer-lengths .pill[aria-pressed="true"],.light-settings .pill[aria-pressed="true"]{background:#d5a9b6;border-color:#d5a9b6;color:#2c3f2c}
+.light-settings{margin-top:18px;color:#d7e2d0;font-size:1rem}
+.light-settings summary{cursor:pointer;max-width:max-content;padding:4px 0}
+.light-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:12px}
+.light-row>span{min-width:56px}
+
+/* ambient light: soft radial pools behind the countdown */
+.ambient{position:absolute;inset:-15%;z-index:-1;pointer-events:none;--glow:226 178 104;opacity:.45;transition:opacity 1.2s}
+.ambient[data-color="rose"]{--glow:212 150 172}
+.ambient[data-color="sage"]{--glow:160 194 146}
+.ambient[data-color="lavender"]{--glow:174 158 208}
+.ambient[data-intensity="off"]{opacity:0}
+.ambient[data-intensity="medium"]{opacity:.7}
+.ambient[data-intensity="high"]{opacity:1}
+.glow{position:absolute;left:20%;top:12%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgb(var(--glow)/.5) 0%,rgb(var(--glow)/.22) 38%,rgb(var(--glow)/0) 70%);will-change:transform,opacity}
+.ambient[data-mode="still"] .glow:nth-child(n+2),.ambient[data-mode="breathing"] .glow:nth-child(3){display:none}
+.ambient[data-mode="breathing"] .glow:nth-child(1){animation:qt-breathe 10s ease-in-out infinite}
+.ambient[data-mode="breathing"] .glow:nth-child(2){left:10%;top:2%;width:80%;opacity:.5;animation:qt-breathe 10s ease-in-out -2s infinite}
+.ambient[data-mode="waves"] .glow:nth-child(1){left:2%;top:8%;animation:qt-drift-a 41s ease-in-out infinite alternate}
+.ambient[data-mode="waves"] .glow:nth-child(2){left:40%;top:22%;width:55%;opacity:.8;animation:qt-drift-b 35s ease-in-out infinite alternate}
+.ambient[data-mode="waves"] .glow:nth-child(3){left:18%;top:38%;width:50%;opacity:.65;animation:qt-drift-c 45s ease-in-out infinite alternate}
+@keyframes qt-breathe{0%,100%{transform:scale(.88);opacity:.7}50%{transform:scale(1.08);opacity:1}}
+@keyframes qt-drift-a{0%{transform:translate(0,0) scale(1)}50%{transform:translate(18%,10%) scale(1.08)}100%{transform:translate(30%,-4%) scale(.95)}}
+@keyframes qt-drift-b{0%{transform:translate(0,0) scale(.95)}50%{transform:translate(-26%,-12%) scale(1.06)}100%{transform:translate(-12%,14%) scale(1)}}
+@keyframes qt-drift-c{0%{transform:translate(0,0)}50%{transform:translate(22%,-18%) scale(1.1)}100%{transform:translate(-14%,-8%) scale(.92)}}
+.tab-hidden .glow{animation-play-state:paused!important}
+@media(max-width:650px){.timer-stage{min-height:56vh}.light-row>span{width:100%}}
+
+/* cards v2: cream faces, dusty pink for hearts and diamonds, garden green for spades and clubs */
+.card{background:#f7efdc;border:1px solid #d9cbaa;color:#2f4a36}
+.card.red{color:#b0607a}
+.card .face-art{position:absolute;inset:0;width:100%;height:100%;font-family:Georgia,serif}
+.card .idx{z-index:1;font-family:'Libre Baskerville',Georgia,serif}
+.card.down{background:repeating-linear-gradient(45deg,#3f5a46 0 6px,#4b6852 6px 12px);border:3px solid #f7efdc}
+@media(max-width:650px){.card .face-art{inset:14px 0 0}}
+.card .idx{flex-direction:column;gap:0;align-items:center;font-size:clamp(.68rem,1.4vw,.92rem)}
+.card .idx span{font-size:.85em}
+.card .idx.tl{top:4px;left:4px}.card .idx.br{bottom:4px;right:4px}
+@media(max-width:650px){.card .idx{flex-direction:row;font-size:.66rem}}
+.timer-stage .primary{background:#d5a9b6;color:#2c3f2c;font-weight:600}.timer-stage .primary:hover{background:#e2bcc7}
