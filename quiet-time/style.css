@@ -5,3 +5,93 @@
 
 /* Minesweeper: clear, touch-friendly, deliberately quiet. */
 .ms-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 15px}.ms-toolbar label{font-size:.82rem;color:#697c67}.ms-status{display:flex;gap:16px;align-items:center;justify-content:space-between;max-width:650px;color:#647d60;font-size:.87rem;margin:6px 0 14px}.ms-board-scroll{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 2px 10px;overscroll-behavior:contain}.ms-board{display:grid;width:max-content;border:3px solid #758a72;border-radius:7px;overflow:hidden;background:#8c9d84;touch-action:pan-x}.ms-cell{height:var(--ms-cell);width:var(--ms-cell);padding:0;display:flex;align-items:center;justify-content:center;border:1px solid #d7dbcb;font-family:'DM Sans',system-ui,sans-serif;font-size:1rem;font-weight:700;line-height:1;border-radius:0;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation}.ms-covered{background:#e0e7d5;box-shadow:inset -2px -2px 0 #c7d2bb,inset 2px 2px 0 #fbfcf0;color:#577053}.ms-covered:hover{background:#d1dec6}.ms-open{background:#f8f6e9;border-color:#e2e4d8;color:#526851}.ms-flagged{color:#af738b}.ms-mine{background:#edcbd1;color:#884f5b}.ms-wrong{background:#f2dadd;color:#aa5b66}.ms-n1{color:#5d7f73}.ms-n2{color:#517651}.ms-n3{color:#ae6575}.ms-n4{color:#6a6b93}.ms-n5{color:#945c5e}.ms-n6{color:#6d8381}.ms-n7{color:#555c65}.ms-n8{color:#8b7b75}.ms-message{margin:10px 0 0}.ms-cell:disabled{cursor:default;opacity:1}.ms-cell:focus-visible{outline:3px solid #b37c93;outline-offset:-3px;position:relative;z-index:1}@media(max-width:650px){.ms-status{flex-wrap:wrap;gap:8px}.ms-toolbar{gap:7px}.ms-toolbar .pill{padding:8px 10px}}
+
+
+/* quiet time — photo-based woodland colors, deliberately restrained */
+:root{background:#293b29;color:#f1eedf;color-scheme:dark}
+body{background:radial-gradient(circle at 15% -2%,#3a5037 0%,transparent 42%),linear-gradient(180deg,#293b29 0%,#203224 100%);text-transform:lowercase}
+button,select,input{font:inherit}
+.topbar{padding:22px 4px 17px}
+.brand{color:#eee9d9;font-size:1.22rem;font-weight:400}
+.brand:hover{color:#f9e3ea}
+.flower{color:#d5a2b2}
+.hero{min-height:260px;background-position:center 49%;box-shadow:0 16px 35px #0d211c52;border:1px solid #6b806343}
+.hero:before{background:linear-gradient(90deg,#18291fc0 0%,#20382332 56%,transparent 90%)}
+.hero-inner{padding:34px 38px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.04em;margin:0;text-shadow:0 3px 16px #10221380}
+.sectionline{margin:30px 4px 17px}
+.sectionline h2{font-size:clamp(1.15rem,2.5vw,1.55rem);color:#f0eddf}
+.tiles{gap:14px}
+.tile{min-height:140px;border-radius:16px;background:#3b5140!important;border:1px solid #6c80654d;box-shadow:0 7px 23px #14261932;color:#f7f0df;position:relative;padding:23px;justify-content:space-between}
+.tile:nth-child(2n){background:#405340!important}
+.tile:nth-child(3n){background:#364b3a!important}
+.tile:before{content:'✿';position:absolute;right:18px;top:16px;font-size:.75rem;color:#c18b9d77}
+.tile:hover{background:#4b614c!important;box-shadow:0 12px 26px #101f174f;transform:translateY(-2px);border-color:#b6bfa176}
+.tile .ico{font-size:1.95rem;color:#d0b4ae}
+.tile .name{color:#f3efdd;font-size:1.16rem;margin:0;letter-spacing:-.01em}
+.view{background:#f4f1e6;color:#314832;border:1px solid #d6d8c7;box-shadow:0 18px 42px #08190d4a}
+.viewhead{margin-bottom:21px}
+.viewhead h2{color:#2c4430}
+.view .back{color:#557256}
+.pill,.primary,.small-btn,.textbtn{transition:background .15s,border-color .15s}
+.session-panel{background:#344b39;border:1px solid #6d856757;color:#f1eddc;box-shadow:0 9px 25px #10241742;margin:23px 0 38px;padding:15px 19px}
+.session-panel .session-label{font-family:'Libre Baskerville',Georgia,serif;font-size:1rem;margin-right:auto;color:#f5e8df}
+.session-fields{gap:14px;align-items:center;justify-content:space-between}
+.session-fields label{color:#d7e2d0;font-size:.76rem}
+.session-panel .pill{background:#ebeee2;color:#304831;border-color:#879b86}
+.session-panel .primary{background:#d5a9b6;color:#2c3f2c;font-weight:600}
+.active-session .textbtn{color:#f0e5e8;border-color:#81927b}
+.active-session .textbtn:hover{background:#51664f}
+.external-single{padding:30px 4px}
+.external-link{display:inline-flex;align-items:center;text-decoration:none}
+.writing-space{max-width:760px;margin:0 auto}
+.write-editor{display:block;width:100%;min-height:360px;resize:vertical;border-radius:13px;border:1px solid #cbd0bc;box-shadow:inset 0 1px 5px #60785c13;padding:26px 30px;background:#fcfaf1;color:#334734;font-size:1.06rem;line-height:1.9;font-family:Georgia,serif;text-transform:none;color-scheme:light;outline-offset:3px}
+.write-editor:focus{outline:2px solid #708a6d}
+.write-editor::placeholder{color:#8a9b84}
+.write-tools{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:17px 2px 20px}
+.write-count{font-size:.83rem;color:#6c7e69}
+.write-past{border-top:1px solid #dbe0d1;padding-top:13px;font-size:.82rem;color:#61755c}
+.write-past summary{cursor:pointer;max-width:max-content}
+.write-entry{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #dce1d4}
+.write-original{font-size:.78rem;margin-top:18px;text-align:right}
+.write-original a{color:#69836b}
+@media(max-width:650px){.hero{min-height:225px}.hero-inner{padding:26px}.tiles{gap:10px}.tile{min-height:122px;padding:16px}.tile .name{font-size:1.01rem}.session-fields{justify-content:start}.session-panel .session-label{width:100%;margin-bottom:2px}.write-editor{padding:19px;min-height:360px}}
+
+/* larger, more even type: one body size, one heading size */
+:root{font-size:18px}
+.brand{font-size:1.4rem}
+.hero h1{font-size:clamp(2rem,5vw,2.6rem)}
+h2,.sectionline h2,.viewhead h2,.session-dialog h2{font-size:1.4rem}
+.tile .name,.session-panel .session-label{font-size:1.4rem}
+.pill,.primary,.textbtn,.view .back,.feedback,.ms-status,.ms-toolbar label,.write-count,.write-past,.write-original,.session-fields label,.session-panel,.sol-info,.tag,.numgrid button{font-size:1rem}
+.write-editor{font-size:1.15rem}
+.card .face{font-size:1rem}
+
+/* home tiles: a little drawing in each, name underneath */
+.tile:before{content:none}
+.tile{min-height:190px;justify-content:flex-end;overflow:hidden}
+.tile-art{position:absolute;top:14px;right:14px;width:56%;max-width:150px;height:auto;transition:transform .25s}
+.tile:hover .tile-art{transform:rotate(-4deg) scale(1.05)}
+.tile .name{position:relative}
+@media(max-width:650px){.tile{min-height:150px}.tile .name{font-size:1.2rem}.tile-art{width:62%}}
+
+/* game pages: same dark green as the app, light text */
+.view{background:#293b29;color:#f1eedf;border:1px solid #6c806540;box-shadow:0 18px 42px #08190d40}
+.viewhead h2,.view .back{color:#f1eedf}
+.view .back:hover{color:#f9e3ea}
+.feedback,.ms-status,.ms-toolbar label,.write-count,.write-past,.write-original a,.tag{color:#d7e2d0}
+.tag{background:#3b5140}
+.write-past{border-top-color:#6c806566}
+.write-entry{border-bottom-color:#6c806566}
+.sol-wrap{background:#3b5140}
+
+/* home: the garden photo is the whole background */
+body.home-page{background:transparent}
+body.home-page:before{content:'';position:fixed;inset:0;z-index:-1;background:url('assets/garden.jpg') center/cover no-repeat}
+body.home-page .home-title{margin:20vh 4px 22px;color:#fff8eb;font-size:clamp(2.2rem,6vw,3.4rem);letter-spacing:-.04em}
+body.home-page .home-title{text-shadow:0 2px 14px #102213b3}
+body.home-page .brand{visibility:hidden}
+body.home-page .tile{background:#293b29d9!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+body.home-page .tile:hover{background:#3b5140e6!important}
+body.home-page .session-panel{background:#293b29d9;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+@media(max-width:650px){body.home-page .home-title{margin-top:12vh}}

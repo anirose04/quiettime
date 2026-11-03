@@ -1,4 +1,4 @@
-/* Quiet Time — Minesweeper. Local-only state, no external dependencies. */
+/* Quiet Time — minesweeper. Local-only state, no external dependencies. */
 const MS_LEVELS = {
   gentle: { rows: 9, cols: 9, mines: 10, title: 'gentle · 9 × 9' },
   thoughtful: { rows: 16, cols: 16, mines: 40, title: 'thoughtful · 16 × 16' },
@@ -18,7 +18,7 @@ function msNewGame(level = 'gentle') {
     board: Array.from({ length: preset.rows * preset.cols }, () => ({
       mine: false, adjacent: 0, revealed: false, flagged: false
     })),
-    message: 'Choose a square to begin. Your first square is always safe.'
+    message: ''
   };
   msSave();
 }
@@ -65,7 +65,7 @@ function msCheckWin() {
   if (ms.board.every(c => c.mine || c.revealed)) {
     ms.status = 'won';
     ms.board.forEach(c => { if (c.mine) c.flagged = true; });
-    ms.message = 'Every safe square found. Beautifully done! ✿';
+    ms.message = 'every safe square found. beautifully done!';
   }
 }
 function msReveal(i) {
@@ -76,7 +76,7 @@ function msReveal(i) {
   if (cell.mine) {
     ms.status = 'lost';
     ms.board.forEach(c => { if (c.mine) c.revealed = true; });
-    ms.message = 'A mine! You can start a fresh little puzzle whenever you like.';
+    ms.message = 'a mine! you can start a fresh little puzzle whenever you like.';
   } else {
     // Flood fill empty areas iteratively so large openings do not overflow the stack.
     const queue = [i];
@@ -106,37 +106,36 @@ function msToggleFlag(i) {
     ms.message = 'All flags are placed. Remove a flag to move this one.';
   } else {
     cell.flagged = !cell.flagged;
-    ms.message = cell.flagged ? 'Flag placed. ✿' : 'Flag removed.';
+    ms.message = cell.flagged ? 'Flag placed.' : 'Flag removed.';
   }
   msSave(); msUpdate();
 }
 function drawMinesweeper() {
   msLoad(); msFlagMode = false;
-  layout('Minesweeper', 'Little clues, one square at a time.', `
+  layout('minesweeper', 'Little clues, one square at a time.', `
     <div class="ms-toolbar">
       <label for="msLevel">Difficulty</label>
       <select class="pill" id="msLevel">
         ${Object.entries(MS_LEVELS).map(([id, p]) => `<option value="${id}">${p.title}</option>`).join('')}
       </select>
       <button class="pill" id="msNew" type="button">new puzzle</button>
-      <button class="pill" id="msFlag" type="button" aria-pressed="false">⚑ flag mode: off</button>
+      <button class="pill" id="msFlag" type="button" aria-pressed="false">flag mode: off</button>
     </div>
     <div class="ms-status"><span id="msMinesLeft"></span><span id="msState"></span></div>
-    <div class="ms-board-scroll" aria-label="Minesweeper game board, scroll horizontally for large puzzles">
-      <div id="msBoard" class="ms-board" role="grid" aria-label="Minesweeper grid"></div>
+    <div class="ms-board-scroll" aria-label="minesweeper game board, scroll horizontally for large puzzles">
+      <div id="msBoard" class="ms-board" role="grid" aria-label="minesweeper grid"></div>
     </div>
     <p id="msMessage" class="feedback ms-message" role="status" aria-live="polite"></p>
-    <p class="tip">Click or tap to uncover a square. Numbers tell you how many mines touch it, including diagonally. Right-click on Mac, or use <strong>flag mode</strong> on a touch screen, to mark suspected mines. A long press also places a flag. The first reveal is always safe.</p>
   `);
   $('#msLevel').value = ms.level;
   $('#msLevel').onchange = e => {
     const value = e.target.value;
-    if (confirm('Start a new Minesweeper puzzle?')) {
+    if (confirm('start a new minesweeper puzzle?')) {
       msNewGame(value); msFlagMode = false; msUpdate();
     } else e.target.value = ms.level;
   };
   $('#msNew').onclick = () => {
-    if (ms.status !== 'playing' || confirm('Start a new Minesweeper puzzle?')) {
+    if (ms.status !== 'playing' || confirm('start a new minesweeper puzzle?')) {
       msNewGame(ms.level); msUpdate();
     }
   };
@@ -183,11 +182,11 @@ function msUpdate() {
   const safeRemaining = ms.board.filter(c => !c.mine && !c.revealed).length;
   $('#msLevel').value = ms.level;
   const flagButton = $('#msFlag');
-  flagButton.textContent = `⚑ flag mode: ${msFlagMode ? 'on' : 'off'}`;
+  flagButton.textContent = `flag mode: ${msFlagMode ? 'on' : 'off'}`;
   flagButton.classList.toggle('active', msFlagMode);
   flagButton.setAttribute('aria-pressed', String(msFlagMode));
-  $('#msMinesLeft').textContent = `⚑ ${ms.mines - flags} flags left`;
-  $('#msState').textContent = ms.status === 'won' ? '✿ puzzle solved' :
+  $('#msMinesLeft').textContent = `${ms.mines - flags} flags left`;
+  $('#msState').textContent = ms.status === 'won' ? 'puzzle solved' :
     ms.status === 'lost' ? 'a fresh start awaits' : `${safeRemaining} safe squares left`;
   $('#msMessage').textContent = ms.message;
   const preferred = matchMedia('(max-width: 650px)').matches ? 31 : 35;
