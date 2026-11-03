@@ -23,7 +23,7 @@ const tileArt={
 function go(page='home'){if(activeQuiet()&&page!==quiet.page){requestEarlyEnd();return}history.replaceState(null,'','#'+page);render(page)}
 function render(page=(location.hash.slice(1).split('?')[0]||'home')){
  if(activeQuiet()&&page!==quiet.page){history.replaceState(null,'','#'+quiet.page);page=quiet.page}
- document.body.classList.toggle('home-page',page==='home');
+ document.body.classList.remove('home-page');
  if(page==='home')home();
  else if(page==='sudoku')drawSudoku();
  else if(page==='solitaire')drawSolitaire();
@@ -35,6 +35,7 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
  attachSessionControls();scrollTo({top:0,behavior:'instant'});
 }
 function home(){
+ document.body.classList.add('home-page');
  app.innerHTML=`<h1 class="home-title">quiet time</h1><section class="tiles">${tiles.map(([id,n])=>`<button class="tile tile-${id}" data-page="${id}" type="button"><svg class="tile-art" viewBox="0 0 120 100" aria-hidden="true">${tileArt[id]}</svg><span class="name">${n}</span></button>`).join('')}</section>${sessionPanel()}`;
  app.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{
    if(b.dataset.page==='nyt'||b.dataset.page==='murdoku'){
@@ -69,11 +70,33 @@ function newSol(){let d=shuffle(deck()),cols=Array.from({length:7},()=>[]);for(l
 function saveSol(){storage.set('solitaire',sol)}
 function cardLabel(c){return 'a23456789jqk'[c.rank-1]||'10'}function rankText(r){return r===1?'a':r===11?'j':r===12?'q':r===13?'k':String(r)}
 function cardHTML(c,loc,index=0,offset=0){if(!c)return '';return `<div class="card ${c.up?(red(c.suit)?'red':''):'down'} ${sol.selected&&sol.selected.loc===loc&&index>=sol.selected.index?'picked':''}" data-loc="${loc}" data-index="${index}" style="top:${offset}px" aria-label="${c.up?rankText(c.rank)+' of '+c.suit:'face down'}">${c.up?`<span class="face">${rankText(c.rank)} ${c.suit}</span><span class="suit">${c.suit}</span>`:''}</div>`}
-function drawSolitaire(){sol=storage.get('solitaire');if(!sol)newSol();layout('solitaire','',`<div class="controls" style="margin-bottom:15px"><button class="pill" id="newSol">new game</button><button class="pill" id="undoSol">undo move</button><span class="tag" id="moveCount"></span></div><section class="sol-wrap"><div class="sol-top"><div class="sol-slot"><div class="sol-pile" id="stock" aria-label="stock"></div><div class="sol-pile" id="waste" data-drop="waste"></div></div><div class="sol-slot" id="foundations"></div></div><div class="sol-table" id="columns"></div><div class="sol-info" id="solInfo" aria-live="polite"></div></section>`);$('#newSol').onclick=()=>{if(confirm('start a new game?')){newSol();updateSol()}};$('#undoSol').onclick=()=>{const prev=storage.get('sol-undo');if(prev){sol=prev;saveSol();updateSol();storage.set('sol-undo',null)}};updateSol()}
+function drawSolitaire(){sol=storage.get('solitaire');if(!sol)newSol();layout('solitaire','',`<div class="controls" style="margin-bottom:15px"><button class="pill" id="newSol">new game</button><button class="pill" id="undoSol">undo move</button><span class="tag" id="moveCount"></span></div><section class="sol-wrap"><div class="sol-top"><div class="sol-slot"><div class="sol-pile" id="stock" aria-label="stock"></div><div class="sol-pile" id="waste" data-drop="waste"></div></div><div class="sol-slot" id="foundations"></div></div><div class="sol-table" id="columns"></div><div class="sol-info" id="solInfo" aria-live="polite"></div></section>`);$('.sol-wrap').onpointerdown=solDragStart;$('.sol-wrap').addEventListener('click',e=>{if(solJustDragged){e.stopPropagation();solJustDragged=false}},true);$('#newSol').onclick=()=>{if(confirm('start a new game?')){newSol();updateSol()}};$('#undoSol').onclick=()=>{const prev=storage.get('sol-undo');if(prev){sol=prev;saveSol();updateSol();storage.set('sol-undo',null)}};updateSol()}
 function updateSol(){if(!$('#columns'))return;$('#stock').innerHTML=sol.stock.length?`<div class="card down"></div>`:sol.waste.length?'↻':'';$('#waste').innerHTML=sol.waste.length?cardHTML(sol.waste.at(-1),'waste',sol.waste.length-1):'';$('#foundations').innerHTML=sol.found.map((f,i)=>`<div class="sol-pile" data-drop="f${i}">${f.length?cardHTML(f.at(-1),'f'+i,f.length-1):`<span class="empty">a</span>`}</div>`).join('');$('#columns').innerHTML=sol.cols.map((col,i)=>`<div class="sol-col" data-drop="t${i}">${col.map((c,j)=>cardHTML(c,'t'+i,j,j*25)).join('')}</div>`).join('');$('#moveCount').textContent=sol.moves+' moves';$('#solInfo').textContent=sol.message;$('#stock').onclick=()=>{rememberSol();if(sol.stock.length){let c=sol.stock.pop();c.up=true;sol.waste.push(c)}else if(sol.waste.length){sol.stock=sol.waste.reverse().map(c=>({...c,up:false}));sol.waste=[]}sol.selected=null;sol.moves++;saveSol();updateSol()};$('#waste').onclick=e=>selectSol('waste',sol.waste.length-1);$('#foundations').onclick=e=>{let p=e.target.closest('[data-drop]');if(p)clickSol(p.dataset.drop)};$('#columns').onclick=e=>{let c=e.target.closest('.card'),p=e.target.closest('[data-drop]');if(!p)return;if(sol.selected){clickSol(p.dataset.drop);return}if(c)selectSol(p.dataset.drop,+c.dataset.index);else clickSol(p.dataset.drop)}}
 function selectSol(loc,index){let cards=getPile(loc);if(!cards||!cards[index]?.up)return;sol.selected={loc,index};sol.message='';saveSol();updateSol()}
 function getPile(loc){return loc==='waste'?sol.waste:loc[0]==='t'?sol.cols[+loc.slice(1)]:loc[0]==='f'?sol.found[+loc.slice(1)]:null}
 function rememberSol(){storage.set('sol-undo',structuredClone(sol))}
+// drag and drop: pick up a face-up card (and everything on top of it), drop it on any pile; clicking still works too.
+let solDrag=null,solJustDragged=false;
+function solDragStart(e){if(e.button>0)return;const card=e.target.closest('.card');if(!card||card.classList.contains('down')||!card.dataset.loc)return;solDrag={loc:card.dataset.loc,index:+card.dataset.index,x:e.clientX,y:e.clientY,ghost:null}}
+document.addEventListener('pointermove',e=>{
+ if(!solDrag)return;
+ if(!solDrag.ghost){
+   if(Math.hypot(e.clientX-solDrag.x,e.clientY-solDrag.y)<6)return;
+   const cards=[...document.querySelectorAll(`.card[data-loc="${solDrag.loc}"]`)].filter(c=>+c.dataset.index>=solDrag.index);if(!cards.length){solDrag=null;return}
+   const first=cards[0].getBoundingClientRect(),ghost=document.createElement('div');ghost.className='sol-ghost';ghost.style.width=first.width+'px';
+   cards.forEach(c=>{const r=c.getBoundingClientRect(),copy=c.cloneNode(true);copy.style.top=(r.top-first.top)+'px';copy.classList.remove('picked');ghost.append(copy);c.classList.add('lifted')});
+   solDrag.ghost=ghost;solDrag.dx=solDrag.x-first.left;solDrag.dy=solDrag.y-first.top;document.body.append(ghost);
+ }
+ e.preventDefault();solDrag.ghost.style.left=(e.clientX-solDrag.dx)+'px';solDrag.ghost.style.top=(e.clientY-solDrag.dy)+'px';
+});
+document.addEventListener('pointerup',e=>{
+ if(!solDrag)return;const drag=solDrag;solDrag=null;
+ if(!drag.ghost&&Math.hypot(e.clientX-drag.x,e.clientY-drag.y)<6)return;
+ drag.ghost?.remove();solJustDragged=true;setTimeout(()=>solJustDragged=false,0);
+ const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-drop]');
+ if(target&&target.dataset.drop!==drag.loc){sol.selected={loc:drag.loc,index:drag.index};clickSol(target.dataset.drop)}else updateSol();
+});
+document.addEventListener('pointercancel',()=>{if(solDrag?.ghost){solDrag.ghost.remove();updateSol()}solDrag=null});
 function clickSol(dest){if(!sol.selected){let pile=getPile(dest);if(pile?.length&&pile.at(-1).up)selectSol(dest,pile.length-1);return}let {loc,index}=sol.selected;if(loc===dest){sol.selected=null;saveSol();updateSol();return}let src=getPile(loc),dst=getPile(dest),moving=src.slice(index);if(!moving.length)return;let valid=false;if(dest[0]==='t'){valid=(!dst.length&&moving[0].rank===13)||(dst.length&&dst.at(-1).up&&dst.at(-1).rank===moving[0].rank+1&&color(dst.at(-1))!==color(moving[0]))}else if(dest[0]==='f'&&moving.length===1){valid=(!dst.length&&moving[0].rank===1)||(dst.length&&dst.at(-1).suit===moving[0].suit&&dst.at(-1).rank+1===moving[0].rank)}if(valid){rememberSol();dst.push(...src.splice(index));if(loc[0]==='t'&&src.length)src.at(-1).up=true;sol.moves++;sol.message=sol.found.every(f=>f.length===13)?'you won! a lovely little victory.':'a lovely move.'}else sol.message='that move does not fit just yet.';sol.selected=null;saveSol();updateSol()}
 
 // an in-app forward-only writing space: local only, not affiliated with justwrite.page.
