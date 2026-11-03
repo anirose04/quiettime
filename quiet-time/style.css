@@ -86,14 +86,15 @@ h2,.sectionline h2,.viewhead h2,.session-dialog h2{font-size:1.4rem}
 .sol-wrap{background:#3b5140}
 
 /* home: the garden photo is the whole background */
-body.home-page{background:transparent}
-body.home-page:before{content:'';position:fixed;inset:0;z-index:-1;background:url('assets/garden.jpg') center/cover no-repeat}
+/* the garden photo sits behind every page */
+body{background:transparent}
+body:before{content:'';position:fixed;inset:0;z-index:-1;background:url('assets/garden.jpg') center/cover no-repeat}
 body.home-page .home-title{margin:20vh 4px 22px;color:#fff8eb;font-size:clamp(2.2rem,6vw,3.4rem);letter-spacing:-.04em}
 body.home-page .home-title{text-shadow:0 2px 14px #102213b3}
 body.home-page .brand{visibility:hidden}
 body.home-page .tile{background:#293b29d9!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 body.home-page .tile:hover{background:#3b5140e6!important}
-body.home-page .session-panel{background:#293b29d9;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+body .session-panel{background:#293b29d9;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 @media(max-width:650px){body.home-page .home-title{margin-top:12vh}}
 
 /* sudoku: keep all 81 cells inside the board at every size */
@@ -105,3 +106,25 @@ body.home-page .session-panel{background:#293b29d9;-webkit-backdrop-filter:blur(
 .card.lifted{opacity:.25}
 .sol-ghost{position:fixed;z-index:1000;pointer-events:none;height:0}
 .sol-ghost .card{box-shadow:0 10px 24px #0d211c66;cursor:grabbing}
+
+body:not(.home-page) .brand{text-shadow:0 2px 12px #102213cc}
+.view{background:#293b29}
+
+/* playing cards: white faces, capital ranks, corner indices and a centre pip */
+.card{background:#fffdf7;border:1px solid #d8d2c2;border-radius:8px;padding:0;color:#24302a;font-family:'Libre Baskerville',Georgia,serif;font-weight:700;text-transform:none;box-shadow:0 1px 3px #1a2a2033}
+.card.red{color:#b2414f}
+.card .idx{position:absolute;display:flex;align-items:center;gap:2px;font-size:clamp(.72rem,1.6vw,1rem);line-height:1;letter-spacing:-.02em}
+.card .idx.tl{top:5px;left:6px}
+.card .idx.br{bottom:5px;right:6px;transform:rotate(180deg)}
+.card .pip{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(1.3rem,3.6vw,2.3rem);font-weight:400}
+.card .pip.face{font-size:clamp(1.2rem,3.2vw,2rem);font-weight:700}
+.card.down{background:repeating-linear-gradient(45deg,#4d6a55 0 6px,#5c7a63 6px 12px);border:3px solid #fffdf7;box-shadow:0 1px 3px #1a2a2055}
+.sol-pile .empty{text-transform:none;font-family:'Libre Baskerville',Georgia,serif;font-size:1.2rem;color:#dfe9d799;display:flex;align-items:center;justify-content:center;height:100%;padding:0}
+@media(max-width:650px){.card .idx.br{display:none}.card .idx.tl{top:3px;left:4px}}
+
+/* solitaire table: seven equal columns that shrink to fit, top row lined up with them */
+.sol-top,.sol-table{display:grid;grid-template-columns:repeat(7,minmax(0,81px));gap:12px;max-width:none}
+.sol-slot{display:contents}
+#foundations>.sol-pile:first-child{grid-column:4}
+.sol-top .sol-pile{width:auto}
+@media(max-width:650px){.view{padding:16px 12px}.sol-wrap{padding:10px}.sol-top,.sol-table{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.sol-pile,.card{height:58px}.card .pip{font-size:1.15rem}.card .pip.face{font-size:1rem}.card .idx{font-size:.7rem}}
