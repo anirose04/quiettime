@@ -1,5 +1,5 @@
 const $=s=>document.querySelector(s), app=$('#app');const storage={get(k){try{return JSON.parse(localStorage.getItem('lg-'+k))}catch{return null}},set(k,v){localStorage.setItem('lg-'+k,JSON.stringify(v))}};
-const links=[['murdoku','https://murdoku.com/'],['nyt games','https://www.nytimes.com/crosswords']];
+const sites={murdoku:'https://murdoku.com/',nyt:'https://www.nytimes.com/crosswords',murdle:'https://murdle.com/',gutenberg:'https://www.gutenberg.org/','little-daily':'https://thelittledaily.com/',trust:'https://ncase.me/trust/',owid:'https://ourworldindata.org/','atlas-obscura':'https://www.atlasobscura.com/','ground-news':'https://ground.news/','mit-ocw':'https://ocw.mit.edu/'};
 // timer-only activities: done away from the screen, timed by the quiet session itself
 const timerPages={'mary-oliver':'mary oliver time','stretching':'stretching time','coloring':'coloring time'};
 const sessionChoices=[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['write','just write'],...Object.entries(timerPages)];
@@ -12,18 +12,33 @@ function sessionPanel(){
 }
 function attachSessionControls(){let start=$('#startSession');if(start)start.onclick=()=>{const page=$('#sessionActivity').value;const minutes=Number($('#sessionLength').value);quiet={page,until:Date.now()+minutes*60000};storage.set('quiet-session',quiet);go(page)};let end=$('#earlyEnd');if(end)end.onclick=requestEarlyEnd;let hd=$('#sessionClock');if(hd)hd.textContent=sessionRemaining()}
 function requestEarlyEnd(){if(!activeQuiet())return;const existing=$('#quietExitDialog');if(existing){existing.remove();return}const mask=document.createElement('div');mask.id='quietExitDialog';mask.className='session-modal';mask.innerHTML=`<div class="session-dialog" role="dialog" aria-modal="true" aria-labelledby="sessionDialogTitle"><h2 id="sessionDialogTitle">leave this quiet moment?</h2><p>you can leave at any time, with a brief pause before switching.</p><p id="exitCountdown" aria-live="polite">you can end the session in 8 seconds.</p><div class="controls"><button class="pill" id="stayQuiet">stay here</button><button class="primary" id="confirmQuietExit" disabled>finish early</button></div></div>`;document.body.append(mask);$('#stayQuiet').onclick=()=>mask.remove();const until=Date.now()+8000;function step(){if(!mask.isConnected)return;let remaining=Math.ceil((until-Date.now())/1000),button=$('#confirmQuietExit');if(remaining<=0){$('#exitCountdown').textContent='you can leave whenever you choose.';button.disabled=false}else{$('#exitCountdown').textContent=`you can end the session in ${remaining} seconds.`;setTimeout(step,200)}}step();$('#confirmQuietExit').onclick=()=>{quiet=null;storage.set('quiet-session',null);mask.remove();go('home')};}
-const tiles=[['sudoku','sudoku'],['minesweeper','minesweeper'],['murdoku','murdoku'],['nyt','nyt games'],['solitaire','solitaire'],['write','just write'],['mary-oliver','mary oliver time'],['stretching','stretching time'],['coloring','coloring time']];
-// little drawings for the home tiles, built from simple shapes in the garden palette
-const tileArt={
- sudoku:`<rect x="20" y="8" width="26" height="26" rx="6" fill="#d5a2b2"/><rect x="50" y="8" width="26" height="26" rx="6" fill="#ffffff14"/><rect x="80" y="8" width="26" height="26" rx="6" fill="#ffffff14"/><rect x="20" y="38" width="26" height="26" rx="6" fill="#ffffff14"/><rect x="50" y="38" width="26" height="26" rx="6" fill="#a9c29a"/><rect x="80" y="38" width="26" height="26" rx="6" fill="#ffffff14"/><rect x="20" y="68" width="26" height="26" rx="6" fill="#ffffff14"/><rect x="50" y="68" width="26" height="26" rx="6" fill="#ffffff14"/><rect x="80" y="68" width="26" height="26" rx="6" fill="#e3c27e"/>`,
- minesweeper:`<circle cx="30" cy="22" r="9" fill="#ffffff14"/><circle cx="58" cy="22" r="9" fill="#ffffff14"/><circle cx="86" cy="22" r="9" fill="#a9c29a"/><circle cx="30" cy="50" r="9" fill="#ffffff14"/><circle cx="58" cy="50" r="16" fill="#d5a2b2"/><circle cx="86" cy="50" r="9" fill="#ffffff14"/><circle cx="30" cy="78" r="9" fill="#e3c27e"/><circle cx="58" cy="78" r="9" fill="#ffffff14"/><circle cx="86" cy="78" r="9" fill="#ffffff14"/>`,
- murdoku:`<circle cx="52" cy="50" r="32" fill="#ffffff14"/><circle cx="74" cy="40" r="24" fill="#d5a2b2" fill-opacity=".85"/><circle cx="44" cy="62" r="14" fill="#e3c27e"/><circle cx="96" cy="78" r="6" fill="#a9c29a"/>`,
- nyt:`<rect x="18" y="10" width="40" height="40" rx="8" fill="#efe6cf"/><rect x="62" y="10" width="40" height="40" rx="8" fill="#ffffff14"/><rect x="18" y="54" width="40" height="40" rx="8" fill="#ffffff14"/><rect x="62" y="54" width="40" height="40" rx="8" fill="#a9c29a"/><circle cx="82" cy="30" r="9" fill="#d5a2b2"/>`,
- solitaire:`<rect x="26" y="16" width="44" height="64" rx="8" fill="#a9c29a" transform="rotate(-14 48 48)"/><rect x="40" y="14" width="44" height="64" rx="8" fill="#e3c27e"/><rect x="54" y="16" width="44" height="64" rx="8" fill="#efe6cf" transform="rotate(14 76 48)"/><circle cx="80" cy="50" r="8" fill="#d5a2b2"/>`,
- 'mary-oliver':`<circle cx="62" cy="46" r="30" fill="#efe6cf"/><circle cx="76" cy="38" r="27" fill="#3b5140"/><circle cx="98" cy="20" r="4" fill="#e3c27e"/><circle cx="104" cy="58" r="3" fill="#d5a2b2"/><circle cx="24" cy="82" r="5" fill="#a9c29a"/>`,
- stretching:`<path d="M20 86a40 40 0 0 1 80 0" fill="none" stroke="#a9c29a" stroke-width="8" stroke-linecap="round"/><path d="M34 86a26 26 0 0 1 52 0" fill="none" stroke="#e3c27e" stroke-width="8" stroke-linecap="round"/><path d="M48 86a12 12 0 0 1 24 0" fill="none" stroke="#d5a2b2" stroke-width="8" stroke-linecap="round"/>`,
- coloring:`<path d="M30 92V36l9-18 9 18v56z" fill="#d5a2b2"/><path d="M54 92V30l9-18 9 18v62z" fill="#e3c27e"/><path d="M78 92V40l9-18 9 18v52z" fill="#a9c29a"/><rect x="30" y="74" width="18" height="6" fill="#ffffff40"/><rect x="54" y="74" width="18" height="6" fill="#ffffff40"/><rect x="78" y="74" width="18" height="6" fill="#ffffff40"/>`,
- write:`<path d="M14 28c14-12 26 12 40 0s26 12 40 0s14 6 14 6" fill="none" stroke="#efe6cf" stroke-width="7" stroke-linecap="round"/><path d="M14 52c14-12 26 12 40 0s26 12 40 0" fill="none" stroke="#a9c29a" stroke-width="7" stroke-linecap="round"/><path d="M14 76c14-12 26 12 40 0" fill="none" stroke="#d5a2b2" stroke-width="7" stroke-linecap="round"/><circle cx="72" cy="76" r="5" fill="#e3c27e"/>`
+// the homepage collection: [heading, [[id, name, kind]]]; kind sets the card colour
+const collection=[
+ ['games',[['sudoku','sudoku','games'],['minesweeper','minesweeper','games'],['solitaire','solitaire','games'],['murdoku','murdoku','games'],['nyt','nyt games','games'],['murdle','murdle','games']]],
+ ['words',[['write','just write','writing'],['gutenberg','project gutenberg','reading']]],
+ ['explore',[['little-daily','the little daily','learning'],['trust','the evolution of trust','learning'],['owid','our world in data','learning'],['atlas-obscura','atlas obscura','learning'],['ground-news','ground news','learning'],['mit-ocw','mit opencourseware','learning']]],
+ ['away from the screen',[['mary-oliver','mary oliver time','timer'],['stretching','stretching time','timer'],['coloring','coloring time','timer']]]
+];
+const names=Object.fromEntries(collection.flatMap(([,items])=>items.map(([id,n])=>[id,n])));
+// simple cream line icons for the cards (stroke and fill come from the card's text colour)
+const icons={
+ sudoku:`<rect x="8" y="8" width="32" height="32" rx="4"/><path d="M18.7 8v32M29.3 8v32M8 18.7h32M8 29.3h32"/>`,
+ minesweeper:`<circle cx="24" cy="24" r="9"/><path d="M24 8v5M24 35v5M8 24h5M35 24h5M12.7 12.7l3.5 3.5M31.8 31.8l3.5 3.5M12.7 35.3l3.5-3.5M31.8 16.2l3.5-3.5"/>`,
+ solitaire:`<rect x="7" y="12" width="20" height="28" rx="3" transform="rotate(-10 17 26)"/><rect x="21" y="9" width="20" height="28" rx="3"/><path d="M31 18l3.5 5-3.5 5-3.5-5z" class="solid"/>`,
+ murdoku:`<path d="M7 7h24v24H7zM15 7v24M23 7v24M7 15h24M7 23h24"/><circle cx="33" cy="33" r="6"/><path d="M37.5 37.5l4.5 4.5"/>`,
+ nyt:`<rect x="8" y="8" width="32" height="32" rx="3"/><path d="M16 8v32M24 8v32M32 8v32M8 16h32M8 24h32M8 32h32"/><path d="M16 8h8v8h-8zM32 24h8v8h-8zM8 32h8v8H8z" class="solid"/>`,
+ murdle:`<circle cx="24" cy="24" r="16"/><circle cx="24" cy="20" r="4"/><path d="M22 23.5l-2 8.5h8l-2-8.5"/>`,
+ write:`<path d="M8 14h22M8 22h16M8 30h10"/><path d="M24 39l2-7 12-12 5 5-12 12z"/>`,
+ gutenberg:`<path d="M24 14c-5-4-11-5-17-4v26c6-1 12 0 17 4 5-4 11-5 17-4V10c-6-1-12 0-17 4zM24 14v26"/>`,
+ 'little-daily':`<path d="M6 34h36M13 34a11 11 0 0 1 22 0M24 11v6M11 19l4 4M37 19l-4 4M15 40h18"/>`,
+ trust:`<circle cx="18" cy="24" r="11"/><circle cx="30" cy="24" r="11"/>`,
+ owid:`<circle cx="24" cy="24" r="16"/><path d="M8 24h32M24 8c-7 5-7 27 0 32M24 8c7 5 7 27 0 32"/>`,
+ 'atlas-obscura':`<circle cx="24" cy="24" r="16"/><path d="M30 18l-3.5 8.5L18 30l3.5-8.5z" class="solid"/>`,
+ 'ground-news':`<rect x="8" y="10" width="26" height="28" rx="3"/><path d="M34 17h5v17a4 4 0 0 1-4 4h-2M14 18h14M14 24h14M14 30h9"/>`,
+ 'mit-ocw':`<path d="M4 18l20-8 20 8-20 8z"/><path d="M12 22v9c5 4 19 4 24 0v-9M40 20v11"/>`,
+ 'mary-oliver':`<path d="M10 38C10 21 21 10 39 10c0 18-11 28-29 28zM10 38l17-17"/>`,
+ stretching:`<path d="M8 36a16 16 0 0 1 32 0M15 36a9 9 0 0 1 18 0M22 36a2 2 0 0 1 4 0"/>`,
+ coloring:`<path d="M24 8a16 16 0 1 0 0 32c3 0 4-2 3-4s0-4 3-4h4a6 6 0 0 0 6-6c0-10-7-18-16-18z"/><circle cx="15" cy="23" r="2" class="solid"/><circle cx="20" cy="15" r="2" class="solid"/><circle cx="29" cy="14" r="2" class="solid"/>`
 };
 function go(page='home'){if(activeQuiet()&&page!==quiet.page){requestEarlyEnd();return}history.replaceState(null,'','#'+page);render(page)}
 function render(page=(location.hash.slice(1).split('?')[0]||'home')){
@@ -35,7 +50,7 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
  else if(page==='solitaire')drawSolitaire();
  else if(page==='minesweeper')drawMinesweeper();
  else if(page==='write')drawWrite();
- else if(page==='murdoku'||page==='nyt')external(page);
+ else if(sites[page])external(page);
  else if(timerPages[page])drawTimer(page);
  else home();
  if(activeQuiet()&&!timerPages[page])app.insertAdjacentHTML('afterbegin',sessionPanel());
@@ -43,13 +58,10 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
 }
 function home(){
  document.body.classList.add('home-page');
- app.innerHTML=`<h1 class="home-title">quiet time</h1><section class="tiles">${tiles.map(([id,n])=>`<button class="tile tile-${id}" data-page="${id}" type="button"><svg class="tile-art" viewBox="0 0 120 100" aria-hidden="true">${tileArt[id]}</svg><span class="name">${n}</span></button>`).join('')}</section>${sessionPanel()}`;
- app.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{
-   if(b.dataset.page==='nyt'||b.dataset.page==='murdoku'){
-     const target=b.dataset.page==='nyt'?links[1][1]:links[0][1];
-     window.open(target,'_blank','noopener,noreferrer');
-   }else go(b.dataset.page);
- });
+ app.innerHTML=`<h1 class="home-title">quiet time</h1>${collection.map(([heading,items])=>`<section class="shelf"><h2 class="shelf-title">${heading}</h2><div class="shelf-grid">${items.map(([id,n,kind])=>{const inner=`<svg class="activity-icon" viewBox="0 0 48 48" aria-hidden="true">${icons[id]}</svg><span class="activity-name">${n}</span>`;return sites[id]?`<a class="activity kind-${kind}" href="${sites[id]}" target="_blank" rel="noopener noreferrer" data-site="${id}">${inner}</a>`:`<button class="activity kind-${kind}" data-page="${id}" type="button">${inner}</button>`}).join('')}</div></section>`).join('')}${sessionPanel()}`;
+ app.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>go(b.dataset.page));
+ // outside sites open in their own tab, but never past a quiet session: leaving goes through the same early-exit pause
+ app.querySelectorAll('[data-site]').forEach(a=>a.onclick=e=>{if(activeQuiet()){e.preventDefault();requestEarlyEnd()}});
  attachSessionControls();
 }
 function layout(title,subtitle,content){
@@ -57,8 +69,7 @@ function layout(title,subtitle,content){
  $('#back').onclick=()=>go('home');
 }
 function external(page){
- const destination=page==='nyt'?links[1]:links[0];
- layout(destination[0],'',`<div class="external-single"><a class="primary external-link" href="${destination[1]}" target="_blank" rel="noopener noreferrer">open ${destination[0]}</a></div>`);
+ layout(names[page],'',`<div class="external-single"><a class="primary external-link" href="${sites[page]}" target="_blank" rel="noopener noreferrer">open ${names[page]}</a></div>`);
 }
 // timer activities: one screen, reused by each timer page. The countdown is the quiet session's own
 // timestamp (shown in #sessionClock, updated by the shared interval), so there is a single source of truth.

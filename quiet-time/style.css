@@ -180,3 +180,22 @@ body:not(.home-page) .brand{text-shadow:0 2px 12px #102213cc}
 .card .idx.tl{top:4px;left:4px}.card .idx.br{bottom:4px;right:4px}
 @media(max-width:650px){.card .idx{flex-direction:row;font-size:.66rem}}
 .timer-stage .primary{background:#d5a9b6;color:#2c3f2c;font-weight:600}.timer-stage .primary:hover{background:#e2bcc7}
+
+/* home: one scrollable collection, gently coloured by kind of activity */
+.shelf{margin:0 0 30px}
+.shelf .shelf-title{margin:0 4px 12px;font-family:'DM Sans',system-ui,sans-serif;font-size:1rem;font-weight:500;letter-spacing:.05em;color:#f3ecdae0;text-shadow:0 1px 8px #10221399}
+.shelf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.activity{--kind:#405b48;display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:132px;padding:18px 18px 16px;border-radius:16px;border:1px solid #f3ecda1f;background:color-mix(in srgb,var(--kind) 90%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 7px 22px #10221938;color:#f3ecda;text-align:left;text-decoration:none;font:inherit;text-transform:lowercase;transition:transform .2s,box-shadow .2s,filter .2s;-webkit-tap-highlight-color:transparent}
+.activity:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 11px 26px #10221952}
+.activity:active{transform:scale(.98);filter:brightness(1.04)}
+.activity-icon{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;opacity:.92}
+.activity-icon .solid{fill:currentColor;stroke:none}
+.activity-name{font-family:'Libre Baskerville',Georgia,serif;font-size:1.12rem;line-height:1.3}
+.kind-games{--kind:#405b48}
+.kind-writing{--kind:#75585f}
+.kind-reading{--kind:#75694e}
+.kind-learning{--kind:#465a65}
+.kind-timer{--kind:#786c53}
+body.home-page .home-title{margin-top:14vh}
+@media(max-width:650px){.shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.activity{min-height:116px;padding:14px;gap:14px}.activity-icon{width:32px;height:32px}.activity-name{font-size:1rem}body.home-page .home-title{margin-top:9vh}}
+@media(prefers-reduced-motion:reduce){.activity{transition:none}.activity:hover,.activity:active{transform:none}}
