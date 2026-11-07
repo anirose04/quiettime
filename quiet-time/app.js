@@ -1,8 +1,8 @@
 const $=s=>document.querySelector(s), app=$('#app');const storage={get(k){try{return JSON.parse(localStorage.getItem('lg-'+k))}catch{return null}},set(k,v){localStorage.setItem('lg-'+k,JSON.stringify(v))}};
-const sites={murdoku:'https://murdoku.com/',nyt:'https://www.nytimes.com/crosswords',murdle:'https://murdle.com/',gutenberg:'https://www.gutenberg.org/','little-daily':'https://thelittledaily.com/',run:'https://www.coolmathgames.com/0-run-2',trust:'https://ncase.me/trust/',owid:'https://ourworldindata.org/','mit-ocw':'https://ocw.mit.edu/'};
+const sites={murdoku:'https://murdoku.com/',nyt:'https://www.nytimes.com/crosswords',murdle:'https://murdle.com/',gutenberg:'https://www.gutenberg.org/','little-daily':'https://thelittledaily.com/',trust:'https://ncase.me/trust/',owid:'https://ourworldindata.org/','mit-ocw':'https://ocw.mit.edu/'};
 // timer-only activities: done away from the screen, timed by the quiet session itself
 const timerPages={'mary-oliver':'mary oliver time','stretching':'stretching time','coloring':'coloring time'};
-const sessionChoices=[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['write','just write'],...Object.entries(timerPages)];
+const sessionChoices=[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['skip','skip'],['write','just write'],...Object.entries(timerPages)];
 let quiet=storage.get('quiet-session');
 function activeQuiet(){if(!quiet)return false;if(quiet.pausedLeft!=null)return true;if(Date.now()>=quiet.until){if(timerPages[quiet.page])storage.set('timer-done',quiet.page);quiet=null;storage.set('quiet-session',null);return false}return true}
 function sessionRemaining(){if(!activeQuiet())return '';let secs=Math.ceil((quiet.pausedLeft??quiet.until-Date.now())/1000);return Math.floor(secs/60)+':'+String(secs%60).padStart(2,'0')}
@@ -14,7 +14,7 @@ function attachSessionControls(){let start=$('#startSession');if(start)start.onc
 function requestEarlyEnd(){if(!activeQuiet())return;const existing=$('#quietExitDialog');if(existing){existing.remove();return}const mask=document.createElement('div');mask.id='quietExitDialog';mask.className='session-modal';mask.innerHTML=`<div class="session-dialog" role="dialog" aria-modal="true" aria-labelledby="sessionDialogTitle"><h2 id="sessionDialogTitle">leave this quiet moment?</h2><p>you can leave at any time, with a brief pause before switching.</p><p id="exitCountdown" aria-live="polite">you can end the session in 8 seconds.</p><div class="controls"><button class="pill" id="stayQuiet">stay here</button><button class="primary" id="confirmQuietExit" disabled>finish early</button></div></div>`;document.body.append(mask);$('#stayQuiet').onclick=()=>mask.remove();const until=Date.now()+8000;function step(){if(!mask.isConnected)return;let remaining=Math.ceil((until-Date.now())/1000),button=$('#confirmQuietExit');if(remaining<=0){$('#exitCountdown').textContent='you can leave whenever you choose.';button.disabled=false}else{$('#exitCountdown').textContent=`you can end the session in ${remaining} seconds.`;setTimeout(step,200)}}step();$('#confirmQuietExit').onclick=()=>{quiet=null;storage.set('quiet-session',null);mask.remove();go('home')};}
 // the homepage collection: [heading, [[id, name, kind]]]; kind sets the card colour
 const collection=[
- ['games',[['sudoku','sudoku','games'],['minesweeper','minesweeper','games'],['solitaire','solitaire','games'],['murdoku','murdoku','games'],['nyt','nyt games','games'],['murdle','murdle','games'],['little-daily','the little daily','games'],['run','run 2','games']]],
+ ['games',[['sudoku','sudoku','games'],['minesweeper','minesweeper','games'],['solitaire','solitaire','games'],['murdoku','murdoku','games'],['nyt','nyt games','games'],['murdle','murdle','games'],['little-daily','the little daily','games'],['skip','skip','games']]],
  ['words',[['write','just write','writing'],['gutenberg','project gutenberg','reading']]],
  ['explore',[['trust','the evolution of trust','learning'],['owid','our world in data','learning'],['mit-ocw','mit opencourseware','learning']]],
  ['away from the screen',[['mary-oliver','mary oliver time','timer'],['stretching','stretching time','timer'],['coloring','coloring time','timer']]]
@@ -31,7 +31,7 @@ const icons={
  write:`<path d="M8 14h22M8 22h16M8 30h10"/><path d="M24 39l2-7 12-12 5 5-12 12z"/>`,
  gutenberg:`<path d="M24 14c-5-4-11-5-17-4v26c6-1 12 0 17 4 5-4 11-5 17-4V10c-6-1-12 0-17 4zM24 14v26"/>`,
  'little-daily':`<path d="M6 34h36M13 34a11 11 0 0 1 22 0M24 11v6M11 19l4 4M37 19l-4 4M15 40h18"/>`,
- run:`<circle cx="29" cy="10" r="4"/><path d="M27 16l-5 10 6 5-2 10M22 26l-7 4-3 8M24 19l8 4 5-3M17 20l7-4"/><path d="M6 42h36"/>`,
+ skip:`<circle cx="29" cy="10" r="4"/><path d="M27 16l-5 10 6 5-2 10M22 26l-7 4-3 8M24 19l8 4 5-3M17 20l7-4"/><path d="M6 42h36"/>`,
  trust:`<circle cx="18" cy="24" r="11"/><circle cx="30" cy="24" r="11"/>`,
  owid:`<circle cx="24" cy="24" r="16"/><path d="M8 24h32M24 8c-7 5-7 27 0 32M24 8c7 5 7 27 0 32"/>`,
  'mit-ocw':`<path d="M4 18l20-8 20 8-20 8z"/><path d="M12 22v9c5 4 19 4 24 0v-9M40 20v11"/>`,
@@ -48,6 +48,7 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
  else if(page==='sudoku')drawSudoku();
  else if(page==='solitaire')drawSolitaire();
  else if(page==='minesweeper')drawMinesweeper();
+ else if(page==='skip')drawSkip();
  else if(page==='write')drawWrite();
  else if(sites[page])external(page);
  else if(timerPages[page])drawTimer(page);
