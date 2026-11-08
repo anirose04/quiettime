@@ -1,7 +1,8 @@
 /* Quiet Time — tumble. A little sprout runs down a tunnel among the stars.
    Walk onto a wall and the whole tunnel turns so that wall becomes the floor.
    Canvas only, local-only progress, no external dependencies. */
-const TUMBLE_LEVELS = 10;
+const TUMBLE_LEVELS = 60;
+const TUMBLE_FALLS = ['oops, a little slip', 'a little tumble', 'whoops, a slip', 'tumble! it happens'];
 let tumble = null;          // live game state
 let tumbleKeys = { left: false, right: false };
 let tumbleJumpQueued = 0;   // seconds left on a buffered jump press
@@ -20,10 +21,12 @@ function tumbleRand(seed) {
 // A guaranteed path runs through every level; everything else is scenery and shortcuts.
 function tumbleLevel(n) {
   const rnd = tumbleRand(n * 7919 + 13);
-  const sides = n <= 4 ? 4 : n <= 7 ? 5 : 6;
-  const len = 70 + n * 18;
-  const density = Math.max(0.3, 0.9 - n * 0.065);
-  const maxGap = n < 3 ? 1 : n < 6 ? 2 : 3;
+  // difficulty ramps gently over all levels: faster, more sides, fewer spare tiles, wider gaps
+  const t = (n - 1) / (TUMBLE_LEVELS - 1);
+  const sides = n <= 8 ? 4 : n <= 18 ? 5 : n <= 30 ? 6 : n <= 44 ? 7 : 8;
+  const len = 70 + Math.round(n * 7);
+  const density = 0.9 - 0.6 * t;
+  const maxGap = n < 4 ? 1 : n < 14 ? 2 : 3;
   const rows = [];
   for (let r = 0; r < len + 14; r++) {
     rows.push(Array.from({ length: sides }, () => r < 10 || r >= len || rnd() < density));
@@ -44,7 +47,7 @@ function tumbleLevel(n) {
       safe = next; r += 6;
     }
   }
-  return { n, sides, len, rows, speed: 4.5 + n * 0.33 };
+  return { n, sides, len, rows, speed: 4.8 + 3.5 * t };
 }
 
 function tumbleSaved() {
@@ -117,7 +120,7 @@ function tumbleStep(dt) {
     }
   }
   if (s.falling && s.h < -1.6) {
-    s.state = 'fell'; s.tries++; tumbleSave(); tumbleHud();
+    s.state = 'fell'; s.tries++; s.fallMsg = TUMBLE_FALLS[Math.floor(Math.random() * TUMBLE_FALLS.length)]; tumbleSave(); tumbleHud();
   }
   if (s.z >= L.len + 5) {
     s.state = 'cleared';
@@ -187,7 +190,7 @@ function tumbleDraw(ctx, W, H) {
   if (s.state !== 'playing') {
     const msg = {
       ready: [`level ${L.n}`, 'tap or press space to begin'],
-      fell: ['oops, a little slip', 'tap or press space to try again'],
+      fell: [s.fallMsg || TUMBLE_FALLS[0], 'tap or press space to try again'],
       cleared: L.n < TUMBLE_LEVELS ? ['level cleared ✿', `tap for level ${L.n + 1}`] : ['every level cleared ✿', 'tap to start again from level 1']
     }[s.state];
     ctx.fillStyle = 'rgba(18,34,26,.55)'; ctx.fillRect(0, 0, W, H);
@@ -236,13 +239,9 @@ function tumbleDrawSprout(ctx, verts, P, dp, F) {
   ctx.fillStyle = '#fffaf0';   // little sparkles in the eyes
   ctx.beginPath(); ctx.arc(-u * 0.20, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
   ctx.beginPath(); ctx.arc(u * 0.28, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
-  // a tiny kawaii smile (ω)
+  // a simple little smile
   ctx.strokeStyle = '#2f4a36'; ctx.lineWidth = Math.max(1.2, u * 0.06); ctx.lineCap = 'round';
-  ctx.beginPath();
-  ctx.arc(-u * 0.07, -u * 0.9 - bob, u * 0.07, 0.15 * Math.PI, 0.95 * Math.PI);
-  ctx.moveTo(u * 0.14, -u * 0.9 - bob);
-  ctx.arc(u * 0.07, -u * 0.9 - bob, u * 0.07, 0.05 * Math.PI, 0.85 * Math.PI);
-  ctx.stroke();
+  ctx.beginPath(); ctx.arc(0, -u * 0.96 - bob, u * 0.13, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke();
   // sprout on top
   ctx.strokeStyle = '#7f9c6c'; ctx.lineWidth = Math.max(1.5, u * 0.09); ctx.lineCap = 'round';
   ctx.beginPath(); ctx.moveTo(0, -u * 1.75 - bob); ctx.quadraticCurveTo(u * 0.05, -u * 2.05 - bob, 0, -u * 2.2 - bob); ctx.stroke();
@@ -257,7 +256,7 @@ function tumbleHud() {
   if (!sel || !tumble) return;
   sel.innerHTML = Array.from({ length: tumble.unlocked }, (_, i) => `<option value="${i + 1}">level ${i + 1}</option>`).join('');
   sel.value = tumble.level.n;
-  $('#tumbleInfo').textContent = `${tumble.level.sides}-sided tunnel · ${tumble.tries} slips so far`;
+  $('#tumbleInfo').textContent = `${tumble.level.sides}-sided tunnel · ${tumble.tries} slips and tumbles so far`;
 }
 
 function drawTumble() {
