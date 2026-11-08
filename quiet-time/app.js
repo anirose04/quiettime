@@ -1,8 +1,8 @@
 const $=s=>document.querySelector(s), app=$('#app');const storage={get(k){try{return JSON.parse(localStorage.getItem('lg-'+k))}catch{return null}},set(k,v){localStorage.setItem('lg-'+k,JSON.stringify(v))}};
-const sites={murdoku:'https://murdoku.com/',nyt:'https://www.nytimes.com/crosswords',murdle:'https://murdle.com/',gutenberg:'https://www.gutenberg.org/','little-daily':'https://thelittledaily.com/',trust:'https://ncase.me/trust/',owid:'https://ourworldindata.org/','mit-ocw':'https://ocw.mit.edu/'};
+const sites={murdoku:'https://murdoku.com/',nyt:'https://www.nytimes.com/crosswords',murdle:'https://murdle.com/','little-daily':'https://thelittledaily.com/'};
 // timer-only activities: done away from the screen, timed by the quiet session itself
 const timerPages={'mary-oliver':'mary oliver time','stretching':'stretching time','coloring':'coloring time'};
-const sessionChoices=[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['tumble','tumble'],['garden','data garden'],['write','just write'],...Object.entries(timerPages)];
+const sessionChoices=[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['tumble','tumble'],['garden','data garden'],['history','the history paper'],['write','just write'],...Object.entries(timerPages)];
 let quiet=storage.get('quiet-session');
 function activeQuiet(){if(!quiet)return false;if(quiet.pausedLeft!=null)return true;if(Date.now()>=quiet.until){if(timerPages[quiet.page])storage.set('timer-done',quiet.page);quiet=null;storage.set('quiet-session',null);return false}return true}
 function sessionRemaining(){if(!activeQuiet())return '';let secs=Math.ceil((quiet.pausedLeft??quiet.until-Date.now())/1000);return Math.floor(secs/60)+':'+String(secs%60).padStart(2,'0')}
@@ -15,8 +15,8 @@ function requestEarlyEnd(){if(!activeQuiet())return;const existing=$('#quietExit
 // the homepage collection: [heading, [[id, name, kind]]]; kind sets the card colour
 const collection=[
  ['games',[['sudoku','sudoku','games'],['minesweeper','minesweeper','games'],['solitaire','solitaire','games'],['murdoku','murdoku','games'],['nyt','nyt games','games'],['murdle','murdle','games'],['little-daily','the little daily','games'],['tumble','tumble','games']]],
- ['words',[['write','just write','writing'],['gutenberg','project gutenberg','reading']]],
- ['explore',[['garden','data garden','learning'],['trust','the evolution of trust','learning'],['owid','our world in data','learning'],['mit-ocw','mit opencourseware','learning']]],
+ ['words',[['write','just write','writing']]],
+ ['explore',[['garden','data garden','learning'],['history','the history paper','reading']]],
  ['away from the screen',[['mary-oliver','mary oliver time','timer'],['stretching','stretching time','timer'],['coloring','coloring time','timer']]]
 ];
 const names=Object.fromEntries(collection.flatMap(([,items])=>items.map(([id,n])=>[id,n])));
@@ -29,13 +29,10 @@ const icons={
  nyt:`<rect x="8" y="8" width="32" height="32" rx="3"/><path d="M16 8v32M24 8v32M32 8v32M8 16h32M8 24h32M8 32h32"/><path d="M16 8h8v8h-8zM32 24h8v8h-8zM8 32h8v8H8z" class="solid"/>`,
  murdle:`<circle cx="24" cy="24" r="16"/><circle cx="24" cy="20" r="4"/><path d="M22 23.5l-2 8.5h8l-2-8.5"/>`,
  write:`<path d="M8 14h22M8 22h16M8 30h10"/><path d="M24 39l2-7 12-12 5 5-12 12z"/>`,
- gutenberg:`<path d="M24 14c-5-4-11-5-17-4v26c6-1 12 0 17 4 5-4 11-5 17-4V10c-6-1-12 0-17 4zM24 14v26"/>`,
+ history:`<path d="M9 10h26v28a3 3 0 0 0 3 3H12a3 3 0 0 1-3-3z"/><path d="M35 18h4v20a3 3 0 0 1-3 3"/><path d="M14 16h16M14 22h7M14 27h7M14 32h16"/><rect x="24" y="21" width="6" height="7" class="solid"/>`,
  'little-daily':`<path d="M6 34h36M13 34a11 11 0 0 1 22 0M24 11v6M11 19l4 4M37 19l-4 4M15 40h18"/>`,
  tumble:`<circle cx="29" cy="10" r="4"/><path d="M27 16l-5 10 6 5-2 10M22 26l-7 4-3 8M24 19l8 4 5-3M17 20l7-4"/><path d="M6 42h36"/>`,
  garden:`<path d="M8 40h32"/><path d="M14 40V26M24 40V18M34 40V30"/><circle cx="14" cy="22" r="4"/><circle cx="24" cy="13" r="5" class="solid"/><circle cx="34" cy="26" r="4"/>`,
- trust:`<circle cx="18" cy="24" r="11"/><circle cx="30" cy="24" r="11"/>`,
- owid:`<circle cx="24" cy="24" r="16"/><path d="M8 24h32M24 8c-7 5-7 27 0 32M24 8c7 5 7 27 0 32"/>`,
- 'mit-ocw':`<path d="M4 18l20-8 20 8-20 8z"/><path d="M12 22v9c5 4 19 4 24 0v-9M40 20v11"/>`,
  'mary-oliver':`<path d="M10 38C10 21 21 10 39 10c0 18-11 28-29 28zM10 38l17-17"/>`,
  stretching:`<path d="M8 36a16 16 0 0 1 32 0M15 36a9 9 0 0 1 18 0M22 36a2 2 0 0 1 4 0"/>`,
  coloring:`<path d="M24 8a16 16 0 1 0 0 32c3 0 4-2 3-4s0-4 3-4h4a6 6 0 0 0 6-6c0-10-7-18-16-18z"/><circle cx="15" cy="23" r="2" class="solid"/><circle cx="20" cy="15" r="2" class="solid"/><circle cx="29" cy="14" r="2" class="solid"/>`
@@ -51,6 +48,7 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
  else if(page==='minesweeper')drawMinesweeper();
  else if(page==='tumble')drawTumble();
  else if(page==='garden')drawGarden();
+ else if(page==='history')drawHistory();
  else if(page==='write')drawWrite();
  else if(sites[page])external(page);
  else if(timerPages[page])drawTimer(page);
