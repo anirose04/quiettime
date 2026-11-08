@@ -1,0 +1,62 @@
+{
+  "_about": "What the weekly refresh (scripts/psyc-feed.mjs) reads for the psyc paper. Deliberately broad: it is meant to surface things you would not search for, so it follows journals and fields rather than topics or a syllabus. Field journals set a paper's category directly. General journals only contribute papers whose title and abstract clearly match a category below. Edit this file on GitHub to change where new papers come from; no code changes needed.",
+  "settings": {
+    "window_days": 365,
+    "max_per_category": 40,
+    "max_per_topic": 3,
+    "preprint_share": 0.1,
+    "citing_share": 0.25
+  },
+  "journals": {
+    "cognitive": [
+      { "name": "Cognition", "issn": "0010-0277" },
+      { "name": "Journal of Experimental Psychology: General", "issn": "0096-3445" },
+      { "name": "Psychonomic Bulletin & Review", "issn": "1069-9384" },
+      { "name": "Memory & Cognition", "issn": "0090-502X" },
+      { "name": "Cognitive Psychology", "issn": "0010-0285" },
+      { "name": "Journal of Memory and Language", "issn": "0749-596X" },
+      { "name": "Journal of Experimental Psychology: Learning, Memory, and Cognition", "issn": "0278-7393" },
+      { "name": "Cognitive Research: Principles and Implications", "issn": "2365-7464" },
+      { "name": "Journal of Cognition", "issn": "2514-4820" },
+      { "name": "Open Mind", "issn": "2470-2986" },
+      { "name": "Judgment and Decision Making", "issn": "1930-2975" },
+      { "name": "Thinking & Reasoning", "issn": "1354-6783" }
+    ],
+    "social": [
+      { "name": "Journal of Personality and Social Psychology", "issn": "0022-3514" },
+      { "name": "Journal of Experimental Social Psychology", "issn": "0022-1031" },
+      { "name": "Personality and Social Psychology Bulletin", "issn": "0146-1672" },
+      { "name": "Social Psychological and Personality Science", "issn": "1948-5506" },
+      { "name": "European Journal of Social Psychology", "issn": "0046-2772" },
+      { "name": "British Journal of Social Psychology", "issn": "0144-6665" },
+      { "name": "Social Cognition", "issn": "0278-016X" },
+      { "name": "Comprehensive Results in Social Psychology", "issn": "2374-3603" }
+    ],
+    "educational": [
+      { "name": "Journal of Educational Psychology", "issn": "0022-0663" },
+      { "name": "Contemporary Educational Psychology", "issn": "0361-476X" },
+      { "name": "Learning and Instruction", "issn": "0959-4752" },
+      { "name": "Educational Psychology Review", "issn": "1040-726X" },
+      { "name": "British Journal of Educational Psychology", "issn": "0007-0998" },
+      { "name": "npj Science of Learning", "issn": "2056-7936" },
+      { "name": "Instructional Science", "issn": "0020-4277" },
+      { "name": "Journal of Experimental Education", "issn": "0022-0973" }
+    ]
+  },
+  "general_journals": [
+    { "name": "Psychological Science", "issn": "0956-7976" },
+    { "name": "Nature Human Behaviour", "issn": "2397-3374" },
+    { "name": "Communications Psychology", "issn": "3004-8370" },
+    { "name": "Collabra: Psychology", "issn": "2474-7394" },
+    { "name": "Advances in Methods and Practices in Psychological Science", "issn": "2515-2459" },
+    { "name": "Royal Society Open Science", "issn": "2054-5703" },
+    { "name": "PNAS", "issn": "0027-8424" }
+  ],
+  "classify": {
+    "educational": ["student", "classroom", "teacher", "instruct", "school", "tutor", "undergraduate", "education", "curriculum", "academic achievement", "self-regulated learning", "homework", "pedagog"],
+    "social": ["social", "stereotype", "prejudice", "group", "attitude", "persua", "cooperat", "moral", "conversation", "partisan", "conform", "interpersonal", "trust", "prosocial", "polariz"],
+    "cognitive": ["memory", "attention", "perception", "decision", "reasoning", "metacogni", "cognitive", "language", "learning", "belief", "judgment", "reading", "working memory", "bias"]
+  },
+  "exclude_title": ["erratum", "corrigendum", "correction", "retract", "editorial", "commentary", "book review", "call for", "reply to", "response to", "comment on", "protocol", "introduction to the special", "scale validation", "psychometric", "validation of"],
+  "exclude_text": ["patients with", "clinical trial", "schizophrenia", "rodent", " mice ", " rats ", "cancer", "fmri study of"]
+}

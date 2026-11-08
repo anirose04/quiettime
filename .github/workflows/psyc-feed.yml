@@ -1,12 +1,11 @@
-# Weekly refresh of the psyc paper's "fresh off the press" discovery feed.
-# Retrieves bibliographic metadata only (OpenAlex, Crossref, PubMed) and commits
-# quiet-time/data/psyc-feed.json + psyc-feed-status.json. It never writes or verifies research digests.
+# Weekly refresh of the new papers in the psyc paper.
+# Retrieves bibliographic metadata only (OpenAlex, Crossref) and commits
+# quiet-time/data/psyc-feed.json + psyc-feed-status.json. It never writes or verifies research stories:
+# those are written by hand in quiet-time/psyc-discoveries.js.
 #
 # Optional repository secrets (Settings → Secrets and variables → Actions):
-#   OPENALEX_API_KEY  free key from https://openalex.org — strongly recommended (anonymous search is rate-limited)
+#   OPENALEX_API_KEY  free key from https://openalex.org (anonymous search can be rate-limited)
 #   CROSSREF_MAILTO   a contact email for Crossref's polite pool
-#   NCBI_API_KEY      NCBI key for PubMed E-utilities (10 instead of 3 requests/second)
-#   NCBI_EMAIL        contact email NCBI asks API users to send
 name: psyc paper feed
 
 on:
@@ -30,18 +29,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Check the bundled collection
+        run: node scripts/psyc-check.mjs
       - name: Refresh feed (keeps the previous feed if the refresh fails)
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
-          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
-          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
         run: node scripts/psyc-feed.mjs
       - name: Commit changes
         run: |
           git config user.name "psyc-feed bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add quiet-time/data/psyc-feed.json quiet-time/data/psyc-feed-status.json
+          git add quiet-time/data/psyc-feed.json quiet-time/data/psyc-feed-status.json quiet-time/data/psyc-collection.json
           if git diff --cached --quiet; then
             echo "no changes"
           else

@@ -1,0 +1,85 @@
+{
+"_about": "Which papers in the collection appear in which reference lists, from OpenAlex referenced_works. Used by scripts/psyc-check.mjs to validate cites/citedby links.",
+"graph": {
+"bastani2025": [
+"deslauriers2019"
+],
+"camerer2018": [
+"klein2018"
+],
+"carpenter2013": [
+"diemand2011"
+],
+"coles2022": [
+"klein2018",
+"strack1988",
+"wagenmakers2016"
+],
+"deslauriers2019": [
+"carpenter2013",
+"diemand2011"
+],
+"drew2013": [
+"simons1999"
+],
+"ghosting2026": [
+"boothby2018",
+"kumar2018"
+],
+"jaeger2023": [
+"koriat1997"
+],
+"kestin2025": [
+"deslauriers2019"
+],
+"klein2018": [
+"camerer2018"
+],
+"kristal2020": [
+"shu2012"
+],
+"lucca2025": [
+"hamlin2007"
+],
+"meyer2015": [
+"diemand2011"
+],
+"mueller2014": [
+"diemand2011"
+],
+"murphy2022": [
+"koriat1997",
+"metcalfefinn2008"
+],
+"onan2022": [
+"koriat1997",
+"roediger2006"
+],
+"procrast2026": [
+"camerer2018"
+],
+"ruggeri2020": [
+"camerer2018",
+"klein2018"
+],
+"sandstrom2022": [
+"boothby2018"
+],
+"taylor2020": [
+"diemand2011",
+"mueller2014"
+],
+"urry2021": [
+"mueller2014"
+],
+"wagenmakers2016": [
+"strack1988"
+],
+"watts2018": [
+"kidd2013"
+],
+"weinshall2011": [
+"danziger2011"
+]
+}
+}
