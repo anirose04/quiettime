@@ -1,0 +1,50 @@
+# Weekly refresh of the psyc paper's "fresh off the press" discovery feed.
+# Retrieves bibliographic metadata only (OpenAlex, Crossref, PubMed) and commits
+# quiet-time/data/psyc-feed.json + psyc-feed-status.json. It never writes or verifies research digests.
+#
+# Optional repository secrets (Settings → Secrets and variables → Actions):
+#   OPENALEX_API_KEY  free key from https://openalex.org — strongly recommended (anonymous search is rate-limited)
+#   CROSSREF_MAILTO   a contact email for Crossref's polite pool
+#   NCBI_API_KEY      NCBI key for PubMed E-utilities (10 instead of 3 requests/second)
+#   NCBI_EMAIL        contact email NCBI asks API users to send
+name: psyc paper feed
+
+on:
+  schedule:
+    - cron: '17 7 * * 1'   # Mondays 07:17 UTC
+  workflow_dispatch: {}     # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: psyc-feed
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Refresh feed (keeps the previous feed if the refresh fails)
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+        run: node scripts/psyc-feed.mjs
+      - name: Commit changes
+        run: |
+          git config user.name "psyc-feed bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add quiet-time/data/psyc-feed.json quiet-time/data/psyc-feed-status.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "psyc feed: weekly metadata refresh"
+            git push
+          fi

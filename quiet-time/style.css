@@ -328,3 +328,44 @@ canvas.r-plot{display:block;width:100%;max-width:720px;height:auto;border-radius
 .cnotes i{display:block;border-radius:50%;background:var(--c);aspect-ratio:1}
 .color-pad button{display:flex;align-items:center;justify-content:center}
 .color-pad .cdot{width:26px;margin:0}
+
+/* the psyc paper (reuses the history paper's newspaper styles) */
+.p-tabs{display:flex;flex-wrap:wrap;gap:6px;max-width:760px;margin:0 auto 14px}
+.p-tab{font-family:'Courier Prime','Courier New',ui-monospace,monospace;background:#3b5140;color:#f1eedf;border:1px solid #6c806566;border-radius:999px;padding:7px 13px;cursor:pointer}
+.p-tab.active{background:#f4f1e6;color:#293b29}
+.p-badge{display:inline-block;font-size:.7rem;letter-spacing:.04em;border:1px solid #6f6a3c88;color:#6f6a3c;border-radius:3px;padding:0 5px;text-transform:lowercase}
+.p-badge.verified{border-color:#5d7a4f;color:#3f5a3a;background:#dfe8d2}
+.p-badge.pre{border-color:#b0607a;color:#8d4a61}
+.p-badge.kind{border-color:#293b29;color:#293b29}
+.p-vocab{margin-top:16px;text-transform:none}
+.p-featured{border:1px dashed #29392966;border-radius:6px;padding:10px 12px;margin:10px 0 4px;background:#fbf9f1}
+.p-ref{font-size:.88rem;line-height:1.6;margin:0 0 6px;text-transform:none}
+.p-table-wrap{overflow-x:auto;margin:6px 0 8px}
+.p-table{border-collapse:collapse;width:100%;font-size:.85rem;line-height:1.45;text-transform:none}
+.p-table th,.p-table td{border-top:1px solid #29392944;padding:6px 8px;text-align:left;vertical-align:top}
+.p-table th{border-top:2px solid #293b29;font-weight:700}
+.p-note{font-size:.92rem}
+.p-flag{display:block;margin-top:6px;font-size:.82rem;color:#8d4a61;border-left:3px solid #b0607a;padding-left:8px}
+.p-kind{margin:0;color:#6f6a3c}
+.p-cards{display:grid;gap:10px}
+.p-card,.p-arch{background:#fbf9f1;border:1px solid #29392933;border-radius:6px;padding:10px 12px;text-transform:none}
+.p-card.read{opacity:.72}
+.p-card-meta{margin:0 0 4px}
+.p-card-title{font-family:inherit;font-weight:700;font-size:1rem;line-height:1.4;margin:0 0 4px}
+.p-card-line{font-size:.85rem;line-height:1.5;margin:0 0 3px}
+.p-conn{color:#3f5a3a}
+.p-card-links{font-size:.85rem;margin:4px 0}
+.p-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.p-paper .textbtn,.p-card .textbtn,.p-arch .textbtn{color:#293b29;border-color:#29392955;font-family:inherit;padding:3px 9px}
+.p-card .textbtn[aria-pressed="true"]{background:#dfe8d2}
+.p-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 10px;text-transform:none}
+.p-seg{border:0;padding:0;margin:0;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.p-seg legend{float:left;margin-right:6px;font-size:.85rem}
+.p-ctl{font-size:.85rem;display:flex;gap:6px;align-items:center}
+.p-checks{display:flex;flex-wrap:wrap;gap:12px;font-size:.85rem}
+.p-notice{background:#f3dfe5;border-left:4px solid #b0607a;padding:8px 10px;font-size:.88rem;text-transform:none}
+.p-feed-title{font-size:clamp(1.5rem,5vw,2.2rem)}
+.p-provenance{margin-top:14px}
+.p-arch{margin-bottom:8px}.p-arch-title{font-weight:700;margin:0 0 4px}
+.p-group{margin-top:16px}
+.h-paper select.pill{font-family:inherit;color:#293b29;background:#fbf9f1}
+@media(max-width:650px){.p-table{font-size:.78rem}.p-controls{flex-direction:column;align-items:stretch}}

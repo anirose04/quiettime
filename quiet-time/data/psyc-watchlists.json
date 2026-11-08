@@ -1,0 +1,438 @@
+{
+  "_about": "Watchlists for 'fresh off the press'. Edit this file (on GitHub or locally) to change what the weekly refresh looks for — no code changes needed. Topics drive relevance; authors and journals widen the net but never make a paper relevant on their own. IDs are OpenAlex identifiers (https://openalex.org); a person can have more than one ID when OpenAlex has split their record.",
+  "settings": {
+    "window_days": 180,
+    "newly_indexed_days": 30,
+    "min_relevance": 7,
+    "include_preprints": true,
+    "fields": [
+      "Psychology",
+      "Social Sciences",
+      "Neuroscience"
+    ],
+    "max_items": 120
+  },
+  "topics": [
+    {
+      "label": "metacognitive monitoring and control",
+      "terms": [
+        "metacognitive monitoring",
+        "metacognitive control",
+        "metacognition",
+        "metacognitive",
+        "metamemory",
+        "monitoring and control"
+      ]
+    },
+    {
+      "label": "confidence judgments and accuracy",
+      "terms": [
+        "confidence judgment",
+        "confidence judgments",
+        "confidence accuracy",
+        "calibration",
+        "overconfidence",
+        "underconfidence",
+        "resolution",
+        "metacognitive sensitivity",
+        "metacognitive efficiency",
+        "meta-d"
+      ]
+    },
+    {
+      "label": "cue utilization and cue validity",
+      "terms": [
+        "cue utilization",
+        "cue-utilization",
+        "cue validity",
+        "cue use",
+        "cue integration",
+        "diagnostic cue",
+        "mnemonic cue",
+        "intrinsic cue",
+        "extrinsic cue"
+      ]
+    },
+    {
+      "label": "processing fluency, accessibility and familiarity",
+      "terms": [
+        "processing fluency",
+        "perceptual fluency",
+        "retrieval fluency",
+        "encoding fluency",
+        "fluency",
+        "ease of retrieval",
+        "accessibility",
+        "familiarity",
+        "disfluency"
+      ]
+    },
+    {
+      "label": "naive theories and attribution",
+      "terms": [
+        "naive theory",
+        "naive theories",
+        "lay theory",
+        "lay theories",
+        "beliefs about memory",
+        "attribution",
+        "misattribution",
+        "discounting",
+        "theory-based",
+        "experience-based"
+      ]
+    },
+    {
+      "label": "metacognitive knowledge",
+      "terms": [
+        "metacognitive knowledge",
+        "metacognitive beliefs",
+        "strategy knowledge",
+        "knowledge of strategies"
+      ]
+    },
+    {
+      "label": "judgments of learning and feeling of knowing",
+      "terms": [
+        "judgment of learning",
+        "judgments of learning",
+        "JOL",
+        "JOLs",
+        "feeling of knowing",
+        "feeling-of-knowing",
+        "ease of learning",
+        "tip of the tongue",
+        "metacomprehension"
+      ]
+    },
+    {
+      "label": "study-time allocation and control models",
+      "terms": [
+        "study time allocation",
+        "study-time allocation",
+        "study choice",
+        "restudy",
+        "self-paced study",
+        "region of proximal learning",
+        "discrepancy reduction",
+        "agenda-based regulation",
+        "labor in vain",
+        "value-directed remembering"
+      ]
+    },
+    {
+      "label": "uncertainty and judgment",
+      "terms": [
+        "judgment under uncertainty",
+        "decision under uncertainty",
+        "uncertainty",
+        "subjective probability",
+        "heuristics",
+        "availability heuristic"
+      ]
+    },
+    {
+      "label": "self-regulated learning",
+      "terms": [
+        "self-regulated learning",
+        "self-regulation of learning",
+        "learning strategies",
+        "desirable difficulties",
+        "interleaving",
+        "retrieval practice",
+        "spacing"
+      ]
+    },
+    {
+      "label": "motivation and self-worth",
+      "terms": [
+        "self-worth",
+        "self-handicapping",
+        "achievement goals",
+        "mastery goals",
+        "performance goals",
+        "effort avoidance",
+        "academic motivation",
+        "fear of failure"
+      ]
+    },
+    {
+      "label": "attention, resources and learning decisions",
+      "terms": [
+        "cognitive load",
+        "mental effort",
+        "perceived effort",
+        "time pressure",
+        "divided attention",
+        "effort regulation",
+        "resource constraints"
+      ]
+    }
+  ],
+  "require_any": [
+    "learning",
+    "learner",
+    "memory",
+    "judgment",
+    "judgement",
+    "confidence",
+    "metacogn",
+    "student",
+    "recall",
+    "decision",
+    "study",
+    "monitoring"
+  ],
+  "exclude_terms": [
+    "large language model",
+    "LLM",
+    "deep learning",
+    "neural network",
+    "reinforcement learning",
+    "transformer",
+    "federated",
+    "robot",
+    "wireless",
+    "6G",
+    "datacenter",
+    "power allocation",
+    "bibliometric",
+    "S-REF",
+    "metacognitive therapy",
+    "psychiatry",
+    "psychiatric",
+    "schizophrenia",
+    "psychosis"
+  ],
+  "authors": [
+    {
+      "name": "Asher Koriat",
+      "openalex": [
+        "A5052370962"
+      ]
+    },
+    {
+      "name": "John Dunlosky",
+      "openalex": [
+        "A5034336197"
+      ]
+    },
+    {
+      "name": "Janet Metcalfe",
+      "openalex": [
+        "A5061509248"
+      ]
+    },
+    {
+      "name": "Nate Kornell",
+      "openalex": [
+        "A5064113756"
+      ]
+    },
+    {
+      "name": "Rakefet Ackerman",
+      "openalex": [
+        "A5063867736"
+      ]
+    },
+    {
+      "name": "Monika Undorf",
+      "openalex": [
+        "A5026829499"
+      ]
+    },
+    {
+      "name": "Keith W. Thiede",
+      "openalex": [
+        "A5038239597"
+      ]
+    },
+    {
+      "name": "Anastasia Efklides",
+      "openalex": [
+        "A5025411561"
+      ]
+    },
+    {
+      "name": "Philip H. Winne",
+      "openalex": [
+        "A5069400021",
+        "A5153327105"
+      ]
+    },
+    {
+      "name": "Bennett L. Schwartz",
+      "openalex": [
+        "A5054776004"
+      ]
+    },
+    {
+      "name": "Matthew G. Rhodes",
+      "openalex": [
+        "A5081194171"
+      ]
+    },
+    {
+      "name": "Alan D. Castel",
+      "openalex": [
+        "A5014896812"
+      ]
+    },
+    {
+      "name": "Anique B. H. de Bruin",
+      "openalex": [
+        "A5069192964"
+      ]
+    },
+    {
+      "name": "Daniel M. Oppenheimer",
+      "openalex": [
+        "A5033148711"
+      ]
+    },
+    {
+      "name": "Norbert Schwarz",
+      "openalex": [
+        "A5034259217"
+      ]
+    },
+    {
+      "name": "Jennifer Wiley",
+      "openalex": [
+        "A5028420397"
+      ]
+    },
+    {
+      "name": "Logan Fiorella",
+      "openalex": [
+        "A5018951844"
+      ]
+    }
+  ],
+  "journals": [
+    {
+      "name": "Metacognition and Learning",
+      "issn": "1556-1623"
+    },
+    {
+      "name": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+      "issn": "0278-7393"
+    },
+    {
+      "name": "Journal of Experimental Psychology: General",
+      "issn": "0096-3445"
+    },
+    {
+      "name": "Memory & Cognition",
+      "issn": "0090-502X"
+    },
+    {
+      "name": "Psychonomic Bulletin & Review",
+      "issn": "1069-9384"
+    },
+    {
+      "name": "Educational Psychology Review",
+      "issn": "1040-726X"
+    },
+    {
+      "name": "Journal of Memory and Language",
+      "issn": "0749-596X"
+    },
+    {
+      "name": "Learning and Instruction",
+      "issn": "0959-4752"
+    },
+    {
+      "name": "Journal of Educational Psychology",
+      "issn": "0022-0663"
+    },
+    {
+      "name": "Contemporary Educational Psychology",
+      "issn": "0361-476X"
+    },
+    {
+      "name": "Psychological Science",
+      "issn": "0956-7976"
+    },
+    {
+      "name": "Cognition",
+      "issn": "0010-0277"
+    },
+    {
+      "name": "Memory",
+      "issn": "0965-8211"
+    },
+    {
+      "name": "Journal of Applied Research in Memory and Cognition",
+      "issn": "2211-3681"
+    },
+    {
+      "name": "Consciousness and Cognition",
+      "issn": "1053-8100"
+    },
+    {
+      "name": "Journal of Behavioral Decision Making",
+      "issn": "0894-3257"
+    },
+    {
+      "name": "Judgment and Decision Making",
+      "issn": "1930-2975"
+    },
+    {
+      "name": "Thinking & Reasoning",
+      "issn": "1354-6783"
+    }
+  ],
+  "foundational": [
+    {
+      "key": "koriat1997",
+      "label": "Koriat (1997), cue-utilization approach to JOLs",
+      "doi": "10.1037/0096-3445.126.4.349",
+      "openalex": "W2019760471"
+    },
+    {
+      "key": "metcalfefinn2008",
+      "label": "Metcalfe & Finn (2008), JOLs causally related to study choice",
+      "doi": "10.3758/PBR.15.1.174",
+      "openalex": "W2156525945"
+    },
+    {
+      "key": "oppenheimer2004",
+      "label": "Oppenheimer (2004), spontaneous discounting of availability",
+      "doi": "10.1111/j.0963-7214.2004.01502005.x",
+      "openalex": "W2102827992"
+    },
+    {
+      "key": "koriatbjork2005",
+      "label": "Koriat & Bjork (2005), illusions of competence",
+      "doi": "10.1037/0278-7393.31.2.187",
+      "openalex": "W2056938988"
+    },
+    {
+      "key": "kirkjohnson2019",
+      "label": "Kirk-Johnson et al. (2019), misinterpreted-effort hypothesis",
+      "doi": "10.1016/j.cogpsych.2019.101237",
+      "openalex": "W2970939575"
+    },
+    {
+      "key": "kna2014",
+      "label": "Koriat, Nussinson & Ackerman (2014), interpreting study effort",
+      "doi": "10.1037/xlm0000009",
+      "openalex": "W2096473415"
+    },
+    {
+      "key": "schwarz1991",
+      "label": "Schwarz et al. (1991), ease of retrieval as information",
+      "doi": "10.1037/0022-3514.61.2.195",
+      "openalex": "W2147792648"
+    }
+  ],
+  "related": {
+    "_about": "Papers in your collection whose new citing articles should be watched. Add DOIs (the psyc paper's archive can copy the DOIs of your saved papers for you).",
+    "dois": [
+      "10.1007/s11409-023-09370-x",
+      "10.1007/s10648-022-09692-3",
+      "10.3758/s13421-022-01307-0"
+    ]
+  }
+}

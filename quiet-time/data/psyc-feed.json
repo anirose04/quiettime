@@ -1,0 +1,3784 @@
+{
+ "generated_at": "2026-11-08T16:01:43.565Z",
+ "as_of": "2026-11-08",
+ "window_days": 180,
+ "status_vocabulary": {
+  "discovered": "bibliographic record retrieved and checked enough to identify the work — nothing in this feed has been reviewed or verified"
+ },
+ "providers": {
+  "openalex": "search, citations, topics, open-access locations",
+  "crossref": "online/issue/deposit dates, types, preprint relations, update notices",
+  "pubmed": "publication types where indexed"
+ },
+ "counts": {
+  "candidates": 1433,
+  "passed_relevance": 52,
+  "items": 51
+ },
+ "foundational": [
+  {
+   "key": "koriat1997",
+   "label": "Koriat (1997), cue-utilization approach to JOLs",
+   "openalex": "W2019760471",
+   "doi": "10.1037/0096-3445.126.4.349"
+  },
+  {
+   "key": "metcalfefinn2008",
+   "label": "Metcalfe & Finn (2008), JOLs causally related to study choice",
+   "openalex": "W2156525945",
+   "doi": "10.3758/PBR.15.1.174"
+  },
+  {
+   "key": "oppenheimer2004",
+   "label": "Oppenheimer (2004), spontaneous discounting of availability",
+   "openalex": "W2102827992",
+   "doi": "10.1111/j.0963-7214.2004.01502005.x"
+  },
+  {
+   "key": "koriatbjork2005",
+   "label": "Koriat & Bjork (2005), illusions of competence",
+   "openalex": "W2056938988",
+   "doi": "10.1037/0278-7393.31.2.187"
+  },
+  {
+   "key": "kirkjohnson2019",
+   "label": "Kirk-Johnson et al. (2019), misinterpreted-effort hypothesis",
+   "openalex": "W2970939575",
+   "doi": "10.1016/j.cogpsych.2019.101237"
+  },
+  {
+   "key": "kna2014",
+   "label": "Koriat, Nussinson & Ackerman (2014), interpreting study effort",
+   "openalex": "W2096473415",
+   "doi": "10.1037/xlm0000009"
+  },
+  {
+   "key": "schwarz1991",
+   "label": "Schwarz et al. (1991), ease of retrieval as information",
+   "openalex": "W2147792648",
+   "doi": "10.1037/0022-3514.61.2.195"
+  }
+ ],
+ "items": [
+  {
+   "id": "doi:10.3758/s13423-026-03030-2",
+   "doi": "10.3758/s13423-026-03030-2",
+   "openalex": "W7223252160",
+   "title": "Are restudy decisions reactively altered by judgments of learning? Insights from related and unrelated word pairs",
+   "authors": [
+    "Franziska Ingendahl",
+    "Monika Undorf"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Psychonomic Bulletin & Review",
+    "issn": "1069-9384",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-22",
+    "indexed_openalex": "2026-10-23T00:00:00",
+    "online": "2026-10-22",
+    "issue": "2026-12",
+    "crossref_deposit": "2026-10-22",
+    "primary": "2026-10-22",
+    "online_first": true
+   },
+   "links": {
+    "doi": "https://doi.org/10.3758/s13423-026-03030-2",
+    "landing": "https://doi.org/10.3758/s13423-026-03030-2",
+    "oa": "https://link.springer.com/content/pdf/10.3758/s13423-026-03030-2.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Psychonomic Bulletin & Review"
+   },
+   "relevance": {
+    "score": 15,
+    "matched": {
+     "title": [
+      "judgments of learning and feeling of knowing",
+      "study-time allocation and control models"
+     ],
+     "abstract": [
+      "metacognitive monitoring and control"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Monika Undorf"
+    ],
+    "watched_journal": "Psychonomic Bulletin & Review",
+    "found_via": [
+     "topic",
+     "author",
+     "journal"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997",
+     "metcalfefinn2008"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: judgments of learning and feeling of knowing; also study-time allocation and control models, metacognitive monitoring and control (from title metadata).",
+   "pmid": "42918958",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/13546783.2026.2743518",
+   "doi": "10.1080/13546783.2026.2743518",
+   "openalex": "W7220837415",
+   "title": "Running out of (perceived) time: the role of subjective time in metacognitive regulation of mental effort",
+   "authors": [
+    "Nira Munichor",
+    "Shahar Gat",
+    "Rakefet Ackerman"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Thinking & Reasoning",
+    "issn": "1354-6783",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-07",
+    "indexed_openalex": "2026-10-08T00:00:00",
+    "online": "2026-10-07",
+    "issue": null,
+    "crossref_deposit": "2026-10-07",
+    "primary": "2026-10-07",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1080/13546783.2026.2743518",
+    "landing": "https://doi.org/10.1080/13546783.2026.2743518",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 13,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "attention, resources and learning decisions"
+     ],
+     "abstract": [],
+     "keywords": [
+      "confidence judgments and accuracy"
+     ]
+    },
+    "watched_authors": [
+     "Rakefet Ackerman"
+    ],
+    "watched_journal": "Thinking & Reasoning",
+    "found_via": [
+     "topic",
+     "author",
+     "journal"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also attention, resources and learning decisions, confidence judgments and accuracy (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.actpsy.2026.107715",
+   "doi": "10.1016/j.actpsy.2026.107715",
+   "openalex": "W7204519187",
+   "title": "The relationship between judgment-of-learning resolution and the contribution of item-level processing experience versus global prior beliefs",
+   "authors": [
+    "Yahua Li",
+    "Xun Chen",
+    "Jingyi Shi",
+    "WU Jian-yuan",
+    "Chunliang Yang",
+    "Liang Luo",
+    "Xiao Hu"
+   ],
+   "author_count": 7,
+   "source": {
+    "name": "Acta Psychologica",
+    "issn": "0001-6918",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-08-28",
+    "indexed_openalex": "2026-08-29T00:00:00",
+    "online": null,
+    "issue": "2026-10",
+    "crossref_deposit": "2026-08-28",
+    "primary": "2026-08-28",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.actpsy.2026.107715",
+    "landing": "https://doi.org/10.1016/j.actpsy.2026.107715",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0001691826015167/pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Acta Psychologica"
+   },
+   "relevance": {
+    "score": 13,
+    "matched": {
+     "title": [
+      "confidence judgments and accuracy",
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [
+      "metacognitive monitoring and control",
+      "naive theories and attribution"
+     ],
+     "keywords": [
+      "cue utilization and cue validity"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997",
+     "metcalfefinn2008"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: confidence judgments and accuracy; also judgments of learning and feeling of knowing, metacognitive monitoring and control (from title metadata).",
+   "pmid": "42664927",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3390/bs16071103",
+   "doi": "10.3390/bs16071103",
+   "openalex": "W7167048471",
+   "title": "Inter-Item Differences in Metacognitive Judgments: Insights into the Collective Wisdomware Underlying These Judgments",
+   "authors": [
+    "Asher Koriat",
+    "Noam Yehudai"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Behavioral Sciences",
+    "issn": "2076-328X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-07-02",
+    "indexed_openalex": "2026-07-03T00:00:00",
+    "online": "2026-07-02",
+    "issue": null,
+    "crossref_deposit": "2026-07-02",
+    "primary": "2026-07-02",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3390/bs16071103",
+    "landing": "https://doi.org/10.3390/bs16071103",
+    "oa": "https://doi.org/10.3390/bs16071103",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Behavioral Sciences"
+   },
+   "relevance": {
+    "score": 12,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "confidence judgments and accuracy",
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Asher Koriat"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997",
+     "metcalfefinn2008"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, judgments of learning and feeling of knowing (from title metadata).",
+   "pmid": "42510224",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.cognition.2026.106730",
+   "doi": "10.1016/j.cognition.2026.106730",
+   "openalex": "W7214489139",
+   "title": "Semantic generation masks value directed remembering in memory but not metamemory: Evidence from truth-telling and lie fabrication",
+   "authors": [
+    "Samet Kaya",
+    "Miri Besken"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Cognition",
+    "issn": "0010-0277",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-26",
+    "indexed_openalex": "2026-09-27T00:00:00",
+    "online": null,
+    "issue": "2027-01",
+    "crossref_deposit": "2026-09-26",
+    "primary": "2026-09-26",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106730",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106730",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0010027726002994/pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by-nc-nd",
+    "oa_host": "Cognition"
+   },
+   "relevance": {
+    "score": 12,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "study-time allocation and control models"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Cognition",
+    "found_via": [
+     "topic",
+     "cites-collection"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": [
+     "10.3758/s13421-022-01307-0"
+    ]
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also study-time allocation and control models, judgments of learning and feeling of knowing (from title metadata).",
+   "pmid": "42800086",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.48127/spvk-epmq/26.17.07",
+   "doi": "10.48127/spvk-epmq/26.17.07",
+   "openalex": "W7223180654",
+   "title": "AIŠKINAMŲJŲ PAVEIKSLŲ IR METAKOGNITYVINIO KALIBRAVIMOSI TIKSLUMO SĄSAJOS GAMTAMOKSLINIAME UGDYME [EXPLANATORY IMAGES AND METACOGNITIVE CALIBRATION ACCURACY IN SCIENCE EDUCATION]",
+   "authors": [
+    "Aušrinė Raudoniūtė"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "ŠVIETIMAS POLITIKA VADYBA KOKYBĖ / EDUCATION POLICY MANAGEMENT AND QUALITY",
+    "issn": "2029-1922",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-12",
+    "indexed_openalex": "2026-10-22T00:00:00",
+    "online": "2026-10-22",
+    "issue": "2026-10-12",
+    "crossref_deposit": "2026-10-22",
+    "primary": "2026-10-22",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.48127/spvk-epmq/26.17.07",
+    "landing": "https://doi.org/10.48127/spvk-epmq/26.17.07",
+    "oa": "http://gu.puslapiai.lt/spvk/wp-content/uploads/sites/3/journal/published_paper/volume-17/issue-1/oWDLcFrx.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": null,
+    "oa_host": "ŠVIETIMAS POLITIKA VADYBA KOKYBĖ / EDUCATION POLICY MANAGEMENT AND QUALITY"
+   },
+   "relevance": {
+    "score": 11,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "confidence judgments and accuracy"
+     ],
+     "abstract": [
+      "self-regulated learning"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "cites-collection"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": [
+     "10.1007/s11409-023-09370-x"
+    ]
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, self-regulated learning (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1177/17470218261500053",
+   "doi": "10.1177/17470218261500053",
+   "openalex": "W7223187669",
+   "title": "EXPRESS: The Dynamics of Cue Integration in Metacognitive Judgments",
+   "authors": [
+    "Luisa Marie Schulz",
+    "Arndt Bröder",
+    "Monika Undorf"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Quarterly Journal of Experimental Psychology",
+    "issn": "0033-555X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-21",
+    "indexed_openalex": "2026-10-22T00:00:00",
+    "online": "2026-10-21",
+    "issue": null,
+    "crossref_deposit": "2026-10-22",
+    "primary": "2026-10-21",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1177/17470218261500053",
+    "landing": "https://doi.org/10.1177/17470218261500053",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 10,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "cue utilization and cue validity"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Monika Undorf"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also cue utilization and cue validity, judgments of learning and feeling of knowing (from title metadata).",
+   "pmid": "42908206",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/09658211.2026.2691574",
+   "doi": "10.1080/09658211.2026.2691574",
+   "openalex": "W7165573184",
+   "title": "Revisiting the confidence-accuracy relationship in eyewitness identification: a metacognitive perspective",
+   "authors": [
+    "Chenxin Yu",
+    "Kara N. Moore"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Memory",
+    "issn": "0965-8211",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "review",
+   "article_type_basis": "PubMed publication type",
+   "dates": {
+    "openalex_publication": "2026-06-22",
+    "indexed_openalex": "2026-06-23T00:00:00",
+    "online": "2026-06-22",
+    "issue": "2026-09-14",
+    "crossref_deposit": "2026-06-23",
+    "primary": "2026-06-22",
+    "online_first": true
+   },
+   "links": {
+    "doi": "https://doi.org/10.1080/09658211.2026.2691574",
+    "landing": "https://doi.org/10.1080/09658211.2026.2691574",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 10,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "confidence judgments and accuracy"
+     ],
+     "abstract": [
+      "uncertainty and judgment"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Memory",
+    "found_via": [
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, uncertainty and judgment (from title metadata).",
+   "pmid": "42331394",
+   "pubmed_types": [
+    "Journal Article",
+    "Review"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1021/acs.jchemed.6c00013",
+   "doi": "10.1021/acs.jchemed.6c00013",
+   "openalex": "W7203600014",
+   "title": "Generative Artificial Intelligence in Medicinal Chemistry Education: Student Engagement, Confidence Calibration, and Safety-Related Uncertainty in Case-Based Learning",
+   "authors": [
+    "Afaf Hasan Al-Nadaf"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "Journal of Chemical Education",
+    "issn": "0021-9584",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-08-17",
+    "indexed_openalex": "2026-08-18T00:00:00",
+    "online": "2026-08-17",
+    "issue": "2026-09-08",
+    "crossref_deposit": "2026-08-17",
+    "primary": "2026-08-17",
+    "online_first": true
+   },
+   "links": {
+    "doi": "https://doi.org/10.1021/acs.jchemed.6c00013",
+    "landing": "https://doi.org/10.1021/acs.jchemed.6c00013",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 10,
+    "matched": {
+     "title": [
+      "confidence judgments and accuracy",
+      "uncertainty and judgment"
+     ],
+     "abstract": [
+      "metacognitive monitoring and control",
+      "processing fluency, accessibility and familiarity"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: confidence judgments and accuracy; also uncertainty and judgment, metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3390/jintelligence14070145",
+   "doi": "10.3390/jintelligence14070145",
+   "openalex": "W7168188519",
+   "title": "Making Judgments of Learning Increases Restudy Choices: Evidence for Reactivity in Metacognitive Control",
+   "authors": [
+    "Meng Liu",
+    "Yanlu Qi",
+    "Mingliang Hu",
+    "Ningxin Su",
+    "Baike Li"
+   ],
+   "author_count": 5,
+   "source": {
+    "name": "Journal of Intelligence",
+    "issn": "2079-3200",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-07-11",
+    "indexed_openalex": "2026-07-14T00:00:00",
+    "online": "2026-07-11",
+    "issue": null,
+    "crossref_deposit": "2026-07-13",
+    "primary": "2026-07-11",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3390/jintelligence14070145",
+    "landing": "https://doi.org/10.3390/jintelligence14070145",
+    "oa": "https://www.mdpi.com/2079-3200/14/7/145/pdf?version=1783762793",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Journal of Intelligence"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "judgments of learning and feeling of knowing",
+      "study-time allocation and control models"
+     ],
+     "abstract": [],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also judgments of learning and feeling of knowing, study-time allocation and control models (from title metadata).",
+   "pmid": "42505956",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3390/jintelligence14100237",
+   "doi": "10.3390/jintelligence14100237",
+   "openalex": "W7216256866",
+   "title": "Math Anxiety and Metacognition: How Numerical Content Shapes Confidence",
+   "authors": [
+    "Yael Sidi",
+    "Kinga Morsanyi",
+    "Rakefet Ackerman"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Journal of Intelligence",
+    "issn": "2079-3200",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-02",
+    "indexed_openalex": "2026-10-03T00:00:00",
+    "online": "2026-10-02",
+    "issue": null,
+    "crossref_deposit": "2026-10-02",
+    "primary": "2026-10-02",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3390/jintelligence14100237",
+    "landing": "https://doi.org/10.3390/jintelligence14100237",
+    "oa": "https://doi.org/10.3390/jintelligence14100237",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Journal of Intelligence"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "confidence judgments and accuracy"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Rakefet Ackerman"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy (from title metadata).",
+   "pmid": "42930951",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1177/13621688261485406",
+   "doi": "10.1177/13621688261485406",
+   "openalex": "W7213658930",
+   "title": "When Scripts Matter: Writing-System Effects on Metacognitive Calibration in Inferential Word Learning",
+   "authors": [
+    "Mikhail Ordin",
+    "Leona Polyanskaya"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Language Teaching Research",
+    "issn": "1362-1688",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-18",
+    "indexed_openalex": "2026-09-20T00:00:00",
+    "online": "2026-09-18",
+    "issue": null,
+    "crossref_deposit": "2026-09-19",
+    "primary": "2026-09-18",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1177/13621688261485406",
+    "landing": "https://doi.org/10.1177/13621688261485406",
+    "oa": "https://doi.org/10.1177/13621688261485406",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by-nc",
+    "oa_host": "Language Teaching Research"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "confidence judgments and accuracy"
+     ],
+     "abstract": [
+      "processing fluency, accessibility and familiarity"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, processing fluency, accessibility and familiarity (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11409-026-09469-x",
+   "doi": "10.1007/s11409-026-09469-x",
+   "openalex": "W7162452819",
+   "title": "Teacher judgments of student self-regulated learning – Examining the effect of student and teacher characteristics",
+   "authors": [
+    "Sabrina Nadja Brunner",
+    "Yves Karlen"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Metacognition and Learning",
+    "issn": "1556-1623",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-05-26",
+    "indexed_openalex": "2026-05-27T00:00:00",
+    "online": "2026-05-26",
+    "issue": null,
+    "crossref_deposit": "2026-05-26",
+    "primary": "2026-05-26",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11409-026-09469-x",
+    "landing": "https://doi.org/10.1007/s11409-026-09469-x",
+    "oa": "https://link.springer.com/content/pdf/10.1007/s11409-026-09469-x.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by-nc-nd",
+    "oa_host": "Metacognition and Learning"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "self-regulated learning"
+     ],
+     "abstract": [
+      "metacognitive monitoring and control",
+      "cue utilization and cue validity",
+      "metacognitive knowledge"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Metacognition and Learning",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: self-regulated learning; also metacognitive monitoring and control, cue utilization and cue validity (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11409-026-09478-w",
+   "doi": "10.1007/s11409-026-09478-w",
+   "openalex": "W7165571620",
+   "title": "An afforded elaboration mechanism of judgment of learning reactivity",
+   "authors": [
+    "Florian Scholten",
+    "Zachary Adolph Niese"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Metacognition and Learning",
+    "issn": "1556-1623",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-06-22",
+    "indexed_openalex": "2026-06-23T00:00:00",
+    "online": "2026-06-22",
+    "issue": null,
+    "crossref_deposit": "2026-06-22",
+    "primary": "2026-06-22",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11409-026-09478-w",
+    "landing": "https://doi.org/10.1007/s11409-026-09478-w",
+    "oa": "https://doi.org/10.1007/s11409-026-09478-w",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Metacognition and Learning"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": "Metacognition and Learning",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997",
+     "koriatbjork2005",
+     "metcalfefinn2008"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: judgments of learning and feeling of knowing; also metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3390/jintelligence14090198",
+   "doi": "10.3390/jintelligence14090198",
+   "openalex": "W7204876719",
+   "title": "Aha! Ratings as Metacognitive Judgments",
+   "authors": [
+    "Jennifer Wiley",
+    "Taylor Strickland Miller"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Journal of Intelligence",
+    "issn": "2079-3200",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-01",
+    "indexed_openalex": "2026-09-02T00:00:00",
+    "online": "2026-09-01",
+    "issue": null,
+    "crossref_deposit": "2026-09-01",
+    "primary": "2026-09-01",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3390/jintelligence14090198",
+    "landing": "https://doi.org/10.3390/jintelligence14090198",
+    "oa": "https://doi.org/10.3390/jintelligence14090198",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Journal of Intelligence"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Jennifer Wiley"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also judgments of learning and feeling of knowing (from title metadata).",
+   "pmid": "42783558",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3389/fpsyg.2026.1926110",
+   "doi": "10.3389/fpsyg.2026.1926110",
+   "openalex": "W7213299655",
+   "title": "College students' metacognitive awareness of generative-AI reliance: an experimental study of decision confidence and attribution bias",
+   "authors": [
+    "Shaowei Ren"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "Frontiers in Psychology",
+    "issn": "1664-1078",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-15",
+    "indexed_openalex": "2026-09-16T00:00:00",
+    "online": "2026-09-15",
+    "issue": null,
+    "crossref_deposit": "2026-09-15",
+    "primary": "2026-09-15",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3389/fpsyg.2026.1926110",
+    "landing": "https://doi.org/10.3389/fpsyg.2026.1926110",
+    "oa": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1926110/pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Frontiers in Psychology"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "naive theories and attribution"
+     ],
+     "abstract": [
+      "confidence judgments and accuracy"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also naive theories and attribution, confidence judgments and accuracy (from title metadata).",
+   "pmid": "42812513",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3758/s13421-026-01923-0",
+   "doi": "10.3758/s13421-026-01923-0",
+   "openalex": "W7172380382",
+   "title": "Testing the validity of fluency as a metacognitive cue for judgments of distraction in serial recall",
+   "authors": [
+    "Gesa Fee Komar",
+    "Axel Buchner",
+    "Raoul Bell"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Memory & Cognition",
+    "issn": "0090-502X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-08-04",
+    "indexed_openalex": "2026-08-05T00:00:00",
+    "online": "2026-08-04",
+    "issue": null,
+    "crossref_deposit": "2026-08-04",
+    "primary": "2026-08-04",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3758/s13421-026-01923-0",
+    "landing": "https://doi.org/10.3758/s13421-026-01923-0",
+    "oa": "https://link.springer.com/content/pdf/10.3758/s13421-026-01923-0.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Memory & Cognition"
+   },
+   "relevance": {
+    "score": 9,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "processing fluency, accessibility and familiarity"
+     ],
+     "abstract": [],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Memory & Cognition",
+    "found_via": [
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also processing fluency, accessibility and familiarity (from title metadata).",
+   "pmid": "42552501",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3758/s13423-026-02968-7",
+   "doi": "10.3758/s13423-026-02968-7",
+   "openalex": "W7172394440",
+   "title": "Metacognition and metacognitive monitoring in aging",
+   "authors": [
+    "Ali Pournaghdali",
+    "Gloria L. Cheng",
+    "Stephanie Cosentino",
+    "Teal S. Eich"
+   ],
+   "author_count": 4,
+   "source": {
+    "name": "Psychonomic Bulletin & Review",
+    "issn": "1069-9384",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "review",
+   "article_type_basis": "PubMed publication type",
+   "dates": {
+    "openalex_publication": "2026-08-01",
+    "indexed_openalex": "2026-08-05T00:00:00",
+    "online": "2026-08-04",
+    "issue": "2026-08",
+    "crossref_deposit": "2026-08-04",
+    "primary": "2026-08-04",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3758/s13423-026-02968-7",
+    "landing": "https://doi.org/10.3758/s13423-026-02968-7",
+    "oa": "https://link.springer.com/content/pdf/10.3758/s13423-026-02968-7.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Psychonomic Bulletin & Review"
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "confidence judgments and accuracy",
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Psychonomic Bulletin & Review",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, judgments of learning and feeling of knowing (from title metadata).",
+   "pmid": "42550405",
+   "pubmed_types": [
+    "Journal Article",
+    "Review"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/09658211.2026.2711903",
+   "doi": "10.1080/09658211.2026.2711903",
+   "openalex": "W7172527050",
+   "title": "The impact of stereotype threat on episodic memory and metamemory in older adults: when study time matters",
+   "authors": [
+    "Lina Guerrero Sastoque",
+    "Anne-Laure Gilet",
+    "Badiâa Bouazzaoui"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Memory",
+    "issn": "0965-8211",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-08-05",
+    "indexed_openalex": "2026-08-06T00:00:00",
+    "online": "2026-08-05",
+    "issue": "2026-09-14",
+    "crossref_deposit": "2026-08-05",
+    "primary": "2026-08-05",
+    "online_first": true
+   },
+   "links": {
+    "doi": "https://doi.org/10.1080/09658211.2026.2711903",
+    "landing": "https://doi.org/10.1080/09658211.2026.2711903",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing",
+      "study-time allocation and control models"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Memory",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also judgments of learning and feeling of knowing, study-time allocation and control models (from title metadata).",
+   "pmid": "42554651",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/cgf.70476",
+   "doi": "10.1111/cgf.70476",
+   "openalex": "W7164301121",
+   "title": "Visual Cues for Logical Reasoning about Text Enhance Metacognitive Sensitivity",
+   "authors": [
+    "Antonia Schlieder",
+    "Jan Rummel",
+    "Filip Sadlo"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Computer Graphics Forum",
+    "issn": "0167-7055",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-06-11",
+    "indexed_openalex": "2026-06-12T00:00:00",
+    "online": "2026-06-11",
+    "issue": null,
+    "crossref_deposit": "2026-06-11",
+    "primary": "2026-06-11",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1111/cgf.70476",
+    "landing": "https://doi.org/10.1111/cgf.70476",
+    "oa": "https://doi.org/10.1111/cgf.70476",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Computer Graphics Forum"
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "confidence judgments and accuracy"
+     ],
+     "abstract": [],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-collection"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": [
+     "10.1007/s11409-023-09370-x"
+    ]
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11409-026-09479-9",
+   "doi": "10.1007/s11409-026-09479-9",
+   "openalex": "W7164168413",
+   "title": "Immediate judgments of learning do not improve performance for educationally relevant materials: Evidence from key-term definitions, country outlines, and animal species",
+   "authors": [
+    "Franziska Ingendahl",
+    "Monika Undorf"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Metacognition and Learning",
+    "issn": "1556-1623",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-06-10",
+    "indexed_openalex": "2026-06-11T00:00:00",
+    "online": "2026-06-10",
+    "issue": null,
+    "crossref_deposit": "2026-06-10",
+    "primary": "2026-06-10",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11409-026-09479-9",
+    "landing": "https://doi.org/10.1007/s11409-026-09479-9",
+    "oa": "https://link.springer.com/content/pdf/10.1007/s11409-026-09479-9.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Metacognition and Learning"
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [
+     "Monika Undorf"
+    ],
+    "watched_journal": "Metacognition and Learning",
+    "found_via": [
+     "topic",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: judgments of learning and feeling of knowing; also metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/01443410.2026.2742893",
+   "doi": "10.1080/01443410.2026.2742893",
+   "openalex": "W7220660113",
+   "title": "Understanding students’ perceived source of effort: Bridging effort source belief and effort attribution",
+   "authors": [
+    "Yiting Hao",
+    "Lars‐Erik Malmberg",
+    "Gabriel J. Stylianides"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Educational Psychology",
+    "issn": "0144-3410",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-06",
+    "indexed_openalex": "2026-10-07T00:00:00",
+    "online": "2026-10-06",
+    "issue": null,
+    "crossref_deposit": "2026-10-06",
+    "primary": "2026-10-06",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1080/01443410.2026.2742893",
+    "landing": "https://doi.org/10.1080/01443410.2026.2742893",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "naive theories and attribution"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-collection"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997",
+     "kna2014"
+    ],
+    "cites_collection": [
+     "10.1007/s10648-022-09692-3"
+    ]
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: naive theories and attribution; also judgments of learning and feeling of knowing (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.jml.2026.104810",
+   "doi": "10.1016/j.jml.2026.104810",
+   "openalex": "W7212268747",
+   "title": "Context memory in younger and older adults: Insights from metacognition",
+   "authors": [
+    "Oliwia Zaborowska",
+    "Beatrice G. Kuhlmann",
+    "Nikoletta Symeonidou",
+    "Maciej Hanczakowski",
+    "Katarzyna Zawadzka"
+   ],
+   "author_count": 5,
+   "source": {
+    "name": "Journal of Memory and Language",
+    "issn": "0749-596X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-12",
+    "indexed_openalex": "2026-09-12T00:00:00",
+    "online": null,
+    "issue": "2027-02",
+    "crossref_deposit": "2026-09-12",
+    "primary": "2026-09-12",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.jml.2026.104810",
+    "landing": "https://doi.org/10.1016/j.jml.2026.104810",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [],
+     "keywords": [
+      "judgments of learning and feeling of knowing",
+      "study-time allocation and control models"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": "Journal of Memory and Language",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": false,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also judgments of learning and feeling of knowing, study-time allocation and control models (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11409-026-09494-w",
+   "doi": "10.1007/s11409-026-09494-w",
+   "openalex": "W7211916014",
+   "title": "Metacomprehension accuracy with multiple texts: a comprehensive approach",
+   "authors": [
+    "Huib Karel Tabbers",
+    "Carolin Hahnel",
+    "Marloes L. Nederhand",
+    "Daniel Schiffner",
+    "Cornelia Schoor"
+   ],
+   "author_count": 5,
+   "source": {
+    "name": "Metacognition and Learning",
+    "issn": "1556-1623",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-07",
+    "indexed_openalex": "2026-09-08T00:00:00",
+    "online": "2026-09-07",
+    "issue": null,
+    "crossref_deposit": "2026-09-07",
+    "primary": "2026-09-07",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11409-026-09494-w",
+    "landing": "https://doi.org/10.1007/s11409-026-09494-w",
+    "oa": "https://link.springer.com/content/pdf/10.1007/s11409-026-09494-w.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Metacognition and Learning"
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [
+      "attention, resources and learning decisions"
+     ],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": "Metacognition and Learning",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: judgments of learning and feeling of knowing; also attention, resources and learning decisions, metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3390/jintelligence14070112",
+   "doi": "10.3390/jintelligence14070112",
+   "openalex": "W7165679349",
+   "title": "Self-Evaluation in AI-Assisted Cognition: An Explanatory Framework for Calibration and Miscalibration Effects",
+   "authors": [
+    "Monica Laura Maier"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "Journal of Intelligence",
+    "issn": "2079-3200",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "review",
+   "article_type_basis": "PubMed publication type",
+   "dates": {
+    "openalex_publication": "2026-06-23",
+    "indexed_openalex": "2026-06-24T00:00:00",
+    "online": "2026-06-23",
+    "issue": null,
+    "crossref_deposit": "2026-06-23",
+    "primary": "2026-06-23",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3390/jintelligence14070112",
+    "landing": "https://doi.org/10.3390/jintelligence14070112",
+    "oa": "https://www.mdpi.com/2079-3200/14/7/112/pdf?version=1782198574",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Journal of Intelligence"
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "confidence judgments and accuracy"
+     ],
+     "abstract": [
+      "metacognitive monitoring and control",
+      "naive theories and attribution",
+      "self-regulated learning"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: confidence judgments and accuracy; also metacognitive monitoring and control, naive theories and attribution (from title metadata).",
+   "pmid": "42505923",
+   "pubmed_types": [
+    "Journal Article",
+    "Review"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.lindif.2026.103011",
+   "doi": "10.1016/j.lindif.2026.103011",
+   "openalex": "W7221361338",
+   "title": "Researching individual differences in self-regulated learning with digital tools",
+   "authors": [
+    "Philip H. Winne"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "Learning and Individual Differences",
+    "issn": "1041-6080",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-10",
+    "indexed_openalex": "2026-10-11T00:00:00",
+    "online": null,
+    "issue": "2026-12",
+    "crossref_deposit": "2026-10-10",
+    "primary": "2026-10-10",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.lindif.2026.103011",
+    "landing": "https://doi.org/10.1016/j.lindif.2026.103011",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "self-regulated learning"
+     ],
+     "abstract": [],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Philip H. Winne"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "cites-foundational",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": false,
+   "versions": {},
+   "classification": "topic match: self-regulated learning (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/87567555.2026.2686953",
+   "doi": "10.1080/87567555.2026.2686953",
+   "openalex": "W7166678374",
+   "title": "Teaching Students to Set Goals: A Study Diary Intervention to Support Motivation and Metacognition",
+   "authors": [
+    "Zahia Marzouk",
+    "Mladen Raković",
+    "Philip H. Winne"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "College Teaching",
+    "issn": "1930-8299",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-06-30",
+    "indexed_openalex": "2026-07-01T00:00:00",
+    "online": "2026-06-30",
+    "issue": null,
+    "crossref_deposit": "2026-06-30",
+    "primary": "2026-06-30",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1080/87567555.2026.2686953",
+    "landing": "https://doi.org/10.1080/87567555.2026.2686953",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "metacognitive knowledge",
+      "self-regulated learning"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Philip H. Winne"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also metacognitive knowledge, self-regulated learning (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11409-026-09500-1",
+   "doi": "10.1007/s11409-026-09500-1",
+   "openalex": "W7220446830",
+   "title": "Effects of a self-regulated learning training on adolescents’ metacognitive awareness, learning processes and outcomes: a multi-method perspective",
+   "authors": [
+    "Shruti Athavale",
+    "Lyn Lim",
+    "Maria Bannert"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Metacognition and Learning",
+    "issn": "1556-1623",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-05",
+    "indexed_openalex": "2026-10-06T00:00:00",
+    "online": "2026-10-05",
+    "issue": null,
+    "crossref_deposit": "2026-10-05",
+    "primary": "2026-10-05",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11409-026-09500-1",
+    "landing": "https://doi.org/10.1007/s11409-026-09500-1",
+    "oa": "https://link.springer.com/content/pdf/10.1007/s11409-026-09500-1.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Metacognition and Learning"
+   },
+   "relevance": {
+    "score": 8,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "self-regulated learning"
+     ],
+     "abstract": [
+      "metacognitive knowledge"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Metacognition and Learning",
+    "found_via": [
+     "journal"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also self-regulated learning, metacognitive knowledge (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.5281/zenodo.22891680",
+   "doi": "10.5281/zenodo.22891680",
+   "openalex": "W7214014602",
+   "title": "Metacognition: Teaching Students How to Learn",
+   "authors": [
+    "Santhosh Kareepadath Rajan"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "Zenodo (CERN European Organization for Nuclear Research)",
+    "issn": null,
+    "type": "repository"
+   },
+   "status": "discovered",
+   "publication_status": "repository version (not peer reviewed)",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-22",
+    "indexed_openalex": "2026-09-23T00:00:00",
+    "primary": "2026-09-22",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.5281/zenodo.22891680",
+    "landing": "https://doi.org/10.5281/zenodo.22891680",
+    "oa": "https://doi.org/10.5281/zenodo.22891680",
+    "oa_version": null,
+    "oa_license": "cc-by",
+    "oa_host": "Zenodo (CERN European Organization for Nuclear Research)"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "confidence judgments and accuracy",
+      "processing fluency, accessibility and familiarity",
+      "metacognitive knowledge",
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, processing fluency, accessibility and familiarity (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.22373/englisia.373",
+   "doi": "10.22373/englisia.373",
+   "openalex": "W7225095441",
+   "title": "Disfluency manifestations of lexical retrieval failures during the tip-of-the-tongue phenomenon in “The tonight show starring Jimmy Fallon”",
+   "authors": [
+    "Agus Eko Cahyono",
+    "Mei Irma Mujianti",
+    "Raudatul Nurul Insan"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Englisia Journal of language education and humanities",
+    "issn": "2339-2576",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-11-02",
+    "indexed_openalex": "2026-11-03T00:00:00",
+    "online": "2026-11-02",
+    "issue": null,
+    "crossref_deposit": "2026-11-03",
+    "primary": "2026-11-02",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.22373/englisia.373",
+    "landing": "https://doi.org/10.22373/englisia.373",
+    "oa": "https://doi.org/10.22373/englisia.373",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Englisia Journal of language education and humanities"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "processing fluency, accessibility and familiarity",
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [
+      "metacognitive monitoring and control"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: processing fluency, accessibility and familiarity; also judgments of learning and feeling of knowing, metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.biopsycho.2026.109291",
+   "doi": "10.1016/j.biopsycho.2026.109291",
+   "openalex": "W7161375456",
+   "title": "Neural correlates of metamemory judgments in worry: An ERP study",
+   "authors": [
+    "Metehan Irak",
+    "Öznur Çamoğlu"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Biological Psychology",
+    "issn": "0301-0511",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-05-16",
+    "indexed_openalex": "2026-05-17T00:00:00",
+    "online": null,
+    "issue": "2026-07",
+    "crossref_deposit": "2026-05-16",
+    "primary": "2026-05-16",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.biopsycho.2026.109291",
+    "landing": "https://doi.org/10.1016/j.biopsycho.2026.109291",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [],
+     "keywords": [
+      "confidence judgments and accuracy",
+      "judgments of learning and feeling of knowing"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": false,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, judgments of learning and feeling of knowing (from title metadata).",
+   "pmid": "42144096",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.17605/osf.io/4vr3c",
+   "doi": "10.17605/osf.io/4vr3c",
+   "openalex": "W7169795937",
+   "title": "Relative Metamemory Accuracy in Judgments of Learning Is Not Spared in Older Adults: Evidence From Immediate and Delayed JOLs and Cross-Block Metamemory Updating",
+   "authors": [
+    "Ayşe Akgoez",
+    "Daniel Zimprich"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": null,
+    "issn": null,
+    "type": null
+   },
+   "status": "discovered",
+   "publication_status": "preprint (not peer reviewed)",
+   "article_type": "preprint",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-07-14",
+    "indexed_openalex": "2026-07-21T00:00:00",
+    "primary": "2026-07-14",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.17605/osf.io/4vr3c",
+    "landing": "https://osf.io/4vr3c",
+    "oa": "https://osf.io/4vr3c",
+    "oa_version": "submittedVersion",
+    "oa_license": "cc-by",
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [
+      "confidence judgments and accuracy"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also judgments of learning and feeling of knowing, confidence judgments and accuracy (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.cedpsych.2026.102465",
+   "doi": "10.1016/j.cedpsych.2026.102465",
+   "openalex": "W7162122835",
+   "title": "Searching the internet for explanations: aligning standards improves the accuracy of metacognitive confidence judgments",
+   "authors": [
+    "Björn Mattes",
+    "Stephanie Pieschl"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Contemporary Educational Psychology",
+    "issn": "0361-476X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-05-22",
+    "indexed_openalex": "2026-05-23T00:00:00",
+    "online": null,
+    "issue": "2026-09",
+    "crossref_deposit": "2026-05-22",
+    "primary": "2026-05-22",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cedpsych.2026.102465",
+    "landing": "https://doi.org/10.1016/j.cedpsych.2026.102465",
+    "oa": "https://doi.org/10.1016/j.cedpsych.2026.102465",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Contemporary Educational Psychology"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "confidence judgments and accuracy"
+     ],
+     "abstract": [],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Contemporary Educational Psychology",
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/15248372.2026.2720939",
+   "doi": "10.1080/15248372.2026.2720939",
+   "openalex": "W7162972783",
+   "title": "Primary School Children’s Use of External and Internal Cues in the Monitoring of Working Memory",
+   "authors": [
+    "Lidia Truxius",
+    "Claudia Maria Roebers"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Journal of Cognition and Development",
+    "issn": "1524-8372",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-08-20",
+    "indexed_openalex": "2026-06-01T00:00:00",
+    "online": "2026-08-20",
+    "issue": null,
+    "crossref_deposit": "2026-08-20",
+    "primary": "2026-08-20",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1080/15248372.2026.2720939",
+    "landing": "https://doi.org/10.1080/15248372.2026.2720939",
+    "oa": "https://www.tandfonline.com/doi/pdf/10.1080/15248372.2026.2720939?needAccess=true",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Journal of Cognition and Development"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [],
+     "abstract": [
+      "metacognitive monitoring and control",
+      "confidence judgments and accuracy",
+      "cue utilization and cue validity",
+      "processing fluency, accessibility and familiarity",
+      "uncertainty and judgment"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy, cue utilization and cue validity (from abstract metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.concog.2026.104138",
+   "doi": "10.1016/j.concog.2026.104138",
+   "openalex": "W7221067540",
+   "title": "The role of visual feedback in metacognitive judgments of motor performance",
+   "authors": [
+    "Lise Brun",
+    "Perrine Porte",
+    "Marianne Cottin",
+    "Éric Guinet",
+    "Aïna Chalabaev",
+    "Estelle Palluel",
+    "Nathan Faivre",
+    "Céline Souchay"
+   ],
+   "author_count": 8,
+   "source": {
+    "name": "Consciousness and Cognition",
+    "issn": "1053-8100",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-09",
+    "indexed_openalex": "2026-10-10T00:00:00",
+    "online": null,
+    "issue": "2026-11",
+    "crossref_deposit": "2026-10-09",
+    "primary": "2026-10-09",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.concog.2026.104138",
+    "landing": "https://doi.org/10.1016/j.concog.2026.104138",
+    "oa": "https://doi.org/10.2139/ssrn.5108617",
+    "oa_version": "acceptedVersion",
+    "oa_license": null,
+    "oa_host": "SSRN Electronic Journal"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [],
+     "keywords": [
+      "confidence judgments and accuracy"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": "Consciousness and Cognition",
+    "found_via": [
+     "topic",
+     "journal"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": false,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also confidence judgments and accuracy (from title metadata).",
+   "pmid": "42854333",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1098/rstb.2025.0240",
+   "doi": "10.1098/rstb.2025.0240",
+   "openalex": "W4416322687",
+   "title": "Neural mechanisms of error-driven learning in retrieval practice: confidence gates memory and metamemory networks",
+   "authors": [
+    "Aike Shi",
+    "Yixuan Liu",
+    "Xiaonan L. Liu"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Philosophical Transactions of the Royal Society B Biological Sciences",
+    "issn": "0962-8436",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-07-09",
+    "indexed_openalex": "2025-11-18T00:00:00",
+    "online": "2026-07-09",
+    "issue": "2026-07-09",
+    "crossref_deposit": "2026-07-09",
+    "primary": "2026-07-09",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1098/rstb.2025.0240",
+    "landing": "https://doi.org/10.1098/rstb.2025.0240",
+    "oa": "https://royalsocietypublishing.org/rstb/article-pdf/doi/10.1098/rstb.2025.0240/6151286/rstb.2025.0240.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Philosophical Transactions of the Royal Society B Biological Sciences"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "self-regulated learning"
+     ],
+     "abstract": [],
+     "keywords": [
+      "confidence judgments and accuracy"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also self-regulated learning, confidence judgments and accuracy (from title metadata).",
+   "pmid": "42421580",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.3390/bs16091542",
+   "doi": "10.3390/bs16091542",
+   "openalex": "W7204867128",
+   "title": "Making Judgments of Learning (JOLs) for Others Produces Positive Reactivity",
+   "authors": [
+    "Yunfeng Wei",
+    "Nicholas C. Soderstrom",
+    "Michelle L. Meade"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Behavioral Sciences",
+    "issn": "2076-328X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-01",
+    "indexed_openalex": "2026-09-02T00:00:00",
+    "online": "2026-09-01",
+    "issue": null,
+    "crossref_deposit": "2026-09-01",
+    "primary": "2026-09-01",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.3390/bs16091542",
+    "landing": "https://doi.org/10.3390/bs16091542",
+    "oa": "https://doi.org/10.3390/bs16091542",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Behavioral Sciences"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [
+      "cue utilization and cue validity"
+     ],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: judgments of learning and feeling of knowing; also cue utilization and cue validity, metacognitive monitoring and control (from title metadata).",
+   "pmid": "42792341",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11409-026-09497-7",
+   "doi": "10.1007/s11409-026-09497-7",
+   "openalex": "W7214188651",
+   "title": "Testing the dependency of metacognitive monitoring and executive functions in children: A cross-sectional and longitudinal study",
+   "authors": [
+    "Donna Bryce",
+    "Janina Eberhart"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Metacognition and Learning",
+    "issn": "1556-1623",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-24",
+    "indexed_openalex": "2026-09-25T00:00:00",
+    "online": "2026-09-24",
+    "issue": null,
+    "crossref_deposit": "2026-09-24",
+    "primary": "2026-09-24",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11409-026-09497-7",
+    "landing": "https://doi.org/10.1007/s11409-026-09497-7",
+    "oa": "https://link.springer.com/content/pdf/10.1007/s11409-026-09497-7.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Metacognition and Learning"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "cue utilization and cue validity"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Metacognition and Learning",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also cue utilization and cue validity (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.59543/jidmis.v3.1042",
+   "doi": "10.59543/jidmis.v3.1042",
+   "openalex": "W7171996869",
+   "title": "Generativa Between Cognitive Offloading and Thinking: A Theoretical Framework of Metacognitive Tension in the Use of Generative AI",
+   "authors": [
+    "Reinaldo Antonio Guerrero Chirinos"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "Journal of Intelligent Decision Making and Information Science",
+    "issn": "3079-0875",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-07-31",
+    "indexed_openalex": "2026-08-01T00:00:00",
+    "online": "2026-07-31",
+    "issue": null,
+    "crossref_deposit": "2026-07-31",
+    "primary": "2026-07-31",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.59543/jidmis.v3.1042",
+    "landing": "https://doi.org/10.59543/jidmis.v3.1042",
+    "oa": "https://jidmis.org/index.php/jidmis/article/download/1042/302",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Journal of Intelligent Decision Making and Information Science"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "cue utilization and cue validity",
+      "self-regulated learning"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also cue utilization and cue validity, self-regulated learning (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.5498/wjp.126282",
+   "doi": "10.5498/wjp.126282",
+   "openalex": "W7223675096",
+   "title": "Metacognitive beliefs, affective-defensive processes, spiritual coping, and psychological distress: A structured narrative review",
+   "authors": [
+    "Süheyb Okur"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": "World Journal of Psychiatry",
+    "issn": "2220-3206",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "review",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-26",
+    "indexed_openalex": "2026-10-27T00:00:00",
+    "online": "2026-10-26",
+    "issue": null,
+    "crossref_deposit": "2026-10-26",
+    "primary": "2026-10-26",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.5498/wjp.126282",
+    "landing": "https://doi.org/10.5498/wjp.126282",
+    "oa": "https://www.f6publishing.com/Forms/Main/DownloadFile.aspx?type=m&typeid=2&id=126282&filepath=8E31D0401EB18CD6271A9142AB7E05E3F9966DD5606E4AA916F63816B88AB733C2566D9D88E46782",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by-nc",
+    "oa_host": "World Journal of Psychiatry"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "metacognitive knowledge"
+     ],
+     "abstract": [
+      "naive theories and attribution"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also metacognitive knowledge, naive theories and attribution (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.21428/3c290898.a2b97a25",
+   "doi": "10.21428/3c290898.a2b97a25",
+   "openalex": "W7218399184",
+   "title": "From Individual to Socially Shared Regulation: A Conceptual Synthesis of Metacognitive Knowledge in Collaborative Science Inquiry",
+   "authors": [
+    "Preeti Shukla"
+   ],
+   "author_count": 1,
+   "source": {
+    "name": null,
+    "issn": null,
+    "type": null
+   },
+   "status": "discovered",
+   "publication_status": "article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-03",
+    "indexed_openalex": "2026-10-04T00:00:00",
+    "online": "2026-10-03",
+    "issue": null,
+    "crossref_deposit": "2026-10-03",
+    "primary": "2026-10-03",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.21428/3c290898.a2b97a25",
+    "landing": "https://doi.org/10.21428/3c290898.a2b97a25",
+    "oa": "https://ninbio-researchreports.pubpub.org/pub/ddnlm043/download/pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control",
+      "metacognitive knowledge"
+     ],
+     "abstract": [
+      "self-regulated learning"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also metacognitive knowledge, self-regulated learning (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "openalex:W7223434046",
+   "doi": null,
+   "openalex": "W7223434046",
+   "title": "Does Prior Knowledge Reveal a Hidden Reactivity Effect of Judgments of Learning for General Knowledge Facts?",
+   "authors": [
+    "Franziska Ingendahl",
+    "Monika Undorf"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "OSF Preprints (OSF Preprints)",
+    "issn": null,
+    "type": "repository"
+   },
+   "status": "discovered",
+   "publication_status": "preprint (not peer reviewed)",
+   "article_type": "preprint",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-21",
+    "indexed_openalex": "2026-10-24T00:00:00",
+    "primary": "2026-10-21",
+    "online_first": false
+   },
+   "links": {
+    "doi": null,
+    "landing": "https://osf.io/4fxp7",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [
+     "Monika Undorf"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": false,
+   "versions": {},
+   "classification": "topic match: judgments of learning and feeling of knowing; also metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.29333/iji.2026.19431a",
+   "doi": "10.29333/iji.2026.19431a",
+   "openalex": "W7214209726",
+   "title": "Individual Performance Feedback Promotes Retrieval Practice Across Prior Knowledge Levels",
+   "authors": [
+    "Rommel Alexander Enríquez Ávila",
+    "Cristian Narváez-Rivera"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "International Journal of Instruction",
+    "issn": "1308-1470",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-24",
+    "indexed_openalex": "2026-09-25T00:00:00",
+    "online": null,
+    "issue": "2026-10-01",
+    "crossref_deposit": "2026-09-24",
+    "primary": "2026-09-24",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.29333/iji.2026.19431a",
+    "landing": "https://doi.org/10.29333/iji.2026.19431a",
+    "oa": "https://doi.org/10.29333/iji.2026.19431a",
+    "oa_version": "publishedVersion",
+    "oa_license": null,
+    "oa_host": "International Journal of Instruction"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "self-regulated learning"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing",
+      "study-time allocation and control models",
+      "attention, resources and learning decisions"
+     ],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: self-regulated learning; also judgments of learning and feeling of knowing, study-time allocation and control models (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1177/17470218261498018",
+   "doi": "10.1177/17470218261498018",
+   "openalex": "W7220958460",
+   "title": "EXPRESS: What an Indirect Measurement Approach Reveals About the Susceptibility of Directly Assessed Metamemory Beliefs to Demand Characteristics and Ad Hoc Belief Construction",
+   "authors": [
+    "Franziska Ingendahl",
+    "Monika Undorf"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Quarterly Journal of Experimental Psychology",
+    "issn": "0033-555X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-08",
+    "indexed_openalex": "2026-10-09T00:00:00",
+    "online": "2026-10-08",
+    "issue": null,
+    "crossref_deposit": "2026-10-08",
+    "primary": "2026-10-08",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1177/17470218261498018",
+    "landing": "https://doi.org/10.1177/17470218261498018",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Monika Undorf"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also judgments of learning and feeling of knowing (from title metadata).",
+   "pmid": "42845028",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.31234/osf.io/gkm6b_v1",
+   "doi": "10.31234/osf.io/gkm6b_v1",
+   "openalex": "W7215924778",
+   "title": "Perceptual Cues Can Influence Curiosity, Metamemory, and Memory Processes",
+   "authors": [
+    "A.M. Chen",
+    "Rhodes, Matthew, committee member",
+    "Alan D. Castel"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "PsyArXiv (OSF Preprints)",
+    "issn": null,
+    "type": "repository"
+   },
+   "status": "discovered",
+   "publication_status": "preprint (not peer reviewed)",
+   "article_type": "preprint",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-10-02",
+    "indexed_openalex": "2026-10-03T00:00:00",
+    "online": null,
+    "issue": null,
+    "crossref_deposit": "2026-10-02",
+    "primary": "2026-10-02",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/gkm6b_v1",
+    "landing": "https://doi.org/10.31234/osf.io/gkm6b_v1",
+    "oa": "https://doi.org/10.31234/osf.io/gkm6b_v1",
+    "oa_version": "acceptedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "PsyArXiv (OSF Preprints)"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "metacognitive monitoring and control"
+     ],
+     "abstract": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Alan D. Castel"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {
+    "duplicates": [
+     "W7220210828"
+    ]
+   },
+   "classification": "topic match: metacognitive monitoring and control; also judgments of learning and feeling of knowing (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11409-026-09493-x",
+   "doi": "10.1007/s11409-026-09493-x",
+   "openalex": "W7203827147",
+   "title": "Metacomprehension accuracy and regulation in multiple-document reading: On the effects of summary writing and external standards",
+   "authors": [
+    "Corinna Schuster",
+    "Julia Waldeyer",
+    "Marc Stadtler"
+   ],
+   "author_count": 3,
+   "source": {
+    "name": "Metacognition and Learning",
+    "issn": "1556-1623",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-08-20",
+    "indexed_openalex": "2026-08-21T00:00:00",
+    "online": "2026-08-20",
+    "issue": null,
+    "crossref_deposit": "2026-08-20",
+    "primary": "2026-08-20",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11409-026-09493-x",
+    "landing": "https://doi.org/10.1007/s11409-026-09493-x",
+    "oa": "https://link.springer.com/content/pdf/10.1007/s11409-026-09493-x.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Metacognition and Learning"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "judgments of learning and feeling of knowing"
+     ],
+     "abstract": [],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": "Metacognition and Learning",
+    "found_via": [
+     "topic",
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: judgments of learning and feeling of knowing; also metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1007/s11251-026-09807-1",
+   "doi": "10.1007/s11251-026-09807-1",
+   "openalex": "W7163327247",
+   "title": "Germane processes moderate the effectiveness of complex desirable difficulty tasks",
+   "authors": [
+    "Ines Zeitlhofer",
+    "Joerg Zumbach"
+   ],
+   "author_count": 2,
+   "source": {
+    "name": "Instructional Science",
+    "issn": "0020-4277",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-06-03",
+    "indexed_openalex": "2026-06-04T00:00:00",
+    "online": "2026-06-03",
+    "issue": "2026-09",
+    "crossref_deposit": "2026-06-03",
+    "primary": "2026-06-03",
+    "online_first": true
+   },
+   "links": {
+    "doi": "https://doi.org/10.1007/s11251-026-09807-1",
+    "landing": "https://doi.org/10.1007/s11251-026-09807-1",
+    "oa": "https://link.springer.com/content/pdf/10.1007/s11251-026-09807-1.pdf",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Instructional Science"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [],
+     "abstract": [
+      "metacognitive monitoring and control",
+      "attention, resources and learning decisions"
+     ],
+     "keywords": [
+      "self-regulated learning"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": null,
+    "found_via": [
+     "topic",
+     "cites-foundational",
+     "cites-collection"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "kirkjohnson2019"
+    ],
+    "cites_collection": [
+     "10.1007/s10648-022-09692-3"
+    ]
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: metacognitive monitoring and control; also attention, resources and learning decisions, self-regulated learning (from abstract metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1037/edu0001028",
+   "doi": "10.1037/edu0001028",
+   "openalex": "W7161575899",
+   "title": "When interleaving feels easier than blocking: Aligning learner goals with the affordances of interleaved sequences reduces perceived effort.",
+   "authors": [
+    "Roman Abel",
+    "Veronica X. Yan",
+    "Erdem Onan",
+    "Saskia Giebl",
+    "Julian Roelle"
+   ],
+   "author_count": 5,
+   "source": {
+    "name": "Journal of Educational Psychology",
+    "issn": "0022-0663",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-05-18",
+    "indexed_openalex": "2026-05-19T00:00:00",
+    "online": "2026-10",
+    "issue": null,
+    "crossref_deposit": "2026-05-18",
+    "primary": "2026-10",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1037/edu0001028",
+    "landing": "https://doi.org/10.1037/edu0001028",
+    "oa": null,
+    "oa_version": null,
+    "oa_license": null,
+    "oa_host": null
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "self-regulated learning",
+      "attention, resources and learning decisions"
+     ],
+     "abstract": [],
+     "keywords": []
+    },
+    "watched_authors": [],
+    "watched_journal": "Journal of Educational Psychology",
+    "found_via": [
+     "topic"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": false,
+   "versions": {},
+   "classification": "topic match: self-regulated learning; also attention, resources and learning decisions (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.learninstruc.2026.102462",
+   "doi": "10.1016/j.learninstruc.2026.102462",
+   "openalex": "W7212724154",
+   "title": "Happy or redundant? Retrieval practice enhances lasting learning in non-interactive teaching for low-quality explanations",
+   "authors": [
+    "Heike Russ",
+    "Tino Endres",
+    "Leonie Sibley",
+    "Salome Flegr",
+    "Jochen Kühn",
+    "Vincent Hoogerheide",
+    "Katharina Scheiter",
+    "Andreas Lachner"
+   ],
+   "author_count": 8,
+   "source": {
+    "name": "Learning and Instruction",
+    "issn": "0959-4752",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-09-14",
+    "indexed_openalex": "2026-09-15T00:00:00",
+    "online": null,
+    "issue": "2027-02",
+    "crossref_deposit": "2026-09-14",
+    "primary": "2026-09-14",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1016/j.learninstruc.2026.102462",
+    "landing": "https://doi.org/10.1016/j.learninstruc.2026.102462",
+    "oa": "https://doi.org/10.1016/j.learninstruc.2026.102462",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Learning and Instruction"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "self-regulated learning"
+     ],
+     "abstract": [],
+     "keywords": [
+      "metacognitive monitoring and control"
+     ]
+    },
+    "watched_authors": [],
+    "watched_journal": "Learning and Instruction",
+    "found_via": [
+     "cites-foundational"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [
+     "koriat1997"
+    ],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {},
+   "classification": "topic match: self-regulated learning; also metacognitive monitoring and control (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/0142159x.2026.2684561",
+   "doi": "10.1080/0142159x.2026.2684561",
+   "openalex": "W7164643088",
+   "title": "Strengthening teachers’ dual role in self-regulated learning during diagnostic reasoning supervision",
+   "authors": [
+    "Lorena Isbej",
+    "Dominique G. J. Waterval",
+    "Javiera Fuentes‐Cimma",
+    "Arnoldo J. Riquelme",
+    "Anique B. H. de Bruin"
+   ],
+   "author_count": 5,
+   "source": {
+    "name": "Medical Teacher",
+    "issn": "0142-159X",
+    "type": "journal"
+   },
+   "status": "discovered",
+   "publication_status": "journal article",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-06-13",
+    "indexed_openalex": "2026-06-14T00:00:00",
+    "online": "2026-06-13",
+    "issue": null,
+    "crossref_deposit": "2026-06-13",
+    "primary": "2026-06-13",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.1080/0142159x.2026.2684561",
+    "landing": "https://doi.org/10.1080/0142159x.2026.2684561",
+    "oa": "https://www.tandfonline.com/doi/pdf/10.1080/0142159X.2026.2684561?needAccess=true",
+    "oa_version": "publishedVersion",
+    "oa_license": "cc-by-nc-nd",
+    "oa_host": "Medical Teacher"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "self-regulated learning"
+     ],
+     "abstract": [
+      "attention, resources and learning decisions"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Anique B. H. de Bruin"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {
+    "preprint": "10.6084/m9.figshare.32665745",
+    "basis": "same normalised title and first author"
+   },
+   "classification": "topic match: self-regulated learning; also attention, resources and learning decisions (from title metadata).",
+   "pmid": "42287142",
+   "pubmed_types": [
+    "Journal Article"
+   ],
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  },
+  {
+   "id": "doi:10.6084/m9.figshare.32665745",
+   "doi": "10.6084/m9.figshare.32665745",
+   "openalex": "W7164668836",
+   "title": "Strengthening teachers’ dual role in self-regulated learning during diagnostic reasoning supervision",
+   "authors": [
+    "Lorena Isbej",
+    "Dominique G. J. Waterval",
+    "Javiera Fuentes‐Cimma",
+    "Arnoldo J. Riquelme",
+    "Anique B. H. de Bruin"
+   ],
+   "author_count": 5,
+   "source": {
+    "name": "Figshare",
+    "issn": null,
+    "type": "repository"
+   },
+   "status": "discovered",
+   "publication_status": "repository version (not peer reviewed)",
+   "article_type": "article",
+   "article_type_basis": "OpenAlex type",
+   "dates": {
+    "openalex_publication": "2026-06-13",
+    "indexed_openalex": "2026-06-14T00:00:00",
+    "primary": "2026-06-13",
+    "online_first": false
+   },
+   "links": {
+    "doi": "https://doi.org/10.6084/m9.figshare.32665745",
+    "landing": "https://figshare.com/articles/journal_contribution/Strengthening_teachers_dual_role_in_self-regulated_learning_during_diagnostic_reasoning_supervision/32665745",
+    "oa": "https://figshare.com/articles/journal_contribution/Strengthening_teachers_dual_role_in_self-regulated_learning_during_diagnostic_reasoning_supervision/32665745",
+    "oa_version": "submittedVersion",
+    "oa_license": "cc-by",
+    "oa_host": "Figshare"
+   },
+   "relevance": {
+    "score": 7,
+    "matched": {
+     "title": [
+      "self-regulated learning"
+     ],
+     "abstract": [
+      "attention, resources and learning decisions"
+     ],
+     "keywords": []
+    },
+    "watched_authors": [
+     "Anique B. H. de Bruin"
+    ],
+    "watched_journal": null,
+    "found_via": [
+     "author"
+    ]
+   },
+   "connections": {
+    "cites_foundational": [],
+    "cites_collection": []
+   },
+   "flags": {
+    "replication_in_title": false,
+    "meta_or_review_in_title": false
+   },
+   "abstract_available": true,
+   "versions": {
+    "published_version": "10.1080/0142159x.2026.2684561",
+    "basis": "same normalised title and first author"
+   },
+   "classification": "topic match: self-regulated learning; also attention, resources and learning decisions (from title metadata).",
+   "newly_indexed": false,
+   "discovered_at": "2026-11-08"
+  }
+ ]
+}

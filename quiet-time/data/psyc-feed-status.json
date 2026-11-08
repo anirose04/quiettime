@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "last_attempt": "2026-11-08T15:59:26.506Z",
+  "last_success": "2026-11-08T16:01:43.565Z",
+  "error": null,
+  "providers": {
+    "openalex": {
+      "calls": 23,
+      "key_used": false
+    },
+    "crossref": {
+      "calls": 50,
+      "polite": false
+    },
+    "pubmed": {
+      "calls": 6,
+      "key_used": false
+    }
+  },
+  "warnings": [
+    "newly indexed works could not be queried (): this filter may need an OpenAlex API key"
+  ]
+}
