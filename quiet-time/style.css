@@ -203,3 +203,50 @@ body.home-page .home-title{margin-top:14vh}
 /* tumble */
 .tumble-bar{margin-bottom:14px}.tumble-stage{width:100%;border-radius:15px;overflow:hidden;background:#22382a;touch-action:none}.tumble-stage canvas{display:block;width:100%;cursor:pointer;touch-action:none}.tumble-pad{display:flex;justify-content:center;gap:10px;margin-top:14px}.tumble-pad .pill{min-width:76px;min-height:52px;user-select:none;-webkit-user-select:none;touch-action:none}.tumble-help{margin-top:12px}
 @media(hover:hover) and (pointer:fine){.tumble-pad{display:none}}
+
+/* data garden */
+.garden-intro{max-width:640px;line-height:1.6;color:#d7e2d0;margin:0 0 16px}
+.garden-bar{margin-bottom:22px}
+.r-status{font-size:.85rem;color:#b9c9b0}.r-status.busy:before{content:'';display:inline-block;width:.7em;height:.7em;margin-right:6px;border-radius:50%;background:#e2b64f;animation:rpulse 1s infinite alternate}
+@keyframes rpulse{from{opacity:.3}to{opacity:1}}
+.garden-bed{border-top:1px solid #6c806566;padding:18px 0 8px}
+.bed-head h3{font-family:'Libre Baskerville',Georgia,serif;font-weight:400;font-size:1.1rem;margin:0}
+.bed-head p{margin:4px 0 12px;color:#b9c9b0;font-size:.88rem}
+.bed-plots{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.bed-soon{margin:0 0 6px}
+.plot{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:12px;border-radius:14px;border:1px solid #6c806566;background:#33493a;color:#f1eedf}
+.plot:hover{background:#3d5644}
+.plot .plant{width:72px;height:72px}
+.plot-title{font-family:'Libre Baskerville',Georgia,serif;font-size:.95rem}
+.plot-q{font-size:.78rem;color:#b9c9b0;line-height:1.4}
+.plot.just-bloomed .plant{animation:bloom 1.2s ease-out}
+@keyframes bloom{0%{transform:scale(.6)}60%{transform:scale(1.12)}100%{transform:scale(1)}}
+.garden-credits{margin-top:20px;font-size:.78rem;line-height:1.6}
+.garden-credits a,.lesson-foot a,.journal a{color:#e9d5c9}
+.lesson-head{display:flex;gap:14px;align-items:center;margin:16px 0 6px}
+.lesson-head .plant{width:64px;height:64px;flex-shrink:0}
+.lesson-unit{margin:0;font-size:.8rem;color:#b9c9b0;text-transform:lowercase}
+.lesson-q{margin:4px 0 0;font-family:'Libre Baskerville',Georgia,serif;font-size:1.05rem;line-height:1.5}
+.step{border-left:3px solid #6c8065;padding:6px 0 10px 16px;margin:18px 0}
+.step.current{border-left-color:#e2b64f}
+.step.passed{border-left-color:#8fb07a}
+.step-text{line-height:1.65;max-width:680px}
+.step-text p{margin:0 0 10px}
+.step-text code,.hint code{background:#1c2b1f;padding:1px 5px;border-radius:5px;font-size:.9em}
+textarea.code{display:block;width:100%;font:15px/1.5 ui-monospace,'SF Mono',Menlo,Consolas,monospace;background:#1c2b1f;color:#f1eedf;border:1px solid #6c806566;border-radius:10px;padding:10px 12px;resize:vertical;tab-size:2;white-space:pre;overflow-x:auto}
+textarea.code:focus{outline:2px solid #e2b64f;outline-offset:1px}
+.step-bar{margin-top:8px}
+.step-ok{color:#9bc48a;font-size:.9rem}
+.hint{color:#e9d5c9;font-size:.92rem;margin:8px 0 0}
+.output{margin-top:8px}
+pre.r-out{background:#fdfbf3;color:#24302a;border-radius:10px;padding:10px 12px;overflow-x:auto;font:13.5px/1.45 ui-monospace,'SF Mono',Menlo,Consolas,monospace;margin:0 0 8px;white-space:pre}
+pre.r-out .stderr,pre.r-out .warning{color:#8a5a2b}pre.r-out .message{color:#5d6b57}
+canvas.r-plot{display:block;width:100%;max-width:720px;height:auto;border-radius:10px;margin:0 0 8px}
+.step-msg{margin:6px 0;font-size:.92rem;color:#e9d5c9}.step-msg.good{color:#9bc48a}.step-msg.err{color:#f2b8c2}
+.next-row{margin-top:8px}
+.note-area{width:100%;font:inherit;background:#1c2b1f;color:#f1eedf;border:1px solid #6c806566;border-radius:10px;padding:10px 12px;margin-bottom:10px}
+.lesson-foot{margin-top:26px;border-top:1px solid #6c806566;padding-top:14px}
+.lesson-foot p{font-size:.8rem;line-height:1.6;margin:0 0 6px}
+.journal{margin-top:16px}.journal-entry{border-bottom:1px solid #6c806566;padding:12px 0}.journal-entry h3{font-family:'Libre Baskerville',Georgia,serif;font-weight:400;font-size:1.05rem;margin:0}.journal-entry p{line-height:1.6;margin:6px 0}
+@media(max-width:650px){.bed-plots{grid-template-columns:repeat(2,minmax(0,1fr))}textarea.code{font-size:14px}}
+.garden-intro,.bed-head p,.plot-q,.lesson-q,.step,.step textarea,.lesson-foot,.journal,.garden-credits,.r-status,.note-area{text-transform:none}
