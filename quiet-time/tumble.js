@@ -2,7 +2,7 @@
    Walk onto a wall and the whole tunnel turns so that wall becomes the floor.
    Canvas only, local-only progress, no external dependencies. */
 const TUMBLE_LEVELS = 60;
-const TUMBLE_FALLS = ['oops, a little slip', 'a little tumble'];
+const TUMBLE_FALLS = ['oops, a little slip', 'a little tumble', 'whoops, a slip', 'tumble! it happens'];
 let tumble = null;          // live game state
 let tumbleKeys = { left: false, right: false };
 let tumbleJumpQueued = 0;   // seconds left on a buffered jump press
@@ -23,31 +23,32 @@ function tumbleLevel(n) {
   const rnd = tumbleRand(n * 7919 + 13);
   // difficulty ramps gently over all levels: faster, more sides, fewer spare tiles, wider gaps
   const t = (n - 1) / (TUMBLE_LEVELS - 1);
-  const sides = n <= 8 ? 4 : n <= 18 ? 5 : n <= 30 ? 6 : n <= 44 ? 7 : 8;
+  const sides = n <= 8 ? 4 : n <= 16 ? 5 : n <= 24 ? 6 : n <= 32 ? 7 : n <= 40 ? 8 : n <= 50 ? 10 : 12;
   const len = 70 + Math.round(n * 7);
-  const density = 0.9 - 0.6 * t;
-  const maxGap = n < 4 ? 1 : n < 14 ? 2 : 3;
+  // chance an off-path tile exists: about half are missing from the very first level
+  const density = 0.55 - 0.3 * t;
+  const maxGap = n < 4 ? 1 : n < 14 ? 2 : n < 40 ? 3 : 4;
   const rows = [];
   for (let r = 0; r < len + 14; r++) {
-    rows.push(Array.from({ length: sides }, () => r < 10 || r >= len || rnd() < density));
+    rows.push(Array.from({ length: sides }, () => r < 8 || r >= len || rnd() < density));
   }
-  let r = 10, safe = 0;
+  let r = 8, safe = 0;
   while (r < len) {
-    const run = 3 + Math.floor(rnd() * 4);
+    const run = 2 + Math.floor(rnd() * 3);
     for (let k = 0; k < run && r + k < len; k++) rows[r + k][safe] = true;
     r += run;
     const pick = rnd();
-    if (pick < 0.42 && n > 1) {
+    if (pick < 0.5) {
       const gap = 1 + Math.floor(rnd() * maxGap);
       for (let k = 0; k < gap && r + k < len - 2; k++) rows[r + k][safe] = false;
       r += gap;
     } else if (pick < 0.8) {
       const next = (safe + (rnd() < 0.5 ? 1 : sides - 1)) % sides;
-      for (let k = 0; k < 6 && r + k < len; k++) { rows[r + k][safe] = true; rows[r + k][next] = true; }
-      safe = next; r += 6;
+      for (let k = 0; k < 5 && r + k < len; k++) { rows[r + k][safe] = true; rows[r + k][next] = true; }
+      safe = next; r += 5;
     }
   }
-  return { n, sides, len, rows, speed: 4.8 + 3.5 * t };
+  return { n, sides, len, rows, speed: 4.8 + 6.4 * Math.pow(t, 1.2) };
 }
 
 function tumbleSaved() {
@@ -228,13 +229,9 @@ function tumbleDrawSprout(ctx, verts, P, dp, F) {
   const bob = Math.abs(step) * u * 0.08;
   ctx.fillStyle = '#f7efdc';
   ctx.beginPath(); ctx.ellipse(0, -u * 1.0 - bob, u * 0.82, u * 0.78, 0, 0, Math.PI * 2); ctx.fill();
-  ctx.strokeStyle = '#c9b78f'; ctx.lineWidth = Math.max(1, u * 0.06); ctx.stroke();
+  ctx.strokeStyle = '#6b4f3c'; ctx.lineWidth = Math.max(1, u * 0.06); ctx.stroke();
   if (s.state === 'playing') {
-    // running away from us: we see his back, with a little round tail
-    ctx.fillStyle = 'rgba(201,183,143,.35)';
-    ctx.beginPath(); ctx.ellipse(0, -u * 0.62 - bob, u * 0.6, u * 0.32, 0, 0, Math.PI); ctx.fill();
-    ctx.fillStyle = '#fffaf0'; ctx.strokeStyle = '#c9b78f'; ctx.lineWidth = Math.max(1, u * 0.05);
-    ctx.beginPath(); ctx.arc(0, -u * 0.5 - bob, u * 0.17, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    // running away from us: just his round back and the sprout on top
   } else {
     // between runs he turns round to say hello
     // cheeks and eyes
