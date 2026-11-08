@@ -321,10 +321,10 @@ canvas.r-plot{display:block;width:100%;max-width:720px;height:auto;border-radius
 @media(max-width:650px){.h-paper{padding:18px 14px}.h-text{font-size:.95rem}.h-issue-link{grid-template-columns:1fr}.h-no{grid-row:auto}}
 
 /* colorku: colour dots in place of digits */
-.cdot{display:block;width:62%;aspect-ratio:1;margin:auto;border-radius:50%;background:var(--c);box-shadow:inset 0 -2px 0 #00000026}
-.cell.given .cdot{width:70%;box-shadow:inset 0 -2px 0 #00000026,0 0 0 2px #fffdf4,0 0 0 3.5px #31493566}
+.cdot{display:block;width:62%;aspect-ratio:1;margin:auto;border-radius:50%;background:var(--c);box-shadow:inset 0 -2px 0 #0000001f,inset 0 0 0 1px #29392922}
+.cell.given .cdot{width:70%;box-shadow:inset 0 -2px 0 #0000001f,inset 0 0 0 1px #29392922,0 0 0 2px #fffdf4,0 0 0 3.5px #31493566}
 .cell.error .cdot{box-shadow:0 0 0 2px #fffdf4,0 0 0 4px #a54851}
 .cnotes{position:absolute;inset:8%;display:grid;grid-template-columns:repeat(3,1fr);gap:8%}
-.cnotes i{display:block;border-radius:50%;background:var(--c);aspect-ratio:1}
+.cnotes i{display:block;border-radius:50%;background:var(--c);aspect-ratio:1}.cnotes i:not([style*=transparent]){box-shadow:inset 0 0 0 1px #29392922}
 .color-pad button{display:flex;align-items:center;justify-content:center}
 .color-pad .cdot{width:26px;margin:0}

@@ -105,8 +105,9 @@ function countSolutions(board,limit=2){let choice=-1,opts=null;for(let i=0;i<81;
 function newSudoku(level='easy'){let full=sudokuFull(),puzzle=[...full],target={easy:40,medium:32,hard:27}[level],order=shuffle([...Array(81).keys()]);for(let i of order){if(puzzle.filter(Boolean).length<=target)break;let old=puzzle[i];puzzle[i]=0;if(countSolutions([...puzzle])!==1)puzzle[i]=old}sdk={full,puzzle,values:[...puzzle],notes:{},selected:0,noteMode:false,level,mistakes:false,message:''};saveSudoku()}
 function saveSudoku(){storage.set('sudoku',sdk)}
 // colorku: the same puzzle with nine colours in place of the digits (a display switch; the puzzle underneath is unchanged)
-const SDK_COLORS=['','#d9735f','#e2b64f','#8fb07a','#4f9a94','#5b86d6','#9b62c4','#d98ba0','#8a6447','#3d4f43'];
-const SDK_COLOR_NAMES=['','coral','gold','sage','teal','blue','purple','pink','brown','charcoal'];
+// a soft pastel rainbow, in order: red, orange, yellow, dark & light green, dark & light blue, dark & light purple
+const SDK_COLORS=['','#e58f8a','#f1b27c','#f0d67a','#78a982','#b6d99c','#6f8fca','#a9cfea','#8f76b8','#d0b9e8'];
+const SDK_COLOR_NAMES=['','red','orange','yellow','dark green','light green','dark blue','light blue','dark purple','light purple'];
 const sdkColorMode=()=>!!storage.get('sudoku-colors');
 const sdkName=n=>sdkColorMode()?SDK_COLOR_NAMES[n]:String(n);
 function sdkMark(n){return sdkColorMode()?`<span class="cdot" style="--c:${SDK_COLORS[n]}"></span>`:String(n)}
