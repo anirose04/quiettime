@@ -2,7 +2,7 @@
    Walk onto a wall and the whole tunnel turns so that wall becomes the floor.
    Canvas only, local-only progress, no external dependencies. */
 const TUMBLE_LEVELS = 60;
-const TUMBLE_FALLS = ['oops, a little slip', 'a little tumble', 'whoops, a slip', 'tumble! it happens'];
+const TUMBLE_FALLS = ['oops, a little slip', 'a little tumble'];
 let tumble = null;          // live game state
 let tumbleKeys = { left: false, right: false };
 let tumbleJumpQueued = 0;   // seconds left on a buffered jump press
@@ -229,19 +229,28 @@ function tumbleDrawSprout(ctx, verts, P, dp, F) {
   ctx.fillStyle = '#f7efdc';
   ctx.beginPath(); ctx.ellipse(0, -u * 1.0 - bob, u * 0.82, u * 0.78, 0, 0, Math.PI * 2); ctx.fill();
   ctx.strokeStyle = '#c9b78f'; ctx.lineWidth = Math.max(1, u * 0.06); ctx.stroke();
-  // cheeks and eyes
-  ctx.fillStyle = '#e6a9b4';
-  ctx.beginPath(); ctx.arc(-u * 0.42, -u * 0.86 - bob, u * 0.12, 0, Math.PI * 2); ctx.fill();
-  ctx.beginPath(); ctx.arc(u * 0.42, -u * 0.86 - bob, u * 0.12, 0, Math.PI * 2); ctx.fill();
-  ctx.fillStyle = '#2f4a36';
-  ctx.beginPath(); ctx.arc(-u * 0.24, -u * 1.06 - bob, u * 0.11, 0, Math.PI * 2); ctx.fill();
-  ctx.beginPath(); ctx.arc(u * 0.24, -u * 1.06 - bob, u * 0.11, 0, Math.PI * 2); ctx.fill();
-  ctx.fillStyle = '#fffaf0';   // little sparkles in the eyes
-  ctx.beginPath(); ctx.arc(-u * 0.20, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
-  ctx.beginPath(); ctx.arc(u * 0.28, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
-  // a simple little smile
-  ctx.strokeStyle = '#2f4a36'; ctx.lineWidth = Math.max(1.2, u * 0.06); ctx.lineCap = 'round';
-  ctx.beginPath(); ctx.arc(0, -u * 0.96 - bob, u * 0.13, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke();
+  if (s.state === 'playing') {
+    // running away from us: we see his back, with a little round tail
+    ctx.fillStyle = 'rgba(201,183,143,.35)';
+    ctx.beginPath(); ctx.ellipse(0, -u * 0.62 - bob, u * 0.6, u * 0.32, 0, 0, Math.PI); ctx.fill();
+    ctx.fillStyle = '#fffaf0'; ctx.strokeStyle = '#c9b78f'; ctx.lineWidth = Math.max(1, u * 0.05);
+    ctx.beginPath(); ctx.arc(0, -u * 0.5 - bob, u * 0.17, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  } else {
+    // between runs he turns round to say hello
+    // cheeks and eyes
+    ctx.fillStyle = '#e6a9b4';
+    ctx.beginPath(); ctx.arc(-u * 0.42, -u * 0.86 - bob, u * 0.12, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(u * 0.42, -u * 0.86 - bob, u * 0.12, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#2f4a36';
+    ctx.beginPath(); ctx.arc(-u * 0.24, -u * 1.06 - bob, u * 0.11, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(u * 0.24, -u * 1.06 - bob, u * 0.11, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#fffaf0';   // little sparkles in the eyes
+    ctx.beginPath(); ctx.arc(-u * 0.20, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(u * 0.28, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
+    // a simple little smile
+    ctx.strokeStyle = '#2f4a36'; ctx.lineWidth = Math.max(1.2, u * 0.06); ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.arc(0, -u * 0.96 - bob, u * 0.13, 0.2 * Math.PI, 0.8 * Math.PI); ctx.stroke();
+  }
   // sprout on top
   ctx.strokeStyle = '#7f9c6c'; ctx.lineWidth = Math.max(1.5, u * 0.09); ctx.lineCap = 'round';
   ctx.beginPath(); ctx.moveTo(0, -u * 1.75 - bob); ctx.quadraticCurveTo(u * 0.05, -u * 2.05 - bob, 0, -u * 2.2 - bob); ctx.stroke();
@@ -256,7 +265,7 @@ function tumbleHud() {
   if (!sel || !tumble) return;
   sel.innerHTML = Array.from({ length: tumble.unlocked }, (_, i) => `<option value="${i + 1}">level ${i + 1}</option>`).join('');
   sel.value = tumble.level.n;
-  $('#tumbleInfo').textContent = `${tumble.level.sides}-sided tunnel · ${tumble.tries} slips and tumbles so far`;
+  $('#tumbleInfo').textContent = `${tumble.level.sides}-sided tunnel · ${tumble.tries} ${tumble.tries === 1 ? 'tumble' : 'tumbles'}`;
 }
 
 function drawTumble() {
