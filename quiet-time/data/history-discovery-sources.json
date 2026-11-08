@@ -1,0 +1,34 @@
+{
+  "_about": "Where the history paper's weekly refresh (scripts/history-feed.mjs) looks for new scholarship. Deliberately worldwide. It keeps only open-access articles, and the app mixes them in sparingly. Edit on GitHub to change sources; no code changes needed.",
+  "settings": { "window_days": 365, "max_per_category": 12, "max_per_journal": 3 },
+  "journals": [
+    { "name": "American Historical Review", "issn": "0002-8762" },
+    { "name": "Past & Present", "issn": "0031-2746" },
+    { "name": "Journal of World History", "issn": "1045-6007" },
+    { "name": "Journal of Global History", "issn": "1740-0228" },
+    { "name": "Comparative Studies in Society and History", "issn": "0010-4175" },
+    { "name": "The Journal of African History", "issn": "0021-8537" },
+    { "name": "Modern Asian Studies", "issn": "0026-749X" },
+    { "name": "The Journal of Asian Studies", "issn": "0021-9118" },
+    { "name": "Hispanic American Historical Review", "issn": "0018-2168" },
+    { "name": "Journal of Latin American Studies", "issn": "0022-216X" },
+    { "name": "Journal of Social History", "issn": "0022-4529" },
+    { "name": "Social History", "issn": "0307-1022" },
+    { "name": "Gender & History", "issn": "0953-5233" },
+    { "name": "History Workshop Journal", "issn": "1363-3554" },
+    { "name": "Environmental History", "issn": "1084-5453" },
+    { "name": "Isis", "issn": "0021-1753" },
+    { "name": "The Historical Journal", "issn": "0018-246X" },
+    { "name": "The English Historical Review", "issn": "0013-8266" },
+    { "name": "Journal of Medieval History", "issn": "0304-4181" },
+    { "name": "The Journal of Roman Studies", "issn": "0075-4358" },
+    { "name": "Economic History Review", "issn": "0013-0117" },
+    { "name": "Medical History", "issn": "0025-7273" }
+  ],
+  "classify": {
+    "everyday": ["everyday", "daily life", "household", "food", "family", "children", "consumption", "material culture", "labour", "labor", "workers", "migration", "domestic", "marriage", "neighbour", "market"],
+    "ideas": ["science", "scientific", "medicine", "medical", "knowledge", "philosoph", "intellectual", "religio", "print", "manuscript", "technology", "education", "disease", "translation", "theology"],
+    "power": ["state", "empire", "imperial", "colonial", "war", "politic", "revolution", "slavery", "enslaved", "government", "nation", "law", "rebellion", "diplomat", "sovereign"]
+  },
+  "exclude_title": ["erratum", "corrigendum", "correction", "retract", "editorial", "book review", "review of", "reviews", "call for", "reply to", "response to", "introduction", "obituary", "forum:", "in memoriam", "front matter", "notes on contributors"]
+}

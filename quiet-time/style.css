@@ -335,6 +335,13 @@ canvas.r-plot{display:block;width:100%;max-width:720px;height:auto;border-radius
 .d-paper [data-cat="cognitive"],.d-story[data-cat="cognitive"]{--tint:var(--cog)}
 .d-paper [data-cat="social"],.d-story[data-cat="social"]{--tint:var(--soc)}
 .d-paper [data-cat="educational"],.d-story[data-cat="educational"]{--tint:var(--edu)}
+.d-paper [data-cat="everyday"],.d-story[data-cat="everyday"]{--tint:var(--cog)}
+.d-paper [data-cat="ideas"],.d-story[data-cat="ideas"]{--tint:var(--edu)}
+.d-paper [data-cat="power"],.d-story[data-cat="power"]{--tint:var(--soc)}
+.d-text{margin:20px 0 6px}
+.d-text-label{font-size:.76rem;letter-spacing:.05em;color:var(--tint);margin:0 0 5px;text-transform:lowercase}
+.d-text .h-excerpt{margin:0;font-size:.98rem}
+.d-text .h-excerpt footer{text-transform:none}
 .d-paper .h-masthead .h-mast-title{margin-bottom:14px}
 .d-paper button{font-family:inherit;color:inherit}
 .d-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 16px;border-bottom:1px solid var(--ink);padding-bottom:12px;text-transform:lowercase}

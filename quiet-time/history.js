@@ -1,184 +1,305 @@
-/* Quiet Time — the history paper. Small, sourced issues to read at leisure, plus a personal history board.
-   Issue content lives in history-issues.js; answers and the board are stored on this device only. */
-let historyView = { page: 'front', issue: null };
+/* Quiet Time — the history paper: a little magazine of things people wrote down.
+   One feed. Every hand-written story (history-discoveries.js) carries a period text checked word for word.
+   New papers (data/history-feed.json, refreshed weekly) appear sparingly: only the authors' own open-licence
+   abstract or the bare listing. Nothing automated ever writes a finding.
+   Routes: #history, #history?d=<id>, #history?saved. The older issues live on inside their stories, and
+   everything personal stays on this device. */
+const HIST_FIRST = 7, HIST_MORE = 6;
+const H_CATS = { everyday: 'everyday life', ideas: 'ideas and science', power: 'power and politics' };
+const H_REL = { same: 'the same events, from another side', linked: 'a documented connection', debate: 'part of the same argument', idea: 'same idea, different setting', cousin: 'a thematic cousin (no direct link)' };
+let histState = { filter: 'all', shown: HIST_FIRST, scroll: 0, trail: [] };
+let histFeed = null, histFeedTried = false;
 const H_ESC = t => String(t ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const H_PLAIN = html => { const d = document.createElement('div'); d.innerHTML = html; return d.textContent; };
+const hHttp = u => /^https?:\/\//.test(u || '') ? u : null;
+const hLink = (href, text) => `<a href="${H_ESC(href)}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+const historyBoard = () => { const b = storage.get('history-board'); return Array.isArray(b) ? b : []; };
+const histSaved = () => { const s = storage.get('history-saved'); return s && typeof s === 'object' ? s : {}; };
+const histD = id => HISTORY_DISCOVERIES.find(d => d.id === id);
+const histPaper = id => histFeed?.items?.find(p => p.id === id);
+const histIssue = d => d.issue ? HISTORY_ISSUES.find(i => i.id === d.issue) : null;
+const histSource = (d, key) => histIssue(d)?.sources[key] || HISTORY_SOURCES[key];
 
-function historyBoard() { const b = storage.get('history-board'); return Array.isArray(b) ? b : []; }
-function historySaveBoard(b) { storage.set('history-board', b); }
-function historyAnswers() { return storage.get('history-answers') || {}; }
-
-// [[key|locator]] → a numbered citation that scrolls to the issue's source list
-function historyCites(text, issue) {
-  const keys = Object.keys(issue.sources);
-  return text.replace(/\[\[([a-zA-Z0-9]+)(?:\|([^\]]+))?\]\]/g, (m, key, loc) => {
-    const n = keys.indexOf(key) + 1;
-    if (!n) return '';
-    return `<a class="h-cite" href="#" data-src="${key}" title="${H_ESC(H_PLAIN(issue.sources[key].cite) + (loc ? ' — ' + loc : ''))}">[${n}${loc ? ', ' + H_ESC(loc) : ''}]</a>`;
-  });
+// ---------------------------------------------------------------- routing
+function histGo(hash) { if (location.hash === hash) render('history'); else location.hash = hash; }
+function histOpen(id, follow) {
+  if (!document.querySelector('.d-story') && !document.querySelector('.d-saved')) histState.scroll = scrollY;
+  histState.trail = follow ? [...histState.trail, id] : [id];
+  histGo('#history?d=' + encodeURIComponent(id));
 }
-
-function drawHistory() {
-  if (historyView.page === 'issue' && HISTORY_ISSUES.some(i => i.id === historyView.issue)) drawHistoryIssue(historyView.issue);
-  else if (historyView.page === 'board') drawHistoryBoard();
-  else drawHistoryFront();
+function histSurprise(follow) {
+  const pool = HISTORY_DISCOVERIES.filter(d => !histState.trail.includes(d.id));
+  histOpen(pool[Math.floor(Math.random() * pool.length)].id, follow);
 }
-function historyGuardLinks(root) {
-  // outside links (sources) never slip past a quiet session; the in-page citations just scroll
+async function drawHistory() {
+  if (!histFeedTried) {
+    histFeedTried = true;
+    layout('', '', '<div class="h-paper d-paper"><p class="h-small">unfolding the paper…</p></div>');
+    try {
+      const r = await fetch('data/history-feed.json', { cache: 'no-cache', signal: AbortSignal.timeout(3000) });
+      if (r.ok) histFeed = await r.json();
+    } catch { /* the bundled stories are enough on their own */ }
+    if (!Array.isArray(histFeed?.items)) histFeed = null;
+    else histFeed.items = histFeed.items.filter(p => p.title && H_CATS[p.category]);
+    if (location.hash.startsWith('#history')) render('history'); // a full render keeps the quiet-session panel
+    return;
+  }
+  const q = location.hash.split('?')[1] || '';
+  if (q === 'saved') return histDrawSaved();
+  if (q.startsWith('d=')) {
+    const id = decodeURIComponent(q.slice(2));
+    if (histD(id) || histPaper(id)) {
+      const at = histState.trail.indexOf(id);
+      histState.trail = at >= 0 ? histState.trail.slice(0, at + 1) : [...histState.trail, id];
+      return histD(id) ? histDrawStory(histD(id)) : histDrawPaper(histPaper(id));
+    }
+  }
+  histDrawFeed();
+}
+// outside links never reach past a quiet session; inline citations open the source list
+function histGuard(root) {
   root.addEventListener('click', e => {
-    const cite = e.target.closest('.h-cite');
-    if (cite) {
+    const ref = e.target.closest('[data-hsrc]');
+    if (ref) {
       e.preventDefault();
-      const target = document.getElementById('src-' + cite.dataset.src);
-      if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'center' }); target.classList.remove('flash'); void target.offsetWidth; target.classList.add('flash'); }
+      const t = document.getElementById('hsrc-' + ref.dataset.hsrc);
+      if (t) { let p = t.closest('details'); while (p) { p.open = true; p = p.parentElement.closest('details'); } t.scrollIntoView({ behavior: 'smooth', block: 'center' }); t.classList.remove('flash'); void t.offsetWidth; t.classList.add('flash'); }
       return;
     }
     const a = e.target.closest('a[target="_blank"]');
     if (a && activeQuiet()) { e.preventDefault(); requestEarlyEnd(); }
   });
 }
-
-function drawHistoryFront() {
-  historyView = { page: 'front', issue: null };
-  const board = historyBoard();
-  layout('the history paper', '', `
-    <div class="h-paper h-front">
-      <header class="h-masthead">
-        <p class="h-mast-rule">est. in quiet time · read at leisure · no. 1 – ${HISTORY_ISSUES.length}</p>
-        <h3 class="h-mast-title">the history paper</h3>
-        <p class="h-mast-sub">small issues of curious history, each with a story, a real text from the period, a little question, and its sources.</p>
-      </header>
-      <ol class="h-issue-list">
-        ${HISTORY_ISSUES.map(i => `<li><button class="h-issue-link" data-issue="${i.id}" type="button">
-          <span class="h-no">no. ${i.no}</span><span class="h-issue-title">${H_ESC(i.title)}</span>
-          <span class="h-issue-kicker">${H_ESC(i.kicker)}</span><span class="h-issue-period">${H_ESC(i.period)}</span></button></li>`).join('')}
-      </ol>
-      <div class="h-front-foot"><button class="pill" id="hBoard" type="button">history board · ${board.length} kept</button></div>
-    </div>`);
-  document.querySelectorAll('[data-issue]').forEach(b => b.onclick = () => { historyView = { page: 'issue', issue: b.dataset.issue }; drawHistoryIssue(b.dataset.issue); scrollTo({ top: 0 }); });
-  $('#hBoard').onclick = () => { historyView = { page: 'board' }; drawHistoryBoard(); scrollTo({ top: 0 }); };
+function histWire(root) {
+  histGuard(root);
+  root.addEventListener('click', e => {
+    const s = e.target.closest('[data-hsave]');
+    if (s) { const on = histToggleSave(s.dataset.hsave); s.classList.toggle('on', on); s.setAttribute('aria-pressed', String(on)); s.textContent = on ? 'saved ✿' : 'save'; return; }
+    const o = e.target.closest('[data-hopen]');
+    if (o) histOpen(o.dataset.hopen);
+    const f = e.target.closest('[data-hfollow]');
+    if (f) histOpen(f.dataset.hfollow, true);
+  });
+}
+const histSaveBtn = id => { const on = !!histSaved()[id]; return `<button class="d-save${on ? ' on' : ''}" type="button" data-hsave="${H_ESC(id)}" aria-pressed="${on}">${on ? 'saved ✿' : 'save'}</button>`; };
+function histToggleSave(id) {
+  const s = histSaved();
+  if (s[id]) delete s[id];
+  else {
+    const p = histPaper(id), today = new Date().toISOString().slice(0, 10);
+    s[id] = p ? { savedAt: today, title: p.title, authors: p.authors, source: p.source, date: p.date, link: p.links?.doi || p.links?.landing || null } : today;
+  }
+  storage.set('history-saved', s);
+  return !!s[id];
 }
 
-function drawHistoryIssue(id) {
-  const issue = HISTORY_ISSUES.find(i => i.id === id);
-  const c = t => historyCites(t, issue);
-  const answers = historyAnswers()[id] || {};
-  const kept = new Set(historyBoard().map(k => k.id));
-  const bs = issue.bookshelf;
+// ---------------------------------------------------------------- what goes in the paper
+// same order all week; balanced across kinds of history, with new papers kept to a quiet minority
+function histCompose(filter) {
+  const now = new Date();
+  let a = now.getFullYear() * 100 + Math.floor((now - new Date(now.getFullYear(), 0, 1)) / 6048e5) + 7;
+  const rand = () => { a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const shuffle = l => { const o = [...l]; for (let i = o.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [o[i], o[j]] = [o[j], o[i]]; } return o; };
+  const cats = filter === 'all' ? shuffle(Object.keys(H_CATS)) : [filter];
+  const pools = Object.fromEntries(cats.map(c => [c, shuffle(HISTORY_DISCOVERIES.filter(d => d.cat === c))]));
+  const papers = (histFeed?.items || []).filter(p => cats.includes(p.category));
+  const raw = [...shuffle(papers.filter(p => p.abstract)), ...shuffle(papers.filter(p => !p.abstract))];
+  const related = (x, y) => !!x?.links?.some && !!y?.links?.some && (x.links.some(l => l[0] === y.id) || y.links.some(l => l[0] === x.id));
+  const out = [];
+  for (let n = 0; ; n++) {
+    let item = null;
+    if (n % 8 === 5 && raw.length) item = raw.shift();
+    else for (const c of [cats[n % cats.length], ...cats]) {
+      const pool = pools[c];
+      if (!pool.length) continue;
+      const i = pool.findIndex(x => !related(x, out.at(-1)));
+      item = pool.splice(i >= 0 ? i : 0, 1)[0];
+      break;
+    }
+    item ??= raw.shift();
+    if (!item) return out;
+    out.push(item);
+  }
+}
+
+// ---------------------------------------------------------------- cards
+function histCardD(d) {
+  const src = histSource(d, d.main), by = d.excerpt?.by || histIssue(d)?.bookshelf.author || '';
+  return `<article class="d-card" data-cat="${d.cat}">
+    <p class="d-kicker">${H_ESC(H_CATS[d.cat])} · ${H_ESC(d.when)}</p>
+    <h3 class="d-head"><button type="button" class="d-open" data-hopen="${d.id}">${H_ESC(d.head)}</button></h3>
+    <p class="d-body">${d.card}</p>
+    <p class="d-foot"><span class="d-source">${hLink(src.url, `${H_ESC(by)} ↗`)}</span>
+      <span class="d-acts">${histSaveBtn(d.id)}<button type="button" class="d-more" data-hopen="${d.id}">the story and the text →</button></span></p>
+  </article>`;
+}
+function histCardP(p) {
+  const link = hHttp(p.links?.doi) || hHttp(p.links?.landing);
+  const words = String(p.abstract || '').split(/\s+/);
+  const excerpt = words.length > 80 ? words.slice(0, 80).join(' ') + '…' : p.abstract;
+  const by = `${H_ESC((p.authors || [])[0] || 'author unknown')}${(p.author_count || 0) > 1 ? ' and others' : ''}, ${H_ESC((p.date || '').slice(0, 4))}`;
+  return `<article class="d-card d-new" data-cat="${H_ESC(p.category)}">
+    <p class="d-kicker">${H_ESC(H_CATS[p.category])} · new scholarship</p>
+    <h3 class="d-head"><button type="button" class="d-open" data-hopen="${H_ESC(p.id)}">${H_ESC(p.title)}</button></h3>
+    ${p.abstract ? `<p class="d-body"><span class="d-quote-mark">in the authors’ words, not checked by me:</span> ${H_ESC(excerpt)}</p>` : '<p class="d-body d-listing">Only the listing so far. I haven’t seen what it argues, so I won’t guess.</p>'}
+    <p class="d-foot"><span class="d-source">${link ? hLink(link, `${by} ↗`) : by}</span>
+      <span class="d-acts">${histSaveBtn(p.id)}<button type="button" class="d-more" data-hopen="${H_ESC(p.id)}">${p.abstract ? 'the abstract →' : 'the listing →'}</button></span></p>
+  </article>`;
+}
+const histCard = x => x.cat ? histCardD(x) : histCardP(x);
+
+// ---------------------------------------------------------------- the feed
+function histDrawFeed() {
+  histState.trail = [];
+  layout('', '', `<div class="h-paper d-paper">
+    <header class="h-masthead">
+      <p class="h-mast-rule">a little magazine of things people wrote down</p>
+      <h3 class="h-mast-title">the history paper</h3>
+    </header>
+    <div class="d-bar">
+      <div class="d-filters" role="group" aria-label="show">${[['all', 'all'], ...Object.entries(H_CATS)].map(([k, l]) => `<button type="button" class="d-filter${histState.filter === k ? ' on' : ''}" data-hfilter="${k}" ${k !== 'all' ? `data-cat="${k}"` : ''} aria-pressed="${histState.filter === k}">${l}</button>`).join('')}</div>
+      <div class="d-bar-right"><button type="button" class="d-link" id="hSurprise">surprise me</button><button type="button" class="d-link" id="hSavedLink">saved</button></div>
+    </div>
+    <div class="d-feed" id="hFeed"></div>
+    <div class="d-end" id="hEnd"></div>
+    ${histFeed?.as_of ? `<p class="d-colophon">new scholarship looked up ${H_ESC(histFeed.as_of)}. stories are checked by hand, so they change more slowly.</p>` : ''}
+  </div>`);
+  histWire(document.querySelector('.d-paper'));
+  $('#hSurprise').onclick = () => histSurprise(false);
+  $('#hSavedLink').onclick = () => { histState.scroll = scrollY; histGo('#history?saved'); };
+  document.querySelectorAll('[data-hfilter]').forEach(b => b.onclick = () => {
+    histState.filter = b.dataset.hfilter; histState.shown = HIST_FIRST;
+    document.querySelectorAll('[data-hfilter]').forEach(x => { const on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); });
+    fill();
+  });
+  function fill() {
+    const list = histCompose(histState.filter);
+    $('#hFeed').innerHTML = list.slice(0, histState.shown).map(histCard).join('');
+    $('#hEnd').innerHTML = histState.shown < list.length
+      ? '<button type="button" class="d-morebtn" id="hMore">more discoveries</button>'
+      : '<p class="d-rest">that’s all that’s on the shelf for now.</p>';
+    const more = $('#hMore');
+    if (more) more.onclick = () => { const from = histState.shown; histState.shown += HIST_MORE; fill(); $('#hFeed').children[from]?.querySelector('.d-open')?.focus({ preventScroll: true }); };
+  }
+  fill();
+  const y = histState.scroll;
+  if (y) queueMicrotask(() => scrollTo({ top: y, behavior: 'instant' }));
+}
+
+// ---------------------------------------------------------------- a story
+function histTrailBar() {
+  const label = id => { const t = histD(id)?.head || histPaper(id)?.title || ''; const w = t.split(' '); return w.slice(0, 5).join(' ') + (w.length > 5 ? '…' : ''); };
+  const trail = histState.trail;
+  return `<nav class="d-trail" aria-label="the path you took">
+    <button type="button" class="d-link d-backbtn" id="hBack">← back</button>
+    <span class="d-crumbs"><button type="button" class="d-crumb" data-hcrumb="">the paper</button>${trail.map((id, i) => i === trail.length - 1 ? `<span class="d-sep">›</span><span class="d-crumb here" aria-current="page">${H_ESC(label(id))}</span>` : `<span class="d-sep">›</span><button type="button" class="d-crumb" data-hcrumb="${H_ESC(id)}">${H_ESC(label(id))}</button>`).join('')}</span>
+  </nav>`;
+}
+function histWireStory() {
+  const t = histState.trail;
+  $('#hBack').onclick = () => t.length > 1 ? histGo('#history?d=' + encodeURIComponent(t[t.length - 2])) : histGo('#history');
+  document.querySelectorAll('[data-hcrumb]').forEach(b => b.onclick = () => histGo(b.dataset.hcrumb ? '#history?d=' + encodeURIComponent(b.dataset.hcrumb) : '#history'));
+  $('#hSurprise').onclick = () => histSurprise(true);
+  $('#hToFeed').onclick = () => histGo('#history');
+  histWire(document.querySelector('.d-story'));
+}
+const H_CONTEXT = {
+  scholarly: 'the surrounding facts were checked against the scholarly sources below.',
+  reference: 'the surrounding facts come from the reference works below, not original research.',
+  text: 'this rests mostly on the text itself, which shows what the writer said, not that it happened.'
+};
+function histDrawStory(d) {
+  const refs = [], issue = histIssue(d);
+  const cite = text => String(text).replace(/\[\[(\w+)(?:\|([^\]]+))?\]\]/g, (m, key, loc) => {
+    const s = histSource(d, key);
+    if (!s) return '';
+    if (!refs.includes(key)) refs.push(key);
+    return `<a class="h-cite" href="${H_ESC(s.url)}" data-hsrc="${key}" title="${H_ESC(H_PLAIN(s.cite) + (loc ? ' — ' + loc : ''))}">[${refs.indexOf(key) + 1}]</a>`;
+  });
+  const body = d.story.map(p => `<p class="d-para">${cite(p)}</p>`).join('');
+  const x = issue ? { text: issue.bookshelf.excerpt, work: issue.bookshelf.work, by: issue.bookshelf.author, written: issue.bookshelf.written, locator: issue.bookshelf.locator } : d.excerpt;
+  const verified = issue ? issue.bookshelf.verified : 'checked word for word against the linked text.';
+  const xSource = issue ? issue.bookshelf.cite[0] : x.source;
+  const xCite = cite(`[[${xSource}|${x.locator}]]`);
+  const refList = refs.map(k => { const s = histSource(d, k); return `<li id="hsrc-${k}"><span class="h-src-type">${H_ESC(s.type)}</span> ${s.cite} ${hLink(s.url, 'link ↗')}</li>`; }).join('');
+  layout('', '', `<div class="h-paper d-paper d-story" data-cat="${d.cat}">
+    ${histTrailBar()}
+    <article>
+      <p class="d-kicker">${H_ESC(H_CATS[d.cat])} · ${H_ESC(d.when)}</p>
+      <h3 class="d-title">${H_ESC(d.head)}</h3>
+      ${body}
+      <figure class="d-text">
+        <p class="d-text-label">from the period</p>
+        <blockquote class="h-excerpt">${x.text}<footer>— ${H_ESC(x.by)}, <em>${H_ESC(x.work)}</em>, ${H_ESC(x.written)}${x.translator ? `, trans. ${H_ESC(x.translator)}` : ''} ${xCite}</footer></blockquote>
+      </figure>
+      <p class="d-evidence">the text: ${H_ESC(verified)} ${H_ESC(H_CONTEXT[d.context])}</p>
+      <div class="d-storyacts">${histSaveBtn(d.id)}</div>
+      <section class="d-holes"><h4 class="d-sec">where this goes next</h4><ul>${d.links.map(([to, rel, why]) => { const t = histD(to); return `<li class="d-hole" data-cat="${t.cat}"><p class="d-rel">${H_ESC(H_REL[rel])}</p><button type="button" class="d-hole-go" data-hfollow="${t.id}">${H_ESC(t.head)}</button><p class="d-why">${why}</p></li>`; }).join('')}</ul>
+        <p class="d-holes-foot"><button type="button" class="d-link" id="hSurprise">somewhere completely different</button> <button type="button" class="d-link" id="hToFeed">back to the paper</button></p></section>
+      <div class="d-extra">
+        ${issue ? `<details><summary>the longer issue</summary><div class="d-detail">${histLongIssue(issue)}</div></details>` : ''}
+        <details><summary>sources</summary><ol class="d-refs">${refList}</ol></details>
+      </div>
+    </article>
+  </div>`);
+  histWireStory();
+}
+function histDrawPaper(p) {
+  const link = hHttp(p.links?.doi) || hHttp(p.links?.landing);
+  layout('', '', `<div class="h-paper d-paper d-story" data-cat="${H_ESC(p.category)}">
+    ${histTrailBar()}
+    <article>
+      <p class="d-kicker">${H_ESC(H_CATS[p.category])} · new scholarship</p>
+      <h3 class="d-title d-title-plain">${H_ESC(p.title)}</h3>
+      <p class="d-byline">${H_ESC((p.authors || []).join(', '))}${p.source ? ` · <em>${H_ESC(p.source)}</em>` : ''}${p.date ? ` · ${H_ESC(p.date)}` : ''}</p>
+      ${p.abstract ? `<p class="d-para">${H_ESC(p.abstract)}</p><p class="d-evidence">this is the authors’ own abstract (${H_ESC(p.abstract_license || 'open licence')}), reproduced automatically. nobody has checked it, and it is not a summary by me.</p>` : '<p class="d-para d-listing">Only the listing so far. I haven’t seen what it argues, so I won’t guess.</p>'}
+      <p class="d-paperlinks">${link ? hLink(link, 'read the original ↗') : ''}</p>
+      <div class="d-storyacts">${histSaveBtn(p.id)}</div>
+      <section class="d-holes"><h4 class="d-sec">where this goes next</h4><p class="d-why">I haven’t read this one, so I’ve left this empty rather than invent a connection.</p>
+        <p class="d-holes-foot"><button type="button" class="d-link" id="hSurprise">somewhere completely different</button> <button type="button" class="d-link" id="hToFeed">back to the paper</button></p></section>
+    </article>
+  </div>`);
+  histWireStory();
+}
+// the original issues, kept whole for anyone who wants them; the quizzes are not shown
+function histLongIssue(issue) {
   const keys = Object.keys(issue.sources);
-  layout('the history paper', '', `
-    <div class="controls h-nav"><button class="pill" id="hFront" type="button">← all issues</button><button class="pill" id="hBoardBtn" type="button">history board</button></div>
-    <article class="h-paper h-issue" id="hIssue">
-      <header class="h-issue-head">
-        <p class="h-mast-rule">the history paper · no. ${issue.no} · ${H_ESC(issue.period)}</p>
-        <h3 class="h-headline">${H_ESC(issue.title)}</h3>
-        <p class="h-kicker">${H_ESC(issue.kicker)}</p>
-      </header>
-
-      <section class="h-sec"><h4 class="h-sec-label"><span>01</span> / today's story</h4>
-        ${issue.story.map(p => `<p class="h-text${p.kind ? ' h-interp' : ''}">${p.kind ? `<span class="h-kind">${H_ESC(p.kind)}</span>` : ''}${c(p.text)}</p>`).join('')}
-      </section>
-
-      <section class="h-sec"><h4 class="h-sec-label"><span>02</span> / from the bookshelf</h4>
-        <p class="h-work"><em>${H_ESC(bs.work)}</em><br><span>${H_ESC(bs.author)} · ${H_ESC(bs.written)} · ${H_ESC(bs.genre)}</span></p>
-        <blockquote class="h-excerpt">${bs.excerpt}<footer>— ${H_ESC(bs.locator)} ${bs.cite.map(k => c(`[[${k}]]`)).join(' ')}</footer></blockquote>
-        <p class="h-verified">excerpt verified: ${H_ESC(bs.verified)}</p>
-        <p class="h-text">${c(bs.about)}</p>
-      </section>
-
-      <section class="h-sec"><h4 class="h-sec-label"><span>03</span> / a little question</h4>
-        ${issue.questions.map((q, qi) => `<div class="h-q" data-q="${qi}">
-          <p class="h-q-text">${H_ESC(q.q)}</p>
-          <div class="h-options">${q.options.map((o, oi) => `<button class="h-opt" type="button" data-o="${oi}">${H_ESC(o)}</button>`).join('')}</div>
-          <div class="h-explain" hidden></div>
-        </div>`).join('')}
-      </section>
-
-      <section class="h-sec"><h4 class="h-sec-label"><span>04</span> / a curious connection</h4>
-        <p class="h-conn-title">${H_ESC(issue.connection.title)}</p>
-        <p class="h-text">${c(issue.connection.text)}</p>
-      </section>
-
-      <section class="h-sec"><h4 class="h-sec-label"><span>05</span> / keep this</h4>
-        <p class="h-small">one click puts it on your history board, with its sources. notes are optional.</p>
-        <ul class="h-keep">${issue.keep.map(k => `<li><p class="h-keep-text">${H_ESC(k.text)}</p><p class="h-small">${H_ESC(k.explain)}</p>
-          <button class="pill h-keep-btn${kept.has(k.id) ? ' active' : ''}" type="button" data-keep="${k.id}" aria-pressed="${kept.has(k.id)}">${kept.has(k.id) ? 'kept ✿' : 'keep'}</button></li>`).join('')}</ul>
-      </section>
-
-      <section class="h-sec h-sources"><h4 class="h-sec-label">sources</h4>
-        <ol>${keys.map(k => `<li id="src-${k}"><span class="h-src-type">${H_ESC(issue.sources[k].type)}</span> ${issue.sources[k].cite} <a href="${issue.sources[k].url}" target="_blank" rel="noopener noreferrer">link ↗</a></li>`).join('')}</ol>
-        <p class="h-small">labels such as “scholarly interpretation” mark a historian’s reading rather than an established fact. quotations keep their original wording.</p>
-      </section>
-    </article>`);
-  $('#hFront').onclick = () => { drawHistoryFront(); scrollTo({ top: 0 }); };
-  $('#hBoardBtn').onclick = () => { historyView = { page: 'board' }; drawHistoryBoard(); scrollTo({ top: 0 }); };
-  const art = $('#hIssue');
-  historyGuardLinks(art);
-  art.querySelectorAll('.h-q').forEach(box => {
-    const qi = +box.dataset.q;
-    const show = oi => historyShowAnswer(issue, box, qi, oi);
-    box.querySelectorAll('.h-opt').forEach(b => b.onclick = () => {
-      const all = historyAnswers(); all[id] = { ...(all[id] || {}), [qi]: +b.dataset.o }; storage.set('history-answers', all);
-      show(+b.dataset.o);
-    });
-    if (answers[qi] != null) show(answers[qi]);
+  const c = t => String(t).replace(/\[\[([a-zA-Z0-9]+)(?:\|([^\]]+))?\]\]/g, (m, key, loc) => {
+    const n = keys.indexOf(key) + 1;
+    return n ? `<a class="h-cite" href="${H_ESC(issue.sources[key].url)}" data-hsrc="${key}" title="${H_ESC(H_PLAIN(issue.sources[key].cite) + (loc ? ' — ' + loc : ''))}">[${loc ? H_ESC(loc) : key}]</a>` : '';
   });
-  art.querySelectorAll('[data-keep]').forEach(b => b.onclick = () => historyToggleKeep(issue, b));
+  return `<h5>the story</h5>${issue.story.map(p => `<p>${p.kind ? `<em>${H_ESC(p.kind)}:</em> ` : ''}${c(p.text)}</p>`).join('')}
+    <h5>about the text</h5><p>${c(issue.bookshelf.about)}</p>
+    <h5>${H_ESC(issue.connection.title)}</h5><p>${c(issue.connection.text)}</p>`;
 }
 
-function historyShowAnswer(issue, box, qi, oi) {
-  const q = issue.questions[qi];
-  box.querySelectorAll('.h-opt').forEach((b, i) => {
-    b.classList.toggle('right', i === q.answer);
-    b.classList.toggle('chosen', i === oi);
-    b.setAttribute('aria-pressed', String(i === oi));
+// ---------------------------------------------------------------- saved
+function histDrawSaved() {
+  const saved = histSaved(), board = historyBoard();
+  const ds = Object.keys(saved).map(histD).filter(Boolean);
+  const papers = Object.entries(saved).filter(([id, v]) => !histD(id) && v && typeof v === 'object');
+  layout('', '', `<div class="h-paper d-paper d-saved">
+    <nav class="d-trail"><button type="button" class="d-link d-backbtn" id="hBack">← the paper</button></nav>
+    <h3 class="d-title">saved</h3>
+    ${ds.length || papers.length || board.length ? '' : '<p class="d-para">Nothing here yet. Tap “save” on anything you’d like to come back to.</p>'}
+    <div class="d-feed">${ds.map(histCard).join('')}</div>
+    ${papers.length ? `<ul class="d-saved-list">${papers.map(([id, v]) => `<li class="d-saved-row"><p class="d-saved-title">${H_ESC(v.title)}</p><p class="d-why">${H_ESC((v.authors || []).slice(0, 3).join(', '))}${v.source ? ` · ${H_ESC(v.source)}` : ''}. a saved listing; not read or summarised here.</p><p class="d-saved-acts">${hHttp(v.link) ? hLink(v.link, 'the original ↗') : ''} <button type="button" class="d-link" data-hunsave="${H_ESC(id)}">remove</button></p></li>`).join('')}</ul>` : ''}
+    ${board.length ? `<details class="d-older" open><summary>from your history board</summary><div class="d-detail">${board.map(k => `<div class="d-saved-row" data-kid="${H_ESC(k.id)}"><p class="d-rel">${H_ESC(k.kind)}${k.period ? ` · ${H_ESC(k.period)}` : ''}</p><p>${H_ESC(k.text)}</p>${k.explain ? `<p class="d-why">${H_ESC(k.explain)}</p>` : ''}${(k.sources || []).map(s => `<p class="d-why">${H_ESC(s.cite)} ${hHttp(s.url) ? hLink(s.url, 'link ↗') : ''}</p>`).join('')}<textarea class="h-note" rows="2" placeholder="a note, if you like" aria-label="optional note">${H_ESC(k.note || '')}</textarea><p class="d-saved-acts"><button type="button" class="d-link" data-kremove>remove</button></p></div>`).join('')}</div></details>` : ''}
+    <p class="d-colophon"><button type="button" class="d-link" id="hExport">keep a copy</button> <label class="d-link d-import">bring a copy back<input type="file" id="hImport" accept="application/json,.json" hidden></label> <span id="hMsg" aria-live="polite"></span></p>
+  </div>`);
+  const root = document.querySelector('.d-saved');
+  histWire(root);
+  $('#hBack').onclick = () => histGo('#history');
+  root.querySelectorAll('[data-hunsave]').forEach(b => b.onclick = () => { const s = histSaved(); delete s[b.dataset.hunsave]; storage.set('history-saved', s); histDrawSaved(); });
+  root.querySelectorAll('[data-kid]').forEach(row => {
+    const id = row.dataset.kid;
+    row.querySelector('.h-note').onchange = e => { const b = historyBoard(); const k = b.find(x => x.id === id); if (k) { k.note = e.target.value; storage.set('history-board', b); } };
+    row.querySelector('[data-kremove]').onclick = () => { storage.set('history-board', historyBoard().filter(x => x.id !== id)); histDrawSaved(); };
   });
-  const ex = box.querySelector('.h-explain');
-  ex.hidden = false;
-  ex.innerHTML = `<p><strong>${oi === q.answer ? 'yes —' : 'not quite —'}</strong> ${historyCites(q.explain, issue)}</p><button class="textbtn h-again" type="button">ask me again</button>`;
-  ex.querySelector('.h-again').onclick = () => {
-    const all = historyAnswers(); if (all[issue.id]) { delete all[issue.id][qi]; storage.set('history-answers', all); }
-    box.querySelectorAll('.h-opt').forEach(b => { b.classList.remove('right', 'chosen'); b.setAttribute('aria-pressed', 'false'); });
-    ex.hidden = true; ex.innerHTML = '';
-  };
-}
-
-function historyCard(issue, k) {
-  return {
-    id: k.id, issueId: issue.id, issueNo: issue.no, issueTitle: issue.title, period: issue.period,
-    kind: k.kind, text: k.text, explain: k.explain, related: k.related,
-    sources: k.cite.map(key => ({ cite: H_PLAIN(issue.sources[key].cite), url: issue.sources[key].url })),
-    savedAt: new Date().toISOString().slice(0, 10), note: ''
-  };
-}
-function historyToggleKeep(issue, btn) {
-  const k = issue.keep.find(x => x.id === btn.dataset.keep);
-  let board = historyBoard();
-  const has = board.some(c => c.id === k.id);
-  board = has ? board.filter(c => c.id !== k.id) : [historyCard(issue, k), ...board];
-  historySaveBoard(board);
-  btn.classList.toggle('active', !has);
-  btn.setAttribute('aria-pressed', String(!has));
-  btn.textContent = has ? 'keep' : 'kept ✿';
-}
-
-function drawHistoryBoard(query = '') {
-  historyView = { page: 'board' };
-  layout('history board', '', `
-    <div class="controls h-nav"><button class="pill" id="hFront" type="button">← the history paper</button>
-      <input class="pill h-search" id="hSearch" type="search" placeholder="search your board" aria-label="search your history board" value="${H_ESC(query)}">
-      <button class="pill" id="hExport" type="button">export (.json)</button>
-      <label class="pill h-import">import<input type="file" id="hImport" accept="application/json,.json" hidden></label></div>
-    <p class="h-board-msg" id="hMsg" aria-live="polite"></p>
-    <div class="h-board" id="hCards"></div>`);
-  $('#hFront').onclick = () => { drawHistoryFront(); scrollTo({ top: 0 }); };
-  const render = () => historyRenderCards($('#hSearch').value.trim().toLowerCase());
-  $('#hSearch').oninput = render;
   $('#hExport').onclick = () => {
-    const blob = new Blob([JSON.stringify({ app: 'quiet time', kind: 'history-board', version: 1, exported: new Date().toISOString(), cards: historyBoard() }, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob), a = document.createElement('a');
-    a.href = url; a.download = 'history-board.json'; document.body.append(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 2000);
+    const text = JSON.stringify({ app: 'quiet time', kind: 'history-board', version: 2, exported: new Date().toISOString(), cards: historyBoard(), saved: histSaved(), answers: storage.get('history-answers') || {} }, null, 2);
+    const u = URL.createObjectURL(new Blob([text], { type: 'application/json' })), a = document.createElement('a');
+    a.href = u; a.download = 'history-paper-saved.json'; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 2000);
   };
   $('#hImport').onchange = async e => {
     const f = e.target.files[0]; if (!f) return;
@@ -186,47 +307,16 @@ function drawHistoryBoard(query = '') {
       const data = JSON.parse(await f.text());
       const cards = (Array.isArray(data) ? data : data.cards || []).filter(c => c && typeof c.id === 'string' && typeof c.text === 'string');
       const board = historyBoard(), byId = new Map(board.map(c => [c.id, c]));
-      let added = 0;
       for (const c of cards) {
-        const clean = {
-          id: c.id, issueId: String(c.issueId || ''), issueNo: c.issueNo, issueTitle: String(c.issueTitle || ''), period: String(c.period || ''),
-          kind: String(c.kind || ''), text: c.text, explain: String(c.explain || ''), related: String(c.related || ''),
-          sources: Array.isArray(c.sources) ? c.sources.filter(s => s && s.cite).map(s => ({ cite: String(s.cite), url: /^https?:\/\//.test(s.url || '') ? s.url : '' })) : [],
-          savedAt: String(c.savedAt || ''), note: String(c.note || '')
-        };
-        if (byId.has(c.id)) { const cur = byId.get(c.id); if (!cur.note && clean.note) cur.note = clean.note; }
-        else { byId.set(c.id, clean); board.push(clean); added++; }
+        const clean = { id: c.id, issueId: String(c.issueId || ''), issueNo: c.issueNo, issueTitle: String(c.issueTitle || ''), period: String(c.period || ''), kind: String(c.kind || ''), text: c.text, explain: String(c.explain || ''), related: String(c.related || ''), sources: Array.isArray(c.sources) ? c.sources.filter(s => s && s.cite).map(s => ({ cite: String(s.cite), url: hHttp(s.url) || '' })) : [], savedAt: String(c.savedAt || ''), note: String(c.note || '') };
+        if (byId.has(c.id)) { const cur = byId.get(c.id); if (!cur.note && clean.note) cur.note = clean.note; } else { byId.set(c.id, clean); board.push(clean); }
       }
-      historySaveBoard(board);
-      $('#hMsg').textContent = `imported ${added} new card${added === 1 ? '' : 's'}${cards.length - added ? ` (${cards.length - added} already here)` : ''}.`;
-      render();
-    } catch { $('#hMsg').textContent = 'that file could not be read as a history board backup.'; }
-    e.target.value = '';
+      storage.set('history-board', board);
+      const s = histSaved();
+      for (const [id, v] of Object.entries(data.saved || {})) if (!s[id] && (histD(id) ? typeof v === 'string' : v && typeof v.title === 'string')) s[id] = histD(id) ? v : { savedAt: String(v.savedAt || ''), title: v.title, authors: Array.isArray(v.authors) ? v.authors.map(String) : [], source: String(v.source || ''), date: String(v.date || ''), link: hHttp(v.link) };
+      storage.set('history-saved', s);
+      histDrawSaved();
+      $('#hMsg').textContent = 'brought back.';
+    } catch { $('#hMsg').textContent = 'that file could not be read.'; }
   };
-  historyGuardLinks($('#hCards'));
-  render();
-}
-function historyRenderCards(q) {
-  const board = historyBoard();
-  const list = board.filter(c => !q || [c.text, c.explain, c.related, c.period, c.issueTitle, c.note, ...(c.sources || []).map(s => s.cite)].join(' ').toLowerCase().includes(q));
-  const box = $('#hCards');
-  box.innerHTML = !board.length ? '<p class="h-empty">nothing kept yet. open an issue and press “keep” on anything you’d like to remember.</p>'
-    : !list.length ? '<p class="h-empty">no cards match that search.</p>'
-    : list.map(c => `<article class="h-card" data-id="${H_ESC(c.id)}">
-      <p class="h-card-meta">${H_ESC(c.kind)} · ${H_ESC(c.period)}</p>
-      <p class="h-card-text">${H_ESC(c.text)}</p>
-      <p class="h-small">${H_ESC(c.explain)}</p>
-      <p class="h-small"><strong>related:</strong> ${H_ESC(c.related)}</p>
-      <details class="h-card-src"><summary>sources</summary><ul>${(c.sources || []).map(s => `<li>${H_ESC(s.cite)} ${s.url ? `<a href="${H_ESC(s.url)}" target="_blank" rel="noopener noreferrer">link ↗</a>` : ''}</li>`).join('')}</ul></details>
-      <p class="h-small">from <button class="textbtn h-open" type="button" data-issue="${H_ESC(c.issueId)}">no. ${H_ESC(c.issueNo)} · ${H_ESC(c.issueTitle)}</button>${c.savedAt ? ` · kept ${H_ESC(c.savedAt)}` : ''}</p>
-      <textarea class="h-note" rows="2" placeholder="a note, if you like" aria-label="optional note">${H_ESC(c.note)}</textarea>
-      <button class="textbtn h-remove" type="button">remove</button>
-    </article>`).join('');
-  box.querySelectorAll('.h-card').forEach(card => {
-    const id = card.dataset.id;
-    card.querySelector('.h-note').onchange = e => { const b = historyBoard(); const c = b.find(x => x.id === id); if (c) { c.note = e.target.value; historySaveBoard(b); } };
-    card.querySelector('.h-remove').onclick = () => { historySaveBoard(historyBoard().filter(x => x.id !== id)); historyRenderCards($('#hSearch').value.trim().toLowerCase()); };
-    const open = card.querySelector('.h-open');
-    open.onclick = () => { if (HISTORY_ISSUES.some(i => i.id === open.dataset.issue)) { historyView = { page: 'issue', issue: open.dataset.issue }; drawHistoryIssue(open.dataset.issue); scrollTo({ top: 0 }); } };
-  });
 }

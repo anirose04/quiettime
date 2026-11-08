@@ -1,0 +1,711 @@
+{
+ "generated_at": "2026-11-08T20:12:57.672Z",
+ "as_of": "2026-11-08",
+ "window_days": 365,
+ "about": "Bibliographic records only. abstract is the authors' own text, included only for CC BY records. Nothing here has been read, reviewed or verified.",
+ "counts": {
+  "candidates": 298,
+  "usable": 163,
+  "items": 36,
+  "with_abstract": 34
+ },
+ "items": [
+  {
+   "id": "doi:10.1017/s1740022826100643",
+   "doi": "10.1017/s1740022826100643",
+   "title": "Fraught friendships: East German experts, communist development, and environment in Mongolia during the Cold War",
+   "category": "everyday",
+   "authors": [
+    "Julia E. Ault"
+   ],
+   "author_count": 1,
+   "source": "Journal of Global History",
+   "date": "2026-07-30",
+   "abstract": "This article examines East German experts’ participation in development projects in Mongolia and their conceptions of environments during the Cold War. Starting in the 1950s, East Germany (German Democratic Republic, GDR) and Mongolia intensified economic ties that aimed to industrialise Mongolia and align with communist objectives. The endeavours were intended to provide development aid, though they also provided the GDR with access to natural resources it could not obtain domestically. Drawing on sources from numerous German archives, this article argues that East German development projects followed broader patterns of exploitation and consumption between Europe and the Global South after the Second World War. Communist trade relations dissolved with the end of the Cold War, but they set the stage for trade and environmental impacts that have continued to this day.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s1740022826100643",
+    "landing": "https://doi.org/10.1017/s1740022826100643"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/ehr.70083",
+   "doi": "10.1111/ehr.70083",
+   "title": "The commercialization of labour markets: Evidence from wage inequality in the Middle Ages",
+   "category": "everyday",
+   "authors": [
+    "Jordan Claridge",
+    "Vincent Delabastita",
+    "Spike Gibbs"
+   ],
+   "author_count": 3,
+   "source": "The Economic History Review",
+   "date": "2026-01-09",
+   "abstract": "This paper moves beyond the focus on ‘average’ wage trends in pre‐industrial economies by examining the broad diversity of pay rates and forms of remuneration across occupations and regions in medieval England. We find that whilst some workers enjoyed substantial growth in wage rates after the Black Death, there was a large group who experienced no real increases. We argue that wage inequality in post‐Black Death England reflects the uneven penetration of market forces across occupations and regions, with deep‐rooted customary structures continuing to shape remuneration. Its findings suggest that a more nuanced approach is essential for understanding the complexities and continuities of pre‐industrial labour dynamics.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/ehr.70083",
+    "landing": "https://doi.org/10.1111/ehr.70083"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/ehr.70086",
+   "doi": "10.1111/ehr.70086",
+   "title": "Life‐cycle living standards of male‐headed households: Evidence from Stockholm, 1800–80",
+   "category": "everyday",
+   "authors": [
+    "Anton Svensson"
+   ],
+   "author_count": 1,
+   "source": "The Economic History Review",
+   "date": "2026-01-29",
+   "abstract": "Recent research in economic history argues for using a household life cycle standard‐of‐living approach that includes the income and expenses of all household members and considers fluctuations in the household over the life course. This study builds on that approach by empirically examining the development of living standards in male‐headed households in Stockholm 1800–80, linking individuals and their households in the tax records throughout the life cycle. We compile a random sample of approximately 400 male‐headed households to examine how living standards developed and whether they were able to save to mitigate income decline in old age. Distinguishing between manual‐ and non‐manual‐worker households, this study finds that the manual‐worker household size outgrew income in early adulthood, creating a temporary downturn in welfare ratios. Living standards rose in subsequent stages but declined again when the head of the household approached old age. Manual‐worker households suffered a more pronounced decline in income during these later years than non‐manual‐worker households. The latter had better opportunities to smooth consumption over the life cycle by setting money aside, although manual‐worker households that survived into old age had some capacity for small savings, which may have eased but not offset the decline.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/ehr.70086",
+    "landing": "https://doi.org/10.1111/ehr.70086"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/ehr.70084",
+   "doi": "10.1111/ehr.70084",
+   "title": "Between famine and freedom: Food prices during the Indonesian War of Independence, 1945–9",
+   "category": "everyday",
+   "authors": [
+    "Ingrid J. J. de Zwarte",
+    "Helmi Moret",
+    "Pim de Zwart"
+   ],
+   "author_count": 3,
+   "source": "The Economic History Review",
+   "date": "2026-01-29",
+   "abstract": "This paper investigates how the Indonesian War of Independence (1945‒9) influenced staple food prices, and how fluctuations in those prices, in turn, shaped the trajectory and dynamics of the conflict. We compiled a dataset comprising more than 8600 prices for staple foods covering the entire Indonesian archipelago from 1939‒49, allowing us to estimate the effects of wartime conditions and the main Dutch military campaigns on food prices. We find that wartime price peaks were much more severe and prolonged than studies previously assumed, both in and outside Java. We show that the first large military operation, Operation Product, was partly motivated by high rice prices and demonstrate that these prices were significantly reduced across Java and Sumatra after the end of the military campaign. We then use a second dataset on wartime wages to estimate nutritional standards. These combined data suggest a very low nutritional status of urban unskilled wage labourers – often below the family subsistence level – in 1946 and the first half of 1947. Our results point to broader entitlement failures driven by weak market connectivity amidst military and economic warfare.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/ehr.70084",
+    "landing": "https://doi.org/10.1111/ehr.70084"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0022216x2610145x",
+   "doi": "10.1017/s0022216x2610145x",
+   "title": "Maduro’s Long-Lasting Strength from Weakness: How Venezuela’s Dictatorship Turned Adversity into Opportunity",
+   "category": "everyday",
+   "authors": [
+    "Leonardo Di Bonaventura Altuve",
+    "Kurt Weyland"
+   ],
+   "author_count": 2,
+   "source": "Journal of Latin American Studies",
+   "date": "2026-10-05",
+   "abstract": "How did Nicolás Maduro’s autocratic regime in Venezuela survive serious problems and massive failures for 13 years? Contrary to the prevailing emphasis on the autocracy’s fragility, we explore the domestic and international foundations of its noteworthy resilience. Integrating Albert Hirschman’s framework of ‘Exit, Voice and Loyalty’ with Milan Svolik’s systematic theory of authoritarian rule, we highlight how exit via mass emigration, popular loyalty forged through conditional food aid, and elite loyalty engineered through corruption and patronage and reinforced by fears of international prosecution safeguarded Maduro’s dictatorship against domestic challenges that have toppled other autocracies worldwide. Only a US commando operation managed to oust the autocrat – yet nevertheless, the main structures of the non-democratic regime still seem to persist.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0022216x2610145x",
+    "landing": "https://doi.org/10.1017/s0022216x2610145x"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0010417526100528",
+   "doi": "10.1017/s0010417526100528",
+   "title": "Spiraling out in the Circular Economy: Movement and Belonging at a Malaysian Rare Earth Elements Refinery",
+   "category": "everyday",
+   "authors": [
+    "Tom Özden‐Schilling"
+   ],
+   "author_count": 1,
+   "source": "Comparative Studies in Society and History",
+   "date": "2026-05-20",
+   "abstract": "The rise of “circular economy” discourse in the extractive industries has altered how researchers, laborers, activists, and consumers conceptualize movements of materials. To proponents, building a circular economy around rare earth elements (REE) production will “close the loop” around extraction, processing, design, manufacturing, and disposal practices to minimize and eventually eliminate all “waste” produced through technology development. Articulated through utopian imaginaries projecting environmental and technological futures far beyond mining, however, these conceptualizations of movement also carry far-ranging entailments for the movements of specific groups of people, including their place in future social and political orders and their capacity to plan for multi-generational futures. This article follows activists and university researchers brought into conflict through a REE processing facility in Malaysia, where research on commercial applications for post-processing wastes has been treated alternately as pathways to economic diversification and as threats to minoritized communities’ welfare and senses of national belonging. Both groups correlate “responsible” waste management to mismanaged flows of people: prospective experts drawn overseas for more sophisticated work; children emigrating for university education or middle-class jobs after struggling to find positions in Malaysia. While explicitly offering future stability and a broadened ethics of responsible attention, the visions of circularity undergirding these debates effectively collapse the many forms of movement at stake in industrial transition into a promise of transcendence, obscuring the racialized patterns of exclusion and migration that invariably accompany the extractive industries.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0010417526100528",
+    "landing": "https://doi.org/10.1017/s0010417526100528"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/1468-0424.70086",
+   "doi": "10.1111/1468-0424.70086",
+   "title": "New Goods and New Habits: Cleanliness as a Class Marker and the Making of the Peasant Homemaker, Sweden 1850–1910",
+   "category": "everyday",
+   "authors": [
+    "Marie Ulväng"
+   ],
+   "author_count": 1,
+   "source": "Gender & History",
+   "date": "2026-11-06",
+   "abstract": "The article examines what cleanliness, that is, hygiene and tidiness, meant for landowning farm households in the county of Härjedalen in the inland of northern Sweden from the 1860s to the 1910s. The period is characterised by a growing understanding of bacteria and of how infectious diseases could be prevented through improved hygiene, leading towards a ‘germ panic’. In Härjedalen, the industrialisation of forestry led many farm households to sell their homesteads, leaving landowning farm households a small but influential group in local society. The study shows that wealthier farm households improved their houses and adopted bourgeois customs and attitudes to cleanliness to distinguish themselves from the landless peasantry. The shift in the main source of income from livestock farming to forestry altered the dynamics of men's and women's tasks and responsibilities, enabling wives to devote more time to housework. The increase in domestic work and the reallocation of labour were not driven by fear of bacteria or by social pressure from above, but by cleanliness and housewifery as markers of social class. Spacious and well‐kept homes were not an option for the areas’ workers, crofters and tenants.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/1468-0424.70086",
+    "landing": "https://doi.org/10.1111/1468-0424.70086"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/1468-0424.70056",
+   "doi": "10.1111/1468-0424.70056",
+   "title": "‘The Housewife's Greatest Standby’: Dried Eggs, Gender and Domesticity During the Second World War",
+   "category": "everyday",
+   "authors": [
+    "Joel Mead"
+   ],
+   "author_count": 1,
+   "source": "Gender & History",
+   "date": "2026-07-27",
+   "abstract": "This article examines the previously underexplored connections between dried eggs, women and domesticity in Britain during the Second World War. It argues that newsprint and advertisements framed the purchase and use of dried eggs, a novel wartime product, as a means for housewives to contribute to the war effort through domestic labour. Dried eggs were presented as nutritious and natural, and this framing carried an implied criticism of women who resisted or distrusted the product. It also argues that women's everyday engagement with dried eggs was a form of ‘kitchen sovereignty’, in which they interpreted and negotiated rationing policy within the home. Finally, it analyses newspaper coverage of women‐led protests following the cessation of dried egg imports. Together, these perspectives illuminate the relationship between food, gender and domesticity in wartime Britain.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/1468-0424.70056",
+    "landing": "https://doi.org/10.1111/1468-0424.70056"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0018246x26101617",
+   "doi": "10.1017/s0018246x26101617",
+   "title": "Miniature Material Worlds: Women and the Baby House in Eighteenth-Century England",
+   "category": "everyday",
+   "authors": [
+    "Amy Craig"
+   ],
+   "author_count": 1,
+   "source": "The Historical Journal",
+   "date": "2026-07-30",
+   "abstract": "Unlike modern dolls’ houses, eighteenth-century baby houses were more than playthings meant only for children. For genteel women and girls alike, these small-scale spaces held positions of large significance. Taking a material culture approach that combines analysis of extant baby houses with an array of archival evidence, this article reconstructs their role as important affective agents within women’s lives. Expanding upon existing studies which illuminate the connection between the baby house and the full-scale domestic interior, it argues that these miniature material realms were also inherently entwined with the ever-growing world of goods around them. Rather than simply replicating this wider material world in miniature, the baby house represented a powerful and especially intimate medium through which the female user could contemplate and negotiate her place within it. Furthering a flourishing literature concerned with the analytical potential of smallness, the article demonstrates how a close focus upon these personal objects can shed new light on women’s emotional, sensory, and material experiences in this period. It thus advances recent efforts to rehabilitate the status of feminine toys and trinkets, doubly dismissed because of their size, and inherent association with women, as essential historical agents worthy of scholarly investigation.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0018246x26101617",
+    "landing": "https://doi.org/10.1017/s0018246x26101617"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1080/03071022.2026.2673688",
+   "doi": "10.1080/03071022.2026.2673688",
+   "title": "Getting by or getting on: gender, intergenerational earning and caring in deindustrialising localities in Lanarkshire, Scotland",
+   "category": "everyday",
+   "authors": [
+    "Ewan Gibbs",
+    "Gillian Murray",
+    "Janet Greenlees"
+   ],
+   "author_count": 3,
+   "source": "Social History",
+   "date": "2026-07-03",
+   "abstract": "This article explores how British working-class households have navigated deindustrialisation, rising economic inequality and the changing provision of public services since the mid-twentieth century. It examines how these changes have been interpreted using oral history testimonies from people born between the 1940s and the 1970s who have lived and worked their entire lives in Lanarkshire, Scotland. Two juxtaposed narratives of ‘getting on’ and ‘getting by’ structured these recollections, which were primarily recorded with women interviewees. ‘Getting on’ centred on social mobility associated with material improvements, private homeownership and professional white-collar employment. Conversely, ‘getting by’ was underpinned by the struggle for survival in difficult circumstances conditioned by industrial job losses, dwindling public housing stocks and diminishing public transport and green space. We analysed these narratives across three themes: household budgeting, the commodification of housing through council house sales, and social and familial care. The diverging narratives nevertheless coalesce in demonstrating the centrality of the household unit for economic strategising which was increasingly characterised by vernacular equality in companionate marriages. They also demonstrate the centrality of women’s paid and unpaid caring work but underline a communal loss associated with diminished public resources even among those who got on.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1080/03071022.2026.2673688",
+    "landing": "https://doi.org/10.1080/03071022.2026.2673688"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1093/pastj/gtag025",
+   "doi": "10.1093/pastj/gtag025",
+   "title": "Microhistory and Women’s Time Use",
+   "category": "everyday",
+   "authors": [
+    "Jane Humphries"
+   ],
+   "author_count": 1,
+   "source": "Past & Present",
+   "date": "2026-07-24",
+   "abstract": "Gender historians have pioneered attention to ‘doing words’ to identify otherwise invisible women’s work. Searches in court records for verbs with female subjects have documented women’s widespread participation in economic activity, often directing and managing, while playing down their unpaid care for family members. This article turns to a microhistorical source, diaries written by Peter Walkden, a farmer and Nonconformist minister living in eighteenth-century Lancashire. Walkden’s account of his farming routine and interactions with family and community incidentally describes the activities of his wife, Catherine. Evidence of her ‘doings’ identifies Catherine’s repertoire of tasks but is extended here to identify work and labour relations by the ownership of equipment, production for use or sale, and the need for occasional stand-ins when Catherine was indisposed or unavailable. Additional circumstantial evidence and other historical and modern sources enable the estimation of the frequency and duration of tasks, so providing the first breakdown of an early modern woman’s working day. Findings confirm the extent of women’s work but reinstate unpaid care as vital to the functioning of Walkden’s household, and by inference to social reproduction generally. Significantly, when Walkden himself had to provide care or pay for an understudy, it was understood as work and its value recognized.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1093/pastj/gtag025",
+    "landing": "https://doi.org/10.1093/pastj/gtag025"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/1468-0424.70084",
+   "doi": "10.1111/1468-0424.70084",
+   "title": "Negotiating Intimate Boundaries: Gender, Sexuality, and Migration in 1960s West Germany",
+   "category": "everyday",
+   "authors": [
+    "Elisabeth Kimmerle"
+   ],
+   "author_count": 1,
+   "source": "Gender & History",
+   "date": "2026-11-05",
+   "abstract": null,
+   "abstract_license": null,
+   "links": {
+    "doi": "https://doi.org/10.1111/1468-0424.70084",
+    "landing": "https://doi.org/10.1111/1468-0424.70084"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1093/ehr/ceag162",
+   "doi": "10.1093/ehr/ceag162",
+   "title": "Print Magic and Secularisation in Late Colonial India",
+   "category": "ideas",
+   "authors": [
+    "Markus Daechsel"
+   ],
+   "author_count": 1,
+   "source": "The English Historical Review",
+   "date": "2026-08-01",
+   "abstract": "A new genre of magic publications became prominent in the vernacular print culture of India in the aftermath of the First World War. It consisted of cheap and easily accessible compendia combining many different genres of magic, from witchcraft and ‘service magic’ to clairvoyance, omens and auguries, spirit possession and folk medicine, offering both a sense of wonder and excitement and material benefits to their readers. Cutting across older religious boundaries between Hindus and Muslims and containing multiple cross-connections with Western parapsychology and illusionism, this material marked a new place for ‘magic’ within the experience of colonial modernity. As the first extensive exploration of this new body of Urdu source material, this article offers a wide and theory-guided exploration of what the prominence of this cultural genre means for the cultural history of the early twentieth century. Informed by both Alfred Schütz’s phenomenological toolkit and a broadly Marxian literary sociology, this article argues that the changing meaning of magic—which was both produced and reflected in these pamphlets—had important repercussions for how people understood the scope of ‘religion’, ‘science’ and even ‘economics’. While ‘magic’ was in certain respects secularised, it was by no means displaced from mainstream literate culture. More importantly, it never became an obstacle for capitalist development in the way suggested by Max Weber’s disenchantment thesis. Rather, this new form of print ‘magic’ could flourish in its own experiential ‘enclave’, and even develop multiple positive synergies with an emerging consumer culture.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1093/ehr/ceag162",
+    "landing": "https://doi.org/10.1093/ehr/ceag162"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/mdh.2026.10059",
+   "doi": "10.1017/mdh.2026.10059",
+   "title": "Before thalidomide: Heinrich Mückter and the Nazi typhus complex",
+   "category": "ideas",
+   "authors": [
+    "Lukas Frank",
+    "Dominik Groß",
+    "Nico Biermanns"
+   ],
+   "author_count": 3,
+   "source": "Medical History",
+   "date": "2026-04-20",
+   "abstract": "The physician and chemist Heinrich Mückter (1914-87) is widely known for his role in developing thalidomide at Grünenthal, whose market launch led to one of the most serious pharmaceutical scandals in history. Less scholarly attention has been paid, however, to his involvement in Nazi Germany's typhus control and vaccine research and production between 1942 and 1945. Drawing on a variety of historical sources, this article reconstructs his work at a delousing facility in the Białystok District and at the Institute for Typhus and Virus Research of the German Army High Command in Krakow under hygienist Hermann Eyer (1906-97). We show that Mückter participated in a racially framed typhus control programme and in ethically dubious vaccine production methods. He also conducted unethical and methodologically questionable vaccine experiments on human beings in Krakow, including underage test subjects and exploiting the structural vulnerability of the occupied Polish population. In addition, we reassess assumptions about cooperation between Eyer's Wehrmacht institute and the research station at Buchenwald concentration camp under SS physician Erwin Ding-Schuler (1912-45). Taken together, we argue that Mückter operated within a broader network of civilian and military scientists, health officials, and representatives of the pharmaceutical industry who accelerated the erosion of ethical boundaries in biomedical research and contributed to an exterminatory health and population policy in the occupied East. These practices, termed the 'Nazi typhus complex', reveal how preventive medicine, biomedical research, and exterminatory policies were intertwined in the context of an anti-Slavic war of annihilation and the Holocaust.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/mdh.2026.10059",
+    "landing": "https://doi.org/10.1017/mdh.2026.10059"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/mdh.2025.10042",
+   "doi": "10.1017/mdh.2025.10042",
+   "title": "Habit, medicine, and society in 18th-century Britain",
+   "category": "ideas",
+   "authors": [
+    "Alexander Wragge‐Morley"
+   ],
+   "author_count": 1,
+   "source": "Medical History",
+   "date": "2025-11-17",
+   "abstract": "This article examines the place of habit in the medical thought and practices of 18th-century Britain. Scholars, including Steven Shapin and Phil Withington, have shown that habit was important to the broadly humoral understandings of health, disease, and regimen that dominated in Europe for much of the early modern period. In this article, I offer the first sustained attempt to understand the role of habit in the medical thought of 18th-century Britain, focusing on the influential Scottish physician William Cullen. For the first time engaging with all of Cullen's work on habit, including his correspondence, pathological lectures, and clinical lectures, I show that medics of the 18th century developed a new understanding of habit, linked to changing ideas about the nervous system. Increasingly, they emphasised the role that habit could play in causing the periodical return of bodily functions, even when there appeared to be no plausible physical cause. In so doing, medics engaged with one of the key debates of the 18th century - the contested notion that human nature itself might be contingent on social and environmental conditions. For them, habit provided the means by which society could quite literally change the body. These ideas come through clearly in the striking suggestion - hitherto unnoticed - that menstruation was the product of habit, arising not from nature but from culture. Discussions of menstruation reveal the political stakes of habit, with links to highly contested debates about the role that bodies of different genders might play in society.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/mdh.2025.10042",
+    "landing": "https://doi.org/10.1017/mdh.2025.10042"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/1468-0424.70052",
+   "doi": "10.1111/1468-0424.70052",
+   "title": "‘More Beastliness Than Beauty’: Gendering Pica in Seventeenth‐Century English Medicine and Culture",
+   "category": "ideas",
+   "authors": [
+    "Helena C. Aeberli"
+   ],
+   "author_count": 1,
+   "source": "Gender & History",
+   "date": "2026-07-03",
+   "abstract": "Today, defined as the ‘persistent eating of non‐nutritive substances’, pica is a lesser‐known eating disorder with a long history. Defined in early modern England as the ‘desire to eat absurd things’, pica was explicitly gendered, associated with pregnant women and pubescent girls. This article examines the prominence of pica in seventeenth‐century English medical and cultural sources, particularly its pervasive sex‐specific reputation. It investigates pica as a disease concept, arguing that, as transitional states where the female body evaded male control, pregnancy and virginity operated as sites of cultural tension. It then analyses pica onstage in Jonson's The Magnetic Lady and Webster's Duchess of Malfi . Studying pica as a construct intelligible only within culture‐bound ideas about the body, as well as a biological reality, this article asks what roles pica played in seventeenth‐century discourses and with which social, cultural and political anxieties it became entangled. In doing so, it argues that the gendered representation of pica sheds light on the wider psychosocial tensions of seventeenth‐century England, revealing anxieties about female sexuality, maternity, patrilineal transmission, the limits of (male) medical knowledge and ultimately the stable continuation of society itself.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/1468-0424.70052",
+    "landing": "https://doi.org/10.1111/1468-0424.70052"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/mdh.2025.10030",
+   "doi": "10.1017/mdh.2025.10030",
+   "title": "When hospitals came to Sweden in the eighteenth century: a foreign import with practical difficulties",
+   "category": "ideas",
+   "authors": [
+    "Maria Sjöberg"
+   ],
+   "author_count": 1,
+   "source": "Medical History",
+   "date": "2025-12-05",
+   "abstract": "Since Foucault's seminal work in the 1960s on the consequences of eighteenth-century discursive shifts in medicine, the establishment of hospitals during this period has often been interpreted as a progressive innovation driven primarily by medical scientists. However, less attention has been given to the ways in which the founding of hospitals was intertwined with domestic traditions and the practical challenges inherent in their implementation. By examining the establishment of the Seraphim Hospital in Stockholm, along with subsequent hospital foundations in Sweden, the practical difficulties involved become evident. Some of these challenges, particularly those related to funding difficulties, bear a striking resemblance to contemporary discussions on enhancing the efficiency of healthcare, despite the differing historical contexts. In the Swedish eighteenth-century context, ecclesiastical authority in medical matters persisted and played a role in the establishment process, while the military character of the kingdom also influenced hospital development. The conclusion drawn is that both national and local conditions shaped how medical reforms were conceived and practised. The historiographical emphasis on novelty and change may, at times, obscure the continuity of past practices, which undeniably played a crucial role in shaping the new. The concept of path dependency is thus employed not only to trace these historical connections but also to explore the ways in which they influenced the Swedish context, ultimately shaping the trajectory of hospital development in the country.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/mdh.2025.10030",
+    "landing": "https://doi.org/10.1017/mdh.2025.10030"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0018246x26101848",
+   "doi": "10.1017/s0018246x26101848",
+   "title": "Contesting Collecting: Indigenous Material Cultures",
+   "category": "ideas",
+   "authors": [
+    "James Poskett",
+    "Lynette Russell"
+   ],
+   "author_count": 2,
+   "source": "The Historical Journal",
+   "date": "2026-09-23",
+   "abstract": "This dialogue explores how we understand and contest the collecting of Indigenous material cultures.Poskett, using several case studies explores how Indigenous and non-Indigenous perspectives can complicate fixed notions of materiality.Russell, drawing on her own heritage and interdisciplinary research, emphasizes crosscontextualization and the agency of Indigenous communities in shaping how cultural materials are interpreted.Together, they ask how Indigenous and non-Indigenous perspectives can reshape the history of science and museums. James PoskettIn my opening remarks, I want to suggest how we can think beyond 'material culture' in the history of science.In particular, I want to argue that the 'ontological turn' in anthropology -as well as critiques of that turn -can usefully inform methods in the history of science.More pointedly, I argue that any meaningful attempt at 'cross-contextualization', in the sense advocated by Sujit Sivasundaram, requires rethinking our understanding of material culture itself.To keep things brief, I'm going to make three points, illustrated by three exhibits and three quotations.Here is my first quote: 'What would an artefact-oriented anthropology look like if it were not about material culture?' 1 It recently surprised me to learn that back in 2007 material culture was old news.No self-respecting anthropologist would talk about it.This was not something I was informed of, working next door at the Department of History and Philosophy of Science in Cambridge, where all anyone could talk about was the 'material turn'.The quote is from an influential edited volume widely associated with the ontological turn, titled Thinking through things. 2 I'll get onto the specifics of what I think about this in a bit, as I'm certainly not a cardholding 'ontologist'.But as an opening quote, it is useful precisely because it helps us 1",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0018246x26101848",
+    "landing": "https://doi.org/10.1017/s0018246x26101848"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0018246x26102167",
+   "doi": "10.1017/s0018246x26102167",
+   "title": "Calligraphy after Print: Script, Self, and Society in the Material Renaissance",
+   "category": "ideas",
+   "authors": [
+    "Hannah Murphy"
+   ],
+   "author_count": 1,
+   "source": "The Historical Journal",
+   "date": "2026-11-06",
+   "abstract": "What did it mean to write – and to write beautifully – in the century after print? Existing scholarship on Renaissance calligraphy has focused on printed manuals, associating them with standardization, codification, and discipline. This article is the first to offer an account centred on use. Drawing on the influential manuals of the Nuremberg calligrapher Johann Neudörffer (1497–1563), alongside manuscript copies, material interventions by owners, and civic and domestic records, it traces the relationship between the Renaissance ‘invention’ of script and the calligraphic imagination it enabled in practice. At the heart of the craft of calligraphy sat the first powerful argument for what scholars today might term a psychology of writing – a special form of meaning in the making of script. Observing both the power of that claim and its instability, this article aims to establish calligraphy, and more importantly calligraphic practice, as a historiographical subject, one which it argues is of critical importance to understanding crucial elements of the early modern: self, subjectivity, and expressiveness on the one hand, and community, codified style, and discipline on the other.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0018246x26102167",
+    "landing": "https://doi.org/10.1017/s0018246x26102167"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0010417526100693",
+   "doi": "10.1017/s0010417526100693",
+   "title": "Ibn Khaldûn as a Colonial Archive: Toward an Epistemic Decolonization",
+   "category": "ideas",
+   "authors": [
+    "Abdelmajid Hannoum"
+   ],
+   "author_count": 1,
+   "source": "Comparative Studies in Society and History",
+   "date": "2026-10-16",
+   "abstract": "This article examines Ibn Khaldûn not as a stable, timeless precursor of modern social science but as a figure constituted through colonial translation and reception. Focusing on nineteenth- and twentieth-century French and English translations of the Muqaddimah , it argues that Ibn Khaldûn emerged in modern scholarship as a colonial archive—a site where translation, race, and epistemic authority intersected to produce new forms of historical and sociological knowledge. Through close comparison of Arabic originals and their European translations, the article shows how colonial epistemologies reconfigured Ibn Khaldûn’s analytical categories—particularly those concerning tribe, generation, civilization, and climate—into racialized frameworks foreign to his medieval context. It further demonstrates how this translated Ibn Khaldûn became selectively relevant to European social science while remaining excluded from its canonical genealogies. Finally, the article critically reassesses the enduring claim that Ibn Khaldûn articulated racist views about Black populations, showing that this attribution itself belongs to the colonial archive generated through translation rather than to the epistemic logic of the original text. The article thus contributes to comparative histories of knowledge, colonial epistemology, and the global formation of the social sciences.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0010417526100693",
+    "landing": "https://doi.org/10.1017/s0010417526100693"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1093/ehr/ceag229",
+   "doi": "10.1093/ehr/ceag229",
+   "title": "Magic, Witchcraft and the Occult in Pre-modern England",
+   "category": "ideas",
+   "authors": [
+    "Joanne Edge"
+   ],
+   "author_count": 1,
+   "source": "The English Historical Review",
+   "date": "2026-10-20",
+   "abstract": "The fields of magic, witchcraft and the occult have enjoyed an almost total regeneration and reimagining over the last fifty-five years or so; certainly since the first publications of Alan Macfarlane’s Witchcraft in Tudor and Stuart England in 1970, and Keith Thomas’s Religion and the Decline of Magic in 1971.1 Both of these now totemic studies posited witchcraft and witch accusations as primarily socio-economic phenomena: domestic fallings-out between neighbours over material scarcity and inexplicable tragedy leading to suspicions of supernatural harm. Subsequently, historical scholarship on witchcraft and magic has examined them from a variety of perspectives: geographical, legal, religious, political, social and cultural; and the only truth that has been established about witchcraft and magic is that there is no simple explanation for either. We are dealing with extremely complex topics, and one of the key roles of historians of magic and witchcraft is to convey why studying them is important. To do this, we have to communicate the reality of belief in the seemingly ridiculous. We have to rationalise the ‘irrational’ and question the definition of ‘reason’. This is no easy task. The fact is that magic, whether its practice was imagined or real, was mundane in medieval and early modern England, concerned with everyday subjects, and carried out by all sorts of people. It was ‘present’ in English society in a way that it is not today. Grappling with concepts that may seem childish or silly to us is not easy, but, as Richard Kieckhefer notes, magic sits at a crossroads in medieval culture. It leads us down many potential pathways: theological, cultural, scientific, cosmological, intellectual.2 Its study is important for a multitude of reasons. In short, one cannot fully understand medieval and early modern society without it. In what follows, I provide some thoughts on the state of the fields of both magic and witchcraft in general, before analysing each of the books I have been tasked with reviewing, showing in the process what each volume adds to the current state of scholarship. There has been a tendency to think in binaries in historical scholarship of magic and witchcraft: theory vs practice, male vs female, permissible vs impermissible, imagined vs real, medieval vs early modern, common vs elite, literate vs illiterate, demonic vs natural and so on. While useful starting points, these binaries are not helpful when we examine the sources of magic and witchcraft, which paint a much more nuanced picture than two opposing points. There is, however, one binary of sorts that we have to face here: that of ‘magic’ and ‘witchcraft’. The two are separate, although related, phenomena. Magic can be defined (imperfectly) as something people did: a practical way of manipulating the natural world in order to achieve an aim. These aims could be benevolent, neutral or malevolent, and might be practised by anyone, regardless of gender (although particular categories of magic might be practised more by one gender than another). Witchcraft, on the other hand, was overwhelmingly an early modern phenomenon, which usually retrofitted a cause to a bad event occurring, the need for an explanation, and a very real fear of malign forces. This led to people—in England, mostly women, usually poor, often old—being accused of and prosecuted for crimes they almost certainly did not commit. Moreover, the sorts of things witches were accused of—having familiars in the guise of animals, making a demonic pact, attending Sabbaths and flying through the air—were not things the actual magic practitioners we know about did or claimed to do. While some accused witches were perhaps practising some types of magic, for example in the course of healing, they were almost definitely not doing the things they were eventually indicted for. This is a key difference when we consider these distinct, yet intertwined, categories. However, people routinely resorted to counter-magic, or consulted astrologers, to ward off or diagnose witchcraft.3 And so it turns out this binary may not be as clear-cut as it seems. This is difficult and complicated stuff, which requires years of training, archival work, knowledge of various languages and interdisciplinary thinking to untangle. The two main sorts of sources with which historians grapple to study magic and witchcraft in this time period are legal records and texts of magic. Legal records are notoriously thorny; the pre-modern legal system is not at all intuitive or easy to understand, and both church and secular courts punished all sorts of magical crimes.4 Whatever the court in question, legal documents were produced within loci of power, and recorded the responses of those accused of magic or witchcraft through the lens of a scribe. These responses were often made to a set of pre-written questions, and what is omitted is as important as what is included. Evidence for actual magical practice, textual and material, might tell us more about practice on the ground—or not. When we know the name of the owner or scribe of the book, can we really say they performed any of the rituals or spells in a book? It does not necessarily follow that possessing a magical item, or copying, owning or even writing a text is a firm indication of use. There are many other sources we can mine for attitudes towards and evidence of magic: as previously noted, it was everywhere. But in terms of the main sources concerning the reality on the ground, we are thus faced with two equally problematic types of evidence. A final important point before turning to the books under review is to consider where we are as a field in magic and witchcraft studies. I focus here on what I consider to be some key shifts in the last fifteen years or so, beginning with magic studies. The first is a focused emphasis on monastic magical practice, spearheaded by the monographs of Frank Klaassen (2012) and Sophie Page (2013).5 Building on previous work by Kieckhefer,6 among others, both Klaassen and Page show that ritual demonic magic was overwhelmingly practised by monks and clerics. They drew magic circles, summoned spirits and owned copies of the most problematic texts: Picatrix, Liber vaccae and Ars notoria among others. This might seem counterintuitive, since members of religious orders ought to be the most pious Christians in medieval and early ­modern society. But their aims can often be explained by masculine anxieties: monks, who were instructed to be celibate, did not have personal wealth and did not fight, often owned and performed spells to obtain women, treasure or horses. Monks also perhaps saw themselves as the most qualified people in society to test these magical texts. Heterodox interpretations of these texts also existed, which saw the ultimate power being channelled as Christian—done in God’s name. A second key shift is the attempt to reconcile ‘theory’ and ‘practice’. One of the prevailing ways in which binary thinking has not helped is the pervasive idea that the sorts of magic condemned in treatises was not the sort of magic actually practised: that polemics simply contained a stock list of practices—literary topoi—for which there is no evidence. There is some reality in this argument when we consider the lists of condemned practices passed down from Antiquity into the Middle Ages, in the works of Isidore of Seville, John of Salisbury and Thomas Aquinas, among others, which were often copied wholesale.7 But the last decade or so has seen excellent work on the reality of the practices of which people were accused. For example, when magic became a political (rather than ecclesiastical) crime under Henry VIII with the Witchcraft Act of 1542 (repealed and reinstated under Elizabeth I in 1563), there was a marked increase in prosecutions of magical treason, involving magic practices such as wax images and astrological predictions of death. But were these convenient, difficult to disprove accusations designed to eliminate political opponents? Or was actual malevolence at play? Could the people accused be guilty of the practices in question? Francis Young’s 2017 monograph demonstrates that all the practices named in these sorts of political trials can be found in magical books of the time. While this is not direct proof of those accused being guilty of the precise things mentioned, it is nevertheless an important counter to the dismissal of what court records and polemics name as actual magical practice, and brings important nuance to the discussion.8 In terms of witchcraft, a comprehensive, short and readable volume was provided in the form of Marion Gibson’s brilliant 2018 Witchcraft: The Basics, and anyone wishing to get up to speed on the intricacies of the historiography should read it.9 Broadly speaking, there has been a shift in academic scholarship around this topic since Macfarlane and Thomas in the early 1970s. The publication of those two works coincided with the ascent of second-wave feminism, and the witch trials proved an irresistible template on which to try and map points about elite male power. The witch trials are, after all, a dark episode in early modern history. They provided a fruitful analogue for Arthur Miller’s 1953 play The Crucible, which used the Salem witch trials of 1692–3 to demonstrate the real threat of McCarthyism in America in the late 1940s and 1950s.10 The accused, if found guilty, might be punished by execution for crimes they almost certainly did not commit. It is tempting to look at the world around us and see similarities, and, in the early 1970s, second-wave feminist scholars did just that. Building on the now-debunked theories advanced by Margaret Murray in the 1920s, which linked accused witches to actual pagan practitioners,11 these scholars saw witch-hunting as women-hunting and an attack on women’s knowledge. In making a point about misogyny in the present day, they coined inaccurate (and in some cases highly unfortunate) phrases and concepts such the ‘burning times’ and ‘the Holocaust of women’, which were spread beyond academia to the public by a 1990 documentary film.12 Figures such as nine million executed were plucked out of thin air. Witch persecutions were presented as relentless, obsessive, constant attacks by male elites on low-status women.13 In the mid-1990s, historical scholarship on the topic shifted significantly, with the publication of several important monographs on various aspects of witchcraft and the witch trials, showing that it is too simplistic to see the cause of these accusations as elite men oppressing low-status women. The first was that of Lyndal Roper, whose Oedipus and the Devil, a collection of nine linked essays, focused a Freudian psychoanalytic lens on the trials in Germany. Roper’s essential point is that it is not possible to understand the phenomenon of witchcraft without including the psychological aspects of the process. However, a problem Roper could not get away from with this central thesis was that Freudian psychoanalysis is, by her own admission, a relic of the nineteenth century. Nevertheless, her points about feminine jealousy and the space of the birthing room as a site of intense psychic conflict was a welcome and compelling argument for the importance of female agency within the process of witch accusations.14 A second important work from this fruitful time for witchcraft studies is that of Robin Briggs, whose Witches and Neighbours (1996) examined trials from the Duchy of Lorraine in the sixteenth century, and the European picture more widely. Working from a social-historical perspective, Briggs collapsed the notion of an organised elite male movement against lower-status women by pointing to the fact that up to 25 per cent of those accused were in fact men, that the process was in no way organised, and that the only trials that can be seen as truly state-led were those that took place in the microstates of Trier (1581–93), Würzburg (1625–31) and Bamberg (1627–32). Crucially, it was Briggs who first posited the figure of 40–50,000 witches executed across Europe as a whole during the entire period of the trials, completely debunking the millions postulated by second-wave feminists.15 Diane Purkiss’s The Witch in History (1996) argued that tales of witches and witchcraft in early modern England were evidence of the figure of the witch as one of women’s fantasy, rather than purely a construct of the misogynistic fears of men.16 Finally, Stuart Clark’s 1999 Thinking with Demons examined the idea of witchcraft rather than what was happening on the ground: the world of demonologists. Clark examines the demonology of early modern Europe from various perspectives, religious, historical and political, to show that this belief in the power of the Devil was complex, cogent and rational within its own contexts and frameworks.17 The important turns in witchcraft scholarship of the mid-1990s mean that there is no going back to simplistic narratives about this phenomenon in the field of history. However, other academic disciplines still advance theories based on top-down, cynical misogyny alone. The political philosopher Silvia Federici’s Witches, Witch-hunting, and Women, published in 2018, revisits the themes previously raised in her 2004 Caliban and the Witch. Federici sees the early modern witch-hunts as products of nascent capitalism: ‘I reiterate that women were the main target of this persecution, because it was they who were most severely impoverished by the capitalization of economic life, and because the regulation of women’s sexuality and reproductive capacity was a condition for the construction of more stringent forms of social Federici’s is a and tempting and yet as as the simplistic of Murray and the second-wave the 2018 a million copies in and into and much of the feminist on Federici are much pre-modern this because as I have this is complex, difficult material, which requires years of and the to read and understand the documents in because a may be making important points about the present and other need to and evidence still This more than in the of and social It in fact even more when the argument is on the of social as much as evidence to the who truth and evidence as it We not do the mentioned, Marion the brilliant Witchcraft: The Basics, and her The Witches of is no It is a on a set of the witch which took place at and in which led to fifteen women and one being for It is at an academic and one which is to the the points I made about the of witchcraft, this is important. in this is the main of these trials, on the very real fears of witchcraft in the to construct legal cases against the accused. A central question in the historiography of witch trials and witch and one to is why they took place in and not in others. was it about any particular or that made it to this the of and 1990 European Witchcraft: and demonstrates the being to this phenomenon since the early with a whole to such as The question of place has also seen studies to particular English and their for example, The Witches, to the trials of (and their the trials of the and the in in the in this collection on the of whose was for that the of this led to a which the legal against those accused in examines a particular of witchcraft from which took place in the first decade of the the of the in under the of under the A and as as court records and and the through the as it on the people at the of the we know very if The out the particular social and at and which some way to these accusations could spread and is around the people and in an the are and and and Elizabeth and and can see why the at the beginning is the of particular The final is and which the previous to this The most important made by in this volume is her of records and work on documents to the seemingly why did women to what were to many crimes of which they were when England at was not us that set out its to it seem as if women first made the which were by their But what demonstrates is that in fact the as of the familiars their who did her and such before these to the women as records of In the of and Henry of their named their familiars as and with that and Henry two of may have been before and Henry were and perhaps not the were and who before could was not a common name at this and is of course a of it that when the of their who have been and perhaps about in the The of work in highly documents to this process is an may be a of this demonstrates her as a first based on her is a about English magic: that is, magic in for or in the period This is and as it the of the way and have been posited as one of the really is what did the theory and practice of magic look before and after the the of the and the of the This on previous work on most that of who the first of in the of and magic in previous a space between the phenomenon of witchcraft prosecutions and the between accused and on the one hand, and the elite magical practices of and scholars on the book, scholars to focus on one or the the book, one is by the and of the archival and carried out in of records of This is an and Gibson’s book, has an important focus on the who were these did they they male or were equally of is the social of their against that court was no from when it to magical practice, has her at the two social The first Magic in of and in and Magic among the has two and the and on To just one of the many of this book, the and produced map of the of in from court records to show that many of them just the This is because it that in one practitioners as as they could to their the to the last two under a of books by scholars Frank Klaassen and published by in The The Magic of volume brings two types of records concerning magic that have been in any of magic and legal against It is into two and the and and which is an important The and of secular and in the of magic is one that be because there was no and for which a magical I the of and One with a useful short and examines the legal records of the In what the to as a of ‘the of magic and magic can be of as an of or the second of a up the Richard This with a to a over some perhaps an to on aspects of and a to This a of the way in which the sort of magic by in her was both in terms of their own and the of of the legal records to the examines texts of magic which to the sorts of practices as the legal records in to demonstrate that the sorts of practices which were also present in and with a of the of the a in which a of nine men were accused of to treasure in in The was by of and the records of the only in these show is a very complicated at the of which was about the of those In the most of the accused were to public examines texts for treasure a process which The second volume by Klaassen and a to the of legal records and texts of magic. However, of this to cases of demonic magic performed by this is concerned with The definition of is They were concerned with magic that a of people also performed or that in the being a of or being a that to common and being by the as a common prosecuted in This definition sees the volume in based on the of the magic: and magic, and and and of legal records concerned with that of magic, and magic texts which the sorts of practices in those legal texts. these two are, Francis Young’s 2017 study of magic an of the of the two main sorts of texts that historians of magic The books under here many most their focus on archival work and and a to the of magic and witchcraft in their own however, all and Magic and witchcraft are about if not the and of the who prosecuted and were accused of magical magic and witchcraft us to about what it is to be did people did they with did their of power and agency or These are at the of all of these which their with the of most",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1093/ehr/ceag229",
+    "landing": "https://doi.org/10.1093/ehr/ceag229"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0018246x26101836",
+   "doi": "10.1017/s0018246x26101836",
+   "title": "Should the Lithosphere Tell Our Stories?",
+   "category": "ideas",
+   "authors": [
+    "Jochen Richard Schneider",
+    "Siyakha Mguni"
+   ],
+   "author_count": 2,
+   "source": "The Historical Journal",
+   "date": "2026-09-21",
+   "abstract": "This discussion pursues potential areas of epistemic productivity at the convergence of Western scientific frameworks and Indigenous knowledge systems to understand the ontological unity of natural systems, interpreting the lithosphere not merely as a physical substrate, but as a deep archive of human histories, cultural practices, and cosmologies in all the world's regions.By de-fossilizing knowledge -a useful analytical concept that allows the discovery of potential conjunction of scientific thought and robust forms of knowing from ancient cultures -we foreground relational epistemes and explorative narrative possibilities inherent in ancient human landscapes.The selected cases, though brief and not exhaustive, support our view that there are strong resonances between Western science and ancient knowledge forms seen among Indigenous cultures in the world. Jeremy SchneiderLet me begin with a thought experiment.Ancient Greek and Roman mythology imagined a world not unlike our own: a cosmos created from nothing; a long line of descent down to humanity; a series of catastrophes that destroyed the Earth's former inhabitants.What is more, the ancients started looking for evidence in the earth.They dug up fossilized bones, which they interpreted as the remains of creatures.They inspected rocks, from which they inferred past changes to the Earth's surface.Historians, I think, tend to forget that the ancients practised their own form of 'geology'.My point is not that ancient mythology is modern science; rather, that modern science may well be our mythology.1 In my remarks, I want to ponder to what degree one might recast histories of geology as histories of myth.As Siyakha Mguni and I met to prepare this conversation, we thought that the concept of 'cross-contextualization' would be a fruitful way to engage with one another's work.On the face of it, the worlds that we study seem oceans apart.I am a specialist in the European history of science, examining how figures between the sixteenth and eighteenth centuries used fossils to think about 1 See Adrienne Mayor, The first fossil hunters: dinosaurs, mammoths, and myth in Greek and Roman times (Princeton, NJ, 2000).",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0018246x26101836",
+    "landing": "https://doi.org/10.1017/s0018246x26101836"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0010417526100450",
+   "doi": "10.1017/s0010417526100450",
+   "title": "From Disorder to Distinction: Lactose Intolerance and the Racialization of Digestion in Postwar Medicine (1950–1980)",
+   "category": "ideas",
+   "authors": [
+    "Alice Yao"
+   ],
+   "author_count": 1,
+   "source": "Comparative Studies in Society and History",
+   "date": "2026-04-22",
+   "abstract": "This article examines how scientific research on lactose digestion from 1950 to 1980 became entangled in shifting discourses on race, heredity, and population. It traces how scientific framings of lactose digestion changed during this period—initially racialized as a disorder (lactase deficiency) affecting Black Americans, later reclassified as an ethnic trait, and ultimately reinterpreted as a biomarker of European ancestry. Drawing on medical research on “lactose science” and archival sources, this study explores how geneticists, medical researchers, and anthropologists jointly navigated the complexities of race and human variation in the postwar period. Using Peter Galison’s concept of trading zones , the paper traces how ethnicity and population emerged as strategic alternatives to race, facilitating interdisciplinary collaboration while preserving racialized assumptions about biological difference. The paper argues that despite efforts to align with UNESCO’s post-racial scientific agenda, research on lactose digestion came to produce a normative discourse around whiteness. In doing so, it raises a critical question: how did an ostensibly anti-racist science inadvertently revive older racial biologisms?",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0010417526100450",
+    "landing": "https://doi.org/10.1017/s0010417526100450"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1093/ehr/ceag144",
+   "doi": "10.1093/ehr/ceag144",
+   "title": "Atheism in the Visual Culture of Early Modern England",
+   "category": "ideas",
+   "authors": [
+    "Patrick Seamus McGhee"
+   ],
+   "author_count": 1,
+   "source": "The English Historical Review",
+   "date": "2026-06-24",
+   "abstract": null,
+   "abstract_license": null,
+   "links": {
+    "doi": "https://doi.org/10.1093/ehr/ceag144",
+    "landing": "https://doi.org/10.1093/ehr/ceag144"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s1740022826100722",
+   "doi": "10.1017/s1740022826100722",
+   "title": "The Right to Communicate: UNESCO and the politics of global communication, 1969–1987",
+   "category": "power",
+   "authors": [
+    "S. Huxtable"
+   ],
+   "author_count": 1,
+   "source": "Journal of Global History",
+   "date": "2026-10-10",
+   "abstract": "The Right to Communicate (RtC) is the idea that individuals possess not only the freedom to ‘seek, receive and impart information’, as laid down in Article 19 of the Universal Declaration of Human Rights (UDHR), but also the right to communicate horizontally with their peers, using technologies new and old. The brainchild of Jean d’Arcy, a French broadcaster and official who argued in 1969 that Article 19 should be updated to reflect the new technological possibilities, the concept inspired an international effort to write the RtC into human rights law. This article examines the United Nations Educational, Scientific and Cultural Organization’s (UNESCO) campaign to define this new human right, showing how initial enthusiasm was undermined by a widespread conviction that collective rights were a threat to individual rights; the difficulty of squaring the Global South’s state-led vision of communication with d’Arcy’s anti-statist ideals; and the vocal opposition of Western governments and NGOs, who increasingly saw the concept as a threat to freedom of information.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s1740022826100722",
+    "landing": "https://doi.org/10.1017/s1740022826100722"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s1740022826100655",
+   "doi": "10.1017/s1740022826100655",
+   "title": "Unshackled?: China, the ‘unequal treaties’, and the limits of international law, 1919–1929",
+   "category": "power",
+   "authors": [
+    "Lucas Tse"
+   ],
+   "author_count": 1,
+   "source": "Journal of Global History",
+   "date": "2026-09-25",
+   "abstract": "The post-1919 international order extended to China formal sovereign equality while offering few legal means to exercise it. The Sino-Belgian treaty dispute of 1926–29 reveals this: when China abrogated its 1865 treaty with Belgium and Brussels sued at the Permanent Court of International Justice, the institutions that promised peaceful revision could not deliver it without the consent of the powers whose privileges were at stake. The ‘unequal treaties’, a political category coined only in 1923, named the contradiction the order had built in. Four lawyer-diplomats—Wellington Koo, Wang Chung-hui, C.T. Wang, and Eugene Chen—were each caught between national autonomy and admission among the ‘civilised’ powers. The turn from legal argument to ‘revolutionary diplomacy’ was the structure’s doing, not a failure of nerve. Read beside Turkey, Persia, and the Latin American states, China’s case locates the obstacle: not semi-peripheral weakness as such, but the institutional position from which each engaged an order that subordinated its members through the very terms of their admission.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s1740022826100655",
+    "landing": "https://doi.org/10.1017/s1740022826100655"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s001041752610053x",
+   "doi": "10.1017/s001041752610053x",
+   "title": "Two Journeys into Diaspora: Qing and British Imperial Investigations in the Dutch East Indies and Australia",
+   "category": "power",
+   "authors": [
+    "Nicholas McGee"
+   ],
+   "author_count": 1,
+   "source": "Comparative Studies in Society and History",
+   "date": "2026-05-19",
+   "abstract": "This paper compares the experiences and conclusions of two imperial investigations into diasporic Chinese communities of the Asia-Pacific in the 1880s. These were the official investigations undertaken by the specially appointed Qing Commissioners Wang Ronghe and Yu Qiong, and the unofficial mission carried out by the British translator, orientalist, and diplomat Edward Harper Parker. At a crucial moment in the history of Chinese immigration, these two parties undertook almost simultaneous expeditions to investigate the conditions of the vast Chinese diaspora across Southeast Asia and Oceania. Both missions engaged with some of the most contentious issues surrounding Chinese migration of the era. In particular, I focus on their documentation of the brutal exploitation of trafficked Chinese workers on the tobacco plantations of Deli, in the Dutch East Indies, as well as the rising tide of white supremacist efforts to exclude Chinese migrants from British Australia. Arguing for bold new approaches to imperial engagement with Chinese diaspora, both parties faced significant resistance to their work. Using Chinese, British, Dutch, and Australian sources, this paper traces these journeys to reveal unexpected commonalities between two very different imperial systems, demonstrating the surprisingly global reach of the late Qing state. Moreover, it uses the materials created by these missions to paint in-depth portraits of two Chinese communities and situate the period’s “Chinese Question” of migration to white settler colonies in its broader diasporic context.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1017/s001041752610053x",
+    "landing": "https://doi.org/10.1017/s001041752610053x"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0018246x26102052",
+   "doi": "10.1017/s0018246x26102052",
+   "title": "The Gothic Republic, British Liberty, and Icelandic Philologists in the Revolutions of 1848",
+   "category": "power",
+   "authors": [
+    "Sveinn M. Jóhannesson"
+   ],
+   "author_count": 1,
+   "source": "The Historical Journal",
+   "date": "2026-11-05",
+   "abstract": "This article argues that Gothic republican ideas of liberty – defining freedom as independence and participation in lawmaking within the ancient Gothic ‘free state’ – formed an overlooked intellectual background to debates within the Danish composite monarchy during the revolutions of 1848. Focusing on Copenhagen-based Icelandic philologists, it shows that they mobilized the new discipline of comparative-historical philology not as an instrument of nationalism, with which it is usually associated, but to reinvent the Gothic republic. Drawing on Icelandic medieval manuscripts, they constructed an Indo-European genealogy of liberty grounded in a partnership between nobility and people. They thereby recast British liberty as the modern expression of institutions originating not among the Anglo-Saxons but in an Indo-European world extending through Scandinavia to Iceland. In 1848, they translated this genealogy into a political programme reviving open-air assemblies, medieval law codes, juries, and hereditary aristocracy, while modernizing them through British constitutional models. Recovering this programme revises national narratives of 1848, reveals the continuing diversity of nineteenth-century republicanism, and shows how intellectuals on Europe’s peripheries could reshape wider ideas of liberty. Rather than disappearing into nationalism or racialized Teutonism, or necessarily assuming democratic forms, republicanism could provide an aristocratic, anti-national language of resistance to absolutism and national-liberal projects.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0018246x26102052",
+    "landing": "https://doi.org/10.1017/s0018246x26102052"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/ehr.70069",
+   "doi": "10.1111/ehr.70069",
+   "title": "The circulation and distribution of classical Greek coinage",
+   "category": "power",
+   "authors": [
+    "Zane Mullins"
+   ],
+   "author_count": 1,
+   "source": "The Economic History Review",
+   "date": "2025-11-30",
+   "abstract": "From a sample of the most prominent Greek city‐states, data involving a total of 999 hoards and 160,007 coins from 550 to 300 BC were collected to discern the relative magnitudes, consistency of issue, and distribution of Classical Greek coinages. Of the city‐states in this sample, the data display the widespread international use of several Classical Greek coinages. Most notable amongst these are the proliferation of Corinthian‐style coinage in Sicily and Italy and the penetration of Athenian coinage into non‐Greek areas such as the Levant and Egypt. The international movement of coins bolsters other forms of evidence for trade between Mediterranean civilizations in antiquity. Foreign imitations of the most successful internationally circulating coinages are also quantified and discussed.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1111/ehr.70069",
+    "landing": "https://doi.org/10.1111/ehr.70069"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0026749x26102297",
+   "doi": "10.1017/s0026749x26102297",
+   "title": "Khep : Embodied commerce between Dubai and Karachi in the age of surveillance",
+   "category": "power",
+   "authors": [
+    "Noman Baig"
+   ],
+   "author_count": 1,
+   "source": "Modern Asian Studies",
+   "date": "2026-11-04",
+   "abstract": "This article explores khep , an embodied cross-border trade network that links Karachi and Dubai through trust, kinship, and risk. Based on ethnographic fieldwork with currency and commodity dealers who move money and goods between the two cities, I argue that khep is not merely a means of evading state regulation but a distinctive system of embodied commerce that has endured from the pre-colonial era to the present day. In this system, merchants mobilize affective and cultural ties to navigate surveillance and assert economic autonomy. By transforming kinship into financial circuitry and using bodies as logistical instruments, khep diverges from the impersonal rationalities of formal markets grounded in regulatory compliance. Khepiyā s—the traders who physically carry goods across borders—develop embodied knowledge and performative skills that transform airport spaces into contested interfaces where informal economies negotiate with state power. These techniques not only provide traders with economic leverage but also shape their subjectivity as nomadic actors characterized by disguise and malleability. I propose understanding khep as a vernacular economic practice, rooted in moral economies, bodily discipline, and situated knowledge, that unsettles dominant paradigms of market exchange. Rather than positioning khep within the binary of licit versus illicit trade, I argue that it represents an alternative economic rationality—one that operates beyond the neoliberal ethos of due diligence and compliance.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0026749x26102297",
+    "landing": "https://doi.org/10.1017/s0026749x26102297"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/mdh.2026.10058",
+   "doi": "10.1017/mdh.2026.10058",
+   "title": "The anatomy theatre and the slaughterhouse: emotion, vivisection, and the disciplines of medicine in the experimental practices of Charles Bell",
+   "category": "power",
+   "authors": [
+    "James Bradley"
+   ],
+   "author_count": 1,
+   "source": "Medical History",
+   "date": "2026-04-06",
+   "abstract": "This article examines Charles Bell's experimental practices by drawing historiographical attention away from the priority disputes over the spinal nerve functions for which he was most famous. I argue that Bell's primary research interest was the expression of emotions. To this end, he developed a programme of vivisection that explored the underlying mechanisms of emotion. However, this also resulted in a profound contradiction between his experimental practices and his worldview - conducting painful experiments on beloved animals despite moral revulsion towards animal experimentation. This opens up three interconnected areas. Firstly, it allows an exploration of disciplinary identity in medicine, particularly the way that disciplines demanded specific practices and behaviours. Secondly, vivisection more generally required methods and ethics that opposed the growing anti-cruelty voice. Here, a combination of animal choice and the importation of techniques from the slaughterhouses was critical. Thirdly, vivisectors navigated a complex emotional landscape between their professional obligations and broader cultural sensibilities. These three areas are linked together using Boddice's concept of moral economies, the affective frameworks that structured feelings. Particularly important were the sentimental and Romantic economies, both of which impacted Bell and his research. At the same time, Bell always struggled to reconcile the tensions between his disciplinary identity and his sentimental and Romantic beliefs, ultimately leading him to abandon experimentation after his assistant John Shaw's death. I conclude by identifying the guarantees provided by character for licensing ostensibly cruel behaviours, thus allowing for the maintenance of probity within competing moral economies.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/mdh.2026.10058",
+    "landing": "https://doi.org/10.1017/mdh.2026.10058"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0018246x26102040",
+   "doi": "10.1017/s0018246x26102040",
+   "title": "Changes and Significance of Territorial Divisions in the Polish-Lithuanian Commonwealth in the Eighteenth Century",
+   "category": "power",
+   "authors": [
+    "Arkadiusz Borek"
+   ],
+   "author_count": 1,
+   "source": "The Historical Journal",
+   "date": "2026-10-08",
+   "abstract": "The territorial divisions of the Polish-Lithuanian Commonwealth were stable for most of its existence. They were characterized by dualism: in the Kingdom of Poland, territorial divisions and their connection to public institutions were organic; in the Grand Duchy of Lithuania, these matters were strictly ordered. Changes appeared in the eighteenth century, when we can observe localized modifications in the network of territories, and during the Partitions period two systematic reforms were passed. The detailed analysis of such changes clearly shows that the ruling class of the Commonwealth was mainly interested in the political aspects of the territorial divisions: the distribution of prestige by the creation of new land offices connected to new territories, and the use of territorial units as constituencies. This second aspect was the main motivation behind the reforms after the First and Second Partitions. The political and election-focused approach to the system of territorial divisions highlights the difference between the Commonwealth and major European states in this period.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0018246x26102040",
+    "landing": "https://doi.org/10.1017/s0018246x26102040"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s0010417526100723",
+   "doi": "10.1017/s0010417526100723",
+   "title": "Borrowed Time: Sovereign Debt and Temporal Disorder In Socialist Yugoslavia",
+   "category": "power",
+   "authors": [
+    "James M. Robertson"
+   ],
+   "author_count": 1,
+   "source": "Comparative Studies in Society and History",
+   "date": "2026-10-15",
+   "abstract": "When Francis Fukuyama described the collapse of state socialism as marking the “end of history,” he captured the imagination of the post-Cold War moment, rendering the fall of the Berlin Wall a metonym for the definitive eclipse of communism and the advent of a new era of liberal capitalist hegemony. For Europe’s Left, the term became associated with a moment of profound demoralization. Fukuyama’s end of history, however, was only one moment of a longer and more expansive crisis in the socialist order of time. This crisis can be traced back to the global economic upheavals of the 1970s that impacted both social democracy in the West and state socialism in the East. A decade before crowds forced their way across a divided Berlin, socialism on both sides of the Iron Curtain had entered an existential decline. This article argues that the sovereign debt crises that beset European states in the final decade of the Cold War disrupted socialism’s regime of historicity. It develops this argument with reference to late-socialist Yugoslavia and demonstrates how the temporal conditions of sovereign indebtedness shaped popular culture. Through a reading of the films Balkanski špijun (1984) and Već viđeno (1987), the article argues that the erosion of socialism’s horizons of expectation fostered a new experience of historical time in which the past returned in uncanny, troubling, and ultimately destructive ways.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0010417526100723",
+    "landing": "https://doi.org/10.1017/s0010417526100723"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/s174002282610045x",
+   "doi": "10.1017/s174002282610045x",
+   "title": "Too little land, too many people: Italy, Clarence Gamble, and the global population control movement (1950s–1970s)",
+   "category": "power",
+   "authors": [
+    "Bruno Walter Renato Toscano"
+   ],
+   "author_count": 1,
+   "source": "Journal of Global History",
+   "date": "2026-04-13",
+   "abstract": "This article investigates the global history of the population control movement through the case of the relationship between the Italian Association for Demographic Education (AIED) and American philanthropist Clarence J. Gamble. Drawing on archival sources from Italy and the United States, this study examines how international debates on modernization and demographic control intersected with national anxieties surrounding southern Italy’s underdevelopment. Italian activists engaged with international discourses linking population control to modernization, promoting family planning initiatives despite their illegality. Through its collaboration with Gamble, AIED was introduced in a global circulation of cheap contraceptives, an experiment targeting poor and southern women. The article argues that AIED’s persistent connection with Gamble contributed to its growing isolation within international networks by the mid-1960s, as the priorities of Western family planners shifted decisively towards the Global South. By situating the Italian case within these international dynamics, this study offers a new perspective on how national contexts were shaped by the global politics of family planning.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s174002282610045x",
+    "landing": "https://doi.org/10.1017/s174002282610045x"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1111/ehr.70142",
+   "doi": "10.1111/ehr.70142",
+   "title": "The first bear raid and squeeze: Isaac Le Maire and the Dutch East India Company",
+   "category": "power",
+   "authors": [
+    "Oscar Gelderblom",
+    "Abe de Jong",
+    "Joost Jonker"
+   ],
+   "author_count": 3,
+   "source": "The Economic History Review",
+   "date": "2026-09-08",
+   "abstract": "In 1609, the Dutch East India Company (VOC) faced a bear raid by a syndicate of short sellers led by Isaac Le Maire, a former director. We reconstruct the forward trade between 1607 and 1611, the actions taken by the syndicate members, and the responses to these actions by the company. We argue that the bear syndicate members aimed for financial gain from share price declines, while their leader, Le Maire, participated for strategic reasons, that is, breaking up the VOC monopoly. We also show that the government refused to intervene at that time. The raid ended with a squeeze executed by an opposing syndicate, bankrupting several forward traders and blocking Le Maire's plans. We characterize the bear raid and squeeze as a crucial episode in the more general tug‐of‐war between company directors aiming to turn the VOC into an instrument of the state and a diverse group of opposing investors.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/ehr.70142",
+    "landing": "https://doi.org/10.1111/ehr.70142"
+   },
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1017/mdh.2026.10057",
+   "doi": "10.1017/mdh.2026.10057",
+   "title": "‘I cannot say that he is of unsound mind’: the case of Lunatic Richard Lea",
+   "category": "power",
+   "authors": [
+    "Mishka Wazar"
+   ],
+   "author_count": 1,
+   "source": "Medical History",
+   "date": "2026-03-27",
+   "abstract": "This paper examines letters from the casebooks of the Valkenberg Lunatic Asylum in the Cape Colony during the South African War. Valkenberg was opened in 1891 in Cape Town, and was the only asylum established exclusively for white patients in the Cape. The South African War took place between 1899 and 1902, and several soldiers serving in the War were treated at Valkenberg during this period. The letters were written by a male patient who used bureaucratic and legal channels to claim his sanity and secure release from the asylum, showcasing a rare example from the archive of a patient's voice as well as a view into the inner workings of a colonial asylum in South Africa. These letters allow a view into the personal lives of patients and attendants, the medical rules doctors followed, and instances of racism, unexpected solidarity, and loneliness. Analysing these letters reveals the changes taking place in a turbulent South Africa, including the tensions and conflicts of a country at war, the racism and nationalism of early twentieth-century South Africa, and the violence present within the asylum network. By examining letters written directly by a patient, which give voice to a perspective that official institutional records would not ordinarily allow, this paper seeks to contribute to the literature on patient voices in the history of psychiatry.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/mdh.2026.10057",
+    "landing": "https://doi.org/10.1017/mdh.2026.10057"
+   },
+   "first_seen": "2026-11-08"
+  }
+ ]
+}

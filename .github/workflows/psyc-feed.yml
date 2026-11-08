@@ -1,4 +1,4 @@
-# Weekly refresh of the new papers in the psyc paper.
+# Weekly refresh of the new papers in the psyc paper and the history paper.
 # Retrieves bibliographic metadata only (OpenAlex, Crossref) and commits
 # quiet-time/data/psyc-feed.json + psyc-feed-status.json. It never writes or verifies research stories:
 # those are written by hand in quiet-time/psyc-discoveries.js.
@@ -6,7 +6,7 @@
 # Optional repository secrets (Settings → Secrets and variables → Actions):
 #   OPENALEX_API_KEY  free key from https://openalex.org (anonymous search can be rate-limited)
 #   CROSSREF_MAILTO   a contact email for Crossref's polite pool
-name: psyc paper feed
+name: paper feeds
 
 on:
   schedule:
@@ -36,14 +36,21 @@ jobs:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
         run: node scripts/psyc-feed.mjs
+      - name: Check the history collection
+        run: node scripts/history-check.mjs
+      - name: Refresh history feed (keeps the previous feed if the refresh fails)
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
+        run: node scripts/history-feed.mjs
       - name: Commit changes
         run: |
           git config user.name "psyc-feed bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add quiet-time/data/psyc-feed.json quiet-time/data/psyc-feed-status.json quiet-time/data/psyc-collection.json
+          git add quiet-time/data/psyc-feed.json quiet-time/data/psyc-feed-status.json quiet-time/data/psyc-collection.json quiet-time/data/history-feed.json quiet-time/data/history-feed-status.json quiet-time/data/history-collection.json
           if git diff --cached --quiet; then
             echo "no changes"
           else
-            git commit -m "psyc feed: weekly metadata refresh"
+            git commit -m "paper feeds: weekly metadata refresh"
             git push
           fi
