@@ -1,12 +1,13 @@
-/* Quiet Time — skip. A little sprout skips down a tunnel among the stars.
+/* Quiet Time — tumble. A little sprout runs down a tunnel among the stars.
    Walk onto a wall and the whole tunnel turns so that wall becomes the floor.
    Canvas only, local-only progress, no external dependencies. */
-const SKIP_LEVELS = 10;
-let skip = null;          // live game state
-let skipKeys = { left: false, right: false };
-let skipJumpQueued = 0;   // seconds left on a buffered jump press
+const TUMBLE_LEVELS = 10;
+let tumble = null;          // live game state
+let tumbleKeys = { left: false, right: false };
+let tumbleJumpQueued = 0;   // seconds left on a buffered jump press
+let tumbleJumpHeld = false; // holding jump makes the jump float longer, up to a limit
 
-function skipRand(seed) {
+function tumbleRand(seed) {
   return () => {
     seed |= 0; seed = seed + 0x6D2B79F5 | 0;
     let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
@@ -17,8 +18,8 @@ function skipRand(seed) {
 
 // Each level is generated from its number, so it is the same every time you play it.
 // A guaranteed path runs through every level; everything else is scenery and shortcuts.
-function skipLevel(n) {
-  const rnd = skipRand(n * 7919 + 13);
+function tumbleLevel(n) {
+  const rnd = tumbleRand(n * 7919 + 13);
   const sides = n <= 4 ? 4 : n <= 7 ? 5 : 6;
   const len = 70 + n * 18;
   const density = Math.max(0.3, 0.9 - n * 0.065);
@@ -43,92 +44,96 @@ function skipLevel(n) {
       safe = next; r += 6;
     }
   }
-  return { n, sides, len, rows, speed: 7 + n * 0.45 };
+  return { n, sides, len, rows, speed: 4.5 + n * 0.33 };
 }
 
-function skipSaved() {
-  const s = storage.get('skip') || {};
-  const unlocked = Math.min(SKIP_LEVELS, Math.max(1, s.unlocked | 0));
+function tumbleSaved() {
+  const s = storage.get('tumble') || {};
+  const unlocked = Math.min(TUMBLE_LEVELS, Math.max(1, s.unlocked | 0));
   return { unlocked, level: Math.min(unlocked, Math.max(1, s.level | 0)), tries: s.tries | 0 };
 }
-function skipSave() { storage.set('skip', { unlocked: skip.unlocked, level: skip.level.n, tries: skip.tries }); }
+function tumbleSave() { storage.set('tumble', { unlocked: tumble.unlocked, level: tumble.level.n, tries: tumble.tries }); }
 
-function skipReset(levelNum, state = 'ready') {
-  const saved = skipSaved();
-  const level = skipLevel(levelNum);
+function tumbleReset(levelNum, state = 'ready') {
+  const saved = tumbleSaved();
+  const level = tumbleLevel(levelNum);
   const side = 0;
-  skip = {
-    ...(skip || {}), unlocked: Math.max(saved.unlocked, skip?.unlocked || 1), tries: skip?.tries ?? saved.tries,
+  tumble = {
+    ...(tumble || {}), unlocked: Math.max(saved.unlocked, tumble?.unlocked || 1), tries: tumble?.tries ?? saved.tries,
     level, state, z: 1, a: side + 0.5, h: 0, vh: 0, air: false, falling: false, coyote: 0, t: 0,
     rot: Math.PI / 2 - 2 * Math.PI * (side + 0.5) / level.sides
   };
-  skipJumpQueued = 0;
-  skipSave(); skipHud();
+  tumbleJumpQueued = 0;
+  tumbleSave(); tumbleHud();
 }
 
-function skipSolid(row, side) {
-  const rows = skip.level.rows;
+function tumbleSolid(row, side) {
+  const rows = tumble.level.rows;
   if (row < 0 || row >= rows.length) return true;
-  return rows[row][((side % skip.level.sides) + skip.level.sides) % skip.level.sides];
+  return rows[row][((side % tumble.level.sides) + tumble.level.sides) % tumble.level.sides];
 }
 
-function skipAct() {
-  if (skip.state === 'playing') { skipJumpQueued = 0.14; return; }
-  if (skip.state === 'cleared') {
-    if (skip.level.n < SKIP_LEVELS) skipReset(skip.level.n + 1, 'playing');
-    else skipReset(1, 'ready');
+function tumbleAct() {
+  if (tumble.state === 'playing') { tumbleJumpQueued = 0.14; return; }
+  if (tumble.state === 'cleared') {
+    if (tumble.level.n < TUMBLE_LEVELS) tumbleReset(tumble.level.n + 1, 'playing');
+    else tumbleReset(1, 'ready');
     return;
   }
-  if (skip.state === 'fell') { skipReset(skip.level.n, 'playing'); return; }
-  skip.state = 'playing'; skipHud();
+  if (tumble.state === 'fell') { tumbleReset(tumble.level.n, 'playing'); return; }
+  tumble.state = 'playing'; tumbleHud();
 }
 
-function skipStep(dt) {
-  const s = skip, L = s.level;
+function tumbleStep(dt) {
+  const s = tumble, L = s.level;
   s.t += dt;
   if (s.state !== 'playing') return;
   const width = 2 * Math.tan(Math.PI / L.sides);
   const lateral = 2.7 / width;
-  const dir = (skipKeys.left ? 1 : 0) - (skipKeys.right ? 1 : 0);
+  const dir = (tumbleKeys.left ? 1 : 0) - (tumbleKeys.right ? 1 : 0);
   if (!s.falling) {
     s.a += dir * lateral * dt;
     s.a = ((s.a % L.sides) + L.sides) % L.sides;
   }
   s.z += L.speed * dt;
-  skipJumpQueued = Math.max(0, skipJumpQueued - dt);
+  tumbleJumpQueued = Math.max(0, tumbleJumpQueued - dt);
 
   const side = Math.floor(s.a), row = Math.floor(s.z);
   if (!s.air && !s.falling) {
-    if (skipSolid(row, side)) s.coyote = 0;
+    if (tumbleSolid(row, side)) s.coyote = 0;
     else if ((s.coyote += dt) > 0.08) { s.falling = true; s.vh = 0; }
-    if (skipJumpQueued > 0 && !s.falling) { s.air = true; s.vh = 3.3; skipJumpQueued = 0; s.coyote = 0; }
+    if (tumbleJumpQueued > 0 && !s.falling) { s.air = true; s.vh = 2.6; s.holdT = 0; tumbleJumpQueued = 0; s.coyote = 0; }
   }
   if (s.air || s.falling) {
-    s.vh -= 12.5 * dt;
+    // while jump is held on the way up, gravity is gentle for up to 0.3s; letting go (or running out) ends the float
+    let grav = 14;
+    if (s.air && tumbleJumpHeld && s.vh > 0 && s.holdT < 0.3) { grav = 5; s.holdT += dt; }
+    else s.holdT = 1;
+    s.vh -= grav * dt;
     s.h += s.vh * dt;
     if (s.air && s.h <= 0) {
-      if (skipSolid(row, side)) { s.h = 0; s.vh = 0; s.air = false; }
+      if (tumbleSolid(row, side)) { s.h = 0; s.vh = 0; s.air = false; }
       else if (s.h < -0.06) { s.air = false; s.falling = true; }
     }
   }
   if (s.falling && s.h < -1.6) {
-    s.state = 'fell'; s.tries++; skipSave(); skipHud();
+    s.state = 'fell'; s.tries++; tumbleSave(); tumbleHud();
   }
   if (s.z >= L.len + 5) {
     s.state = 'cleared';
-    if (L.n < SKIP_LEVELS) s.unlocked = Math.max(s.unlocked, L.n + 1);
-    skipSave(); skipHud();
+    if (L.n < TUMBLE_LEVELS) s.unlocked = Math.max(s.unlocked, L.n + 1);
+    tumbleSave(); tumbleHud();
   }
 }
 
 // colour helpers
-const SKIP_BG = [27, 44, 33];
-function skipMix(c, t) {
-  return `rgb(${c.map((v, i) => Math.round(v + (SKIP_BG[i] - v) * t)).join(',')})`;
+const TUMBLE_BG = [27, 44, 33];
+function tumbleMix(c, t) {
+  return `rgb(${c.map((v, i) => Math.round(v + (TUMBLE_BG[i] - v) * t)).join(',')})`;
 }
 
-function skipDraw(ctx, W, H) {
-  const s = skip, L = s.level, N = L.sides;
+function tumbleDraw(ctx, W, H) {
+  const s = tumble, L = s.level, N = L.sides;
   // ease the tunnel round so the side underfoot becomes the floor
   const target = Math.PI / 2 - 2 * Math.PI * (Math.floor(s.a) + 0.5) / N;
   let diff = target - s.rot;
@@ -159,19 +164,19 @@ function skipDraw(ctx, W, H) {
     zA = Math.max(zA, 0.3);
     const fog = Math.min(1, Math.max(0, (zA - 2) / 34));
     for (let i = 0; i < N; i++) {
-      if (!skipSolid(r, i)) continue;
+      if (!tumbleSolid(r, i)) continue;
       const finish = r >= L.len;
       const base = finish ? [216, 180, 106] : (r + i) % 2 ? [128, 157, 116] : [112, 142, 103];
       const a = P(verts[i], zA), b = P(verts[i + 1], zA), c = P(verts[i + 1], zB), d = P(verts[i], zB);
       ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.lineTo(...c); ctx.lineTo(...d); ctx.closePath();
-      ctx.fillStyle = skipMix(base, fog); ctx.fill();
-      ctx.strokeStyle = skipMix([62, 88, 64], fog); ctx.lineWidth = 1; ctx.stroke();
+      ctx.fillStyle = tumbleMix(base, fog); ctx.fill();
+      ctx.strokeStyle = tumbleMix([62, 88, 64], fog); ctx.lineWidth = 1; ctx.stroke();
     }
   };
-  // far rows, then the sprout, then the rows in front of it (so a tumble disappears behind the edge)
+  // far rows, then the sprout, then the rows in front of it (so a fall disappears behind the edge)
   const split = Math.floor(s.z - 0.0001);
   for (let r = far; r >= split; r--) drawRow(r);
-  skipDrawSprout(ctx, verts, P, dp, F);
+  tumbleDrawSprout(ctx, verts, P, dp, F);
   for (let r = split - 1; r >= near; r--) drawRow(r);
 
   // progress line along the top
@@ -182,8 +187,8 @@ function skipDraw(ctx, W, H) {
   if (s.state !== 'playing') {
     const msg = {
       ready: [`level ${L.n}`, 'tap or press space to begin'],
-      fell: ['a little tumble', 'tap or press space to try again'],
-      cleared: L.n < SKIP_LEVELS ? ['level cleared ✿', `tap for level ${L.n + 1}`] : ['every level cleared ✿', 'tap to start again from level 1']
+      fell: ['oops, a little slip', 'tap or press space to try again'],
+      cleared: L.n < TUMBLE_LEVELS ? ['level cleared ✿', `tap for level ${L.n + 1}`] : ['every level cleared ✿', 'tap to start again from level 1']
     }[s.state];
     ctx.fillStyle = 'rgba(18,34,26,.55)'; ctx.fillRect(0, 0, W, H);
     ctx.textAlign = 'center'; ctx.fillStyle = '#f7efdc';
@@ -194,8 +199,8 @@ function skipDraw(ctx, W, H) {
   }
 }
 
-function skipDrawSprout(ctx, verts, P, dp, F) {
-  const s = skip, side = Math.floor(s.a), f = s.a - side;
+function tumbleDrawSprout(ctx, verts, P, dp, F) {
+  const s = tumble, side = Math.floor(s.a), f = s.a - side;
   const v0 = verts[side], v1 = verts[side + 1];
   const foot = [v0[0] + (v1[0] - v0[0]) * f, v0[1] + (v1[1] - v0[1]) * f];
   const mid = [(v0[0] + v1[0]) / 2, (v0[1] + v1[1]) / 2];
@@ -226,8 +231,18 @@ function skipDrawSprout(ctx, verts, P, dp, F) {
   ctx.beginPath(); ctx.arc(-u * 0.42, -u * 0.86 - bob, u * 0.12, 0, Math.PI * 2); ctx.fill();
   ctx.beginPath(); ctx.arc(u * 0.42, -u * 0.86 - bob, u * 0.12, 0, Math.PI * 2); ctx.fill();
   ctx.fillStyle = '#2f4a36';
-  ctx.beginPath(); ctx.arc(-u * 0.22, -u * 1.05 - bob, u * 0.08, 0, Math.PI * 2); ctx.fill();
-  ctx.beginPath(); ctx.arc(u * 0.22, -u * 1.05 - bob, u * 0.08, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.arc(-u * 0.24, -u * 1.06 - bob, u * 0.11, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.arc(u * 0.24, -u * 1.06 - bob, u * 0.11, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#fffaf0';   // little sparkles in the eyes
+  ctx.beginPath(); ctx.arc(-u * 0.20, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.arc(u * 0.28, -u * 1.10 - bob, u * 0.04, 0, Math.PI * 2); ctx.fill();
+  // a tiny kawaii smile (ω)
+  ctx.strokeStyle = '#2f4a36'; ctx.lineWidth = Math.max(1.2, u * 0.06); ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.arc(-u * 0.07, -u * 0.9 - bob, u * 0.07, 0.15 * Math.PI, 0.95 * Math.PI);
+  ctx.moveTo(u * 0.14, -u * 0.9 - bob);
+  ctx.arc(u * 0.07, -u * 0.9 - bob, u * 0.07, 0.05 * Math.PI, 0.85 * Math.PI);
+  ctx.stroke();
   // sprout on top
   ctx.strokeStyle = '#7f9c6c'; ctx.lineWidth = Math.max(1.5, u * 0.09); ctx.lineCap = 'round';
   ctx.beginPath(); ctx.moveTo(0, -u * 1.75 - bob); ctx.quadraticCurveTo(u * 0.05, -u * 2.05 - bob, 0, -u * 2.2 - bob); ctx.stroke();
@@ -237,49 +252,50 @@ function skipDrawSprout(ctx, verts, P, dp, F) {
   ctx.restore();
 }
 
-function skipHud() {
-  const sel = $('#skipLevel');
-  if (!sel || !skip) return;
-  sel.innerHTML = Array.from({ length: skip.unlocked }, (_, i) => `<option value="${i + 1}">level ${i + 1}</option>`).join('');
-  sel.value = skip.level.n;
-  $('#skipInfo').textContent = `${skip.level.sides}-sided tunnel · ${skip.tries} tumbles so far`;
+function tumbleHud() {
+  const sel = $('#tumbleLevel');
+  if (!sel || !tumble) return;
+  sel.innerHTML = Array.from({ length: tumble.unlocked }, (_, i) => `<option value="${i + 1}">level ${i + 1}</option>`).join('');
+  sel.value = tumble.level.n;
+  $('#tumbleInfo').textContent = `${tumble.level.sides}-sided tunnel · ${tumble.tries} slips so far`;
 }
 
-function drawSkip() {
-  const saved = skipSaved();
-  skip = null;
-  skip = { unlocked: saved.unlocked, tries: saved.tries };
-  layout('skip', '', `
-    <div class="controls skip-bar">
-      <select class="pill" id="skipLevel" aria-label="level"></select>
-      <button class="pill" id="skipRestart" type="button">restart level</button>
-      <span class="tag" id="skipInfo"></span>
+function drawTumble() {
+  const saved = tumbleSaved();
+  tumble = null;
+  tumble = { unlocked: saved.unlocked, tries: saved.tries };
+  layout('tumble', '', `
+    <div class="controls tumble-bar">
+      <select class="pill" id="tumbleLevel" aria-label="level"></select>
+      <button class="pill" id="tumbleRestart" type="button">restart level</button>
+      <span class="tag" id="tumbleInfo"></span>
     </div>
-    <div class="skip-stage" id="skipStage">
-      <canvas id="skipCanvas" aria-label="skip: a little sprout running down a tunnel. use left and right to move, space to jump."></canvas>
+    <div class="tumble-stage" id="tumbleStage">
+      <canvas id="tumbleCanvas" aria-label="tumble: a little sprout running down a tunnel. use left and right to move, space to jump."></canvas>
     </div>
-    <div class="skip-pad" aria-label="touch controls">
-      <button class="pill" data-skip="left" type="button" aria-label="move left">◀</button>
-      <button class="pill" data-skip="jump" type="button" aria-label="jump">jump</button>
-      <button class="pill" data-skip="right" type="button" aria-label="move right">▶</button>
+    <div class="tumble-pad" aria-label="touch controls">
+      <button class="pill" data-tumble="left" type="button" aria-label="move left">◀</button>
+      <button class="pill" data-tumble="jump" type="button" aria-label="jump">jump</button>
+      <button class="pill" data-tumble="right" type="button" aria-label="move right">▶</button>
     </div>
-    <p class="muted skip-help">← → or a d to move, space or ↑ to jump. walk onto a wall and the tunnel turns with you.</p>`);
-  skipReset(saved.level, 'ready');
-  $('#skipLevel').onchange = e => skipReset(+e.target.value, 'ready');
-  $('#skipRestart').onclick = () => skipReset(skip.level.n, 'ready');
-  const canvas = $('#skipCanvas');
-  canvas.onpointerdown = e => { e.preventDefault(); skipAct(); };
-  document.querySelectorAll('[data-skip]').forEach(b => {
-    const k = b.dataset.skip;
-    const down = e => { e.preventDefault(); b.setPointerCapture?.(e.pointerId); if (k === 'jump') skipAct(); else skipKeys[k] = true; };
-    const up = () => { if (k !== 'jump') skipKeys[k] = false; };
+    <p class="muted tumble-help">← → or a d to move, space or ↑ to jump (hold it to jump farther). walk onto a wall and the tunnel turns with you.</p>`);
+  tumbleReset(saved.level, 'ready');
+  $('#tumbleLevel').onchange = e => tumbleReset(+e.target.value, 'ready');
+  $('#tumbleRestart').onclick = () => tumbleReset(tumble.level.n, 'ready');
+  const canvas = $('#tumbleCanvas');
+  canvas.onpointerdown = e => { e.preventDefault(); tumbleJumpHeld = true; tumbleAct(); };
+  canvas.onpointerup = canvas.onpointercancel = canvas.onpointerleave = () => { tumbleJumpHeld = false; };
+  document.querySelectorAll('[data-tumble]').forEach(b => {
+    const k = b.dataset.tumble;
+    const down = e => { e.preventDefault(); b.setPointerCapture?.(e.pointerId); if (k === 'jump') { tumbleJumpHeld = true; tumbleAct(); } else tumbleKeys[k] = true; };
+    const up = () => { if (k === 'jump') tumbleJumpHeld = false; else tumbleKeys[k] = false; };
     b.onpointerdown = down; b.onpointerup = up; b.onpointercancel = up; b.onlostpointercapture = up;
   });
   const ctx = canvas.getContext('2d');
   let last = performance.now();
   const frame = now => {
-    if (!canvas.isConnected) { skipKeys = { left: false, right: false }; return; }
-    const stage = $('#skipStage'), dpr = Math.min(2, devicePixelRatio || 1);
+    if (!canvas.isConnected) { tumbleKeys = { left: false, right: false }; return; }
+    const stage = $('#tumbleStage'), dpr = Math.min(2, devicePixelRatio || 1);
     const W = stage.clientWidth, H = Math.round(Math.min(W * 0.66, innerHeight * 0.62));
     if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) {
       canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
@@ -287,19 +303,22 @@ function drawSkip() {
     }
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const dt = Math.min(1 / 30, (now - last) / 1000); last = now;
-    skip.dtLast = dt;
-    skipStep(dt);
-    skipDraw(ctx, W, H);
+    tumble.dtLast = dt;
+    tumbleStep(dt);
+    tumbleDraw(ctx, W, H);
     requestAnimationFrame(frame);
   };
   requestAnimationFrame(frame);
 }
 
-const SKIP_KEYMAP = { ArrowLeft: 'left', a: 'left', A: 'left', ArrowRight: 'right', d: 'right', D: 'right' };
+const TUMBLE_KEYMAP = { ArrowLeft: 'left', a: 'left', A: 'left', ArrowRight: 'right', d: 'right', D: 'right' };
 document.addEventListener('keydown', e => {
-  if (!$('#skipCanvas') || e.target.closest?.('select,input,textarea')) return;
-  if (SKIP_KEYMAP[e.key]) { skipKeys[SKIP_KEYMAP[e.key]] = true; e.preventDefault(); }
-  else if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') { e.preventDefault(); if (!e.repeat) skipAct(); }
+  if (!$('#tumbleCanvas') || e.target.closest?.('select,input,textarea')) return;
+  if (TUMBLE_KEYMAP[e.key]) { tumbleKeys[TUMBLE_KEYMAP[e.key]] = true; e.preventDefault(); }
+  else if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') { e.preventDefault(); tumbleJumpHeld = true; if (!e.repeat) tumbleAct(); }
 });
-document.addEventListener('keyup', e => { if (SKIP_KEYMAP[e.key]) skipKeys[SKIP_KEYMAP[e.key]] = false; });
-window.addEventListener('blur', () => { skipKeys = { left: false, right: false }; });
+document.addEventListener('keyup', e => {
+  if (TUMBLE_KEYMAP[e.key]) tumbleKeys[TUMBLE_KEYMAP[e.key]] = false;
+  if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') tumbleJumpHeld = false;
+});
+window.addEventListener('blur', () => { tumbleKeys = { left: false, right: false }; tumbleJumpHeld = false; });
