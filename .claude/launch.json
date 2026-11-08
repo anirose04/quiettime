@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"quiet-time","runtimeExecutable":"sh","runtimeArgs":["-c","cd '/private/tmp/claude-502/-Users-aniro1-Desktop-fall-2026-quiettime/893bf679-a053-47e0-a3fe-f8c2966b9f82/scratchpad/qt' && exec python3 -m http.server 8765"],"port":8765,"autoPort":false}]}
