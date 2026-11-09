@@ -1,7 +1,10 @@
 {
   "ok": true,
-  "last_success": "2026-11-08T20:12:57.672Z",
+  "last_success": "2026-11-09T17:30:02.138Z",
   "error": null,
-  "last_attempt": "2026-11-08T20:12:41.014Z",
+  "published": 28,
+  "queued": 0,
+  "removed": 0,
+  "last_attempt": "2026-11-09T17:29:46.336Z",
   "warnings": []
 }

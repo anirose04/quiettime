@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "last_attempt": "2026-11-08T18:31:17.857Z",
-  "last_success": "2026-11-08T18:32:47.201Z",
+  "last_attempt": "2026-11-09T17:28:12.229Z",
+  "last_success": "2026-11-09T17:29:46.243Z",
   "error": null,
   "providers": {
     "openalex": {
@@ -9,9 +9,14 @@
       "key_used": true
     },
     "crossref": {
-      "calls": 118,
+      "calls": 123,
       "polite": false
     }
   },
-  "warnings": []
+  "warnings": [
+    "changed since it was read: doi:10.1016/j.cognition.2026.106773"
+  ],
+  "published": 85,
+  "queued": 10,
+  "removed": 1
 }

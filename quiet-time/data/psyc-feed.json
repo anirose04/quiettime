@@ -4,7 +4,7 @@
  "window_days": 365,
  "about": "Every item here was read before publication: the title and abstract, checked against the paper's Crossref record. The full papers were not read unless a decision in review/decisions.json says so. abstract is the authors' own text under an open licence.",
  "counts": {
-  "items": 86
+  "items": 85
  },
  "items": [
   {
@@ -299,31 +299,6 @@
     "doi": "https://doi.org/10.1037/xlm0001659",
     "landing": "https://doi.org/10.1037/xlm0001659",
     "oa": "https://doi.org/10.1037/xlm0001659"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1016/j.cognition.2026.106773",
-   "doi": "10.1016/j.cognition.2026.106773",
-   "openalex": "W7153075024",
-   "title": "The spatial specificity and recovery from visual adaptation in causality perception",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Laura Van Zantwijk",
-    "Martin Rolfs",
-    "Sven Ohl"
-   ],
-   "author_count": 3,
-   "source": "Cognition",
-   "date": "2026-11-07",
-   "abstract": "When one object approaches another object which, upon touching, moves in the same direction, humans report a vivid impression of one launching the other. Visual adaptation can alter this perception of causality: observers less often report seeing a launch after viewing a stream of launch events. In three experiments, we further characterised how visual adaptation influences the perception of causality by determining the spatial specificity of adaptation and timecourse of recovery from adaptation. In Experiment 1, observers saw ambiguous test events (i.e., the overlap between the two objects varied over trials) at three different horizontal eccentricities. Adaptation was strongest when adaptor and test event were presented at the same eccentricity, and absent when the two were separated by just three degrees of visual angle. Moreover, the perception of causality gradually recovered from adaptation, but remained incomplete. In Experiment 2, both long and short adaptation sequences were highly effective in driving adaptation, and showed no difference in the recovery timecourse, which was complete following more experimental blocks. In Experiment 3, a break without any task-relevant visual input also led to a recovery over the same timespan, but this time, the recovery was instantaneous and incomplete. Altogether, our results provide evidence for highly spatially specific computations, instananeously responding to the onset of adaptation and then gradually recovering from the adaptation over a short time window.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1016/j.cognition.2026.106773",
-    "landing": "https://doi.org/10.1016/j.cognition.2026.106773",
-    "oa": "https://doi.org/10.1016/j.cognition.2026.106773"
    },
    "cites_collection": [],
    "first_seen": "2026-11-08"
@@ -2264,5 +2239,6 @@
    "cites_collection": [],
    "first_seen": "2026-11-08"
   }
- ]
+ ],
+ "last_refreshed": "2026-11-09T17:28:12.229Z"
 }

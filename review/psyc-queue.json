@@ -1,4 +1,256 @@
 {
  "_about": "Waiting to be read. Nothing here is published. Decide with scripts/paper-review.mjs.",
- "items": []
+ "items": [
+  {
+   "id": "doi:10.1016/j.cognition.2026.106773",
+   "doi": "10.1016/j.cognition.2026.106773",
+   "openalex": "W7153075024",
+   "title": "The spatial specificity and recovery from visual adaptation in causality perception",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Laura Van Zantwijk",
+    "Martin Rolfs",
+    "Sven Ohl"
+   ],
+   "author_count": 3,
+   "source": "Cognition",
+   "date": "2026-11-07",
+   "abstract": "When one object approaches another object which, upon touching, moves in the same direction, humans report a vivid impression of one launching the other. Visual adaptation can alter this perception of causality: observers less often report seeing a launch after viewing a stream of launch events. In three experiments, we further characterized how visual adaptation influences the perception of causality by determining the spatial specificity of adaptation and timecourse of recovery from adaptation. In Experiment 1, observers saw ambiguous test events (i.e., the overlap between the two objects varied over trials) at three different distances from the adapted location. Adaptation was strongest when the adaptor and test event were presented at the same location, and absent when the two were separated by just three degrees of visual angle. Moreover, the perception of causality gradually recovered from adaptation, but remained incomplete. In Experiment 2, both long and short adaptation sequences were highly effective in driving adaptation, and showed no difference in the recovery timecourse, which was complete following more experimental blocks. In Experiment 3, a break without any task-relevant visual input also led to a recovery over the same timespan, but this time, the recovery was instantaneous and incomplete. Altogether, our results provide evidence for highly spatially specific computations, instantaneously responding to the onset of adaptation and then recovering from the adaptation over a short time window.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106773",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106773",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0010027726003422/pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.cognition.2026.106764",
+   "doi": "10.1016/j.cognition.2026.106764",
+   "openalex": "W7223250603",
+   "title": "Repetition bias in self-directed learning",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Alexandr Ten",
+    "Michiko Sakaki",
+    "Kou Murayama"
+   ],
+   "author_count": 3,
+   "source": "Cognition",
+   "date": "2026-11-08",
+   "abstract": "Self-directed learning is a major part of individual knowledge formation. People often autonomously organize their own learning into ”blocks”: they practice a certain task for some continuous stretch of time, then switch to another task for another period of time, and so on. Yet current models of intrinsic motivation highlighting epistemic factors such as novelty, competence, and learning progress make various predictions about the extent to which learners block, as opposed to interleaving, their practice. In this study, we demonstrate that people tend to block in a multi-task setting where existing models of intrinsic motivation based on epistemic factors make ambiguous predictions. We show that while epistemic factors can partially explain blocking, asimple repetition bias substantially improves our ability to predict choices.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106764",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106764",
+    "oa": "https://doi.org/10.1016/j.cognition.2026.106764"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.31234/osf.io/4r2mj_v1",
+   "doi": "10.31234/osf.io/4r2mj_v1",
+   "openalex": "W7225576050",
+   "title": "Auditory Working Memory Is Susceptible to Intrusions from Subsequent Sounds",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Manda Fischer",
+    "Keisuke Fukuda"
+   ],
+   "author_count": 2,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-08",
+   "abstract": "As sounds unfold over time, listeners often need to relate successive events while keeping them distinct. Auditory working memory is susceptible to interference from subsequent sounds, yet whether resulting errors reflect distortion of the remembered target or intrusion of the intervening sound itself remains unclear. Although both mechanisms can produce similar average biases toward an intervening sound, they predict distinct distributions of reproduction errors. Recent advances in continuous pitch reproduction now allow us to test these predictions in audition. In two experiments, participants remembered a target tone over a brief delay and reproduced its pitch on a circular continuous-response scale. During the delay, an intervening tone was presented; participants either ignored it or judged its similarity to the target. We analyzed reproduction-error distributions with mixture modeling to distinguish systematic shifts in target-centred responses (i.e., distortion) from responses clustered around the intervening pitch (i.e., intrusion). The results showed that the error distributions were better accounted for by models incorporating responses centred near the intervening pitch (i.e., intrusion) than the models assuming continuous displacement of target-centred responses alone (i.e., distortion). Exploratory analyses suggested that the influence of task relevance of the intervening sound was associated with baseline memory precision: listeners with less precise baseline reproduction tended to show greater interference when told to explicitly compare the sounds. Together, these findings suggest that intervening sounds may do more than bias reports of remembered pitch. On some trials, the intervening sound may guide the final response in place of the target, even when task-irrelevant.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/4r2mj_v1",
+    "landing": "https://doi.org/10.31234/osf.io/4r2mj_v1",
+    "oa": "https://doi.org/10.31234/osf.io/4r2mj_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.31234/osf.io/fuqjb_v1",
+   "doi": "10.31234/osf.io/fuqjb_v1",
+   "openalex": "W7225558336",
+   "title": "Does CBT change the brain? A systematic review of neuroimaging RCTs on anxiety disorders, depression and obsessive-compulsive disorder",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Ioulia Kokka",
+    "Iraklis Mourikis"
+   ],
+   "author_count": 2,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-09",
+   "abstract": "Cognitive behavioral therapy (CBT) is effective for anxiety disorders, depression and obsessive-compulsive disorder (OCD), but the neurobiological mechanisms of change remain unclear. This systematic review synthesized neuroimaging evidence from randomized controlled trials (RCTs) to examine whether CBT can be considered a neurobiological intervention. Following PRISMA guidelines (PROSPERO: CRD420251239465), PubMed, Scopus and PsycInfo were searched for RCTs of CBT in adults with anxiety disorders, depression or OCD-spectrum disorders reporting pre- and post-treatment neuroimaging. Risk of bias was assessed with RoB 2, and findings were synthesized narratively. Seventeen RCTs were included (OCD = 5, anxiety disorders = 6, depression = 6), using task-based fMRI (n = 8), resting-state fMRI (n = 6), structural MRI (n = 2) or PET (n = 1). Changes after CBT involved emotional reactivity regions, prefrontal and frontoparietal control systems and their connectivity, with disorder-specific patterns: reduced threat reactivity in anxiety disorders, altered cognitive control networks in OCD, and altered mood-related, self-referential and reward connectivity in depression. Neural and clinical change did not always coincide, and comparisons with pharmacotherapy were mixed. Five studies were at high risk of bias. These findings provide preliminary support for CBT as a neurobiological intervention, although small samples and heterogeneous protocols limit conclusions.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/fuqjb_v1",
+    "landing": "https://doi.org/10.31234/osf.io/fuqjb_v1",
+    "oa": "https://doi.org/10.31234/osf.io/fuqjb_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.31234/osf.io/u97pa",
+   "doi": "10.31234/osf.io/u97pa",
+   "openalex": "W7225580781",
+   "title": "Divided Politics, Divided Lives? Affective Polarization, Gender, and Loneliness in Finland",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Patrick Jern",
+    "Ruth Virtanen",
+    "Martin Lagerström",
+    "Albert Weckman",
+    "Kim Strandberg",
+    "Ida E. M. Pedersen"
+   ],
+   "author_count": 6,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-08",
+   "abstract": "Polarization can be described as when opinions and attitudes discontinue existing on a continuum and are drawn to opposing extremes. Affective polarization refers to the positive feelings and associations towards one’s own political ingroup, in combination with negative feelings and associations that arise towards the outgroup on the other end of the spectrum. Recent studies have shown that polarization is increasing in several countries. This change is happening simultaneously with increases in singleness and loneliness. Moreover, a historically significant political gap can be observed in many Western countries between young men and women, raising questions regarding heterosexual relationship formation. The current study set out to examine differences in affective polarization in men and women, and to test loneliness, age, and relationship status as predictors of affective polarization in a Nordic multiparty democracy. We used a population-based sample of 7,357 Finnish adults who responded to an online survey. In line with previous findings, men were found more likely to be TAN (traditional-authoritarian-nationalist)-polarized, and women more likely to be GAL (green-alternative-libertarian)-polarized. In addition, polarization was found to be more common among younger respondents. Surprisingly, relationship status was not found to be a significant predictor of affective polarization. Loneliness was found to be more common in GAL-, but not in TAN-polarized respondents, indicating that less moderate political alignment may be associated with loneliness in general.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/u97pa",
+    "landing": "https://doi.org/10.31234/osf.io/u97pa",
+    "oa": "https://doi.org/10.31234/osf.io/u97pa"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.31234/osf.io/ktcv7",
+   "doi": "10.31234/osf.io/ktcv7",
+   "openalex": "W7225558864",
+   "title": "Five Platform Functions and the Frustration–Aggression Pathway: A Mechanism Model of Grievance Identity Formation among Young Men",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Johan G.L. Verheyden"
+   ],
+   "author_count": 1,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-08",
+   "abstract": "Aggression research holds that aversive experience raises aggressive readiness, but whether aggression is enacted depends on appraisal, cue exposure, reinforcement, and inhibition. This theory article specifies how digital platforms may modulate that pathway for young men exposed to identity-relevant status threat. It disaggregates platform effects into five functions: a social comparison amplifier, an identity threat accelerator, a cue-saturated environment, a reinforcement architecture, and an aggression affordance system. Each maps onto a component of the General Aggression Model, cognitive neoassociationism, or I³ Theory, and each is paired with a discriminant prediction that would count against that function if it failed. The article defines grievance identity as a self-schema marked by central in-group injustice, chronically accessible hostile attributions, legitimised adversarial behaviour, and peer recognition for hostile performance, and distinguishes it from collective victimhood, identity fusion, and ideological commitment. A six-stage pathway links identity-relevant goal blockage to inhibition erosion. The article engages with contested evidence on algorithmic recommendation, the selection-versus-amplification identification problem, and the generalisation gap in precarious manhood research. It reports no data and sets out an empirical agenda and conditions for falsification.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/ktcv7",
+    "landing": "https://doi.org/10.31234/osf.io/ktcv7",
+    "oa": "https://doi.org/10.31234/osf.io/ktcv7"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.31234/osf.io/4yexj",
+   "doi": "10.31234/osf.io/4yexj",
+   "openalex": "W7225575755",
+   "title": "Political Ingroup and Outgroup Cues Condition How Large Language Models Refute Conspiracy Theories",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Erin B. Fitz",
+    "Kyle L. Saunders"
+   ],
+   "author_count": 2,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-08",
+   "abstract": "Despite emerging literature on conspiracy theories (CTs) in human-AI interactions, whether large language models (LLMs) refute CTs and how political identities affect responses remains unclear. Drawing on AI system documentation, positive politeness theory, and motivated reasoning research, we hypothesize that LLMs refute most CTs but adapt responses to the political identities of the user and actor in the claim. In a preregistered study comprising 135,845 conversations, 57 CTs, 21 user-actor political identity condition combinations, and seven OpenAI LLMs, we find that 82% of responses refute the CT and 20% exhibit motivated responding, i.e., acknowledge the user's perspective and affirm their concern. While refutation is more likely for CTs implicating Democrats or Republicans, motivated responding typically accompanies refutation and is more likely when claims involve the user’s outgroup---for example, when a Republican user inquires about a CT involving Democrats, and the model refutes the claim. Although responses to CTs implicating Republicans vary more by user identity than CTs implicating Democrats, the former attenuates response differences between outgroup and ingroup claims. These findings raise broader questions about what it means for AI models to be capable and reliable if LLMs consistently refute conspiracy theories but do so in politically asymmetric ways.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/4yexj",
+    "landing": "https://doi.org/10.31234/osf.io/4yexj",
+    "oa": "https://doi.org/10.31234/osf.io/4yexj"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "openalex:W7215024359",
+   "doi": null,
+   "openalex": "W7215024359",
+   "title": "Effects of Stoic Training on Fear of Negative Evaluation and Responses to Social-Evaluative Stress: A Randomized Controlled Trial",
+   "category": "educational",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Alexander MacLellan",
+    "Charles Kalarchian",
+    "Michael William Lewis"
+   ],
+   "author_count": 3,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-06",
+   "abstract": "Purpose: Stoic philosophy has influenced cognitive and behavioral therapies, but Stoic training has received limited empirical evaluation. This preregistered randomized controlled trial examined whether Stoic training reduced fear of negative evaluation (FNE), improved broader psychological outcomes, increased Stoic attitudes and behaviors, and altered subjective and cardiac responses to acute social-evaluative stress. Methods: Undergraduate students (M age = 19.16 years, SD = 1.05; 81% women) were randomized to eight days of online Stoic training or an active control involving literary-fiction readings. Ninety-eight participants completed pretraining and posttraining self-report assessments (Stoic training, n = 46; control, n = 52). Seventy-eight subsequently completed a modified Trier Social Stress Test (TSST), of whom 66 provided usable electrocardiography data for the preregistered cardiac analyses. Before speech preparation, participants in the Stoic condition completed a five-minute Negative Visualization exercise, whereas control participants waited quietly. Results: Relative to the active control, Stoic training was associated with lower posttraining FNE when controlling for pretraining scores, b = −2.77, p = .016, adjusted d = −0.50, and higher posttraining Stoic Attitudes and Behaviours Scale scores, b = 6.06, p = .038, adjusted d = 0.43. Exploratory subscale analyses suggested possible effects on Beliefs About Control and Beliefs About Happiness, although neither remained significant after correction for multiple comparisons. Between-condition effects on resilience, self-efficacy, and rumination were not significant. During the TSST, cardiac effects were contrary to prediction: Stoic training was associated with higher heart rate, b = 4.13, p = .038, adjusted d = 0.53, and lower heart rate variability, although the latter effect narrowly missed statistical significance, b = −0.17, p = .053, adjusted d = −0.49. Subjective distress and state-anxiety responses to the TSST did not differ significantly by condition. Conclusions: Stoic training led to significantly greater reductions in FNE and increases in Stoic attitudes than an active control, whereas broader psychological outcomes did not differ significantly between conditions. These findings provide initial evidence that brief Stoic training may modify a cognitive vulnerability relevant to social evaluation while engaging the attitudes and behaviors it is intended to cultivate. The unexpected cardiac effects may reflect the broader training, the acute Negative Visualization exercise administered before the stressor, or their combination, highlighting the need to disentangle the cumulative and acute effects of Stoic practice and determine how the timing and context of Negative Visualization influence responses to social-evaluative stress.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": null,
+    "landing": "https://osf.io/egra2",
+    "oa": "https://osf.io/egra2"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.31234/osf.io/6mced_v1",
+   "doi": "10.31234/osf.io/6mced_v1",
+   "openalex": "W7225579093",
+   "title": "Phronesis (Practical Wisdom) as a Measure of Moral Excellence: A Comparative Study of Business and Non-Business Students at a Joint-Venture University in China",
+   "category": "educational",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Yan Huo",
+    "Hyemin Han",
+    "Shane McLoughlin",
+    "Eddy Fang",
+    "Kristjan R Kristjansson"
+   ],
+   "author_count": 5,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-08",
+   "abstract": "The present study compares mastery of phronesis (i.e., practical wisdom) between business school students and students in other schools at a joint-venture university in China. We inquired whether business students’ practical wisdom was more evident or less evident compared with the non-business students. Our question was motivated by the existing research in the business ethics literature that does not provide a ‘happy reading’ about business students, whose qualities are often associated with dishonesty, greed, corruption, and selfishness, more so than those of non-business students. We utilised the Short Phronesis Measure (SPM), which was recently developed and validated; it assesses moral functioning holistically, different from most conventional measures that focus only on individual traits or virtue/vice constructs. We collected data from 653 participants (business students, n=289; non-business students, n=364). Our Bayesian analysis of the data showed that business students’ phronesis mastery was not significantly different from that of non-business students in all domains. The finding suggests that business students are not inferior in phronetic moral functioning in general. This serves as an important reminder for business school educators that business students have the same potential as other students to achieve moral excellence.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/6mced_v1",
+    "landing": "https://doi.org/10.31234/osf.io/6mced_v1",
+    "oa": "https://doi.org/10.31234/osf.io/6mced_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.31234/osf.io/87hm9",
+   "doi": "10.31234/osf.io/87hm9",
+   "openalex": "W7225567092",
+   "title": "Tracking vocabulary development as children start school: assessing measurement invariance in multilingual classrooms",
+   "category": "educational",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Sonali Nag",
+    "Athina Ntalli",
+    "Gideon Arulmani",
+    "Joshua Aaron McGrane"
+   ],
+   "author_count": 4,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-09",
+   "abstract": "Receptive vocabulary, what is understood when hearing a word, underpins reading comprehension and wider learning. Yet, few tests have been validated to function fairly over developmental time and across diverse linguistic experiences. This study examined the Picture Test for Receptive Vocabulary (TalkTogether – Hindi), a 50-item test for four-to-nine-year-olds in multilingual north India. Words in the language of school instruction and linked images were drawn picture- and story books. Over one academic year (2023–2024), 1,949 administrations were collected from children (47% girls) at three time points across 40 schools. The test showed good reliability (Cronbach’s α = .82; Rasch reliability = .78) and captured variation across the proficiency range. Item properties remained stable across time, licensing its use as a fair tracking tool. Between-group differential item functioning (DIF) effects—by sex, home language(s), and a novel index of ambient peer language exposure—were small to negligible. The findings demonstrate that a contextually-situated vocabulary test, validated through rigorous psychometric evaluation, can meet the standards required for fair tracking of oral skills in the language of instruction. The reported protocol to inform item revision and evaluate dimensions of measurement invariance—demographic, contextual and developmental—are likely transferable to other similarly multilingual settings.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/87hm9",
+    "landing": "https://doi.org/10.31234/osf.io/87hm9",
+    "oa": "https://doi.org/10.31234/osf.io/87hm9"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-09"
+  }
+ ]
 }
