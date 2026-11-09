@@ -1,8 +1,8 @@
 /* Quiet Time — the psyc paper: a little magazine of psychology discoveries.
    One feed, three kinds of card, never mixed up:
    - checked stories and abstract-level notes (psyc-discoveries.js, hand-written, every claim cited)
-   - new papers (data/psyc-feed.json, refreshed weekly): only the authors' own open-licence abstract or the
-     bibliographic listing. Nothing automated ever writes a finding.
+   - new papers (data/psyc-feed.json): the authors' own open-licence abstract, shown only after it has been read
+     (scripts/paper-review.mjs). The weekly refresh can queue papers and remove them, never publish them.
    Routes: #psyc, #psyc?d=<id>, #psyc?saved. Everything personal is stored locally. */
 const PSYC_FIRST = 7, PSYC_MORE = 6;
 let psycState = { filter: 'all', shown: PSYC_FIRST, scroll: 0, trail: [] };
@@ -46,7 +46,7 @@ async function psycLoadFeed() {
     if (r.ok) psycFeed = await r.json();
   } catch { /* the bundled collection is enough on its own */ }
   if (!Array.isArray(psycFeed?.items)) psycFeed = null;
-  else { const seen = psycSeen(); psycFeed.items = psycFeed.items.filter(p => p.title && P_CATS.includes(p.category) && !seen.has(String(p.doi).toLowerCase())); }
+  else { const seen = psycSeen(); psycFeed.items = psycFeed.items.filter(p => p.title && p.abstract && P_CATS.includes(p.category) && !seen.has(String(p.doi).toLowerCase())); }
 }
 async function drawPsyc() {
   const q = location.hash.split('?')[1] || '';
@@ -102,7 +102,7 @@ function psycCompose(filter) {
       checked: shuffle(ds.filter(d => d.level === 'checked')),
       note: shuffle(ds.filter(d => d.level === 'abstract' && !d.isNew)),
       recent: shuffle(ds.filter(d => d.isNew && d.level === 'abstract')),
-      raw: [...shuffle(papers.filter(p => p.abstract)), ...shuffle(papers.filter(p => !p.abstract))]
+      raw: shuffle(papers)
     };
   }
   const pattern = ['checked', 'recent', 'checked', 'note', 'checked', 'raw', 'checked', 'note'];
@@ -177,9 +177,9 @@ function psycCardP(p) {
   return `<article class="d-card d-new" data-cat="${P_ESC(p.category)}">
     <p class="d-kicker">${P_ESC(p.category)} · just published${pre ? ' · preprint, not peer reviewed' : ''}</p>
     <h3 class="d-head"><button type="button" class="d-open" data-open="${P_ESC(p.id)}">${P_ESC(p.title)}</button></h3>
-    ${p.abstract ? `<p class="d-body"><span class="d-quote-mark">in the authors’ words, not checked by me:</span> ${P_ESC(psycExcerpt(p.abstract))}</p>` : '<p class="d-body d-listing">Only the listing so far. I haven’t seen what it found, so I won’t guess.</p>'}
+    <p class="d-body"><span class="d-quote-mark">in the authors’ words:</span> ${P_ESC(psycExcerpt(p.abstract))}</p>
     <p class="d-foot"><span class="d-source">${link ? pLink(link, `${P_ESC(psycBy(p))}, ${P_ESC((p.date || '').slice(0, 4))} ↗`) : `${P_ESC(psycBy(p))}, ${P_ESC((p.date || '').slice(0, 4))}`}</span>
-      <span class="d-acts">${psycSaveBtn(p.id)}<button type="button" class="d-more" data-open="${P_ESC(p.id)}">${p.abstract ? 'the abstract →' : 'the listing →'}</button></span></p>
+      <span class="d-acts">${psycSaveBtn(p.id)}<button type="button" class="d-more" data-open="${P_ESC(p.id)}">the abstract →</button></span></p>
   </article>`;
 }
 const psycCard = x => x.cat ? psycCardD(x) : psycCardP(x);
@@ -311,7 +311,7 @@ function psycDrawPaper(p) {
       <p class="d-kicker">${P_ESC(p.category)} · just published${pre ? ' · preprint, not peer reviewed' : ''}</p>
       <h3 class="d-title d-title-plain">${P_ESC(p.title)}</h3>
       <p class="d-byline">${P_ESC(authors)}${p.source ? ` · <em>${P_ESC(p.source)}</em>` : ''}${p.date ? ` · ${P_ESC(p.date)}` : ''}</p>
-      ${p.abstract ? `<p class="d-para">${P_ESC(p.abstract)}</p><p class="d-evidence">this is the authors’ own abstract (${P_ESC(p.abstract_license || 'open licence')}), reproduced automatically. nobody has checked it against the full paper, and it is not a summary by me.</p>` : '<p class="d-para d-listing">Only the listing so far. I haven’t seen what it found, so I won’t guess.</p>'}
+      <p class="d-para">${P_ESC(p.abstract)}</p><p class="d-evidence">this is the authors’ own abstract (${P_ESC(p.abstract_license || 'open licence')}), not a summary by me. I read it and checked the paper’s record, but I haven’t read the full paper.</p>
       <p class="d-paperlinks">${link ? pLink(link, 'read the original ↗') : ''}${pHttp(p.links?.oa) ? ` · ${pLink(p.links.oa, 'free copy ↗')}` : ''}</p>
       <div class="d-storyacts">${psycSaveBtn(p.id)}</div>
       <section class="d-holes"><h4 class="d-sec">where this goes next</h4>

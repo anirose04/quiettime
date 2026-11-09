@@ -1,7 +1,7 @@
 /* Quiet Time — the history paper: a little magazine of things people wrote down.
    One feed. Every hand-written story (history-discoveries.js) carries a period text checked word for word.
-   New papers (data/history-feed.json, refreshed weekly) appear sparingly: only the authors' own open-licence
-   abstract or the bare listing. Nothing automated ever writes a finding.
+   New papers (data/history-feed.json) appear sparingly: the authors' own open-licence abstract, shown only after
+   it has been read (scripts/paper-review.mjs). The weekly refresh can queue papers and remove them, never publish them.
    Routes: #history, #history?d=<id>, #history?saved. The older issues live on inside their stories, and
    everything personal stays on this device. */
 const HIST_FIRST = 7, HIST_MORE = 6;
@@ -40,7 +40,7 @@ async function drawHistory() {
       if (r.ok) histFeed = await r.json();
     } catch { /* the bundled stories are enough on their own */ }
     if (!Array.isArray(histFeed?.items)) histFeed = null;
-    else histFeed.items = histFeed.items.filter(p => p.title && H_CATS[p.category]);
+    else histFeed.items = histFeed.items.filter(p => p.title && p.abstract && H_CATS[p.category]);
     if (location.hash.startsWith('#history')) render('history'); // a full render keeps the quiet-session panel
     return;
   }
@@ -103,7 +103,7 @@ function histCompose(filter) {
   const cats = filter === 'all' ? shuffle(Object.keys(H_CATS)) : [filter];
   const pools = Object.fromEntries(cats.map(c => [c, shuffle(HISTORY_DISCOVERIES.filter(d => d.cat === c))]));
   const papers = (histFeed?.items || []).filter(p => cats.includes(p.category));
-  const raw = [...shuffle(papers.filter(p => p.abstract)), ...shuffle(papers.filter(p => !p.abstract))];
+  const raw = shuffle(papers);
   const related = (x, y) => !!x?.links?.some && !!y?.links?.some && (x.links.some(l => l[0] === y.id) || y.links.some(l => l[0] === x.id));
   const out = [];
   for (let n = 0; ; n++) {
@@ -141,9 +141,9 @@ function histCardP(p) {
   return `<article class="d-card d-new" data-cat="${H_ESC(p.category)}">
     <p class="d-kicker">${H_ESC(H_CATS[p.category])} · new scholarship</p>
     <h3 class="d-head"><button type="button" class="d-open" data-hopen="${H_ESC(p.id)}">${H_ESC(p.title)}</button></h3>
-    ${p.abstract ? `<p class="d-body"><span class="d-quote-mark">in the authors’ words, not checked by me:</span> ${H_ESC(excerpt)}</p>` : '<p class="d-body d-listing">Only the listing so far. I haven’t seen what it argues, so I won’t guess.</p>'}
+    <p class="d-body"><span class="d-quote-mark">in the authors’ words:</span> ${H_ESC(excerpt)}</p>
     <p class="d-foot"><span class="d-source">${link ? hLink(link, `${by} ↗`) : by}</span>
-      <span class="d-acts">${histSaveBtn(p.id)}<button type="button" class="d-more" data-hopen="${H_ESC(p.id)}">${p.abstract ? 'the abstract →' : 'the listing →'}</button></span></p>
+      <span class="d-acts">${histSaveBtn(p.id)}<button type="button" class="d-more" data-hopen="${H_ESC(p.id)}">the abstract →</button></span></p>
   </article>`;
 }
 const histCard = x => x.cat ? histCardD(x) : histCardP(x);
@@ -252,10 +252,10 @@ function histDrawPaper(p) {
       <p class="d-kicker">${H_ESC(H_CATS[p.category])} · new scholarship</p>
       <h3 class="d-title d-title-plain">${H_ESC(p.title)}</h3>
       <p class="d-byline">${H_ESC((p.authors || []).join(', '))}${p.source ? ` · <em>${H_ESC(p.source)}</em>` : ''}${p.date ? ` · ${H_ESC(p.date)}` : ''}</p>
-      ${p.abstract ? `<p class="d-para">${H_ESC(p.abstract)}</p><p class="d-evidence">this is the authors’ own abstract (${H_ESC(p.abstract_license || 'open licence')}), reproduced automatically. nobody has checked it, and it is not a summary by me.</p>` : '<p class="d-para d-listing">Only the listing so far. I haven’t seen what it argues, so I won’t guess.</p>'}
+      <p class="d-para">${H_ESC(p.abstract)}</p><p class="d-evidence">this is the authors’ own abstract (${H_ESC(p.abstract_license || 'open licence')}), not a summary by me. I read it and checked the paper’s record, but I haven’t read the full paper.</p>
       <p class="d-paperlinks">${link ? hLink(link, 'read the original ↗') : ''}</p>
       <div class="d-storyacts">${histSaveBtn(p.id)}</div>
-      <section class="d-holes"><h4 class="d-sec">where this goes next</h4><p class="d-why">I haven’t read this one, so I’ve left this empty rather than invent a connection.</p>
+      <section class="d-holes"><h4 class="d-sec">where this goes next</h4><p class="d-why">I’ve only read this one’s abstract, so I’ve left this empty rather than claim a connection.</p>
         <p class="d-holes-foot"><button type="button" class="d-link" id="hSurprise">somewhere completely different</button> <button type="button" class="d-link" id="hToFeed">back to the paper</button></p></section>
     </article>
   </div>`);

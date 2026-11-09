@@ -1,7 +1,7 @@
 # Weekly refresh of the new papers in the psyc paper and the history paper.
-# Retrieves bibliographic metadata only (OpenAlex, Crossref) and commits
-# quiet-time/data/psyc-feed.json + psyc-feed-status.json. It never writes or verifies research stories:
-# those are written by hand in quiet-time/psyc-discoveries.js.
+# Retrieves bibliographic metadata only (OpenAlex, Crossref). New papers go to a private queue
+# (review/*-queue.json) and stay there until they have been read: this job can remove a paper from the
+# live feeds, for example if it's retracted, but it can never add one. See scripts/paper-review.mjs.
 #
 # Optional repository secrets (Settings → Secrets and variables → Actions):
 #   OPENALEX_API_KEY  free key from https://openalex.org (anonymous search can be rate-limited)
@@ -43,14 +43,16 @@ jobs:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
         run: node scripts/history-feed.mjs
+      - name: Check that nothing unread can appear
+        run: node scripts/paper-review-check.mjs
       - name: Commit changes
         run: |
           git config user.name "psyc-feed bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add quiet-time/data/psyc-feed.json quiet-time/data/psyc-feed-status.json quiet-time/data/psyc-collection.json quiet-time/data/history-feed.json quiet-time/data/history-feed-status.json quiet-time/data/history-collection.json
+          git add review quiet-time/data/psyc-feed.json quiet-time/data/psyc-feed-status.json quiet-time/data/psyc-collection.json quiet-time/data/history-feed.json quiet-time/data/history-feed-status.json quiet-time/data/history-collection.json
           if git diff --cached --quiet; then
             echo "no changes"
           else
-            git commit -m "paper feeds: weekly metadata refresh"
+            git commit -m "paper feeds: weekly queue refresh"
             git push
           fi

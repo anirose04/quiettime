@@ -2,13 +2,9 @@
  "generated_at": "2026-11-08T18:32:47.201Z",
  "as_of": "2026-11-08",
  "window_days": 365,
- "about": "Bibliographic records only. abstract is the authors' own text, included only for CC BY records. Nothing here has been read, reviewed or verified.",
+ "about": "Every item here was read before publication: the title and abstract, checked against the paper's Crossref record. The full papers were not read unless a decision in review/decisions.json says so. abstract is the authors' own text under an open licence.",
  "counts": {
-  "candidates": 1199,
-  "usable": 778,
-  "items": 118,
-  "with_abstract": 114,
-  "citing_collection": 21
+  "items": 86
  },
  "items": [
   {
@@ -155,59 +151,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1016/j.cognition.2026.106730",
-   "doi": "10.1016/j.cognition.2026.106730",
-   "openalex": "W7214489139",
-   "title": "Semantic generation masks value directed remembering in memory but not metamemory: Evidence from truth-telling and lie fabrication",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Samet Kaya",
-    "Miri Besken"
-   ],
-   "author_count": 2,
-   "source": "Cognition",
-   "date": "2026-09-26",
-   "abstract": null,
-   "abstract_license": null,
-   "links": {
-    "doi": "https://doi.org/10.1016/j.cognition.2026.106730",
-    "landing": "https://doi.org/10.1016/j.cognition.2026.106730",
-    "oa": "https://www.sciencedirect.com/science/article/pii/S0010027726002994/pdf"
-   },
-   "cites_collection": [
-    "koriat-cues",
-    "judgments-of-importance"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1037/xge0001944",
-   "doi": "10.1037/xge0001944",
-   "openalex": "W7161150245",
-   "title": "Calibrating growth mindset about intelligence: Increased blame, effort misperception, and a genes-and-growth solution for blame.",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Woo‐kyoung Ahn",
-    "Cheng-Kai Sheu"
-   ],
-   "author_count": 2,
-   "source": "Journal of Experimental Psychology General",
-   "date": "2026-05-14",
-   "abstract": null,
-   "abstract_license": null,
-   "links": {
-    "doi": "https://doi.org/10.1037/xge0001944",
-    "landing": "https://doi.org/10.1037/xge0001944",
-    "oa": "https://psycnet.apa.org/fulltext/2027-68740-001.pdf"
-   },
-   "cites_collection": [
-    "growth-mindset-national"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.3758/s13423-026-03037-9",
    "doi": "10.3758/s13423-026-03037-9",
    "openalex": "W7164706994",
@@ -283,106 +226,6 @@
     "doi": "https://doi.org/10.1186/s41235-026-00759-1",
     "landing": "https://doi.org/10.1186/s41235-026-00759-1",
     "oa": "https://doi.org/10.1186/s41235-026-00759-1"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.5334/joc.515",
-   "doi": "10.5334/joc.515",
-   "openalex": "W7203756617",
-   "title": "Behavioral Constraint Legibility Under Concealment",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Assaf Benchetrit",
-    "Liliya Benchetrit"
-   ],
-   "author_count": 2,
-   "source": "Journal of Cognition",
-   "date": "2026-08-19",
-   "abstract": "Everyday cognition requires observers to find organization in continuous behavior as surface form changes. Behavioral streams can carry a constraint that governs what remains coherent across variation. This study examines whether such a constraint can remain publicly legible when it structures an action stream and remains concealed from observers. The study examined this question in Untitled, Literally, a full-length abstract choreographic work presented in five public performances. Eight sections were constructed with Essence-to-Movement (EtoM), a procedure for preserving a specified behavioral constraint across varied movement conditions. One section, Drink Me, served as an internal contrast. Following the performances, audience members completed an anonymous voluntary questionnaire (N = 393). We tested the hypothesis that observers who reported structural routes into the work would show lower uncertainty, stronger active meaning-making, and lower preference for the internal contrast. The observed profile was consistent with this hypothesis. Structural-entry reports were associated with lower uncertainty, stronger active meaning-making, and sharper within-work discrimination between constraint-governed material and the internal contrast. These associations are interpreted within a post-performance self-report design under concealment.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.5334/joc.515",
-    "landing": "https://doi.org/10.5334/joc.515",
-    "oa": "https://journalofcognition.org/articles/515/files/6a8583dec95f7.pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.3758/s13423-026-02999-0",
-   "doi": "10.3758/s13423-026-02999-0",
-   "openalex": "W7214956377",
-   "title": "Learning how: A “mindless” procedure alone gives rise to contextual cueing—A weakly supervised connectionist model of statistical context learning in visual search",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Werner Seitz",
-    "Artyom Zinchenko",
-    "Hermann J. Müller",
-    "Thomas Geyer"
-   ],
-   "author_count": 4,
-   "source": "Psychonomic Bulletin & Review",
-   "date": "2026-09-30",
-   "abstract": "Because our environment is not random, it is beneficial to assimilate the statistics of sensory impressions and improve performance, such as visual search for a target object in a cluttered array of nontarget objects (contextual cueing [CC] effect). Computational models of CC have so far focused on predicting the target location from a particular configuration of nontarget items. This contrasts with recent findings according to which display repetitions train human participants' general procedures for the search task. Here, we test the latter idea by employing a connectionist model of visual search that exclusively learns a search procedure without acquiring any individual display-layout information. We show that an instance of a \"learning how\" mechanism not only proposes a viable alternative account to existing \"learning that\" mechanisms, but also generates more plausible key behavioral metrics and exhibits a central bias as an emergent phenomenon of learning-induced plasticity. These findings have implications for models of visual search and artificial intelligence: Learning a procedure from leveraging a task's structure alone can mimic the effects of top-down modulation of attention while also reducing the need for supervision in learning, thereby making computational models that leverage procedural learning behaviorally more plausible and easier to train.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.3758/s13423-026-02999-0",
-    "landing": "https://doi.org/10.3758/s13423-026-02999-0",
-    "oa": "https://link.springer.com/content/pdf/10.3758/s13423-026-02999-0.pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.5334/joc.516",
-   "doi": "10.5334/joc.516",
-   "openalex": "W7203726645",
-   "title": "How to Measure the Reliability of Tasks in Experimental Psychology",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Marc Brysbaert"
-   ],
-   "author_count": 1,
-   "source": "Journal of Cognition",
-   "date": "2026-08-18",
-   "abstract": "Calculating the reliability of experimental tasks can be surprisingly difficult using existing tools. Although R packages such as psych are robust, they often require data in wide format and assume carefully selected items that avoid floor and ceiling effects. To encourage the reporting of task reliability in experimental research, I have written an R function, ICC_participants_long, which uses the intraclass correlation coefficient (ICC) to measure the reliability of participant scores directly from data in long format. Applying this function revealed that the current split-half approach may underestimate the reliability of experimental tasks. Furthermore, the model-based approach makes it possible to generate Best Linear Unbiased Predictions (BLUPs) as estimates of participants’ scores, which provides an informative supplement to the raw means.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.5334/joc.516",
-    "landing": "https://doi.org/10.5334/joc.516",
-    "oa": "https://journalofcognition.org/articles/516/files/6a84370c101f4.pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.5334/joc.517",
-   "doi": "10.5334/joc.517",
-   "openalex": "W7204156790",
-   "title": "Perceptual Contaminants to Assessments of Visuospatial Working Memory: The Influences of Path Clutterness and Endpoint Crowding",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Zechun Zhao",
-    "Freya Joëssel",
-    "C. Shawn Green",
-    "Susanne M. Jaeggi",
-    "Aaron R. Seitz"
-   ],
-   "author_count": 5,
-   "source": "Journal of Cognition",
-   "date": "2026-08-25",
-   "abstract": "Identifying individual differences in various cognitive constructs has important implications for settings such as clinical and educational assessments. Yet, cognitive tasks themselves often do not measure a single construct. As such, there is value in understanding the mixture of constructs involved in cognitive task performance, as this would allow target constructs to be better isolated. For example, tasks assessing visuospatial working memory (VSWM), in addition to measuring the \"of interest\" processes of encoding and maintenance, also involve lower-level perceptual processes. Here, we examined perceptual contaminant effects on VSWM using a modified Corsi Block Tapping Task, in which participants observed and reproduced sequences of spatial locations. Two forms of perceptual interference were manipulated: path clutterness, in which distractors appeared near the virtual path connecting successive targets, and endpoint crowding, in which distractors appeared near the target locations themselves. Endpoint crowding produced clear decrements in task performance, whereas path clutterness produced no detectable changes in performance. These findings indicate that perceptual processes, specifically visual crowding, influence VSWM assessment. This underscores the importance of accounting for perceptual processes in the design and interpretation of working memory measures.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.5334/joc.517",
-    "landing": "https://doi.org/10.5334/joc.517",
-    "oa": "https://journalofcognition.org/articles/517/files/6a8d6d6199977.pdf"
    },
    "cites_collection": [],
    "first_seen": "2026-11-08"
@@ -739,84 +582,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1016/j.cognition.2026.106734",
-   "doi": "10.1016/j.cognition.2026.106734",
-   "openalex": "W7214693715",
-   "title": "Input and uptake for complex syntactic structures in child language development: Implementing structural priming with diverse learner populations",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Jiuzhou Hao",
-    "Patrick Sturt",
-    "Jason Rothman",
-    "Vicky Chondrogianni"
-   ],
-   "author_count": 4,
-   "source": "Cognition",
-   "date": "2026-10-01",
-   "abstract": "Language development depends on both the quantity of linguistic input children receive and their ability to uptake input, yet the relationship between these two factors remains unclear. This study adopted the structural priming paradigm to examine how input and uptake shape syntactic development in three groups of Mandarin-speaking children aged 5–9 years ( N = 75, N female = 39): neurotypical monolinguals (optimal input and uptake), monolinguals with Developmental Language Disorder (optimal input, reduced uptake), and Mandarin-English heritage bilinguals (reduced input, optimal uptake). All groups had acquired the target non-canonical structures (the BA-, BEI-, and OSV-constructions). However, reduced input and reduced uptake were associated with distinct production patterns. Heritage bilinguals produced more canonical structures (the SVO-construction), whereas monolingual children, particularly those with Developmental Language Disorder, favoured the BA-construction, suggesting differences in underlying learning mechanisms and production strategies that may be shaped by their language (learning) experience. Moreover, while richer input enhanced uptake, reduced input did not diminish it, suggesting input quantity and processing ability play separable yet interacting roles in development.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1016/j.cognition.2026.106734",
-    "landing": "https://doi.org/10.1016/j.cognition.2026.106734",
-    "oa": "https://www.sciencedirect.com/science/article/pii/S0010027726003033/pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1162/opmi.a.397",
-   "doi": "10.1162/opmi.a.397",
-   "openalex": "W4416223268",
-   "title": "Back to the Future: The Role of Past and Future Context Predictability in Incremental Language Production",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Shiva Upadhye",
-    "Richard Futrell"
-   ],
-   "author_count": 2,
-   "source": "Open Mind",
-   "date": "2026-09-24",
-   "abstract": "Contextual predictability shapes how we choose and encode words in production. The effects of a word’s predictability given preceding or past context are generally well-understood in both production and comprehension, but studies of naturalistic production have also revealed a poorly understood yet robust backward predictability effect of a word given only its future context, which may be linked to future planning. Across two studies of naturalistic speech, we revisit backward predictability using improved operationalizations, introducing Conditional Pointwise Mutual Information (conditional PMI), a conceptually motivated information-theoretic measure that quantifies the information shared between a word and future sequence under the constraints imposed by the past context. Study 1 shows that this measure reproduces predictability effects of future context on phonetic reduction while remaining non-redundant with backward predictability. Study 2 moves from reduction to word choice, examining substitution errors within a novel generative framework that models lexical contextual influences to predict the identity of the word that surfaces as an error. Within this framework, we find that past-conditioned predictability increases likelihood of erroneous selection, whereas future-conditioned predictability reduces it. In predicting error identity, conditional PMI emerges as the strongest contextual predictor, subsuming backward predictability. Together, these findings illuminate how past and future context shape word choice and encoding, linking contextual predictability to mechanisms of incremental planning in sentence production.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1162/opmi.a.397",
-    "landing": "https://doi.org/10.1162/opmi.a.397",
-    "oa": "https://direct.mit.edu/opmi/article-pdf/doi/10.1162/OPMI.a.397/2630536/opmi.a.397.pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1016/j.cognition.2026.106719",
-   "doi": "10.1016/j.cognition.2026.106719",
-   "openalex": "W7128817797",
-   "title": "Joint processing of arrow direction and number magnitude strengthens Spatial-Numerical Associations: evidence from a modified flanker task",
-   "category": "cognitive",
-   "status": "journal article",
-   "authors": [
-    "Valter Prpić",
-    "Stefano Pileggi",
-    "Federico D'Atri",
-    "Mauro Murgia",
-    "Carlo Fantoni",
-    "Dražen Domijan"
-   ],
-   "author_count": 6,
-   "source": "Cognition",
-   "date": "2026-10-03",
-   "abstract": "The existence of an inherent link between numbers and space is a fundamental question in numerical cognition and has been highly debated in recent years. Although Spatial-Numerical Associations (SNAs) have traditionally been investigated using bimanual response settings, recent studies have moved towards unimanual paradigms to avoid potential measurement artifacts. For instance, an influential line of research adopted a modified Implicit Association Test (IAT) in which numbers and arrows were processed disjunctively in sequential trials. However, SNAs consistently emerged only when spatial and magnitude codes were explicitly contrasted, questioning the idea that numbers are inherently represented in a spatial format. To further investigate this issue, we designed a modified flanker task in which spatial and numerical stimuli were presented simultaneously. When arrows were task irrelevant (Experiment 1), no significant SNA emerged. By contrast, when participants judged arrow direction and numerical magnitude conjunctively (Experiment 2), the paradigm revealed extremely large SNAs compared to existing literature. Overall, our results provide no support for an inherent spatial-numerical link, suggesting that robust SNAs require explicit spatial codes combined with semantic number processing. Finally, the large effect size of group-level SNAs, together with remarkable mixed-model-derived psychometric properties, suggest that the modified flanker task is a promising paradigm for investigating individual differences and effect modulations. This paradigm may therefore advance research on SNAs by overcoming limitations of previous bimanual and unimanual paradigms and helping to resolve mixed findings in the literature.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1016/j.cognition.2026.106719",
-    "landing": "https://doi.org/10.1016/j.cognition.2026.106719",
-    "oa": "https://www.sciencedirect.com/science/article/pii/S001002772600288X/pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1016/j.cognition.2026.106735",
    "doi": "10.1016/j.cognition.2026.106735",
    "openalex": "W7215119289",
@@ -944,133 +709,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.31234/osf.io/pgyka",
-   "doi": "10.31234/osf.io/pgyka",
-   "openalex": "W7225383719",
-   "title": "Same, same but different: Executive functioning and eating behavior profiles among weight management participants",
-   "category": "cognitive",
-   "status": "preprint (not peer reviewed)",
-   "authors": [
-    "Marc Yangüez",
-    "Julissa Ruiz",
-    "Hollie A. Raynor",
-    "Aaron R. Seitz",
-    "Sarah‐Jeanne Salvy"
-   ],
-   "author_count": 5,
-   "source": "PsyArXiv (OSF Preprints)",
-   "date": "2026-11-06",
-   "abstract": "Executive functions (EF) are associated with weight management, yet the two common ways of measuring them, cognitive tasks and self-report questionnaires of everyday functioning, rarely agree. The present study examined whether combining both types of measures reveals distinct profiles of EF and how these relate to age, body mass index (BMI), and eating behaviors. Methods: Adults enrolled in a behavioral weight-loss intervention (N = 277; 84% women; mean BMI 33.9 kg/m²) completed diverse cognitive tasks tapping EF, the BRIEF-A, and the Dutch Eating Behavior Questionnaire. Bayesian factor analyses captured task-based (inhibitory control, working memory) and self-reported (behavioral regulation, emotional regulation, metacognition) EF latent factors, which were entered into a latent profile analysis with age, BMI, and restrained, emotional, and external eating. Results: Task-based and self-reported EF factors were essentially uncorrelated. Three profiles emerged (entropy = 0.82): (i) higher EF task performance with few self-reported difficulties, (ii) lower EF task performance with few self-reported difficulties in older participants, and (iii) average EF task performance with more self-reported difficulties and the highest emotional and external eating. BMI and restrained eating were similar across profiles. Conclusions: Adults with similar BMI had distinct combinations of cognitive performance, everyday executive difficulties, and eating behaviors. Emotional and external eating were linked to self-reported EF difficulties rather than EF task performance, suggesting that self-report EF measures add clinically relevant information. Future work should test whether these profiles predict adherence and weight loss.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.31234/osf.io/pgyka",
-    "landing": "https://doi.org/10.31234/osf.io/pgyka",
-    "oa": "https://doi.org/10.31234/osf.io/pgyka"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.31234/osf.io/jev3u",
-   "doi": "10.31234/osf.io/jev3u",
-   "openalex": "W7225402305",
-   "title": "A Bi-Factor Generalized Cognitive Diagnosis Model Framework",
-   "category": "cognitive",
-   "status": "preprint (not peer reviewed)",
-   "authors": [
-    "Rodrigo S. Kreitchmann",
-    "Pablo Nájera",
-    "Francisco José Abad"
-   ],
-   "author_count": 3,
-   "source": "PsyArXiv (OSF Preprints)",
-   "date": "2026-11-06",
-   "abstract": "Cognitive diagnosis models (CDMs) are often applied to constructs that are largely unidimensional in nature (e.g., mathematics, reading, mental health status) where a set of discrete attributes coexists with a dominant general proficiency dimension. This article presents the bi-factor CDM model (BF-CDM), which partitions item responses into a direct effect of continuous general proficiency and a discrete attribute-mastery tier, allowing mastery classifications to be made beyond what is attributable to general ability. By modeling both tiers explicitly, the BF-CDM makes it possible to evaluate the contribution of the discrete tier itself. Specifically, it can show whether the hypothesized attributes carry diagnostic information beyond general proficiency, both through model comparison with the nested unidimensional model and through the reliability of the attribute-specific component. A simulation study manipulating sample size, test length, number of attributes, and attribute-tier discrimination shows accurate recovery of item and person parameters, and of the model-implied response functions. An application to reading comprehension data from PISA illustrates the practical value of the model: reliability of attribute-mastery classifications drops substantially once variance attributable to general proficiency is partialled out, indicating that much of the apparent diagnostic precision obtained under a saturated attribute structure reflects a single dominant general factor.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.31234/osf.io/jev3u",
-    "landing": "https://doi.org/10.31234/osf.io/jev3u",
-    "oa": "https://doi.org/10.31234/osf.io/jev3u"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.31234/osf.io/7eaw6_v1",
-   "doi": "10.31234/osf.io/7eaw6_v1",
-   "openalex": "W7225399186",
-   "title": "Risk in Context: How Weather Influences Consumer Responses to Climate Risk",
-   "category": "cognitive",
-   "status": "preprint (not peer reviewed)",
-   "authors": [
-    "Zeynep Aslan",
-    "Antonia Krefeld-Schwalb",
-    "Bram Van den Bergh"
-   ],
-   "author_count": 3,
-   "source": "PsyArXiv (OSF Preprints)",
-   "date": "2026-11-06",
-   "abstract": "Protecting homes from increasing climate hazards depends in part on consumers’ understandingand acting on objective climate risk information. Yet such information is not interpreted inisolation. Interpretation may be influenced by immediate contextual cues. This research examineshow weather conditions, as one example of relevant contextual cues, influence consumers’responses to property-level climate risk information. Pairing website visit data from an onlineplatform providing flood risk information with the weather data at users’ location, we demonstratethat weather is associated with interest in personal climate-hazard risk. Specifically, visits to thewebsite increase following periods of rainfall and decline during extended dry spells at the users’locations. Beyond generating interest in climate-hazard risks, we show in four experiments thatweather moderates the effect of objective climate-hazard risk on consumers’ judgments. Whenweather conditions contradict the objective risk, consumers’ judgments shift away from the directionimplied by the objective risk information. In contrast, when weather aligns with the objectiverisk, weather effects are mostly absent. These effects also trickle down to consumers’ willingnessto adopt protective measures. These findings advance our understanding of consumers’ evaluationof risks by showing that heterogeneity in risk perception and protection motivation can emergefrom an asymmetric integration of objective risk information and immediate contextual cues dependingon whether the signals align or not.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.31234/osf.io/7eaw6_v1",
-    "landing": "https://doi.org/10.31234/osf.io/7eaw6_v1",
-    "oa": "https://doi.org/10.31234/osf.io/7eaw6_v1"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.31234/osf.io/c8j7u_v1",
-   "doi": "10.31234/osf.io/c8j7u_v1",
-   "openalex": "W7225385851",
-   "title": "Can LLMs Grow Like Children? A Developmental Analysis of Capability Trajectories in Language Model Training",
-   "category": "cognitive",
-   "status": "preprint (not peer reviewed)",
-   "authors": [
-    "安然",
-    "Tingting Rachel Chung",
-    "Klaus Libertus"
-   ],
-   "author_count": 3,
-   "source": "PsyArXiv (OSF Preprints)",
-   "date": "2026-11-06",
-   "abstract": "Within two years, an infant who can barely lift her head learns to sit, reach, and walk. Developmental science found that this growth is both continuous and phased: skills improve smoothly, yet the pace of improvement changes at identifiable ages, and the field built statistical tools to locate those changes. Language models also transform across training, and whether their capabilities grow smoothly or in jumps is actively debated. The present study argues that the developmental answer applies to artificial learners as well, and that the developmental tools can show it. We apply an analysis pipeline built for infant motor development to the training trajectories of 16 open-source language models, each tested at 27 points during training on five benchmarks. The results mirror the infant findings. Growth is continuous but organized into phases, and transitions cluster at a small set of shared points that are deployed differently across domains. Growth proceeds slowly, then rapidly, then slowly, and models differ reliably in developmental rate. Unlike infants, those rate differences are almost entirely explained by model size. The transitions also survive changes of measurement scale, and on a continuous measure they appear earlier and more sharply than on accuracy. The paper contributes a formal test for phase structure in capability growth, a construct mapping between infant development and language model development, and evidence that phase structure may be a shared property of learning systems.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.31234/osf.io/c8j7u_v1",
-    "landing": "https://doi.org/10.31234/osf.io/c8j7u_v1",
-    "oa": "https://doi.org/10.31234/osf.io/c8j7u_v1"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1002/ejsp.70102",
-   "doi": "10.1002/ejsp.70102",
-   "openalex": "W7170033653",
-   "title": "Stabilising Repair in Psychological Science",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Kevin L. Durrheim"
-   ],
-   "author_count": 1,
-   "source": "European Journal of Social Psychology",
-   "date": "2026-07-22",
-   "abstract": "Psychological science has responded to the WEIRD critique through a broad agenda of inclusion, expanding the diversity of research participants, international collaborations and systems of scholarly recognition. While these reforms have generated important gains, concerns about epistemic inequality persist. This article argues that many contemporary reforms function as forms of stabilising repair : institutional responses that absorb critique by broadening participation and visibility while leaving underlying distributions of epistemic authority largely unchanged. Drawing on debates in decolonial scholarship, I show how inclusion can become a substitute for transformation when critique is translated into administratively manageable questions of representation. The result is a discipline that becomes superficially inclusive without necessarily becoming more diverse. I then review emerging proposals for institutional capacity building and epistemic reconstitution, arguing that a genuinely global psychology requires infrastructural pluralisation : the development of multiple centres, networks and knowledge infrastructures through which psychological theory, methods and research agendas can be produced, sustained and recognised.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1002/ejsp.70102",
-    "landing": "https://doi.org/10.1002/ejsp.70102",
-    "oa": "https://doi.org/10.1002/ejsp.70102"
-   },
-   "cites_collection": [
-    "many-labs-2"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1016/j.jesp.2026.104988",
    "doi": "10.1016/j.jesp.2026.104988",
    "openalex": "W7170194862",
@@ -1094,119 +732,6 @@
    "cites_collection": [
     "moral-reminders"
    ],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1177/01461672261469612",
-   "doi": "10.1177/01461672261469612",
-   "openalex": "W4407948941",
-   "title": "Why Poverty in the Present Matters for Intergenerational Concern and the Future of Humanity",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Kyle Fiore Law",
-    "Stylianos Syropoulos",
-    "Amanda Signorini",
-    "Christina Jinhee Capozzoli",
-    "Liane Young",
-    "Brendan Bo O’Connor"
-   ],
-   "author_count": 6,
-   "source": "Personality and Social Psychology Bulletin",
-   "date": "2026-08-29",
-   "abstract": "Contrary to perceived tensions between addressing present and future societal needs, we find present-day poverty and inequality are deeply connected with attitudes toward far-future welfare at both societal and individual levels. Study 1 (144 countries) shows that poorer, more unequal nations score lower on indices of intergenerational concern and farsighted policies. Study 2 (34 countries, N = 123,502) shows that subjective SES predicts obligation to sacrifice for future lives, especially in nations with less inequality. In Study 3 (N = 1,264 Americans), individuals randomly assigned more resources allocate more to future generations, though not proportionately more. Replicating Studies 1 and 2, real-world SES predicts higher donations beyond situational framings. Thus, combatting present-day societal challenges may be key to increasing concern and action for humanity’s future.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1177/01461672261469612",
-    "landing": "https://doi.org/10.1177/01461672261469612",
-    "oa": "https://doi.org/10.31234/osf.io/2a5qn_v1"
-   },
-   "cites_collection": [
-    "marshmallow-trust",
-    "nature-science-replications"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1037/pspi0000526",
-   "doi": "10.1037/pspi0000526",
-   "openalex": "W7204076173",
-   "title": "Insights into growth mindsets over time: People with growth versus fixed mindsets grow increasingly negative in their reactions to others’ repeated failures.",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Samantha Zaw",
-    "Laura E. Wallace",
-    "Ed O’Brien"
-   ],
-   "author_count": 3,
-   "source": "Journal of Personality and Social Psychology",
-   "date": "2026-08-24",
-   "abstract": null,
-   "abstract_license": null,
-   "links": {
-    "doi": "https://doi.org/10.1037/pspi0000526",
-    "landing": "https://doi.org/10.1037/pspi0000526",
-    "oa": "https://psycnet.apa.org/fulltext/2028-16265-001.pdf"
-   },
-   "cites_collection": [
-    "mindset-meta-analysis",
-    "growth-mindset-national"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1177/01461672251389045",
-   "doi": "10.1177/01461672251389045",
-   "openalex": "W4416997551",
-   "title": "The Hidden Costs of Gratitude: Gratitude Amplification Is Costly for Personal and Relationship Well-Being",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Claire J. Shimshock",
-    "Natalie M. Sisson",
-    "Princeton X. Chee",
-    "Jennifer E. Stellar",
-    "Emily A. Impett",
-    "Bonnie M. Le"
-   ],
-   "author_count": 6,
-   "source": "Personality and Social Psychology Bulletin",
-   "date": "2025-12-04",
-   "abstract": null,
-   "abstract_license": null,
-   "links": {
-    "doi": "https://doi.org/10.1177/01461672251389045",
-    "landing": "https://doi.org/10.1177/01461672251389045",
-    "oa": null
-   },
-   "cites_collection": [
-    "undervaluing-gratitude"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1016/j.jesp.2026.105012",
-   "doi": "10.1016/j.jesp.2026.105012",
-   "openalex": "W7218437046",
-   "title": "Reevaluating the empirical support for a lens-based account: dissecting comparative fit and reconstructive category guessing",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Roland Imhoff",
-    "Verena Heidrich"
-   ],
-   "author_count": 2,
-   "source": "Journal of Experimental Social Psychology",
-   "date": "2026-10-04",
-   "abstract": "The lens-based account of intersectional stereotyping (Petsko et al., 2022) proposes that perceivers put on social ”lenses” for categorizing their environment that exhibit comparative fit with observed behavior in a given situation. Support for this claim comes from studies using the Who-Said-What paradigm (Taylor et al., 1978), in which category membership was manipulated to covary with speakers’ pro versus contra positions in a discussion along one of two crossed social dimensions. However, as noted by Klauer et al. (2014), this paradigm is vulnerable to a critical limitation: when category membership can be inferred from statement content, apparent categorization effects may reflect reconstructive category guessing rather than genuine category memory. Across three experiments (N = 764), we tested whether comparative fit modulates social categorization beyond such reconstructive processes. We replicated strong comparative fit effects when category membership was inferable from discussion statements, yielding large effects comparable to those reported by Petsko et al. (2022). Crucially, when participants responded to discussion-unrelated statements that no longer allowed inference of category membership, these effects disappeared, indicating that prior findings were substantially inflated by reconstructive guessing. In a final experiment, we introduced an alternative source of situational fit by spatially aligning speakers with opposing discussion positions during encoding of discussion-unrelated statements. Under these conditions, a significant but markedly smaller comparative fit effect emerged. Our findings suggest that comparative fit can enhance social categorization along the fitting dimension beyond reconstructive guessing. However, this situational lens is rapidly ”put off” once the fit is no longer present.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1016/j.jesp.2026.105012",
-    "landing": "https://doi.org/10.1016/j.jesp.2026.105012",
-    "oa": "https://doi.org/10.1016/j.jesp.2026.105012"
-   },
-   "cites_collection": [],
    "first_seen": "2026-11-08"
   },
   {
@@ -1795,31 +1320,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1177/19485506261499425",
-   "doi": "10.1177/19485506261499425",
-   "openalex": "W7221021728",
-   "title": "Uncertainty Avoidance Moderates the Association Between Parenthood and Well-Being",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Gyuri Lee",
-    "Yang seoyoon",
-    "최혜원"
-   ],
-   "author_count": 3,
-   "source": "Social Psychological and Personality Science",
-   "date": "2026-10-27",
-   "abstract": "Parenthood is associated with both psychological rewards and costs, and prior research has identified conditions under which it relates to higher or lower well-being. This study examines whether the relationship between parenthood and subjective well-being is moderated by uncertainty avoidance, a cultural dimension reflecting the extent to which societies respond to uncertainty. Using data from 331,480 individuals across 82 countries, we found that in countries with high uncertainty avoidance, parents reported lower subjective well-being than nonparents, whereas this association was not significant in countries with low uncertainty avoidance; a similar moderation pattern was observed when the number of children was examined. These effects persisted after controlling for individual-level factors (e.g., income), country-level socioeconomic indicators (e.g., gross domestic product [GDP] per capita), and other cultural dimensions (e.g., individualism). Although the cross-sectional design precludes causal inference, the findings suggest that the association between parenthood and subjective well-being varies across cultures and is moderated by uncertainty avoidance.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1177/19485506261499425",
-    "landing": "https://doi.org/10.1177/19485506261499425",
-    "oa": "https://doi.org/10.17605/osf.io/3nauh"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1177/19485506261480179",
    "doi": "10.1177/19485506261480179",
    "openalex": "W7214324199",
@@ -1850,32 +1350,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1177/01461672261467790",
-   "doi": "10.1177/01461672261467790",
-   "openalex": "W7169671502",
-   "title": "Does Self-Projection Have a Dominant Temporal Direction? In Nine Countries, People Feel More Similar to Their Future Than Past Selves",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Jareef Martuza",
-    "Simen Bø",
-    "Helge Thorbjørnsen",
-    "Hallgeir Sjåstad"
-   ],
-   "author_count": 4,
-   "source": "Personality and Social Psychology Bulletin",
-   "date": "2026-07-17",
-   "abstract": "= 11,416) reveal that people feel more similar to their future selves than their equidistant past selves. This future-oriented asymmetry in self-projection is directionally consistent across nine countries, with variation in effect size, and holds across different time horizons. Time-asymmetric self-projection covaries with higher levels of emotional connection between present and future selves and lower levels of perceived future self-change. We also provide preliminary causal-chain evidence for perceived self-change as a process by experimentally manipulating self-change beliefs. The future-oriented asymmetry appears to be self-focused, as it does not extend to others. Finally, future-oriented self-projection can lead to miscalibrated expectations: People expect their future selves to be more satisfied with hypothetical decisions made in the present than they currently would be with the same decisions in the past.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1177/01461672261467790",
-    "landing": "https://doi.org/10.1177/01461672261467790",
-    "oa": "https://doi.org/10.31234/osf.io/jp2ks"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1177/01461672261470131",
    "doi": "10.1177/01461672261470131",
    "openalex": "W4412870048",
@@ -1897,30 +1371,6 @@
     "doi": "https://doi.org/10.1177/01461672261470131",
     "landing": "https://doi.org/10.1177/01461672261470131",
     "oa": "https://doi.org/10.1177/01461672261470131"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1073/pnas.2623939123",
-   "doi": "10.1073/pnas.2623939123",
-   "openalex": "W7223213919",
-   "title": "System-level reorganization of gene networks underlies the nurse-to-forager transition in honeybees",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Robert E. Page",
-    "ERIC BONABEAU"
-   ],
-   "author_count": 2,
-   "source": "Proceedings of the National Academy of Sciences",
-   "date": "2026-10-22",
-   "abstract": "Division of labor in social insects is enabled by coordinated changes in physiology, neural signaling, and gene regulation, yet it remains unclear to what extent behavioral maturation reflects incremental changes in individual genes and/or a reorganization of transcriptomic regulation at the system level. Here, we analyze the nurse-to-forager transition in worker honeybees ( Apis mellifera ) from a network perspective, treating the transcriptome as a gene–gene correlation system whose global organization reflects collective regulatory states. Using fat body gene expression data across five developmental time points that span an interval of behavioral transition, we construct signed gene–gene correlation networks and quantify their macro- and mesostate properties. We then descend to the level of the gene and construct microstate gene lists of interacting genes. Behavioral maturation of worker honeybees is accompanied by coordinated, nonmonotonic changes in global network structure rather than simple global shifts in interaction strength across the network. Early stages exhibit broadly positive, globally synchronized correlations, whereas later stages show increased modular segregation and the emergence of antagonistic gene–gene relationships. Despite this differentiation, networks remain fully connected with high global efficiency, consistent with a flexible small-world–like organization. Positive correlations primarily support global integration, while negative correlations act as localized, boundary-enforcing constraints. Negative correlations form a structured pattern of antagonism that is sparse and module-specific, occurring primarily between functional gene modules rather than within them. Network layouts and module analyses reveal two polarized, attractor-like regulatory states, a structure recapitulated in a vitellogenin-centered subnetwork and consistent with prior experimental perturbation studies.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1073/pnas.2623939123",
-    "landing": "https://doi.org/10.1073/pnas.2623939123",
-    "oa": "https://www.pnas.org/doi/pdf/10.1073/pnas.2623939123"
    },
    "cites_collection": [],
    "first_seen": "2026-11-08"
@@ -2027,32 +1477,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.31234/osf.io/9hys5",
-   "doi": "10.31234/osf.io/9hys5",
-   "openalex": "W7225396492",
-   "title": "Interact VR: Examining Social-Affective Responses to Social Exclusion in Adolescents with Conduct Disorder",
-   "category": "social",
-   "status": "preprint (not peer reviewed)",
-   "authors": [
-    "Nicholas D. Thomson",
-    "Samuel James West",
-    "Jessica J. James",
-    "Sophie Lyngesen Kjærvik"
-   ],
-   "author_count": 4,
-   "source": "PsyArXiv (OSF Preprints)",
-   "date": "2026-11-06",
-   "abstract": "Introduction: Social exclusion is associated with adverse social and emotional consequences and is particularly relevant for adolescents with conduct disorder (CD), who experience disproportionately high rates of peer rejection and interpersonal difficulties. Although Cyberball has been widely used to study social exclusion, less is known about how adolescents respond to varying levels of exclusion, and few studies have examined these experiences using immersive virtual reality (VR). The present study provides initial validation evidence for Interact VR; an immersive VR paradigm adapted from Cyberball that examines multidimensional social-affective functioning across varying levels of social exclusion.Method: Adolescents with CD aged 13 – 17 years (Mage = 15.75, 66.5% male) completed three Interact VR conditions: inclusion, subtle exclusion, and severe exclusion. Following each condition, participants completed self-report measures of perceived social regard, belonging, competence, meaningful existence, affective valence, arousal, control, and discrete emotions. Linear mixed-effects models examined differences across conditions, and repeated binary outcomes were analyzed using logistic regression models. Results: Increasing social exclusion produced systematic and theoretically coherent changes across multiple domains of social-affective functioning. Participants reported lower perceived social regard, belonging, meaningful existence, increasingly negative affective valence, lower perceived control, and had a greater likelihood of reporting sadness, anger and disgust, and reduced happiness as exclusion increased. Most outcomes distinguished inclusion, subtle exclusion, and severe exclusion, demonstrating sensitivity to varying levels of social exclusion. Competence differentiated only severe exclusion from the other conditions, subjective arousal decreased as exclusion increased, and fear did not differ across conditions. Conclusions: These findings provide initial validation evidence for Interact VR as an ecologically valid paradigm for investigating multidimensional social-affective responses to social exclusion. More broadly, the findings demonstrate that adolescents with CD distinguish between subtle and severe social exclusion across multiple domains of social-affective functioning, providing a richer understanding of how they subjectively experience social exclusion and a promising platform for investigating the social-affective processes underlying CD.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.31234/osf.io/9hys5",
-    "landing": "https://doi.org/10.31234/osf.io/9hys5",
-    "oa": "https://doi.org/10.31234/osf.io/9hys5"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.31234/osf.io/ehbjv",
    "doi": "10.31234/osf.io/ehbjv",
    "openalex": "W7225380238",
@@ -2132,32 +1556,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1038/s41539-026-00459-x",
-   "doi": "10.1038/s41539-026-00459-x",
-   "openalex": "W7167080247",
-   "title": "Peer-led examination simulation reshapes psychophysiological and emotional state profiles during problem-based medical learning",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Morris Gellisch",
-    "T Schäfer"
-   ],
-   "author_count": 2,
-   "source": "npj Science of Learning",
-   "date": "2026-10-24",
-   "abstract": "Problem-based learning is widely assumed to activate students through self-directed inquiry, collaborative reasoning, and contextualized problem solving, yet the psychophysiological and achievement-emotional state dynamics generated by regular PBL sessions remain poorly characterized. In particular, familiar PBL routines may not always provide sufficient salience, accountability, or retrieval-related activation to fully engage the learner states they are intended to promote. This repeated-measures study examined whether embedding a peer-led examination simulation into regular PBL reshapes students’ psychophysiological and achievement-emotional state profiles during medical learning. Forty-two medical students were assessed across resting baseline, regular PBL, and PBL with peer-led examination simulation. Heart rate variability was recorded during two 5-minute performance intervals per learning condition and analyzed using RMSSD, SDNN, pNN50, and LF/HF ratio. Psychological measures captured social interaction anxiety, perceived stress, state anxiety, achievement emotions, self-rated performance, and post-session appraisal. Both PBL formats reduced heart rate variability relative to baseline, indicating that regular PBL itself constituted an autonomically active learning state. Compared with regular PBL, peer-led examination simulation induced additional HRV withdrawal, reflected by lower RMSSD, SDNN, and pNN50, whereas LF/HF did not show a robust condition effect. Baseline-adjusted interval-level mixed models replicated the examination-simulation effect for RMSSD, SDNN, and pNN50. At the achievement-emotional level, the simulation increased anxiety and perceived stress while reducing boredom. Enjoyment, motivation, and self-rated performance remained stable. Students also reported greater perceived benefit from, and stronger preference for, the examination-simulation format. Exploratory analyses further indicated that stronger increases in anxiety were associated with stronger additional RMSSD withdrawal, suggesting convergence between achievement-emotional activation and autonomic regulation. These findings show that peer-led examination simulation does not merely add stress to PBL, but shifts the learning episode toward a more salient, assessment-like, and educationally valued psychophysiological state without compromising students’ motivation. More broadly, the study positions psychophysiological measurement as a tool for examining how instructional design modulates achievement-emotional dynamics, attentional engagement, and autonomic regulation during authentic medical learning.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1038/s41539-026-00459-x",
-    "landing": "https://doi.org/10.1038/s41539-026-00459-x",
-    "oa": "https://www.nature.com/articles/s41539-026-00459-x.pdf"
-   },
-   "cites_collection": [
-    "testing-effect"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1016/j.learninstruc.2026.102462",
    "doi": "10.1016/j.learninstruc.2026.102462",
    "openalex": "W7212724154",
@@ -2186,32 +1584,6 @@
    },
    "cites_collection": [
     "koriat-cues"
-   ],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1007/s10648-026-10210-y",
-   "doi": "10.1007/s10648-026-10210-y",
-   "openalex": "W7203683724",
-   "title": "Relocating the Locus of Generation: The AI-GLM Framework for Generative Learning in AI-Mediated Mathematics Education",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Hoyun Cho"
-   ],
-   "author_count": 1,
-   "source": "Educational Psychology Review",
-   "date": "2026-08-18",
-   "abstract": "Generative learning theory holds that learning depends on the learner’s own construction of relations between prior knowledge and new material, and its evidential practice has long inferred that construction from what the learner produces. External provision of such work is not new, but generative AI extends it across every generative strategy, supplies it on demand, and leaves little trace of its origin, so the locus of generative activity becomes instructionally and empirically ambiguous. Determining who performed the cognitive work that learning requires thus becomes a design and measurement problem. This paper examines that problem in mathematics learning. Through an integrative conceptual analysis of Fiorella and Mayer’s eight generative learning strategies, I identify four cross-cutting themes: the production-to-evaluation shift, metacognitive displacement, the scaffolding–substitution continuum, and reconfigured generative activity. Synthesizing these themes, I propose the AI-Enhanced Generative Learning in Mathematics (AI-GLM) framework, comprising (a) a typology of three AI roles, in which Generation Partner and Generation Substitute occupy the poles of a scaffolding–substitution continuum while Generation Catalyst is distinguished by a functional criterion rather than by a position on it; (b) a role determination mechanism specifying how tool design, task design, learner orientation, and teacher mediation combine to determine the role AI occupies in a given episode; and (c) five design principles. The framework addresses the representational, symbolic, and justificatory demands especially prominent in mathematics and yields propositions stated with the operationalizations and falsification conditions needed to test them.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1007/s10648-026-10210-y",
-    "landing": "https://doi.org/10.1007/s10648-026-10210-y",
-    "oa": "https://link.springer.com/content/pdf/10.1007/s10648-026-10210-y.pdf"
-   },
-   "cites_collection": [
-    "testing-effect",
-    "ai-without-guardrails"
    ],
    "first_seen": "2026-11-08"
   },
@@ -2529,54 +1901,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1016/j.learninstruc.2026.102437",
-   "doi": "10.1016/j.learninstruc.2026.102437",
-   "openalex": "W7212306138",
-   "title": "“How can I help you learn?” Incorporating emotions into parents' support of young children's self-regulated learning at home and school during prolonged crisis",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Lihi Sarfaty",
-    "Adar Ben‐Eliyahu",
-    "Ruth Sharabany"
-   ],
-   "author_count": 3,
-   "source": "Learning and Instruction",
-   "date": "2026-09-12",
-   "abstract": "Background Parents apply their knowledge of cognition, emotion, and behavior (metacognition, metaemotion, and metabehavior) to provide children external regulation to achieve learning goals. Aims Two studies examined how parents' metaprocesses shape children's self-regulated learning (SRL) strategies through external regulation (other-regulation and co-regulation) in distance and in-school learning. Study 1 Method Mothers ( N = 357) were surveyed regarding their own and their 1st–3rd graders’ SRL in three cohorts: Cohort 1 (in-school learning; pre-COVID-19); Cohort 2 (distance learning; COVID-19 first lockdown); and Cohort 3 (in-school learning; post-lockdown). Results Mediation coefficients were estimated for parent metaprocesses associated with their children's SRL, mediated through external regulation. In distance learning, parental metaemotion, metabehavior, and co-regulation were positively associated with their children's SRL. Co-regulation was positively associated with emotion SRL-reappraisal for Cohort 2 and Cohort 3. Study 2 Method Parents ( n = 311; 49% fathers) were surveyed while their 1st-3rd grade children were in distance learning (Time 1: COVID-19 third lockdown) and in routine in-school learning (Time 2) in a repeated-measures design. Their children ( n = 143) reported on social, math, and language abilities at Time 2. Results Cross-lagged models investigated Time 1 and Time 2 associations within- and across-time effects using complex mediation models. Metaprocesses were linked to SRL, math, and language skills through other-regulation, whereas metaprocesses were associated with SRL strategies and social skills through co-regulation. Conclusion Parent metaprocesses were positively associated with prompts guiding their children's SRL strategies and learning outcomes. Findings highlight links between metaprocesses and child emotion SRL-reappraisal through co-regulation.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1016/j.learninstruc.2026.102437",
-    "landing": "https://doi.org/10.1016/j.learninstruc.2026.102437",
-    "oa": "https://www.sciencedirect.com/science/article/pii/S0959475226001222/pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1111/bjep.70134",
-   "doi": "10.1111/bjep.70134",
-   "openalex": "W7225121369",
-   "title": "A cross‐contextual model of student well‐being ( S‐WELL‐B ): Having, loving, doing, and being",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Frances Hoferichter"
-   ],
-   "author_count": 1,
-   "source": "British Journal of Educational Psychology",
-   "date": "2026-11-01",
-   "abstract": "BACKGROUND: Student well-being has become an important focus in educational research, yet the field remains conceptually and methodologically heterogeneous. Existing approaches also differ in contextual scope: school well-being models focus primarily on educational settings, whereas broader models of human well-being address functioning and experience across life contexts. AIMS: This article proposes the Cross-Contextual Model of Student Well-Being (S-WELL-B), a multidimensional and cross-contextual framework for conceptualizing student well-being across school and non-school life contexts. THEORETICAL FRAMEWORK: S-WELL-B is primarily informed by Martela's theory of human well-being and Konu and Rimpelä's school well-being model, while drawing on welfare, belongingness, social support, social cognitive, self-determination and eudaimonic well-being traditions. It comprises four interrelated domains: Having (access to sufficient resources), Loving (connectedness and relational support), Doing (competence and agency) and Being (psychological balance, self-worth and meaning). Hedonic and eudaimonic perspectives are treated as complementary, with eudaimonic aspects strengthened particularly within Being and Doing. KEY PROPOSITIONS: S-WELL-B conceptualizes student well-being as comprising four interrelated and constitutive domains: Having, Loving, Doing and Being. These domains extend across school and non-school life contexts, providing a common framework for conceptualizing student well-being across different areas of students' lives. The four domains are complementary and interrelated, without a predetermined causal hierarchy among them. CONCLUSION: S-WELL-B provides a theoretically grounded and empirically testable framework for clarifying the structure of student well-being and for guiding future operationalization, validation and developmental research.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1111/bjep.70134",
-    "landing": "https://doi.org/10.1111/bjep.70134",
-    "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bjep.70134"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1016/j.learninstruc.2026.102434",
    "doi": "10.1016/j.learninstruc.2026.102434",
    "openalex": "W7167847140",
@@ -2654,30 +1978,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1007/s10648-026-10221-9",
-   "doi": "10.1007/s10648-026-10221-9",
-   "openalex": "W7216134318",
-   "title": "A Complexity Perspective on Culture, Identity, and Motivation: The Dynamic Systems Model of Role Identity",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Avi Kaplan",
-    "Joanna Garner"
-   ],
-   "author_count": 2,
-   "source": "Educational Psychology Review",
-   "date": "2026-10-02",
-   "abstract": "While most contemporary motivation research has approached sociocultural and individual processes separately, any person’s experience, motivation, and action are simultaneously sociocultural and individual. In this article, we propose the Complex Dynamic Systems (CDS) paradigm as a framework for integrating sociocultural and individual processes into a coherent account of motivated action, and we elaborate one CDS model—the Dynamic Systems Model of Role Identity (DSMRI; Kaplan & Garner, 2017). Our central argument is that the DSMRI explains motivated action as an emergent phenomenon grounded in the person’s role identity—a complex dynamic system that itself emerges within a culturally mediated activity system. This yields an integrated, two-level explanation of the foundational motivational question, why does this person act this way in this situation? At the first, sociocultural level, a person acts according to the sociocultural role they occupy in a particular cultural activity system; at the second, individual level, different people occupying the same role construct idiosyncratic role identities that are framed by the role, yet emerge uniquely because they manifest as non-deterministic dynamic systems. In the article, we develop the conception of culture in the DSMRI as a complex, dynamic, symbolically mediated cultural activity system, and the role identity system that emerges within it. We conclude by considering the implications of this conception for motivation theory, research, and the design of educational environments.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1007/s10648-026-10221-9",
-    "landing": "https://doi.org/10.1007/s10648-026-10221-9",
-    "oa": "https://link.springer.com/content/pdf/10.1007/s10648-026-10221-9.pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1016/j.learninstruc.2026.102464",
    "doi": "10.1016/j.learninstruc.2026.102464",
    "openalex": "W7212154198",
@@ -2698,53 +1998,6 @@
     "doi": "https://doi.org/10.1016/j.learninstruc.2026.102464",
     "landing": "https://doi.org/10.1016/j.learninstruc.2026.102464",
     "oa": "https://doi.org/10.1016/j.learninstruc.2026.102464"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1016/j.learninstruc.2026.102486",
-   "doi": "10.1016/j.learninstruc.2026.102486",
-   "openalex": "W7220726914",
-   "title": "Beyond think-aloud: Toward a representational–recursive agenda for multimodal process-tracing research in learning and instruction",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Anthony John Onwuegbuzie"
-   ],
-   "author_count": 1,
-   "source": "Learning and Instruction",
-   "date": "2026-10-07",
-   "abstract": "Background Think-aloud traditionally has been conceptualized as a means of accessing cognitive processes through verbal report. The nine studies in this special issue reveal a broader methodological transition in which verbal protocols increasingly are combined with eye tracking, retrospective cueing, classroom observation, qualitative and quantitative coding, process mining, and epistemic network analysis. Purpose This meta-commentary synthesizes the nine studies together with Hu and Gao's commentary on culturally aware think-aloud research and considers what they collectively imply for the future of process-tracing research in learning and instruction. Results The special issue demonstrates that contemporary process tracing is becoming multimodal, transformational, and implicitly mixed methodological. However, greater methodological sophistication also creates new inferential problems: different traces represent different aspects of cognition; transformations can alter what is represented; integration often remains implicit; ecological validity is relational rather than merely situational; and verbalization itself is culturally situated. Building on these observations, I propose a representational–recursive perspective in which process-tracing research is organized around the design, transformation, integration, and recursive interrogation of multiple representations. I extend this framework further to cultural legitimation, representational equity, and human–AI inquiry. Conclusions The future of think-aloud research lies not in replacing verbal protocols, but in repositioning them within theoretically coherent multimodal systems. Progress will depend on making representational choices explicit, integrating evidence recursively, evaluating meta-inferences across traces, embedding cultural and equity considerations throughout the research process, and using artificial intelligence transparently and accountably.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1016/j.learninstruc.2026.102486",
-    "landing": "https://doi.org/10.1016/j.learninstruc.2026.102486",
-    "oa": "https://www.sciencedirect.com/science/article/pii/S0959475226001714/pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1080/00220973.2026.2719484",
-   "doi": "10.1080/00220973.2026.2719484",
-   "openalex": "W7204206932",
-   "title": "Optimal Sample Allocation for Multisite Partially Nested Individual-Randomized Trials",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Yuze Xie",
-    "Benjamin M. Kelcey"
-   ],
-   "author_count": 2,
-   "source": "The Journal of Experimental Education",
-   "date": "2026-08-25",
-   "abstract": "We examine the efficient and strategic design and analysis of multisite partially nested randomized trials. Multisite partially nested randomized trials arise when, for example, studies use individual randomization within sites to interventions that introduce intermediate clustering that is not present in a control condition. We begin by presenting a conceptual framework for multisite partially nested designs and illustrating it with a working example. We then examine estimation of the average treatment effect, derive power formulas for models with and without covariates, and develop optimal sampling expressions under both a conventional equal cost approach and a more flexible approach that allows unit costs to differ across treatment conditions. We conclude by examining the scale of well-powered studies under common conditions and the sensitivity of the optimal sampling plans to the misspecification of assumed scenarios. The results provide estimation and design principles that guide researchers in the efficient design and analysis of multisite partially nested randomized trials.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1080/00220973.2026.2719484",
-    "landing": "https://doi.org/10.1080/00220973.2026.2719484",
-    "oa": "https://www.tandfonline.com/doi/pdf/10.1080/00220973.2026.2719484?needAccess=true"
    },
    "cites_collection": [],
    "first_seen": "2026-11-08"
@@ -2930,35 +2183,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1007/s10648-026-10186-9",
-   "doi": "10.1007/s10648-026-10186-9",
-   "openalex": "W7167600735",
-   "title": "Validity of Eye-Tracking Measures in Immersive Virtual Reality: Using Cognitive Theories of Learning",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Joy Yeonjoo Lee",
-    "Jewoong Moon",
-    "FRED G. W. C. PAAS",
-    "Minjung Cho",
-    "Ali Darejeh",
-    "Sonja Holmer",
-    "Paul Ayres"
-   ],
-   "author_count": 7,
-   "source": "Educational Psychology Review",
-   "date": "2026-07-07",
-   "abstract": "Eye tracking is a promising research tool for investigating learning processes in immersive virtual reality (IVR). Grounded in cognitive theories of learning, this study proposes a classification of six key learning processes (i.e., cognitive, motivational, affective, social, metacognitive, media-specific) and nine associated constructs (i.e., attention, visual strategy, cognitive load, motivation, emotion, social attention, self-regulation, immersion, usability) measurable through eye tracking in IVR. Using this classification, a systematic review of 38 empirical studies published over a 10-year period (2014 − 2024) was conducted to evaluate the validity of eye-tracking measures. The results showed that the overall validity remains limited with an average score of 48% (± 19%), mainly due to insufficient control of data quality. Measures of cognitive load demonstrated relatively higher validity, likely due to their stronger alignment with performance outcomes. Methodological limitations, such as small sample sizes and dependence on default equipment configurations, were prevalent. To improve validity, future study should strengthen methodological foundations, provide detailed documentation of experimental setups, and use triangulation with complementary data. The classification and validity scoring schemes presented in this study contribute to the theory-driven application of eye tracking in IVR, and offer guidance for improving measurement validity in educational psychology.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1007/s10648-026-10186-9",
-    "landing": "https://doi.org/10.1007/s10648-026-10186-9",
-    "oa": "https://link.springer.com/content/pdf/10.1007/s10648-026-10186-9.pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1007/s10648-026-10193-w",
    "doi": "10.1007/s10648-026-10193-w",
    "openalex": "W7166673425",
@@ -2981,56 +2205,6 @@
     "doi": "https://doi.org/10.1007/s10648-026-10193-w",
     "landing": "https://doi.org/10.1007/s10648-026-10193-w",
     "oa": "https://link.springer.com/content/pdf/10.1007/s10648-026-10193-w.pdf"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1080/00220973.2026.2730118",
-   "doi": "10.1080/00220973.2026.2730118",
-   "openalex": "W4409064040",
-   "title": "Does Socially Desirable Responding Change After an Intervention? Implications for Estimating Treatment Effects",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "James G. Soland",
-    "Joshua B. Gilbert"
-   ],
-   "author_count": 2,
-   "source": "The Journal of Experimental Education",
-   "date": "2026-10-07",
-   "abstract": "Survey measures are common in intervention research, but may suffer from biases such as socially desirable responding (SDR). While previous work demonstrates how unaddressed SDR can affect study results in observational contexts, the degree to which SDR may affect treatment effect estimates from randomized controlled trials (RCTs) is less studied. To shed light on this issue, we examine empirical data from 10 RCTs from education, psychology, and health fields and compare estimated treatment effects from models that do and do not account for SDR. Results show that, with two exceptions, estimated treatment effects were mostly unaffected by SDR. We complement our empirical results with a simulation study to determine the degree of SDR necessary to bias treatment effects and find that severe SDR can bias treatment effects when not accounted for in the model. However, models accounting for SDR are more complex and produce estimates that are slightly downwardly biased despite being the data-generating model. We conclude with a discussion of recommendations for researchers using survey instruments as outcomes in RCTs.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1080/00220973.2026.2730118",
-    "landing": "https://doi.org/10.1080/00220973.2026.2730118",
-    "oa": "https://doi.org/10.31234/osf.io/ujx4n_v1"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1007/s10648-026-10202-y",
-   "doi": "10.1007/s10648-026-10202-y",
-   "openalex": "W7169613397",
-   "title": "When Can AI Models Explain Learning? Validity Criteria for AI as Cognitive Models in Education",
-   "category": "educational",
-   "status": "journal article",
-   "authors": [
-    "Peng Wang",
-    "Olga Viberg",
-    "Effie Lai‐Chong Law",
-    "Samuel Greiff"
-   ],
-   "author_count": 4,
-   "source": "Educational Psychology Review",
-   "date": "2026-07-18",
-   "abstract": "Traditional verbal theories in educational psychology often remain underspecified at the mechanistic level. While they offer rich descriptive constructs and conceptual insights, they provide limited accounts of how learning processes unfold dynamically and causally. Here, “verbal” denotes theories stated in prose and qualitative relations rather than as formal, computational process models. This lack of mechanistic precision constrains rigorous theory testing, limits integration across levels of analysis, and reduces the potential to design interventions grounded in explanatory understanding of learning processes. In this Review, we synthesize an emerging paradigm that treats artificial intelligence (AI) systems not merely as predictive tools or instructional technologies, but as cognitive models of learners, explicit, runnable instantiations of theoretical assumptions about cognition and learning. Our central question is not whether AI systems can serve as cognitive models, but when they should be allowed to count as such. We therefore organize the Review around explicit validity criteria, theoretical grounding, construct validity, mechanistic transparency, alignment with human learning trajectories, error-signature matching, causal-intervention tests, ecological validity, and instructional usefulness, that an AI system must satisfy before its cognitive-model status is granted rather than assumed. We examine how major families of AI models, including neural networks, reinforcement learning agents, cognitive architectures, and large language models, have been used to operationalize core educational constructs such as memory, strategy use, motivation, self-regulation, and social learning. Across these approaches, we highlight how mechanistic transparency, interpretability, and alignment with human learning trajectories and error patterns are essential for explanatory validity. We further discuss methodological tools, such as representation analysis, ablation, and trajectory-level comparison, that enable causal inference about learning mechanisms within models. Finally, we outline key challenges and future directions, including construct validity, ecological realism, individual differences, and ethical accountability. By positioning AI as a theoretical instrument rather than solely an engineering solution, this Review argues that AI-based cognitive models can, when they satisfy these criteria, help transform abstract learning theories into precise, testable, and educationally actionable accounts of how students learn.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1007/s10648-026-10202-y",
-    "landing": "https://doi.org/10.1007/s10648-026-10202-y",
-    "oa": "https://link.springer.com/content/pdf/10.1007/s10648-026-10202-y.pdf"
    },
    "cites_collection": [],
    "first_seen": "2026-11-08"

@@ -1,0 +1,1085 @@
+{
+ "_about": "Every feed paper that has been read, and what was decided. Written by scripts/paper-review.mjs.",
+ "psyc": {
+  "doi:10.3758/s13423-026-03030-2": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "06f8656f32dd966d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1186/s41235-025-00693-8": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b86a47e6bd705a99",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jml.2026.104749": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "17c075ebcfd70571",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.3758/s13423-025-02798-z": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "95b60214701f4145",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1098/rsos.250377": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "094ac339c8541fed",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106730": {
+   "decision": "reject",
+   "reason": "no abstract available to read",
+   "fingerprint": "bcba49004f8d6d57",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1037/xge0001944": {
+   "decision": "reject",
+   "reason": "no abstract available to read",
+   "fingerprint": "45cacf2743972b9f",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.3758/s13423-026-03037-9": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "a7d93d91840b0730",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.3758/s13421-026-01930-1": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "ca7d5d90890cd4d1",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1186/s41235-026-00759-1": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "005284bda23e19b1",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.5334/joc.515": {
+   "decision": "reject",
+   "reason": "opaque; correlational self-report about one dance piece",
+   "fingerprint": "119f4fc75091c419",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.3758/s13423-026-02999-0": {
+   "decision": "reject",
+   "reason": "technical modelling paper",
+   "fingerprint": "4aa1398b4e582fb0",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.5334/joc.516": {
+   "decision": "reject",
+   "reason": "statistics how-to, not a finding",
+   "fingerprint": "78ba705b197b851c",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.5334/joc.517": {
+   "decision": "reject",
+   "reason": "measurement detail, too technical to be a good read",
+   "fingerprint": "472605ed58f7c4c6",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.3758/s13423-026-02985-6": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "ab771ef4c8001d55",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106712": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "07a710bf8f497300",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1037/xlm0001659": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "e0cff88f50be5b13",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106773": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8e361371fc9ca78d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106714": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b5ee89643d35cd13",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106702": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "9f7fb754ca0a0d17",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106770": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "fd982ff6b26e173d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106771": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8fe635e3209d61e4",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1186/s41235-026-00756-4": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "02d29768a4478df8",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106716": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "2b90d0df71491dec",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106700": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "419940170319d75a",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106736": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "2def7343be9b3e4c",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1162/opmi.a.399": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "ec3cc3b18e243516",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1162/opmi.a.398": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "0fb6c09fc9630d84",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106734": {
+   "decision": "reject",
+   "reason": "too technical to be a good read",
+   "fingerprint": "83032135660db83e",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1162/opmi.a.397": {
+   "decision": "reject",
+   "reason": "too technical to be a good read",
+   "fingerprint": "d9813969c388ff72",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106719": {
+   "decision": "reject",
+   "reason": "too technical to be a good read",
+   "fingerprint": "abc35f6ba4c44862",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106735": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "787a2ae3e3a05684",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.3758/s13423-026-02997-2": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "58512c1a6a5054e8",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106704": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "c8564e880f30faa3",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.3758/s13423-026-02998-1": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "0703e5d64da81478",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.cognition.2026.106733": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "6e89c08ed892fb12",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/pgyka": {
+   "decision": "reject",
+   "reason": "clinical weight-loss sample, off the feed's subject",
+   "fingerprint": "31d20f7b2d5f0407",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/jev3u": {
+   "decision": "reject",
+   "reason": "psychometric methods paper",
+   "fingerprint": "d41e1c0043b47d94",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/7eaw6_v1": {
+   "decision": "reject",
+   "reason": "abstract is garbled (words run together)",
+   "fingerprint": "62f9acc9022d87f2",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/c8j7u_v1": {
+   "decision": "reject",
+   "reason": "about training language models, not human minds",
+   "fingerprint": "66ee9e4c2c5436ca",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1002/ejsp.70102": {
+   "decision": "reject",
+   "reason": "an essay on the discipline, not a finding",
+   "fingerprint": "233a34986a87e59d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.104988": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "c784c5ce84b9746b",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261469612": {
+   "decision": "reject",
+   "reason": "open licence could not be confirmed (Crossref lists none)",
+   "fingerprint": "0e4e5f391531e404",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1037/pspi0000526": {
+   "decision": "reject",
+   "reason": "no abstract available to read",
+   "fingerprint": "cc15e058f69c0b35",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672251389045": {
+   "decision": "reject",
+   "reason": "no abstract available to read",
+   "fingerprint": "15d2df9325bdfb06",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.105012": {
+   "decision": "reject",
+   "reason": "too technical to be a good read",
+   "fingerprint": "ab7e4f28b017c8e8",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.105010": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "38f622b09efb1d5d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261499423": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b81ce0c8454377d3",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjso.70116": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "3f9a0fcbea9e3854",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjso.70117": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8a632de58423d298",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/19485506261498257": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b2c9c6bdc08e7eed",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjso.70115": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8ae1ebfaa267d580",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjso.70109": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b0f32855961d8bf6",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/19485506261490145": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "4d033813a72e9ddd",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/19485506261486505": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "21353f38a203f08d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.104965": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "2996170d07fc3386",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjso.70118": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "51b3bd247985ce4e",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1002/ejsp.70106": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "45046a29bdb5cad5",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261476739": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "edcabaee059ffc39",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1002/ejsp.70114": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "4ffbd69487d1d6ab",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261468054": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "168ccd69d3b61e71",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1002/ejsp.70103": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "e1f41e37fa38d081",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1002/ejsp.70111": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "433556dce897aeda",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261493645": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "2219b1125ea238c3",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.104997": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "77764ca1c98f3132",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.104990": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "ada3aca757fbba0e",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.104984": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b4636793bd60e9de",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.jesp.2026.104971": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "5a0af1490f30ba5f",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/19485506261499425": {
+   "decision": "reject",
+   "reason": "open licence could not be confirmed (Crossref lists none)",
+   "fingerprint": "1102c4438cfeaad5",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/19485506261480179": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "7d0c4c497dc37c96",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261467790": {
+   "decision": "reject",
+   "reason": "abstract is cut off at the start; licence could not be confirmed",
+   "fingerprint": "a8b0cea5ddbb19ae",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261470131": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "71160ecf5a311d45",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1073/pnas.2623939123": {
+   "decision": "reject",
+   "reason": "honeybee gene networks, not psychology",
+   "fingerprint": "93f31ffd420f8c32",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261461318": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8853cdc02925a080",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/19485506261491193": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "c880340e0d7fee79",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1177/01461672261478729": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "02d06095089594b8",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/8qxve": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "94a1fedefda00151",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/9hys5": {
+   "decision": "reject",
+   "reason": "validation of a research tool in a clinical sample",
+   "fingerprint": "0acf180b8adeec15",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/ehbjv": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "2e34c325c6dd20cd",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/wcp68": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b23d8817e24b78ac",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjep.70133": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "c915415c851ca1f2",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1038/s41539-026-00459-x": {
+   "decision": "reject",
+   "reason": "too technical to be a good read",
+   "fingerprint": "d0a3072b23da8c2e",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102462": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "253b00829aed8081",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10210-y": {
+   "decision": "reject",
+   "reason": "conceptual framework, not a finding",
+   "fingerprint": "32ae6779548c81e8",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10161-4": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "d130c0ec225f0acd",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s11251-026-09823-1": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "a2dc0331e2f8cf8d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102502": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "36b466396b3a5841",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjep.70115": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "e7b4de905d9d72ce",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s11251-026-09807-1": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8002b2ca1d6a880b",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10184-x": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "45503edb943e78b6",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s11251-026-09820-4": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "9379644aa81a9cd9",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102433": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "4cb374d0d557b56f",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102432": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "e3f8c5d630366d5e",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjep.70131": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "412eb68e13e12ffe",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102431": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b250ae55d5081be0",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjep.70130": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "71004a781f7d2404",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102437": {
+   "decision": "reject",
+   "reason": "too technical to be a good read",
+   "fingerprint": "473c749ba75f3354",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjep.70134": {
+   "decision": "reject",
+   "reason": "conceptual framework, not a finding",
+   "fingerprint": "70006aa6353aaf3c",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102434": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "1675fe10367280bb",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/bjep.70138": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "07d2b785e9c60a77",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10194-9": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "15a005babfc0a66e",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10221-9": {
+   "decision": "reject",
+   "reason": "theory paper, not a finding",
+   "fingerprint": "52edc6b346a73432",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102464": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "56dae6535fcafe11",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102486": {
+   "decision": "reject",
+   "reason": "methods commentary, not a finding",
+   "fingerprint": "ea55a7221a1f71e4",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1080/00220973.2026.2719484": {
+   "decision": "reject",
+   "reason": "sampling-design methods paper",
+   "fingerprint": "8542127e9a0fb1ef",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102487": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "ba8529447dbd0cc1",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102485": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8a98f400a55a34d7",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1038/s41539-026-00447-1": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "4a4850e9c7a069af",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102482": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "c3166725db733097",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102463": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "d7eb98f7a489dacc",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102483": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "22f9125b9869da0e",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1016/j.learninstruc.2026.102480": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "915ab1a6acb9f382",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10186-9": {
+   "decision": "reject",
+   "reason": "methods review",
+   "fingerprint": "4e1c68b0b8715aa7",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10193-w": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "683908d691dac723",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1080/00220973.2026.2730118": {
+   "decision": "reject",
+   "reason": "methods paper; licence could not be confirmed",
+   "fingerprint": "95593de79972de6c",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1007/s10648-026-10202-y": {
+   "decision": "reject",
+   "reason": "theory review, not a finding",
+   "fingerprint": "3356f496a9791586",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/m93n6": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "c6359eaca23e4c56",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.31234/osf.io/zk2xf_v1": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "9be4416618791598",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  }
+ },
+ "history": {
+  "doi:10.1017/s1740022826100643": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "2a9802656b372725",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/ehr.70083": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "486c98c2ef2ea52d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/ehr.70086": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "1dd29a1508c87e76",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/ehr.70084": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "5265a68e4feed978",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0022216x2610145x": {
+   "decision": "reject",
+   "reason": "current politics rather than history",
+   "fingerprint": "36b7b1a74c3238df",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0010417526100528": {
+   "decision": "reject",
+   "reason": "contemporary ethnography, not history",
+   "fingerprint": "c47e40bd5998088c",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/1468-0424.70086": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "8ab1835b5621db6b",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/1468-0424.70056": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "378d2881bc294c2d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0018246x26101617": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "1f89509f79dbee25",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1080/03071022.2026.2673688": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "96c1ae265569c011",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1093/pastj/gtag025": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "e30317be7ae56f85",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/1468-0424.70084": {
+   "decision": "reject",
+   "reason": "no abstract available to read",
+   "fingerprint": "c299bbb086a655cb",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1093/ehr/ceag162": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "95cdb1b3a9c0e45d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/mdh.2026.10059": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "50137f2d3aaf44a3",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/mdh.2025.10042": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "e777dcc7e3f5e943",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/1468-0424.70052": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "03374fd5d7b3a177",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/mdh.2025.10030": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "f3e8474f2777f19d",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0018246x26101848": {
+   "decision": "reject",
+   "reason": "the abstract field holds scraped article text",
+   "fingerprint": "df9af870fc45fde8",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0018246x26102167": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "93095a025941d900",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0010417526100693": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "b1cee3a450f972b7",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1093/ehr/ceag229": {
+   "decision": "reject",
+   "reason": "review essay; the abstract field holds a garbled scrape of the whole text",
+   "fingerprint": "5096ddbf304deeee",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0018246x26101836": {
+   "decision": "reject",
+   "reason": "the abstract field holds scraped article text",
+   "fingerprint": "25ac072bfcd1ebf8",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0010417526100450": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "ba5ee3a2eb7ede25",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1093/ehr/ceag144": {
+   "decision": "reject",
+   "reason": "no abstract available to read",
+   "fingerprint": "d384346221e67e31",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s1740022826100722": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "7fb1e9562dd46d0b",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s1740022826100655": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "cb11d1cf50e9915f",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s001041752610053x": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "21349f47f9887db2",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0018246x26102052": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "708d4c3cbcadf2b1",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/ehr.70069": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "de281dffd4a23e97",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0026749x26102297": {
+   "decision": "reject",
+   "reason": "contemporary ethnography, not history",
+   "fingerprint": "26705cea384d4fcf",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/mdh.2026.10058": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "1f1cf58fa4ce8085",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0018246x26102040": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "7be8c09d4a62ef93",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s0010417526100723": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "695888e9ed1a4d82",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/s174002282610045x": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "014fe5718b280542",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1111/ehr.70142": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "db89cf7da3f60525",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  },
+  "doi:10.1017/mdh.2026.10057": {
+   "decision": "accept",
+   "basis": "title and abstract read; record checked on Crossref",
+   "fingerprint": "e2dbb60f48866b07",
+   "date": "2026-11-09",
+   "reader": "Claude"
+  }
+ }
+}

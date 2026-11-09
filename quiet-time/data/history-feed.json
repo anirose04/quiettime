@@ -2,19 +2,16 @@
  "generated_at": "2026-11-08T20:12:57.672Z",
  "as_of": "2026-11-08",
  "window_days": 365,
- "about": "Bibliographic records only. abstract is the authors' own text, included only for CC BY records. Nothing here has been read, reviewed or verified.",
+ "about": "Every item here was read before publication: the title and abstract, checked against the paper's Crossref record. The full papers were not read unless a decision in review/decisions.json says so. abstract is the authors' own text under an open licence.",
  "counts": {
-  "candidates": 298,
-  "usable": 163,
-  "items": 36,
-  "with_abstract": 34
+  "items": 28
  },
  "items": [
   {
    "id": "doi:10.1017/s1740022826100643",
    "doi": "10.1017/s1740022826100643",
    "title": "Fraught friendships: East German experts, communist development, and environment in Mongolia during the Cold War",
-   "category": "everyday",
+   "category": "power",
    "authors": [
     "Julia E. Ault"
    ],
@@ -87,45 +84,6 @@
    "links": {
     "doi": "https://doi.org/10.1111/ehr.70084",
     "landing": "https://doi.org/10.1111/ehr.70084"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1017/s0022216x2610145x",
-   "doi": "10.1017/s0022216x2610145x",
-   "title": "Maduro’s Long-Lasting Strength from Weakness: How Venezuela’s Dictatorship Turned Adversity into Opportunity",
-   "category": "everyday",
-   "authors": [
-    "Leonardo Di Bonaventura Altuve",
-    "Kurt Weyland"
-   ],
-   "author_count": 2,
-   "source": "Journal of Latin American Studies",
-   "date": "2026-10-05",
-   "abstract": "How did Nicolás Maduro’s autocratic regime in Venezuela survive serious problems and massive failures for 13 years? Contrary to the prevailing emphasis on the autocracy’s fragility, we explore the domestic and international foundations of its noteworthy resilience. Integrating Albert Hirschman’s framework of ‘Exit, Voice and Loyalty’ with Milan Svolik’s systematic theory of authoritarian rule, we highlight how exit via mass emigration, popular loyalty forged through conditional food aid, and elite loyalty engineered through corruption and patronage and reinforced by fears of international prosecution safeguarded Maduro’s dictatorship against domestic challenges that have toppled other autocracies worldwide. Only a US commando operation managed to oust the autocrat – yet nevertheless, the main structures of the non-democratic regime still seem to persist.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1017/s0022216x2610145x",
-    "landing": "https://doi.org/10.1017/s0022216x2610145x"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1017/s0010417526100528",
-   "doi": "10.1017/s0010417526100528",
-   "title": "Spiraling out in the Circular Economy: Movement and Belonging at a Malaysian Rare Earth Elements Refinery",
-   "category": "everyday",
-   "authors": [
-    "Tom Özden‐Schilling"
-   ],
-   "author_count": 1,
-   "source": "Comparative Studies in Society and History",
-   "date": "2026-05-20",
-   "abstract": "The rise of “circular economy” discourse in the extractive industries has altered how researchers, laborers, activists, and consumers conceptualize movements of materials. To proponents, building a circular economy around rare earth elements (REE) production will “close the loop” around extraction, processing, design, manufacturing, and disposal practices to minimize and eventually eliminate all “waste” produced through technology development. Articulated through utopian imaginaries projecting environmental and technological futures far beyond mining, however, these conceptualizations of movement also carry far-ranging entailments for the movements of specific groups of people, including their place in future social and political orders and their capacity to plan for multi-generational futures. This article follows activists and university researchers brought into conflict through a REE processing facility in Malaysia, where research on commercial applications for post-processing wastes has been treated alternately as pathways to economic diversification and as threats to minoritized communities’ welfare and senses of national belonging. Both groups correlate “responsible” waste management to mismanaged flows of people: prospective experts drawn overseas for more sophisticated work; children emigrating for university education or middle-class jobs after struggling to find positions in Malaysia. While explicitly offering future stability and a broadened ethics of responsible attention, the visions of circularity undergirding these debates effectively collapse the many forms of movement at stake in industrial transition into a promise of transcendence, obscuring the racialized patterns of exclusion and migration that invariably accompany the extractive industries.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1017/s0010417526100528",
-    "landing": "https://doi.org/10.1017/s0010417526100528"
    },
    "first_seen": "2026-11-08"
   },
@@ -227,25 +185,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1111/1468-0424.70084",
-   "doi": "10.1111/1468-0424.70084",
-   "title": "Negotiating Intimate Boundaries: Gender, Sexuality, and Migration in 1960s West Germany",
-   "category": "everyday",
-   "authors": [
-    "Elisabeth Kimmerle"
-   ],
-   "author_count": 1,
-   "source": "Gender & History",
-   "date": "2026-11-05",
-   "abstract": null,
-   "abstract_license": null,
-   "links": {
-    "doi": "https://doi.org/10.1111/1468-0424.70084",
-    "landing": "https://doi.org/10.1111/1468-0424.70084"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1093/ehr/ceag162",
    "doi": "10.1093/ehr/ceag162",
    "title": "Print Magic and Secularisation in Late Colonial India",
@@ -343,26 +282,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1017/s0018246x26101848",
-   "doi": "10.1017/s0018246x26101848",
-   "title": "Contesting Collecting: Indigenous Material Cultures",
-   "category": "ideas",
-   "authors": [
-    "James Poskett",
-    "Lynette Russell"
-   ],
-   "author_count": 2,
-   "source": "The Historical Journal",
-   "date": "2026-09-23",
-   "abstract": "This dialogue explores how we understand and contest the collecting of Indigenous material cultures.Poskett, using several case studies explores how Indigenous and non-Indigenous perspectives can complicate fixed notions of materiality.Russell, drawing on her own heritage and interdisciplinary research, emphasizes crosscontextualization and the agency of Indigenous communities in shaping how cultural materials are interpreted.Together, they ask how Indigenous and non-Indigenous perspectives can reshape the history of science and museums. James PoskettIn my opening remarks, I want to suggest how we can think beyond 'material culture' in the history of science.In particular, I want to argue that the 'ontological turn' in anthropology -as well as critiques of that turn -can usefully inform methods in the history of science.More pointedly, I argue that any meaningful attempt at 'cross-contextualization', in the sense advocated by Sujit Sivasundaram, requires rethinking our understanding of material culture itself.To keep things brief, I'm going to make three points, illustrated by three exhibits and three quotations.Here is my first quote: 'What would an artefact-oriented anthropology look like if it were not about material culture?' 1 It recently surprised me to learn that back in 2007 material culture was old news.No self-respecting anthropologist would talk about it.This was not something I was informed of, working next door at the Department of History and Philosophy of Science in Cambridge, where all anyone could talk about was the 'material turn'.The quote is from an influential edited volume widely associated with the ontological turn, titled Thinking through things. 2 I'll get onto the specifics of what I think about this in a bit, as I'm certainly not a cardholding 'ontologist'.But as an opening quote, it is useful precisely because it helps us 1",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1017/s0018246x26101848",
-    "landing": "https://doi.org/10.1017/s0018246x26101848"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1017/s0018246x26102167",
    "doi": "10.1017/s0018246x26102167",
    "title": "Calligraphy after Print: Script, Self, and Society in the Material Renaissance",
@@ -401,45 +320,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1093/ehr/ceag229",
-   "doi": "10.1093/ehr/ceag229",
-   "title": "Magic, Witchcraft and the Occult in Pre-modern England",
-   "category": "ideas",
-   "authors": [
-    "Joanne Edge"
-   ],
-   "author_count": 1,
-   "source": "The English Historical Review",
-   "date": "2026-10-20",
-   "abstract": "The fields of magic, witchcraft and the occult have enjoyed an almost total regeneration and reimagining over the last fifty-five years or so; certainly since the first publications of Alan Macfarlane’s Witchcraft in Tudor and Stuart England in 1970, and Keith Thomas’s Religion and the Decline of Magic in 1971.1 Both of these now totemic studies posited witchcraft and witch accusations as primarily socio-economic phenomena: domestic fallings-out between neighbours over material scarcity and inexplicable tragedy leading to suspicions of supernatural harm. Subsequently, historical scholarship on witchcraft and magic has examined them from a variety of perspectives: geographical, legal, religious, political, social and cultural; and the only truth that has been established about witchcraft and magic is that there is no simple explanation for either. We are dealing with extremely complex topics, and one of the key roles of historians of magic and witchcraft is to convey why studying them is important. To do this, we have to communicate the reality of belief in the seemingly ridiculous. We have to rationalise the ‘irrational’ and question the definition of ‘reason’. This is no easy task. The fact is that magic, whether its practice was imagined or real, was mundane in medieval and early modern England, concerned with everyday subjects, and carried out by all sorts of people. It was ‘present’ in English society in a way that it is not today. Grappling with concepts that may seem childish or silly to us is not easy, but, as Richard Kieckhefer notes, magic sits at a crossroads in medieval culture. It leads us down many potential pathways: theological, cultural, scientific, cosmological, intellectual.2 Its study is important for a multitude of reasons. In short, one cannot fully understand medieval and early modern society without it. In what follows, I provide some thoughts on the state of the fields of both magic and witchcraft in general, before analysing each of the books I have been tasked with reviewing, showing in the process what each volume adds to the current state of scholarship. There has been a tendency to think in binaries in historical scholarship of magic and witchcraft: theory vs practice, male vs female, permissible vs impermissible, imagined vs real, medieval vs early modern, common vs elite, literate vs illiterate, demonic vs natural and so on. While useful starting points, these binaries are not helpful when we examine the sources of magic and witchcraft, which paint a much more nuanced picture than two opposing points. There is, however, one binary of sorts that we have to face here: that of ‘magic’ and ‘witchcraft’. The two are separate, although related, phenomena. Magic can be defined (imperfectly) as something people did: a practical way of manipulating the natural world in order to achieve an aim. These aims could be benevolent, neutral or malevolent, and might be practised by anyone, regardless of gender (although particular categories of magic might be practised more by one gender than another). Witchcraft, on the other hand, was overwhelmingly an early modern phenomenon, which usually retrofitted a cause to a bad event occurring, the need for an explanation, and a very real fear of malign forces. This led to people—in England, mostly women, usually poor, often old—being accused of and prosecuted for crimes they almost certainly did not commit. Moreover, the sorts of things witches were accused of—having familiars in the guise of animals, making a demonic pact, attending Sabbaths and flying through the air—were not things the actual magic practitioners we know about did or claimed to do. While some accused witches were perhaps practising some types of magic, for example in the course of healing, they were almost definitely not doing the things they were eventually indicted for. This is a key difference when we consider these distinct, yet intertwined, categories. However, people routinely resorted to counter-magic, or consulted astrologers, to ward off or diagnose witchcraft.3 And so it turns out this binary may not be as clear-cut as it seems. This is difficult and complicated stuff, which requires years of training, archival work, knowledge of various languages and interdisciplinary thinking to untangle. The two main sorts of sources with which historians grapple to study magic and witchcraft in this time period are legal records and texts of magic. Legal records are notoriously thorny; the pre-modern legal system is not at all intuitive or easy to understand, and both church and secular courts punished all sorts of magical crimes.4 Whatever the court in question, legal documents were produced within loci of power, and recorded the responses of those accused of magic or witchcraft through the lens of a scribe. These responses were often made to a set of pre-written questions, and what is omitted is as important as what is included. Evidence for actual magical practice, textual and material, might tell us more about practice on the ground—or not. When we know the name of the owner or scribe of the book, can we really say they performed any of the rituals or spells in a book? It does not necessarily follow that possessing a magical item, or copying, owning or even writing a text is a firm indication of use. There are many other sources we can mine for attitudes towards and evidence of magic: as previously noted, it was everywhere. But in terms of the main sources concerning the reality on the ground, we are thus faced with two equally problematic types of evidence. A final important point before turning to the books under review is to consider where we are as a field in magic and witchcraft studies. I focus here on what I consider to be some key shifts in the last fifteen years or so, beginning with magic studies. The first is a focused emphasis on monastic magical practice, spearheaded by the monographs of Frank Klaassen (2012) and Sophie Page (2013).5 Building on previous work by Kieckhefer,6 among others, both Klaassen and Page show that ritual demonic magic was overwhelmingly practised by monks and clerics. They drew magic circles, summoned spirits and owned copies of the most problematic texts: Picatrix, Liber vaccae and Ars notoria among others. This might seem counterintuitive, since members of religious orders ought to be the most pious Christians in medieval and early ­modern society. But their aims can often be explained by masculine anxieties: monks, who were instructed to be celibate, did not have personal wealth and did not fight, often owned and performed spells to obtain women, treasure or horses. Monks also perhaps saw themselves as the most qualified people in society to test these magical texts. Heterodox interpretations of these texts also existed, which saw the ultimate power being channelled as Christian—done in God’s name. A second key shift is the attempt to reconcile ‘theory’ and ‘practice’. One of the prevailing ways in which binary thinking has not helped is the pervasive idea that the sorts of magic condemned in treatises was not the sort of magic actually practised: that polemics simply contained a stock list of practices—literary topoi—for which there is no evidence. There is some reality in this argument when we consider the lists of condemned practices passed down from Antiquity into the Middle Ages, in the works of Isidore of Seville, John of Salisbury and Thomas Aquinas, among others, which were often copied wholesale.7 But the last decade or so has seen excellent work on the reality of the practices of which people were accused. For example, when magic became a political (rather than ecclesiastical) crime under Henry VIII with the Witchcraft Act of 1542 (repealed and reinstated under Elizabeth I in 1563), there was a marked increase in prosecutions of magical treason, involving magic practices such as wax images and astrological predictions of death. But were these convenient, difficult to disprove accusations designed to eliminate political opponents? Or was actual malevolence at play? Could the people accused be guilty of the practices in question? Francis Young’s 2017 monograph demonstrates that all the practices named in these sorts of political trials can be found in magical books of the time. While this is not direct proof of those accused being guilty of the precise things mentioned, it is nevertheless an important counter to the dismissal of what court records and polemics name as actual magical practice, and brings important nuance to the discussion.8 In terms of witchcraft, a comprehensive, short and readable volume was provided in the form of Marion Gibson’s brilliant 2018 Witchcraft: The Basics, and anyone wishing to get up to speed on the intricacies of the historiography should read it.9 Broadly speaking, there has been a shift in academic scholarship around this topic since Macfarlane and Thomas in the early 1970s. The publication of those two works coincided with the ascent of second-wave feminism, and the witch trials proved an irresistible template on which to try and map points about elite male power. The witch trials are, after all, a dark episode in early modern history. They provided a fruitful analogue for Arthur Miller’s 1953 play The Crucible, which used the Salem witch trials of 1692–3 to demonstrate the real threat of McCarthyism in America in the late 1940s and 1950s.10 The accused, if found guilty, might be punished by execution for crimes they almost certainly did not commit. It is tempting to look at the world around us and see similarities, and, in the early 1970s, second-wave feminist scholars did just that. Building on the now-debunked theories advanced by Margaret Murray in the 1920s, which linked accused witches to actual pagan practitioners,11 these scholars saw witch-hunting as women-hunting and an attack on women’s knowledge. In making a point about misogyny in the present day, they coined inaccurate (and in some cases highly unfortunate) phrases and concepts such the ‘burning times’ and ‘the Holocaust of women’, which were spread beyond academia to the public by a 1990 documentary film.12 Figures such as nine million executed were plucked out of thin air. Witch persecutions were presented as relentless, obsessive, constant attacks by male elites on low-status women.13 In the mid-1990s, historical scholarship on the topic shifted significantly, with the publication of several important monographs on various aspects of witchcraft and the witch trials, showing that it is too simplistic to see the cause of these accusations as elite men oppressing low-status women. The first was that of Lyndal Roper, whose Oedipus and the Devil, a collection of nine linked essays, focused a Freudian psychoanalytic lens on the trials in Germany. Roper’s essential point is that it is not possible to understand the phenomenon of witchcraft without including the psychological aspects of the process. However, a problem Roper could not get away from with this central thesis was that Freudian psychoanalysis is, by her own admission, a relic of the nineteenth century. Nevertheless, her points about feminine jealousy and the space of the birthing room as a site of intense psychic conflict was a welcome and compelling argument for the importance of female agency within the process of witch accusations.14 A second important work from this fruitful time for witchcraft studies is that of Robin Briggs, whose Witches and Neighbours (1996) examined trials from the Duchy of Lorraine in the sixteenth century, and the European picture more widely. Working from a social-historical perspective, Briggs collapsed the notion of an organised elite male movement against lower-status women by pointing to the fact that up to 25 per cent of those accused were in fact men, that the process was in no way organised, and that the only trials that can be seen as truly state-led were those that took place in the microstates of Trier (1581–93), Würzburg (1625–31) and Bamberg (1627–32). Crucially, it was Briggs who first posited the figure of 40–50,000 witches executed across Europe as a whole during the entire period of the trials, completely debunking the millions postulated by second-wave feminists.15 Diane Purkiss’s The Witch in History (1996) argued that tales of witches and witchcraft in early modern England were evidence of the figure of the witch as one of women’s fantasy, rather than purely a construct of the misogynistic fears of men.16 Finally, Stuart Clark’s 1999 Thinking with Demons examined the idea of witchcraft rather than what was happening on the ground: the world of demonologists. Clark examines the demonology of early modern Europe from various perspectives, religious, historical and political, to show that this belief in the power of the Devil was complex, cogent and rational within its own contexts and frameworks.17 The important turns in witchcraft scholarship of the mid-1990s mean that there is no going back to simplistic narratives about this phenomenon in the field of history. However, other academic disciplines still advance theories based on top-down, cynical misogyny alone. The political philosopher Silvia Federici’s Witches, Witch-hunting, and Women, published in 2018, revisits the themes previously raised in her 2004 Caliban and the Witch. Federici sees the early modern witch-hunts as products of nascent capitalism: ‘I reiterate that women were the main target of this persecution, because it was they who were most severely impoverished by the capitalization of economic life, and because the regulation of women’s sexuality and reproductive capacity was a condition for the construction of more stringent forms of social Federici’s is a and tempting and yet as as the simplistic of Murray and the second-wave the 2018 a million copies in and into and much of the feminist on Federici are much pre-modern this because as I have this is complex, difficult material, which requires years of and the to read and understand the documents in because a may be making important points about the present and other need to and evidence still This more than in the of and social It in fact even more when the argument is on the of social as much as evidence to the who truth and evidence as it We not do the mentioned, Marion the brilliant Witchcraft: The Basics, and her The Witches of is no It is a on a set of the witch which took place at and in which led to fifteen women and one being for It is at an academic and one which is to the the points I made about the of witchcraft, this is important. in this is the main of these trials, on the very real fears of witchcraft in the to construct legal cases against the accused. A central question in the historiography of witch trials and witch and one to is why they took place in and not in others. was it about any particular or that made it to this the of and 1990 European Witchcraft: and demonstrates the being to this phenomenon since the early with a whole to such as The question of place has also seen studies to particular English and their for example, The Witches, to the trials of (and their the trials of the and the in in the in this collection on the of whose was for that the of this led to a which the legal against those accused in examines a particular of witchcraft from which took place in the first decade of the the of the in under the of under the A and as as court records and and the through the as it on the people at the of the we know very if The out the particular social and at and which some way to these accusations could spread and is around the people and in an the are and and and Elizabeth and and can see why the at the beginning is the of particular The final is and which the previous to this The most important made by in this volume is her of records and work on documents to the seemingly why did women to what were to many crimes of which they were when England at was not us that set out its to it seem as if women first made the which were by their But what demonstrates is that in fact the as of the familiars their who did her and such before these to the women as records of In the of and Henry of their named their familiars as and with that and Henry two of may have been before and Henry were and perhaps not the were and who before could was not a common name at this and is of course a of it that when the of their who have been and perhaps about in the The of work in highly documents to this process is an may be a of this demonstrates her as a first based on her is a about English magic: that is, magic in for or in the period This is and as it the of the way and have been posited as one of the really is what did the theory and practice of magic look before and after the the of the and the of the This on previous work on most that of who the first of in the of and magic in previous a space between the phenomenon of witchcraft prosecutions and the between accused and on the one hand, and the elite magical practices of and scholars on the book, scholars to focus on one or the the book, one is by the and of the archival and carried out in of records of This is an and Gibson’s book, has an important focus on the who were these did they they male or were equally of is the social of their against that court was no from when it to magical practice, has her at the two social The first Magic in of and in and Magic among the has two and the and on To just one of the many of this book, the and produced map of the of in from court records to show that many of them just the This is because it that in one practitioners as as they could to their the to the last two under a of books by scholars Frank Klaassen and published by in The The Magic of volume brings two types of records concerning magic that have been in any of magic and legal against It is into two and the and and which is an important The and of secular and in the of magic is one that be because there was no and for which a magical I the of and One with a useful short and examines the legal records of the In what the to as a of ‘the of magic and magic can be of as an of or the second of a up the Richard This with a to a over some perhaps an to on aspects of and a to This a of the way in which the sort of magic by in her was both in terms of their own and the of of the legal records to the examines texts of magic which to the sorts of practices as the legal records in to demonstrate that the sorts of practices which were also present in and with a of the of the a in which a of nine men were accused of to treasure in in The was by of and the records of the only in these show is a very complicated at the of which was about the of those In the most of the accused were to public examines texts for treasure a process which The second volume by Klaassen and a to the of legal records and texts of magic. However, of this to cases of demonic magic performed by this is concerned with The definition of is They were concerned with magic that a of people also performed or that in the being a of or being a that to common and being by the as a common prosecuted in This definition sees the volume in based on the of the magic: and magic, and and and of legal records concerned with that of magic, and magic texts which the sorts of practices in those legal texts. these two are, Francis Young’s 2017 study of magic an of the of the two main sorts of texts that historians of magic The books under here many most their focus on archival work and and a to the of magic and witchcraft in their own however, all and Magic and witchcraft are about if not the and of the who prosecuted and were accused of magical magic and witchcraft us to about what it is to be did people did they with did their of power and agency or These are at the of all of these which their with the of most",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1093/ehr/ceag229",
-    "landing": "https://doi.org/10.1093/ehr/ceag229"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1017/s0018246x26101836",
-   "doi": "10.1017/s0018246x26101836",
-   "title": "Should the Lithosphere Tell Our Stories?",
-   "category": "ideas",
-   "authors": [
-    "Jochen Richard Schneider",
-    "Siyakha Mguni"
-   ],
-   "author_count": 2,
-   "source": "The Historical Journal",
-   "date": "2026-09-21",
-   "abstract": "This discussion pursues potential areas of epistemic productivity at the convergence of Western scientific frameworks and Indigenous knowledge systems to understand the ontological unity of natural systems, interpreting the lithosphere not merely as a physical substrate, but as a deep archive of human histories, cultural practices, and cosmologies in all the world's regions.By de-fossilizing knowledge -a useful analytical concept that allows the discovery of potential conjunction of scientific thought and robust forms of knowing from ancient cultures -we foreground relational epistemes and explorative narrative possibilities inherent in ancient human landscapes.The selected cases, though brief and not exhaustive, support our view that there are strong resonances between Western science and ancient knowledge forms seen among Indigenous cultures in the world. Jeremy SchneiderLet me begin with a thought experiment.Ancient Greek and Roman mythology imagined a world not unlike our own: a cosmos created from nothing; a long line of descent down to humanity; a series of catastrophes that destroyed the Earth's former inhabitants.What is more, the ancients started looking for evidence in the earth.They dug up fossilized bones, which they interpreted as the remains of creatures.They inspected rocks, from which they inferred past changes to the Earth's surface.Historians, I think, tend to forget that the ancients practised their own form of 'geology'.My point is not that ancient mythology is modern science; rather, that modern science may well be our mythology.1 In my remarks, I want to ponder to what degree one might recast histories of geology as histories of myth.As Siyakha Mguni and I met to prepare this conversation, we thought that the concept of 'cross-contextualization' would be a fruitful way to engage with one another's work.On the face of it, the worlds that we study seem oceans apart.I am a specialist in the European history of science, examining how figures between the sixteenth and eighteenth centuries used fossils to think about 1 See Adrienne Mayor, The first fossil hunters: dinosaurs, mammoths, and myth in Greek and Roman times (Princeton, NJ, 2000).",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1017/s0018246x26101836",
-    "landing": "https://doi.org/10.1017/s0018246x26101836"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1017/s0010417526100450",
    "doi": "10.1017/s0010417526100450",
    "title": "From Disorder to Distinction: Lactose Intolerance and the Racialization of Digestion in Postwar Medicine (1950–1980)",
@@ -455,25 +335,6 @@
    "links": {
     "doi": "https://doi.org/10.1017/s0010417526100450",
     "landing": "https://doi.org/10.1017/s0010417526100450"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1093/ehr/ceag144",
-   "doi": "10.1093/ehr/ceag144",
-   "title": "Atheism in the Visual Culture of Early Modern England",
-   "category": "ideas",
-   "authors": [
-    "Patrick Seamus McGhee"
-   ],
-   "author_count": 1,
-   "source": "The English Historical Review",
-   "date": "2026-06-24",
-   "abstract": null,
-   "abstract_license": null,
-   "links": {
-    "doi": "https://doi.org/10.1093/ehr/ceag144",
-    "landing": "https://doi.org/10.1093/ehr/ceag144"
    },
    "first_seen": "2026-11-08"
   },
@@ -573,29 +434,10 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1017/s0026749x26102297",
-   "doi": "10.1017/s0026749x26102297",
-   "title": "Khep : Embodied commerce between Dubai and Karachi in the age of surveillance",
-   "category": "power",
-   "authors": [
-    "Noman Baig"
-   ],
-   "author_count": 1,
-   "source": "Modern Asian Studies",
-   "date": "2026-11-04",
-   "abstract": "This article explores khep , an embodied cross-border trade network that links Karachi and Dubai through trust, kinship, and risk. Based on ethnographic fieldwork with currency and commodity dealers who move money and goods between the two cities, I argue that khep is not merely a means of evading state regulation but a distinctive system of embodied commerce that has endured from the pre-colonial era to the present day. In this system, merchants mobilize affective and cultural ties to navigate surveillance and assert economic autonomy. By transforming kinship into financial circuitry and using bodies as logistical instruments, khep diverges from the impersonal rationalities of formal markets grounded in regulatory compliance. Khepiyā s—the traders who physically carry goods across borders—develop embodied knowledge and performative skills that transform airport spaces into contested interfaces where informal economies negotiate with state power. These techniques not only provide traders with economic leverage but also shape their subjectivity as nomadic actors characterized by disguise and malleability. I propose understanding khep as a vernacular economic practice, rooted in moral economies, bodily discipline, and situated knowledge, that unsettles dominant paradigms of market exchange. Rather than positioning khep within the binary of licit versus illicit trade, I argue that it represents an alternative economic rationality—one that operates beyond the neoliberal ethos of due diligence and compliance.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1017/s0026749x26102297",
-    "landing": "https://doi.org/10.1017/s0026749x26102297"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1017/mdh.2026.10058",
    "doi": "10.1017/mdh.2026.10058",
    "title": "The anatomy theatre and the slaughterhouse: emotion, vivisection, and the disciplines of medicine in the experimental practices of Charles Bell",
-   "category": "power",
+   "category": "ideas",
    "authors": [
     "James Bradley"
    ],

@@ -1,0 +1,1145 @@
+{
+ "_about": "What has been read, by fingerprint. Run paper-review-check.mjs --sign only after actually reading what changed.",
+ "items": {
+  "psyc/story/radiologist-gorilla": {
+   "hash": "2aa1720cd2195544",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/invisible-gorilla-original": {
+   "hash": "4675299e32fc963b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/ebbinghaus-again": {
+   "hash": "a4fb2e6bd915043c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/method-of-loci": {
+   "hash": "7a2d65932b4ba0b9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/aphantasia-profile": {
+   "hash": "073d85b4a1d1b8b4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/russian-blues": {
+   "hash": "afb1ccc92a9bd773",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/critical-period-grammar": {
+   "hash": "ddc568a918be8b6b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/false-memories-reversed": {
+   "hash": "032dc7eaac58f82d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/lost-in-the-mall-again": {
+   "hash": "beae49e35a76216b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/illusory-truth-implausible": {
+   "hash": "6a51fff68809e9e3",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/bionic-reading": {
+   "hash": "84389a0206799356",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/caffeine-search": {
+   "hash": "74917866c3a9cc8f",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/testosterone-crt": {
+   "hash": "a51bda61f2a123bc",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/attention-and-inflammation": {
+   "hash": "1b232ceb2d54f4c4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/open-label-placebo": {
+   "hash": "31a9e282a97fd6c5",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/prospect-theory-global": {
+   "hash": "dab51737a092253a",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/koriat-cues": {
+   "hash": "6f6c41b21be103ff",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/surname-frequency": {
+   "hash": "185ed0577f51cc4f",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/conversations-end": {
+   "hash": "6f58701e6cc11e9c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/ghosting-hurts-ghoster": {
+   "hash": "d4e327c00c04a95f",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/liking-gap": {
+   "hash": "8b2116a31912531b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/undervaluing-gratitude": {
+   "hash": "92786ca5631b4d3c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/stranger-scavenger": {
+   "hash": "83b630edefeafc71",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/moral-decline": {
+   "hash": "26584ec4b4ffb6e4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/lost-wallets": {
+   "hash": "d14cf867ca973304",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/sign-first": {
+   "hash": "7abc2c007a022074",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/sign-first-original": {
+   "hash": "e6d21342a56ff366",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/moral-reminders": {
+   "hash": "b9b7edeb4680c157",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/hungry-judges": {
+   "hash": "2ec480d7a625e988",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/hungry-judges-challenge": {
+   "hash": "07af6cfdaa631fce",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/ego-depletion-many-labs": {
+   "hash": "64315f182ed44bf1",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/deadlines-procrastination": {
+   "hash": "a68ae87a61accac6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/stereotype-threat-rrr": {
+   "hash": "1b4cbb2f12bf677f",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/many-labs-2": {
+   "hash": "763122a20e046cfe",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/nature-science-replications": {
+   "hash": "4ce2b08b29980468",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/smile-pen": {
+   "hash": "3de748eb9a8f582a",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/smile-rrr": {
+   "hash": "3c7d906c70cb8643",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/many-smiles": {
+   "hash": "0ea5846eae510fa9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/infants-helpers": {
+   "hash": "170634e5571cab7e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/infants-replication": {
+   "hash": "6210c50903893539",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/crowd-of-sheep": {
+   "hash": "386787de87259368",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/selfish-distortions": {
+   "hash": "b29c57016be12a92",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/ai-petitions": {
+   "hash": "2acd0d760229828b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/active-learning-feels-worse": {
+   "hash": "73f72d0542984974",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/fluent-lecturer": {
+   "hash": "ac49c8d6277f0998",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/ai-without-guardrails": {
+   "hash": "68940721e24241ac",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/ai-tutor-harvard": {
+   "hash": "ccf4fca3409fcf34",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/growth-mindset-national": {
+   "hash": "75090a81b18c2f86",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/mindset-meta-analysis": {
+   "hash": "191189ade800aa97",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/marshmallow-trust": {
+   "hash": "dc025404e04cdfe6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/marshmallow-follow-up": {
+   "hash": "2d7c48cc9c51b7c0",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/sleepmore-seattle": {
+   "hash": "ed01ed45d0d96c33",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/learning-styles-kids": {
+   "hash": "0505934503472d2d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/music-training-meta": {
+   "hash": "64d211af0321033f",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/feedback-revisited": {
+   "hash": "f3d5bb0ab02ae781",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/covid-first-graders": {
+   "hash": "fcfc94ad71dac62d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/classroom-decorations": {
+   "hash": "d88f268923a17cf3",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/testing-effect": {
+   "hash": "2516759256d5065e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/interleaving-rct": {
+   "hash": "2fb8c42f456d14e9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/productive-failure": {
+   "hash": "589a99b65ae84647",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/fonts-fortune": {
+   "hash": "0d988c089d262dc8",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/disfluent-maths": {
+   "hash": "7b658222b77d6b52",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/sans-forgetica": {
+   "hash": "34b611d06baddb7b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/laptop-notes": {
+   "hash": "b7d433bef338104d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/laptop-notes-replication": {
+   "hash": "7ad6c251ff8f7fe4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/overimitation": {
+   "hash": "9a5f8f5acf59ef57",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/pictures-mislead": {
+   "hash": "e50a9f42c81dec72",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/effort-feels-like-failing": {
+   "hash": "656b68fb18697051",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/judgments-of-importance": {
+   "hash": "f6dfc03ea004636a",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/story/judgments-drive-study": {
+   "hash": "dfe088c861bb1b51",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/digest/cues": {
+   "hash": "0a5570345e021935",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/digest/effort": {
+   "hash": "ad6a6d3ae320780d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/digest/control": {
+   "hash": "7e823c38fd1fb627",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/jaeger2023": {
+   "hash": "42c551407baf2d78",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/onan2022": {
+   "hash": "e2a145807b791214",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/murphy2022": {
+   "hash": "0e85cd430d2ad340",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/koriat1997": {
+   "hash": "2dd822460a38d8fb",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/oppenheimer2004": {
+   "hash": "1c8320e8ac1d9d32",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/metcalfefinn2008": {
+   "hash": "7d195aa5b51a4555",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kirkjohnson2019": {
+   "hash": "082f3ed5989103a4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kna2014": {
+   "hash": "58e03a8e633273bf",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kornellbjork2008": {
+   "hash": "341506c8552f06d4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/koriatbjork2005": {
+   "hash": "147ee202dce660cf",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/finnmetcalfe2008": {
+   "hash": "f15f46029cc51bd7",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/aipersuade2026": {
+   "hash": "4f2fa1988563fc9d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/ariely2021": {
+   "hash": "7a29d2c2ecc71138",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/bastani2025": {
+   "hash": "07566d803facb7d5",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/bolding2026": {
+   "hash": "d12edf704fd7c6a3",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/boothby2018": {
+   "hash": "c471282b1e6628a5",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/caffeine2026": {
+   "hash": "b1b455c404b76ab9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/camerer2018": {
+   "hash": "09f2707d87a10c5b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/carpenter2013": {
+   "hash": "290bf4c30bedaa43",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/cohn2019": {
+   "hash": "907f93835faa7457",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/coles2022": {
+   "hash": "3dcfb071f716a928",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/covid2026": {
+   "hash": "41916da38b9af888",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/danziger2011": {
+   "hash": "24f3290d9fa30e98",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/dawes2020": {
+   "hash": "ef4e06923e43c01e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/deslauriers2019": {
+   "hash": "1d6f265014108e6b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/diemand2011": {
+   "hash": "77fbdae12723717e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/drew2013": {
+   "hash": "d858ab2a624f88be",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/dunster2018": {
+   "hash": "6a2c51d50c7647ae",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/fisher2014": {
+   "hash": "fa5ef521e8aa9630",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/ghosting2026": {
+   "hash": "4f31d48c34abc012",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/hamlin2007": {
+   "hash": "ab5cbbbd4f784ca9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/hartshorne2018": {
+   "hash": "a28afdbe30225a9d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/immune2026": {
+   "hash": "961dc1ce35438a03",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/johnsrrr2026": {
+   "hash": "8fbd9e626fde0bc6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kaptchuk2010": {
+   "hash": "23458d47ccf79e1b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kestin2025": {
+   "hash": "79a44c5950248b70",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kidd2013": {
+   "hash": "4d435e512d157226",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/klein2018": {
+   "hash": "6a42fd39365d697c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kristal2020": {
+   "hash": "b4db159190aeeb12",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/kumar2018": {
+   "hash": "e0295b4485de4ec2",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/lucca2025": {
+   "hash": "67250d2efe1a60da",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/lyons2007": {
+   "hash": "656dc177916e50f6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/mastroianni2021": {
+   "hash": "5c63e610a603cb25",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/mastroianni2023": {
+   "hash": "aa518dd78b7fe00d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/meyer2015": {
+   "hash": "32e6290f5180b482",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/mueller2014": {
+   "hash": "108a1b9c1dda1ff2",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/murphy2023": {
+   "hash": "00f8a62a5d99efbf",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/murre2015": {
+   "hash": "06f8a0c60d6cf33e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/oeberst2021": {
+   "hash": "19f91ef58e6efaf4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/procrast2026": {
+   "hash": "53b96dcf480c88a9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/repetition2026": {
+   "hash": "ad08670f48e01ea4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/roediger2006": {
+   "hash": "7f5b0d2d472aa1f6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/rogowsky2020": {
+   "hash": "d30a926b8bc7745c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/rohrer2020": {
+   "hash": "af0aeb77b7164b30",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/ruggeri2020": {
+   "hash": "e9a2328eda8f972c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/sala2020": {
+   "hash": "ea3a3df5b4cef743",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/sandstrom2022": {
+   "hash": "523efce0580fab98",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/selfish2026": {
+   "hash": "4732973ca6b6a026",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/sheep2026": {
+   "hash": "8d6cfcc21238bac3",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/shu2012": {
+   "hash": "0710cecb6334b6b5",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/simons1999": {
+   "hash": "90f952ad82eb7353",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/sinha2021": {
+   "hash": "01df4b33b57d81e1",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/sisk2018": {
+   "hash": "25e04646c4aba930",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/strack1988": {
+   "hash": "09412e8d82f0d90e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/taylor2020": {
+   "hash": "7ae88c3dfd0f29d2",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/testost2026": {
+   "hash": "fed00acfa3716091",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/urry2021": {
+   "hash": "39646d6559bad55c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/verschuere2018": {
+   "hash": "838f86d451f96e80",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/vohs2021": {
+   "hash": "00aba5dd95bfc259",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/wagenmakers2016": {
+   "hash": "0148b8aa6b276ab2",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/wagner2021": {
+   "hash": "78009e935e75c1f6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/watts2018": {
+   "hash": "fc5e27f2422f9221",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/weinshall2011": {
+   "hash": "6c3512ee9f61130d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/winawer2007": {
+   "hash": "5bd0d3bb0299bfaa",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/wisniewski2020": {
+   "hash": "037009d2b7d1714a",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "psyc/source/yeager2019": {
+   "hash": "7fc7ae69978cedf6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/pepys-cheese": {
+   "hash": "a15f6b62c6223041",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/seneca-bathhouse": {
+   "hash": "104438c32527fff9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/tavern-laws": {
+   "hash": "e448843ae30d9c4f",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/babur-melon": {
+   "hash": "8a44947b9a7b1977",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/aztec-market": {
+   "hash": "7bd49c0be1200bd8",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/pity-white-man": {
+   "hash": "ab62418a830255a4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/zitkala-hair": {
+   "hash": "ae835882aacf1760",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/bekos": {
+   "hash": "b9cb300bc902a8d9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/ingrafting": {
+   "hash": "19cbe2fe48a58fd8",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/never-twice": {
+   "hash": "be4349312188369a",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/hooke-flea": {
+   "hash": "97fd4fab83e1e7d4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/jupiter-moons": {
+   "hash": "e3d00ff64809af35",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/pump-handle": {
+   "hash": "fee8114d51cfa9df",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/tulip-sailor": {
+   "hash": "fa7662b3289b0862",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/faxian-desert": {
+   "hash": "02a0516b6adcf608",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/let-them-eat": {
+   "hash": "2f8eb7b0bd1f0ef2",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/justinian-plague": {
+   "hash": "43d831f8404675ae",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/paper-money": {
+   "hash": "a9df81b9ea060ddf",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/wells-figures": {
+   "hash": "80d4fc7de22ebd6a",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/garret": {
+   "hash": "0284d71c84b6a24d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/mary-prince": {
+   "hash": "c4057ab85da6374c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/las-casas": {
+   "hash": "3fe6a4741b1e3acd",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/mother-seacole": {
+   "hash": "ac13f20581fb1362",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/wollstonecraft-reply": {
+   "hash": "2431cf238e2ed771",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/luddites": {
+   "hash": "ff322280e7da9bac",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/story/equiano-birthplace": {
+   "hash": "d6be1b088154141b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/issue/rights": {
+   "hash": "0b5c7da3b447e1fe",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/issue/machines": {
+   "hash": "bb4aa7cc565c0a87",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/issue/story": {
+   "hash": "d8e4eeca50a95d8c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/pepys": {
+   "hash": "fbe8258fe7beb43d",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britFire": {
+   "hash": "ba8c664a55a063c1",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/seneca": {
+   "hash": "5c861373bbe35210",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britSeneca": {
+   "hash": "303243ffd84dae96",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/johns": {
+   "hash": "698e3e28a267caaa",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/king": {
+   "hash": "7cef2476aea93773",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britHam": {
+   "hash": "bf2fb806b8eabd82",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/babur": {
+   "hash": "72beb3ea7a5077ed",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britBabur": {
+   "hash": "477686eb9f2e70f2",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/bernal": {
+   "hash": "22dcc6c0d127c8c5",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britTlat": {
+   "hash": "947f02939bb0b686",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/park": {
+   "hash": "63e8eb13f8de0bfd",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britPark": {
+   "hash": "5217ad50769004f1",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/zitkala": {
+   "hash": "39b85a7f5f2848b8",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/npsZitkala": {
+   "hash": "2253ddf988e7e917",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/herodotus": {
+   "hash": "10d4b8df6e409c5b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/montagu": {
+   "hash": "f56433d06afd3287",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/riedel": {
+   "hash": "276f4446d2f41018",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/thucydides": {
+   "hash": "4e13e723ffe7c45b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/shapiro": {
+   "hash": "e577b73e9c9b2145",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/hooke": {
+   "hash": "5ec156b8f901109b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britHooke": {
+   "hash": "aae6fcad462faf81",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/galileo": {
+   "hash": "e5989266cbaa9847",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/sepGalileo": {
+   "hash": "e3f19311bc46f593",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/snow": {
+   "hash": "12efed6b47623c9b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/shiode": {
+   "hash": "39ad669ec88f74b1",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/mackay": {
+   "hash": "b8a878b54229f362",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britTulip": {
+   "hash": "b0899435d89cfa30",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/mcclure": {
+   "hash": "d176ea4ea03e68f6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/faxian": {
+   "hash": "eeff8be8328c084e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britFaxian": {
+   "hash": "a76737752186c6a3",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/rousseau": {
+   "hash": "6468324a06550a65",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britCake": {
+   "hash": "b1d172199c8a188a",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/procopius": {
+   "hash": "87e82e48edea0774",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/harbeck": {
+   "hash": "5de14649c99efb70",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/mordechai": {
+   "hash": "11a2b8b1892f1489",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/meier": {
+   "hash": "fad9e8a48777e854",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/polo": {
+   "hash": "14be62b676c58aaa",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britPolo": {
+   "hash": "c34469b47e0afe4b",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/vogelReview": {
+   "hash": "65cb47a8b681293e",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/wells": {
+   "hash": "907f7ba567b35079",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britWells": {
+   "hash": "864a6231ebeda7f9",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/jacobs": {
+   "hash": "c9e2cc5de7de08a4",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/docJacobs": {
+   "hash": "e0a18ffa6e1b35a1",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/lascasas": {
+   "hash": "54fa24d1d87fdc3c",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britCasas": {
+   "hash": "5f08a75093e71685",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/seacole": {
+   "hash": "57bbe4e664761f77",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/britSeacole": {
+   "hash": "730088bc26ce26f0",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/prince": {
+   "hash": "0deff42ebc6dd2d6",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  },
+  "history/source/docPrince": {
+   "hash": "77be232f5b7ede64",
+   "read": "2026-11-09",
+   "reader": "Claude"
+  }
+ }
+}

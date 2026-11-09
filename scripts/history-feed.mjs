@@ -3,13 +3,15 @@
 
    Retrieves bibliographic metadata only. It never writes a summary or a finding. The only prose it passes
    through is an article's own abstract, verbatim, when the record has a Creative Commons licence.
-   The app mixes these in sparingly, so this list stays short and spread across kinds of history.
+   Nothing it finds is published: new papers wait in review/history-queue.json until they have been read
+   (scripts/paper-review.mjs). It can only remove from the live feed, never add to it.
 
    Providers: OpenAlex (journals, licences, abstracts; optional OPENALEX_API_KEY) and Crossref (retraction
    notices; optional CROSSREF_MAILTO).
-   Output: quiet-time/data/history-feed.json (only replaced after a successful run), history-feed-status.json.
+   Output: review/history-queue.json, history-feed-status.json, and removals from quiet-time/data/history-feed.json.
    Usage:  node scripts/history-feed.mjs [--dry-run] [--offline-test] [--strict] */
 import { readFile, writeFile } from 'node:fs/promises';
+import { applyRefresh } from './paper-review-lib.mjs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -100,35 +102,32 @@ async function main() {
       final.push(r);
     }
   }
-  const kept = [];
-  for (const it of final) {
+  const kept = [], retracted = new Set();
+  const published = (previous?.items || []).filter(p => !final.some(f => f.id === p.id));
+  for (const it of [...final, ...published]) {
     if (it.doi) {
       try {
         const u = new URL('https://api.crossref.org/works/' + encodeURIComponent(it.doi));
         if (process.env.CROSSREF_MAILTO) u.searchParams.set('mailto', process.env.CROSSREF_MAILTO);
         const m = (await getJSON(u.toString(), 'crossref', 400)).message;
-        if ([...(m['updated-by'] || []), ...(m['update-to'] || [])].some(x => x.type === 'retraction')) { warnings.push(`dropped retracted ${it.doi}`); continue; }
+        if ([...(m['updated-by'] || []), ...(m['update-to'] || [])].some(x => x.type === 'retraction')) { warnings.push(`dropped retracted ${it.doi}`); retracted.add(it.id); continue; }
       } catch (e) { if (e.status !== 404) warnings.push(`crossref ${it.doi}: ${e.message.slice(0, 80)}`); }
     }
+    if (!final.includes(it)) continue;
     it.first_seen = firstSeen.get(it.id) || iso(TODAY);
     kept.push(it);
   }
-  return {
-    generated_at: new Date().toISOString(), as_of: iso(TODAY), window_days: S.settings.window_days,
-    about: 'Bibliographic records only. abstract is the authors\' own text, included only for CC BY records. Nothing here has been read, reviewed or verified.',
-    counts: { candidates: works.length, usable: rows.length, items: kept.length, with_abstract: kept.filter(i => i.abstract).length },
-    items: kept
-  };
+  return { generated_at: new Date().toISOString(), windowDays: S.settings.window_days, candidates: works.length, usable: rows.length, retracted, items: kept };
 }
 if (args['offline-test']) globalThis.fetch = () => Promise.reject(new Error('simulated network failure'));
 const startedAt = new Date().toISOString();
 const writeStatus = async st => { if (!args['dry-run']) await writeFile(STATUS, JSON.stringify({ ...st, last_attempt: startedAt, warnings }, null, 2) + '\n'); };
 try {
   const feed = await main();
-  if (args['dry-run']) { console.log(JSON.stringify({ counts: feed.counts, warnings, sample: feed.items.slice(0, 12).map(i => [i.category, i.title.slice(0, 80), !!i.abstract]) }, null, 1)); process.exit(0); }
-  await writeFile(FEED, JSON.stringify(feed, null, 1) + '\n');
-  await writeStatus({ ok: true, last_success: feed.generated_at, error: null });
-  console.log(`history feed: ${feed.items.length} items (${feed.counts.with_abstract} with abstracts). warnings: ${warnings.length}`);
+  if (args['dry-run']) { console.log(JSON.stringify({ candidates: feed.candidates, usable: feed.usable, retracted: [...feed.retracted], warnings, sample: feed.items.slice(0, 12).map(i => [i.category, i.title.slice(0, 80), !!i.abstract]) }, null, 1)); process.exit(0); }
+  const result = await applyRefresh('history', feed.items, { retracted: feed.retracted, windowDays: feed.windowDays, today: TODAY, warnings });
+  await writeStatus({ ok: true, last_success: feed.generated_at, error: null, ...result });
+  console.log(`history feed: ${result.published} published, ${result.queued} waiting to be read, ${result.removed} removed. warnings: ${warnings.length}`);
 } catch (e) {
   let prior = {}; try { prior = JSON.parse(await readFile(STATUS, 'utf8')); } catch { /* first run */ }
   await writeStatus({ ok: false, last_success: prior.last_success || null, error: String(e.message || e).slice(0, 300) });

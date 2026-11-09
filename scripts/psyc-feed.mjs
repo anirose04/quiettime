@@ -3,7 +3,9 @@
 
    Retrieves bibliographic metadata only. It never writes a summary, a headline or a finding. The only
    prose it passes through is an article's own abstract, verbatim, when the record has a Creative Commons
-   licence; every other paper appears as a bare listing. Connections come only from reference lists.
+   licence. Connections come only from reference lists. Nothing it finds is published: new papers wait in
+   review/psyc-queue.json until they have been read (scripts/paper-review.mjs). It can only remove from the
+   live feed, never add to it.
 
    Providers (official APIs only):
    - OpenAlex  https://api.openalex.org — search, licences, abstracts, reference lists.
@@ -11,10 +13,11 @@
    - Crossref  https://api.crossref.org — retraction and correction notices.
        Optional env CROSSREF_MAILTO joins the polite pool.
 
-   Output: quiet-time/data/psyc-feed.json (only replaced after a successful run) and
-           quiet-time/data/psyc-feed-status.json (always written).
+   Output: review/psyc-queue.json, removals from quiet-time/data/psyc-feed.json (both only after a successful
+           run) and quiet-time/data/psyc-feed-status.json (always written).
    Usage:  node scripts/psyc-feed.mjs [--dry-run] [--today=YYYY-MM-DD] [--offline-test] [--strict] */
 import { readFile, writeFile } from 'node:fs/promises';
+import { applyRefresh } from './paper-review-lib.mjs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -197,28 +200,25 @@ async function main() {
 
   // retraction and correction notices from Crossref; retracted papers never appear
   const mailto = process.env.CROSSREF_MAILTO;
-  const kept = [];
-  for (const it of final) {
+  const kept = [], retracted = new Set();
+  const published = (previous?.items || []).filter(p => !final.some(f => f.id === p.id));
+  for (const it of [...final, ...published]) {
     if (it.doi) {
       try {
         const u = new URL('https://api.crossref.org/works/' + encodeURIComponent(it.doi));
         if (mailto) u.searchParams.set('mailto', mailto);
         const m = (await getJSON(u.toString(), 'crossref', mailto ? 250 : 700)).message;
         const notices = [...(m['updated-by'] || []), ...(m['update-to'] || [])].map(x => x.type);
-        if (notices.includes('retraction') || /^retract/i.test(m.title?.[0] || '')) { warnings.push(`dropped retracted ${it.doi}`); continue; }
+        if (notices.includes('retraction') || /^retract/i.test(m.title?.[0] || '')) { warnings.push(`dropped retracted ${it.doi}`); retracted.add(it.id); continue; }
         if (m.type === 'posted-content') it.status = 'preprint (not peer reviewed)';
       } catch (e) { if (e.status !== 404) warnings.push(`crossref ${it.doi}: ${e.message.slice(0, 80)}`); }
     }
+    if (!final.includes(it)) continue;
     it.first_seen = firstSeen.get(it.id) || iso(TODAY);
     delete it.topic; delete it.listed;
     kept.push(it);
   }
-  return {
-    generated_at: new Date().toISOString(), as_of: iso(TODAY), window_days: S.settings.window_days,
-    about: 'Bibliographic records only. abstract is the authors\' own text, included only for CC BY records. Nothing here has been read, reviewed or verified.',
-    counts: { candidates: cands.size, usable: rows.length, items: kept.length, with_abstract: kept.filter(i => i.abstract).length, citing_collection: kept.filter(i => i.cites_collection.length).length },
-    items: kept
-  };
+  return { generated_at: new Date().toISOString(), windowDays: S.settings.window_days, candidates: cands.size, usable: rows.length, retracted, items: kept };
 }
 
 async function writeStatus(st) {
@@ -229,10 +229,10 @@ if (args['offline-test']) globalThis.fetch = () => Promise.reject(new Error('sim
 const startedAt = new Date().toISOString();
 try {
   const feed = await main();
-  if (args['dry-run']) { console.log(JSON.stringify({ counts: feed.counts, warnings, sample: feed.items.slice(0, 8).map(i => [i.category, i.title.slice(0, 80), !!i.abstract]) }, null, 1)); process.exit(0); }
-  await writeFile(FEED, JSON.stringify(feed, null, 1) + '\n');
-  await writeStatus({ ok: true, last_attempt: startedAt, last_success: feed.generated_at, error: null });
-  console.log(`psyc feed: ${feed.items.length} items (${feed.counts.candidates} candidates). warnings: ${warnings.length}`);
+  if (args['dry-run']) { console.log(JSON.stringify({ candidates: feed.candidates, usable: feed.usable, retracted: [...feed.retracted], warnings, sample: feed.items.slice(0, 8).map(i => [i.category, i.title.slice(0, 80), !!i.abstract]) }, null, 1)); process.exit(0); }
+  const result = await applyRefresh('psyc', feed.items, { retracted: feed.retracted, windowDays: feed.windowDays, today: TODAY, warnings });
+  await writeStatus({ ok: true, last_attempt: startedAt, last_success: feed.generated_at, error: null, ...result });
+  console.log(`psyc feed: ${result.published} published, ${result.queued} waiting to be read, ${result.removed} removed. warnings: ${warnings.length}`);
 } catch (e) {
   // keep the previous feed untouched; the app simply goes on showing it
   await writeStatus({ ok: false, last_attempt: startedAt, error: String(e.message || e).slice(0, 300) });
