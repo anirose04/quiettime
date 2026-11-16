@@ -197,13 +197,6 @@
    "date": "2026-11-09",
    "reader": "Claude"
   },
-  "doi:10.1162/opmi.a.397": {
-   "decision": "reject",
-   "reason": "too technical to be a good read",
-   "fingerprint": "d9813969c388ff72",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
   "doi:10.1016/j.cognition.2026.106719": {
    "decision": "reject",
    "reason": "too technical to be a good read",
@@ -288,13 +281,6 @@
    "date": "2026-11-09",
    "reader": "Claude"
   },
-  "doi:10.1177/01461672261469612": {
-   "decision": "reject",
-   "reason": "open licence could not be confirmed (Crossref lists none)",
-   "fingerprint": "0e4e5f391531e404",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
   "doi:10.1037/pspi0000526": {
    "decision": "reject",
    "reason": "no abstract available to read",
@@ -309,24 +295,10 @@
    "date": "2026-11-09",
    "reader": "Claude"
   },
-  "doi:10.1016/j.jesp.2026.105012": {
-   "decision": "reject",
-   "reason": "too technical to be a good read",
-   "fingerprint": "ab7e4f28b017c8e8",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
   "doi:10.1016/j.jesp.2026.105010": {
    "decision": "accept",
    "basis": "title and abstract read; record checked on Crossref",
    "fingerprint": "38f622b09efb1d5d",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
-  "doi:10.1177/01461672261499423": {
-   "decision": "accept",
-   "basis": "title and abstract read; record checked on Crossref",
-   "fingerprint": "b81ce0c8454377d3",
    "date": "2026-11-09",
    "reader": "Claude"
   },
@@ -376,13 +348,6 @@
    "decision": "accept",
    "basis": "title and abstract read; record checked on Crossref",
    "fingerprint": "21353f38a203f08d",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
-  "doi:10.1016/j.jesp.2026.104965": {
-   "decision": "accept",
-   "basis": "title and abstract read; record checked on Crossref",
-   "fingerprint": "2996170d07fc3386",
    "date": "2026-11-09",
    "reader": "Claude"
   },
@@ -477,20 +442,6 @@
    "date": "2026-11-09",
    "reader": "Claude"
   },
-  "doi:10.1177/19485506261480179": {
-   "decision": "accept",
-   "basis": "title and abstract read; record checked on Crossref",
-   "fingerprint": "7d0c4c497dc37c96",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
-  "doi:10.1177/01461672261467790": {
-   "decision": "reject",
-   "reason": "abstract is cut off at the start; licence could not be confirmed",
-   "fingerprint": "a8b0cea5ddbb19ae",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
   "doi:10.1177/01461672261470131": {
    "decision": "accept",
    "basis": "title and abstract read; record checked on Crossref",
@@ -558,13 +509,6 @@
    "decision": "accept",
    "basis": "title and abstract read; record checked on Crossref",
    "fingerprint": "c915415c851ca1f2",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
-  "doi:10.1038/s41539-026-00459-x": {
-   "decision": "reject",
-   "reason": "too technical to be a good read",
-   "fingerprint": "d0a3072b23da8c2e",
    "date": "2026-11-09",
    "reader": "Claude"
   },

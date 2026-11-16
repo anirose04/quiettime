@@ -4,7 +4,7 @@
  "window_days": 365,
  "about": "Every item here was read before publication: the title and abstract, checked against the paper's Crossref record. The full papers were not read unless a decision in review/decisions.json says so. abstract is the authors' own text under an open licence.",
  "counts": {
-  "items": 85
+  "items": 82
  },
  "items": [
   {
@@ -737,32 +737,6 @@
    "first_seen": "2026-11-08"
   },
   {
-   "id": "doi:10.1177/01461672261499423",
-   "doi": "10.1177/01461672261499423",
-   "openalex": "W7167519260",
-   "title": "Humanlike Self-Enhancement and Self-Protection in Generative Pre-Trained Transformer-Based AI Agents: Of Overclaiming and the Self-Serving Bias",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Siwei Fu",
-    "Constantine Sedikides",
-    "Weihua Zhou",
-    "Xinyue Zhou"
-   ],
-   "author_count": 4,
-   "source": "Personality and Social Psychology Bulletin",
-   "date": "2026-11-04",
-   "abstract": "We investigated whether GPT-based AI agents, despite presumably lacking humanlike sentience, emulate motivated behavior in group settings. We focused on overclaiming (overestimating one’s contribution to group outcomes) and the self-serving bias (taking disproportionate credit for group successes while deflecting blame for group failures). We conducted eight experiments involving a collaborative and creative group task (joke-writing). AI agents consistently overclaimed their own contributions. An egocentrism-reduction manipulation (directing attention equally to one’s own and others’ contributions) attenuated, but did not eliminate, overclaiming. Further, AI agents exhibited the self-serving bias. Overclaiming persisted across variations in temperature settings and demographic personas (gender, ethnicity), and was more pronounced in later GPT models. Chain-of-Thought reasoning did not reduce, and instead increased, overclaiming. AI systems can mimic human self-enhancement and self-protection, raising implications for the emergence of motivated self-like behavior in non-biological systems, the assumed neutrality of LLMs, and the need for improved mitigation techniques.",
-   "abstract_license": "cc-by-nc",
-   "links": {
-    "doi": "https://doi.org/10.1177/01461672261499423",
-    "landing": "https://doi.org/10.1177/01461672261499423",
-    "oa": "https://doi.org/10.1177/01461672261499423"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
    "id": "doi:10.1111/bjso.70116",
    "doi": "10.1111/bjso.70116",
    "openalex": "W7172351353",
@@ -948,35 +922,6 @@
     "doi": "https://doi.org/10.1177/19485506261486505",
     "landing": "https://doi.org/10.1177/19485506261486505",
     "oa": "https://doi.org/10.1177/19485506261486505"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1016/j.jesp.2026.104965",
-   "doi": "10.1016/j.jesp.2026.104965",
-   "openalex": "W7171175953",
-   "title": "Willful ignorance in the context of antibiotic prescribing",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "Alina Schneider",
-    "Miroslav Sirota",
-    "Marina Groß",
-    "Lars Korn",
-    "Elisabeth D. C. Sievert",
-    "Cornelia Betsch",
-    "ROBERT M. BOHM"
-   ],
-   "author_count": 7,
-   "source": "Journal of Experimental Social Psychology",
-   "date": "2026-07-25",
-   "abstract": "Healthcare professionals tend to overprescribe antibiotics despite knowing the risks of antibiotic resistance. This tendency, amplified under diagnostic uncertainty and patient pressure, suggests that mechanisms beyond lack of risk awareness or knowledge sustain overprescription. One such mechanism may be willful ignorance—deliberately avoiding information about the consequences of one’s prescribing decisions. By allowing healthcare professionals to justify immediate antibiotic prescriptions that prioritize short-term self-interests over long-term collective benefits, willful ignorance may contribute to persistent overprescribing. Despite its practical relevance, this psychological mechanism has not yet been empirically investigated in the context of antibiotic prescribing. To test this empirically, we conducted a preregistered online experiment with healthcare professionals (N = 698) from the United States and the United Kingdom. Participants completed an adapted version of the Moral Wiggle Room Task, a behavioral decision-making paradigm designed to investigate willful ignorance. This task compares choices across a full information condition with low diagnostic uncertainty, and a hidden information condition with high diagnostic uncertainty that can be voluntarily reduced. The results support the presence of willful ignorance in antibiotic prescribing. Healthcare professionals were more likely to prescribe antibiotics immediately in the hidden vs. full information condition. Even healthcare professionals who voluntarily reduced diagnostic uncertainty prescribed more antibiotics immediately than those who received diagnostic information involuntarily. These results highlight the role of willful ignorance in antibiotic prescribing and suggest practical implications for policymaking, such as promoting transparent environments to guide appropriate antibiotic prescription choices.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1016/j.jesp.2026.104965",
-    "landing": "https://doi.org/10.1016/j.jesp.2026.104965",
-    "oa": "https://www.sciencedirect.com/science/article/pii/S0022103126000958/pdf"
    },
    "cites_collection": [],
    "first_seen": "2026-11-08"
@@ -1290,36 +1235,6 @@
     "doi": "https://doi.org/10.1016/j.jesp.2026.104971",
     "landing": "https://doi.org/10.1016/j.jesp.2026.104971",
     "oa": "https://doi.org/10.1016/j.jesp.2026.104971"
-   },
-   "cites_collection": [],
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1177/19485506261480179",
-   "doi": "10.1177/19485506261480179",
-   "openalex": "W7214324199",
-   "title": "Disability Representation in Social and Personality Psychology Research: A State-of-the-Art Review",
-   "category": "social",
-   "status": "journal article",
-   "authors": [
-    "William B. Meese",
-    "Jordan Rubin‐McGregor",
-    "Kyle Anderson",
-    "Kathleen R. Bogart",
-    "Brandon L. Boring",
-    "S. Mason Garrison",
-    "Jessica L. McManus",
-    "Ian Moura"
-   ],
-   "author_count": 19,
-   "source": "Social Psychological and Personality Science",
-   "date": "2026-09-25",
-   "abstract": "We conducted a systematic state-of-the-field review examining disability representation of three flagship social and personality psychology journals between 2017 and 2022. First, we examined how frequently publications used disability-related terminology, finding that 192 of the 2,343 articles surveyed did so. Second, we examined patterns of disability-related terminology use and found that these concepts were most often used in an extraneous manner (e.g., in parenthetical phrases). Only 3 articles were primarily focused on disability. This is the first systematic investigation to examine how and to what extent social and personality psychology research addresses topics related to disability. These findings highlight a need for substantive change in the representation of disability within social and personality psychology. We close with recommendations for researchers.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1177/19485506261480179",
-    "landing": "https://doi.org/10.1177/19485506261480179",
-    "oa": "https://doi.org/10.1177/19485506261480179"
    },
    "cites_collection": [],
    "first_seen": "2026-11-08"
@@ -2240,5 +2155,5 @@
    "first_seen": "2026-11-08"
   }
  ],
- "last_refreshed": "2026-11-09T17:28:12.229Z"
+ "last_refreshed": "2026-11-16T16:59:13.814Z"
 }

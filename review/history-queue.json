@@ -1,4 +1,24 @@
 {
  "_about": "Waiting to be read. Nothing here is published. Decide with scripts/paper-review.mjs.",
- "items": []
+ "items": [
+  {
+   "id": "doi:10.1017/s0021853726100929",
+   "doi": "10.1017/s0021853726100929",
+   "title": "State Driven Agrarian Development in the Contested Borderlands of Northwestern Ethiopia: The Experience of the Humera State Farm Project, 1975–91",
+   "category": "power",
+   "authors": [
+    "Alemayehu Erkihun Engida"
+   ],
+   "author_count": 1,
+   "source": "The Journal of African History",
+   "date": "2026-07-30",
+   "abstract": "Drawing on an extensive examination of primary sources, this paper considers the persistent tensions between state-led development and local agencies in Humera—a northwestern Ethiopian borderland—during the Derg regime. It explores how developmental projects in the contested borderlands have been shaped more by ideological showcase than by the pursuit of an efficient production system. As part of its agrarian reform, the Derg nationalized private commercial farmlands in Setit Humera and converted them into state farms. Employing peasant militia labor, a centralized administrative approach, and overlooking unique local conditions, the Derg launched the Humera State Farm not only for economic objectives but also to assert state authority in a politically contested frontier region. Despite substantial political attention, the state farm sparked multifaceted tensions and proved ineffective. Its final collapse in 1990 was ultimately driven by geopolitical conflict, as the farm became entangled in regional struggles involving the Tigray People’s Liberation Front and Sudan’s proxy actions against the Derg.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/s0021853726100929",
+    "landing": "https://doi.org/10.1017/s0021853726100929"
+   },
+   "first_seen": "2026-11-16"
+  }
+ ]
 }

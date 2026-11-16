@@ -41,12 +41,12 @@
    "author_count": 3,
    "source": "Cognition",
    "date": "2026-11-08",
-   "abstract": "Self-directed learning is a major part of individual knowledge formation. People often autonomously organize their own learning into ”blocks”: they practice a certain task for some continuous stretch of time, then switch to another task for another period of time, and so on. Yet current models of intrinsic motivation highlighting epistemic factors such as novelty, competence, and learning progress make various predictions about the extent to which learners block, as opposed to interleaving, their practice. In this study, we demonstrate that people tend to block in a multi-task setting where existing models of intrinsic motivation based on epistemic factors make ambiguous predictions. We show that while epistemic factors can partially explain blocking, asimple repetition bias substantially improves our ability to predict choices.",
+   "abstract": "Self-directed learning is a major part of individual knowledge formation. People often autonomously organize their own learning into \"blocks\": they practice a certain task for some continuous stretch of time, then switch to another task for another period of time, and so on. Yet current models of intrinsic motivation highlighting epistemic factors such as novelty, competence, and learning progress make various predictions about the extent to which learners block, as opposed to interleaving, their practice. In this study, we demonstrate that people tend to block in a multi-task setting where existing models of intrinsic motivation based on epistemic factors make ambiguous predictions. We show that while epistemic factors can partially explain blocking, a simple repetition bias substantially improves our ability to predict choices.",
    "abstract_license": "cc-by",
    "links": {
     "doi": "https://doi.org/10.1016/j.cognition.2026.106764",
     "landing": "https://doi.org/10.1016/j.cognition.2026.106764",
-    "oa": "https://doi.org/10.1016/j.cognition.2026.106764"
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0010027726003331/pdf"
    },
    "cites_collection": [],
    "first_seen": "2026-11-09"
@@ -251,6 +251,922 @@
    },
    "cites_collection": [],
    "first_seen": "2026-11-09"
+  },
+  {
+   "id": "doi:10.1016/j.cognition.2026.106772",
+   "doi": "10.1016/j.cognition.2026.106772",
+   "openalex": "W7160914893",
+   "title": "Computational complexity improves recognition memory for reward-relevant attributes",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Andreas Kapounek",
+    "Lee de‐Wit",
+    "Peter L. Bossaerts"
+   ],
+   "author_count": 3,
+   "source": "Cognition",
+   "date": "2026-11-04",
+   "abstract": "Computational complexity in optimisation tasks is often seen as impairing optimal choice. We test whether it could have beneficial effects on memory. In a preregistered lab experiment (N = 131) using the NP-hard 0-1 knapsack problem, we manipulated knapsack capacity to create instances differing in two objective complexity metrics: phase transition proximity and Sahni-k. As predicted, solving a more complex instance resulted in a 44% (d = 0.45) increase in above-chance recognition memory relative to a lower-complexity instance. Participants spent longer on the complex instance and clicked on items more often. A plausible interpretation of these findings is that the increased processing requirements of search algorithms under complexity may have resulted in enhanced encoding through frequent revisiting of reward-relevant information. These findings provide a formal framework to generate hypotheses about the memory consequences of complexity and the effects of cognitive offloading in real-world decisions.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106772",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106772",
+    "oa": "https://doi.org/10.1016/j.cognition.2026.106772"
+   },
+   "cites_collection": [
+    "ai-without-guardrails"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1017/jdm.2026.10052",
+   "doi": "10.1017/jdm.2026.10052",
+   "openalex": "W7220830922",
+   "title": "Judges, justice, and power: Reorienting decision science",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Mandeep K. Dhami"
+   ],
+   "author_count": 1,
+   "source": "Judgment and Decision Making",
+   "date": "2026-10-07",
+   "abstract": "The field of Judgment and Decision Making has had tremendous success in understanding and improving decision-making in several domains from business to medicine, and it is now time to turn our efforts to the legal domain. The two schools of thought that dominate our field (coherence and correspondence) have generated a set of rich ideas as well as useful methods that can be applied in this context. However, both schools have been somewhat narrow in their focus on what is a ‘good’ decision. If we care about ‘good’ decisions, then we must also care about ‘just’ decisions. We ought to use our science to scrutinize the exercise of judicial power in the search for justice, and therefore in the service of justice. The direct relevance to our field is the fact that justice is a product of decisions, and these decisions are made under conditions of risk and uncertainty. We could reorient our science and put our intellectual resources into extending and applying our theories and methods in the following three ways. (1) Focus on justice as an outcome alongside, or even above the other sorts of outcomes we routinely study. (2) Study the exercise of judicial power in all its guises. (3) Scrutinize the algorithms that increasingly influence or replace judicial power. Justice can be modelled, measured, and improved — but only if we choose to prioritize it.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1017/jdm.2026.10052",
+    "landing": "https://doi.org/10.1017/jdm.2026.10052",
+    "oa": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/AFB6FB977157BC5CB5F49FBA5875C4BB/S1930297526100527a.pdf/div-class-title-judges-justice-and-power-reorienting-decision-science-div.pdf"
+   },
+   "cites_collection": [
+    "hungry-judges",
+    "hungry-judges-challenge"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.376",
+   "doi": "10.1162/opmi.a.376",
+   "openalex": "W7204770417",
+   "title": "Unpacking Number Word Comprehension in Early Childhood",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Alex M. Silver",
+    "Leanne E. Elliott",
+    "Heather J. Bachman",
+    "Elizabeth Votruba-Drzal",
+    "Melissa Libertus"
+   ],
+   "author_count": 5,
+   "source": "Open Mind",
+   "date": "2026-09-20",
+   "abstract": "Children recognize number words prior to understanding the exact numbers, but the limits and mechanisms of this comprehension are unclear. One prominent account suggests that the Approximate Number System (ANS) provides the basis for the number word acquisition process such that symbolic number words are mapped onto imprecise numerical representations, whereas an alternative account suggests that the Object Tracking System (OTS) forms the foundation for the process as children first learn to map number words to exact, small quantities in the subitizing range. Recent theoretical proposals and evidence from longitudinal studies suggest that both the ANS and OTS may be involved in the process, however, how the distinct representations from the ANS and OTS are coordinated in real-time remains untested. Here, children (N = 143, Mage = 3.73 yrs) mapped number words to the referred quantities in a two-alternative forced-choice task where trials were designed with varying ratios and sizes of response options. In line with theories that the innate representational systems for both large, imprecise quantities (i.e., the Approximate Number System) and small, exact sets (i.e., the Object Tracking System) support number word acquisition, comprehension was ratio- and size-dependent, consistent with signatures of the two innate numerical representational systems. These findings provide evidence of the proposed real-time coordination of the ANS and the OTS during number word comprehension.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.376",
+    "landing": "https://doi.org/10.1162/opmi.a.376",
+    "oa": "https://direct.mit.edu/opmi/article-pdf/doi/10.1162/OPMI.a.376/2630516/opmi.a.376.pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.5334/joc.514",
+   "doi": "10.5334/joc.514",
+   "openalex": "W4407159094",
+   "title": "Age and Physical Activity Modulate the Spatial Mapping of Time-Related Words",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Anastasia Malyshevskaya",
+    "Martin H. Fischer",
+    "Штыров Юрий Юрьевич",
+    "Andriy Myachykov"
+   ],
+   "author_count": 4,
+   "source": "Journal of Cognition",
+   "date": "2026-09-04",
+   "abstract": "The processing of temporal concepts is known to be intertwined with spatial cognition. For instance, reaction times (RTs) are shorter when participants classify past- and future-related words with left- and right-lateral responses, respectively, in line with the so-called mental time line hypothesis. While some research has addressed individual differences in processing temporal concepts, it still remains unclear how such space–time congruency effects are influenced by the most crucial time-related factor in our lives – age. To address this question, we asked 94 participants aged 19 to 80 years old to classify past, future, and neutral words as related to time by using left and right response keys. In addition, we collected information regarding participants’ self-reported level of physical activity, as it was shown to be a predictor of healthy ageing. We found that younger participants processed future-related words faster than past-related words, whereas older participants processed past-related words faster than future-related words. This ageing effect was modulated by physical exercise: The higher the self-reported level of physical activity in older participants, the smaller the past-related RT bias. Finally, our data revealed an age-related decline in space–time congruency effects among participants with lower self-reported physical activity. These findings indicate that the conceptual representation of time undergoes lifelong changes influenced by multiple factors, including age and physical activity. We suggest an integrative construct of dynamic conceptual time whereby the individual’s bodily and life-course experiences lead to gradual changes in the processing of temporal concepts.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.5334/joc.514",
+    "landing": "https://doi.org/10.5334/joc.514",
+    "oa": "https://journalofcognition.org/articles/514/files/6a9a8cad20689.pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1186/s41235-026-00772-4",
+   "doi": "10.1186/s41235-026-00772-4",
+   "openalex": "W7162161359",
+   "title": "Consider an alternative: mitigating anchoring effects in professional judges’ sentencing decisions",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Vincent Berthet",
+    "Julien Goldszlagier",
+    "Catelan Nicolas",
+    "Jean-Baptiste Thierry",
+    "Vincent de Gardelle"
+   ],
+   "author_count": 5,
+   "source": "Cognitive Research Principles and Implications",
+   "date": "2026-11-14",
+   "abstract": "We investigate the impact of a cognitive intervention on the anchoring effect in the context of criminal justice, where public prosecutors’ sentencing recommendations influence judicial decisions. We predicted that prompting judges to engage in more deliberative thinking about the prosecutor’s demand would reduce its influence on sentencing decisions. We conducted an experiment on French professional judges ( N = 139) where they evaluated a criminal case in which the prosecutor’s sentencing demands served as anchors. As expected, we found judges exhibited an anchoring effect: they pronounced more severe sentences after high (vs. low) demands from the prosecutor. The cognitive intervention consisted in asking judges to consider an alternative, that is, to generate arguments supporting both the proposed sentence and an opposite (lower or higher) sentence. This intervention substantially reduced the anchoring effect. These findings suggest that judges may rely on the prosecutor’s demands when making sentencing decisions but can be prompted to engage in more deliberative processing. Although these findings should be considered exploratory given the use of a single vignette and the incomplete randomization of experimental conditions across sessions, they suggest that prompting judges to consider alternative sentencing arguments may help reduce the influence of anchoring on judicial decisions. Such simple, effective procedural safeguards may help courts promote fair sentencing.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1186/s41235-026-00772-4",
+    "landing": "https://doi.org/10.1186/s41235-026-00772-4",
+    "oa": "https://doi.org/10.1186/s41235-026-00772-4"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.369",
+   "doi": "10.1162/opmi.a.369",
+   "openalex": "W7163462474",
+   "title": "Developing an Open Multi-Domain Assessment Battery Using Laboratory Tasks for Children in Low- and Middle-Income Countries",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Joseph Coffey",
+    "Elizabeth S. Spelke"
+   ],
+   "author_count": 2,
+   "source": "Open Mind",
+   "date": "2026-09-05",
+   "abstract": "Recent years have seen growing interest in the use of randomized designs to evaluate the impacts of interventions on early child development in low- and middle-income countries. Measuring these impacts requires assessments that can track development prior to school entry in settings that are often noisy and outdoors. Drawing from research in developmental cognitive science, we created an open multi-domain assessment battery for testing children in low- and middle-income countries consisting of tasks based on experimental paradigms used in laboratory settings. These tasks were designed to target abilities that emerge across cultures early in life and predict later performance on related skills in adulthood. This battery was administered to 1435 Ghanaian children whose parent previously took part in a randomized controlled field experiment on the impacts of secondary education on their children's development, measuring performance on tasks at ages 1.5, 3.5, 5.5, and 7.5 years. Starting at age 3.5, children's responses to the tasks were internally consistent and above chance, with overall test results predictive of later performance. There was strong evidence of validity both for tasks in numeracy and spatial reasoning, which were designed to tap into culturally invariant cognitive capacities, as well as those in language and executive functioning, which required more context-specific adaptation. In contrast, there was little evidence of validity in infant tasks or tasks focused on intuitive physics or mental state reasoning. Nevertheless, our results suggest that our approach to assessment design is effective at producing tasks that are internally consistent and sensitive to individual differences within cohort. By making our testing materials and data freely accessible, we hope to provide a foundation for the development of tools for studying cognitive development in field settings.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.369",
+    "landing": "https://doi.org/10.1162/opmi.a.369",
+    "oa": "https://direct.mit.edu/opmi/article-pdf/doi/10.1162/OPMI.a.369/2628709/opmi.a.369.pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.386",
+   "doi": "10.1162/opmi.a.386",
+   "openalex": "W7214678745",
+   "title": "Descriptions of Phenomenal Versus Intentional Mental States Are Differentially Associated With Gaze Direction",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Mohit Mukherji",
+    "Moira Rose Dillon"
+   ],
+   "author_count": 2,
+   "source": "Open Mind",
+   "date": "2026-09-20",
+   "abstract": "Across cultures, humans reason about others’ mental states as being either phenomenal, reflecting shareable experiences, or intentional, reflecting agentive goals. Might our dissociated judgments of others’ mental states be linked to dissociated judgments of others’ gaze direction, one of our earliest social cues from infancy? We presented adults (N = 600) and 6- to 8-year-old children (N = 200) with direct, definitional descriptions as well as descriptions of example phenomenal or intentional mental states and asked them to choose whether a face with averted or straight-ahead gaze better matched the character in each description. Adults and older children chose the averted-gaze face for the direct phenomenality description but the straight-ahead-gaze face for the direct intentionality description. Adults showed the same pattern of responses for the indirect, example descriptions, but children chose the straight-ahead-gaze face for both types of indirect descriptions. Descriptions of either phenomenal or intentional mental states might be intuitively associated with straight-ahead gaze, perhaps originating in infants’ understanding of straight-ahead gaze as communicating either mutual social engagement or general visible accessibility for goal-directed action. The association between phenomenality descriptions and averted gaze may, by contrast, arise only after learning that certain phenomenal contexts involve inner experiences with averted gaze (e.g., someone is looking at a particular emotion-evoking stimulus or looking “into their own mind”). If, in adulthood, our social concepts have indeed been built on prelinguistic intuitions that can be evoked by language, then these intuitions may continue to affect our mature, linguistically driven social reasoning.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.386",
+    "landing": "https://doi.org/10.1162/opmi.a.386",
+    "oa": "https://doi.org/10.1162/opmi.a.386"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.397",
+   "doi": "10.1162/opmi.a.397",
+   "openalex": "W4416223268",
+   "title": "Back to the Future: The Role of Past and Future Context Predictability in Incremental Language Production",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Shiva Upadhye",
+    "Richard Futrell"
+   ],
+   "author_count": 2,
+   "source": "Open Mind",
+   "date": "2026-09-28",
+   "abstract": "Contextual predictability shapes how we choose and encode words in production. The effects of a word’s predictability given preceding or past context are generally well-understood in both production and comprehension, but studies of naturalistic production have also revealed a poorly understood yet robust backward predictability effect of a word given only its future context, which may be linked to future planning. Across two studies of naturalistic speech, we revisit backward predictability using improved operationalizations, introducing Conditional Pointwise Mutual Information (conditional PMI), a conceptually motivated information-theoretic measure that quantifies the information shared between a word and the future sequence under the constraints imposed by the past context. Study 1 shows that this measure reproduces predictability effects of future context on phonetic reduction while remaining non-redundant with backward predictability. Study 2 moves from reduction to word choice, examining substitution errors within a novel generative framework that models lexical and contextual influences to predict the identity of the word that surfaces as an error. Within this framework, we find that past-conditioned predictability increases likelihood of erroneous selection, whereas future-conditioned predictability reduces it. In predicting error identity, conditional PMI emerges as the strongest contextual predictor, subsuming backward predictability. Together, these findings illuminate how past and future context shape word choice and encoding, linking contextual predictability to mechanisms of incremental planning in sentence production.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.397",
+    "landing": "https://doi.org/10.1162/opmi.a.397",
+    "oa": "https://direct.mit.edu/opmi/article-pdf/doi/10.1162/OPMI.a.397/2630536/opmi.a.397.pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.381",
+   "doi": "10.1162/opmi.a.381",
+   "openalex": "W7113470489",
+   "title": "Online Academic Cheating in Young Children and its Prevention",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Minori Onishi",
+    "Yasuhiro Kanakogi"
+   ],
+   "author_count": 2,
+   "source": "Open Mind",
+   "date": "2026-09-05",
+   "abstract": "The global social situation changed dramatically after the COVID-19 pandemic, with various activities being shifted online. Some academic activities, including those for young children, are still conducted virtually. The transition introduced various challenges regarding academic honestly. However, whether young children engage in more academic cheating in online (vs. offline) settings remains unclear. Accordingly, this study examines this aspect, as well as how such behavior can be mitigated. We conducted two experimental studies with five-year-olds (N = 148), using a between-subjects design to examine children’s newly developed visual perspective-taking of proctors and their cheating behavior across offline, online, and two intervention conditions. In Study 1 (n = 74), we used the cost-benefit framework to investigate whether children would cheat more in online settings where proctors’ visual access is limited and the perceived costs of detection are consequently reduced. The visual perspective-taking task confirmed that most children recognized the limitations of online proctoring and were more likely to cheat online than offline. In Study 2 (n = 74), we used the Objective Self-Awareness theory to investigate whether real-time self-images would enhance self-awareness and reduce cheating compared to an avatar condition in which a human-like character tracked participants’ movements with a 2-second delay. Real-time self-images significantly reduced cheating in planned comparisons with both the online condition in Study 1 and an avatar control condition, though the omnibus test was marginally significant. Thus, young children are more likely to cheat online, where monitoring is limited, and fostering self-focused visual attention can reduce such dishonest behavior. These findings highlight the developmental foundations of online academic cheating and offer actionable strategies for improving young children’s online learning environments.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.381",
+    "landing": "https://doi.org/10.1162/opmi.a.381",
+    "oa": "https://doi.org/10.1162/opmi.a.381"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/7w3ju",
+   "doi": "10.31234/osf.io/7w3ju",
+   "openalex": "W7233598380",
+   "title": "Trauma Processing Therapy: A Precision-Weighted Approach to Memory Reconsolidation",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Jiemi Ardian",
+    "Matius Dimas Reza Dana Ismaya",
+    "Ines Damayanti Octaviani",
+    "Yosefina Sonia Christya Kartika"
+   ],
+   "author_count": 4,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-15",
+   "abstract": "Trauma-focused therapy yields positive outcomes for posttraumatic stress disorder (PTSD). However, many individuals do not experience total remission, and symptoms may recur. This might happen because extinction-based learning could maintain the initial fear memory, which can be reactivated at a later time. Inquiry into memory reconsolidation has not yet revealed the requisite circumstances for consistently updating a memory. This article puts forth Trauma Processing Therapy (TPT), a theoretical approach founded on predictive processing. TPT interprets traumatic memories as proxies for extremely precise, multidimensional models that are resistant to corrective information. The fundamental theory suggests that persistent alteration relies on precisely calibrated prediction error while memory is in a pliable state. The process is adaptive and operates as a closed loop. The therapist recognises the primary affective state, evokes and amplifies a corrective emotional anticipation, activates both together, and then observes changes in relation to the initial recollection. When a cycle fails, the protocol distinguishes two types of responses. If the response is inert, this indicates the need to change the corrective approach, while if the response is resistant this indicates the need to challenge the ideas that are hindering progress. A composite clinical vignette is presented to demonstrate the application of the approach in practice. It is not evidence for the effectiveness of TPT or for reconsolidation being achieved. Structured investigations, meticulous analyses and ongoing assessments are essential to confirm these predictions. TPT is an applied theoretical proposition; its therapeutic utility and proposed mechanisms remain to be empirically tested.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/7w3ju",
+    "landing": "https://doi.org/10.31234/osf.io/7w3ju",
+    "oa": "https://doi.org/10.31234/osf.io/7w3ju"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/gm82t_v1",
+   "doi": "10.31234/osf.io/gm82t_v1",
+   "openalex": "W7227759476",
+   "title": "Does Numerology Foretell a Life? Preregistered Tests on Legislators, Olympians and Laureates, and a Lesson on Identity Leakage When Language Models Judge Blind",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "勉 矢作"
+   ],
+   "author_count": 1,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-14",
+   "abstract": "Numerology, sun-sign astrology and the Japanese system sanmeigaku claim that the date of birth (and, for numerology, the name) shows whether a person will rise and when their life will turn. We tested 33 such predictions (excluding the blind matching test described below), preregistered on the Open Science Framework, on four populations with third-party records: 3,308 members of the Japanese House of Representatives, 120,798 national legislators worldwide, 156,386 Olympic athletes, and 8,296 nominees for the Nobel Prize or an Academy Award and Japanese Persons of Cultural Merit. None was supported. Leadership numbers and signs did not predict becoming a leader, an Olympic champion or a laureate, and beginnings, endings and deaths did not cluster in the predicted years; in the largest samples, several differences from chance lay within preregistered bounds of practical equivalence. A positive control, the relative-age effect among Olympic football and ice-hockey players, was detected with the same data and methods (30.0% born January–March against 24.7% of days; p = 1.8 × 10⁻²⁴). In a preregistered blind matching test, one language model wrote a numerology reading and a model from another provider picked the person's life summary out of five. When the reading model was given names, the judge matched readings to summaries well above chance, largely because the reading model wrote the names into the readings against its instructions. Given only the numbers, the judge matched at chance worldwide (20.4%) but at 28.0% in Japan. A follow-up, registered after the first submission, asked the judge to identify each person from the summary alone. In trials in which the judge had not identified the target by both name and exact date of birth, hit rates were 18.5% worldwide and 25.5% in Japan (95% CI 19.0–32.8%), and the judge chose summaries whose recalled birth dates reproduced the reading's numbers more often than chance. The systems did not foretell lives. A language model asked to judge readings blind can appear to succeed by recognising the person, and instructions alone do not prevent this.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/gm82t_v1",
+    "landing": "https://doi.org/10.31234/osf.io/gm82t_v1",
+    "oa": "https://doi.org/10.31234/osf.io/gm82t_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/astf3_v1",
+   "doi": "10.31234/osf.io/astf3_v1",
+   "openalex": "W7226304546",
+   "title": "Psychodiagnostic Markers and Linguistic Indicators of Psychological Capital: A Theoretical Model of Complementarity Within the Structural-Functional Paradigm of Human Capital",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Dmytro Melnychuk",
+    "Oleksii Sabadukha",
+    "Iryna Kovalenko"
+   ],
+   "author_count": 3,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-15",
+   "abstract": "Rapid epochal transformations call for rethinking human capital as a dynamic emergent entity with a complex architecture of endogenous components: educational-competence, health, social, and psychological capital. Within this architecture, psychological capital (PsyCap) acts as a cross-cutting moderator that determines the extent to which the educational-competence core is converted into socio-economic outcomes. This raises the significance of PsyCap psychodiagnostics while exposing the limitations of reflective self-report instruments, which capture momentary self-assessments and remain vulnerable to social desirability bias.The article aims to substantiate the integration of linguistic indicators into PsyCap assessment and to develop a matrix model mapping the four HERO components (hope, efficacy, resilience, optimism) onto classes of linguistic indicators. Drawing on systemic, structural-functional, and interdisciplinary approaches, the study uses construct validity criteria to frame linguistic indicators as external correlates within the nomological network of PsyCap.The model matches hope with achievement and goal-setting markers, efficacy with markers of confidence and control, resilience with register flexibility and reduced negative affect, and optimism with positive-emotional and forward-oriented language. Linguistic indicators cannot replace standardized instruments; rather, they constitute a complementary data source, provided that linguistic and cultural adaptation, control of socio-economic confounders, and ethical safeguards against profiling are ensured. The study builds a conceptual bridge between psychodiagnostics and psycholinguistics and outlines a pathway toward the culturally adapted operationalization of PsyCap assessment in Ukrainian psychology.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/astf3_v1",
+    "landing": "https://doi.org/10.31234/osf.io/astf3_v1",
+    "oa": "https://doi.org/10.31234/osf.io/astf3_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/26bq3",
+   "doi": "10.31234/osf.io/26bq3",
+   "openalex": "W7227856639",
+   "title": "GEMScapes: linking acoustic features to aesthetic emotions in ambient and cinematic music using the GEMS-9 scale",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Javier Marín-Murillo",
+    "Irene Fondón",
+    "María Luz Montesinos"
+   ],
+   "author_count": 3,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-14",
+   "abstract": "Ambient and cinematic music are widely used in behavioral and immersive multimedia paradigms, yet standardized stimulus sets with computational acoustic norms remain scarce. We introduce GEMScapes, an open-access dataset of 38 original, high-fidelity instrumental tracks designed to elicit aesthetic emotions free from familiarity or semantic bias. We combined computational acoustic profiling across temporal, spectral, cepstral, tonal, harmonic–percussive, rhythmic, and stereo spatial domains with 816 trial-level ratings of 36 of the tracks, provided by 65 participants in 68 listening sessions on the Geneva Emotional Music Scale (GEMS-9). To account for stimulus- and participant-level dependencies, we fitted crossed linear mixed-effects models (LMMs) and validated them with ordinal models across 171 candidate pairs, identifying nine predictor–emotion associations (Benjamini–Hochberg false discovery rate [FDR]-adjusted p < 0.05) involving six acoustic and spatial descriptors across six emotional dimensions. Temporal variability and soundstage spatialization were the main predictors: variability of spectral tilt predicted Tension, variability of percussive energy predicted Joyful Activation, Transcendence was associated with wider stereo width and smoother, non-percussive onsets, Peacefulness and Nostalgia with spectral stability, and Sadness with lower spectral brightness and reduced timbral modulation. Variance partitioning revealed a continuum from strongly stimulus-driven states (Tension: 46% stimulus vs. 9% listener variance) to predominantly listener-dependent ones (Wonder: 8% vs. 32%). GEMScapes provides an acoustically characterized resource for music perception, affective computing, and neurocognitive research.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/26bq3",
+    "landing": "https://doi.org/10.31234/osf.io/26bq3",
+    "oa": "https://doi.org/10.31234/osf.io/26bq3"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1073/pnas.2611952123",
+   "doi": "10.1073/pnas.2611952123",
+   "openalex": "W7225982908",
+   "title": "People know who to ask for favors despite underestimating compliance",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Casher D. Belinda",
+    "Brittany C. Solomon"
+   ],
+   "author_count": 2,
+   "source": "Proceedings of the National Academy of Sciences",
+   "date": "2026-11-13",
+   "abstract": "Whether and how people approach social interactions hinges on how they expect others to respond. Extensive social psychology research suggests that people are inaccurate interpersonal perceivers, overestimating negative responses (e.g., discomfort) and underestimating positive responses (e.g., appreciation) across a variety of social situations. However, this conclusion is based almost exclusively on mean-level bias analyses that obscure the dyadic nature of interpersonal judgment and rely on a narrow conceptualization of interpersonal accuracy. Leveraging research on favor-asking and anticipated compliance as an exemplar, we demonstrate that interpersonal accuracy takes multiple theoretically distinct forms, and that the prevailing conclusion that people misunderstand their influence over others—because they tend to underestimate compliance—is likely overgeneralized. Across four studies (13,196 directed dyadic ratings), we show that people accurately differentiate between who will comply with their favor requests (dyadic meta-accuracy) despite the average tendency to underestimate compliance (mean-level bias). This pattern emerged for specific and general favor requests, among well- and newly-acquainted individuals, and beyond what could be expected due to self-projection. Through this dyadic lens, people are highly adept judges of their influence over others, as they are able to target their requests toward individuals who are uniquely likely to acquiesce to them—and can avoid wasting time on those who are not. Thus, our research refines existing implications for how people approach asking for favors. More broadly, by aligning theory, measurement, and level of analysis, our studies elucidate the need for greater theoretical precision and empirical breadth in interpersonal accuracy research.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1073/pnas.2611952123",
+    "landing": "https://doi.org/10.1073/pnas.2611952123",
+    "oa": "https://doi.org/10.1073/pnas.2611952123"
+   },
+   "cites_collection": [
+    "undervaluing-gratitude"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1177/01461672261469612",
+   "doi": "10.1177/01461672261469612",
+   "openalex": "W4407948941",
+   "title": "Why Poverty in the Present Matters for Intergenerational Concern and the Future of Humanity",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Kyle Fiore Law",
+    "Stylianos Syropoulos",
+    "Amanda Signorini",
+    "Christina Jinhee Capozzoli",
+    "Liane Young",
+    "Brendan Bo O’Connor"
+   ],
+   "author_count": 6,
+   "source": "Personality and Social Psychology Bulletin",
+   "date": "2026-08-29",
+   "abstract": "Contrary to perceived tensions between addressing present and future societal needs, we find that present-day poverty and inequality are deeply connected with attitudes toward far-future welfare at both societal and individual levels. Study 1 (144 countries) shows that poorer, more unequal nations score lower on indices of intergenerational concern and farsighted policies. Study 2 (34 countries, N = 123,502) shows that subjective socioeconomic status (SES) predicts greater obligation to sacrifice for future lives, especially in nations with less inequality. In Study 3 ( N = 1,264 Americans), individuals randomly assigned more resources allocate more to future generations, though not proportionately more. Replicating Studies 1 and 2, real-world SES predicts higher donations beyond situational framings. Thus, combatting present-day societal challenges may be key to increasing concern and action for humanity’s future.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1177/01461672261469612",
+    "landing": "https://doi.org/10.1177/01461672261469612",
+    "oa": "https://doi.org/10.31234/osf.io/2a5qn_v1"
+   },
+   "cites_collection": [
+    "marshmallow-trust",
+    "nature-science-replications"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1073/pnas.2531771123",
+   "doi": "10.1073/pnas.2531771123",
+   "openalex": "W4412483731",
+   "title": "Infants use helping to infer the existence and strength of caring relationships",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Bill Pepe",
+    "Brandon Matthew Woo",
+    "Ashley J Thomas",
+    "Lindsey J. Powell"
+   ],
+   "author_count": 4,
+   "source": "Proceedings of the National Academy of Sciences",
+   "date": "2026-04-10",
+   "abstract": "Prosocial and antisocial behaviors can reflect the actor's positive or negative feelings toward a specific person and their broader disposition toward others' welfare. Observers' inferences about these motives shape what they learn about the actor's social relationships and moral character, thereby informing expectations about the actor's future behaviors. In four preregistered studies, we used violation-of-expectation looking methods to investigate 14- and 15-mo-old infants' inferences about social motives by first showing them helping and hindering events and then assessing their expectations for those actors' future actions. If infants use helping and hindering to infer disposition-based motives, they should extend expectations about future helping to others. Alternatively, if they infer relationship-based motives, their expectations should be restricted to the initial interactants. In Experiments 1 and 2, infants first observed two actors, one who helped and another who hindered a common target. At test, infants expected the helper would help the same target in a new, perceptually distinct situation. However, this expectation did not generalize to a new target, suggesting infants inferred specific relationships, not general dispositions. In Experiments 3 and 4, we assessed whether infants used information about the existence or strength of a helper's relationships to predict who they would prioritize helping in the future. We found that infants used patterns of selective helping among multiple targets to make transitive inferences about whose needs the helper would prioritize. Taken together, this suggests that infants use such observations of helping to infer whether, and how much, the helper cares for their social partner.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1073/pnas.2531771123",
+    "landing": "https://doi.org/10.1073/pnas.2531771123",
+    "oa": "https://doi.org/10.1073/pnas.2531771123"
+   },
+   "cites_collection": [
+    "infants-helpers"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1016/j.jesp.2026.105012",
+   "doi": "10.1016/j.jesp.2026.105012",
+   "openalex": "W7218437046",
+   "title": "Reevaluating the empirical support for a lens-based account: dissecting comparative fit and reconstructive category guessing",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Roland Imhoff",
+    "Verena Heidrich"
+   ],
+   "author_count": 2,
+   "source": "Journal of Experimental Social Psychology",
+   "date": "2026-10-04",
+   "abstract": "The lens-based account of intersectional stereotyping (Petsko et al., 2022) proposes that perceivers put on social “lenses” for categorizing their environment that exhibit comparative fit with observed behavior in a given situation. Support for this claim comes from studies using the Who-Said-What paradigm (Taylor et al., 1978), in which category membership was manipulated to covary with speakers' pro versus contra positions in a discussion along one of two crossed social dimensions. However, as noted by Klauer et al. (2014), this paradigm is vulnerable to a critical limitation: when category membership can be inferred from statement content, apparent categorization effects may reflect reconstructive category guessing rather than genuine category memory. Across three experiments ( N = 764), we tested whether comparative fit modulates social categorization beyond such reconstructive processes. We replicated strong comparative fit effects when category membership was inferable from discussion statements, yielding large effects comparable to those reported by Petsko et al. (2022). Crucially, when participants responded to discussion-unrelated statements that no longer allowed inference of category membership, these effects disappeared, indicating that prior findings were substantially inflated by reconstructive guessing. In a final experiment, we introduced an alternative source of situational fit by spatially aligning speakers with opposing discussion positions during encoding of discussion-unrelated statements. Under these conditions, a significant but markedly smaller comparative fit effect emerged. Our findings suggest that comparative fit can enhance social categorization along the fitting dimension beyond reconstructive guessing. However, this situational lens is rapidly “put off” once the fit is no longer present.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.jesp.2026.105012",
+    "landing": "https://doi.org/10.1016/j.jesp.2026.105012",
+    "oa": "https://doi.org/10.1016/j.jesp.2026.105012"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1177/01461672261499423",
+   "doi": "10.1177/01461672261499423",
+   "openalex": "W7167519260",
+   "title": "Humanlike Self-Enhancement and Self-Protection in Generative Pre-Trained Transformer-Based AI Agents: Of Overclaiming and the Self-Serving Bias",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Siwei Fu",
+    "Constantine Sedikides",
+    "Weihua Zhou",
+    "Xinyue Zhou"
+   ],
+   "author_count": 4,
+   "source": "Personality and Social Psychology Bulletin",
+   "date": "2026-11-04",
+   "abstract": "We investigated whether generative pre-trained transformer (GPT)-based AI agents, despite presumably lacking humanlike sentience, emulate motivated behavior in group settings. We focused on overclaiming (overestimating one’s contribution to group outcomes) and the self-serving bias (SSB; taking disproportionate credit for group successes while deflecting blame for group failures). We conducted eight experiments involving a collaborative and creative group task (joke-writing). AI agents overclaimed their own contributions. An egocentrism-reduction manipulation (directing attention equally to one’s own and others’ contributions) attenuated, but did not eliminate, overclaiming. Further, AI agents exhibited the SSB. Overclaiming persisted across variations in temperature settings and demographic personas (gender, ethnicity) and was more pronounced in later GPT models. Also, chain-of-Thought reasoning did not reduce, and instead increased, overclaiming. AI systems can mimic human self-enhancement and self-protection, raising implications for the emergence of motivated self-like behavior in non-biological systems, the assumed neutrality of large language models, and the need for improved mitigation techniques.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1177/01461672261499423",
+    "landing": "https://doi.org/10.1177/01461672261499423",
+    "oa": "https://doi.org/10.1177/01461672261499423"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1016/j.jesp.2026.104965",
+   "doi": "10.1016/j.jesp.2026.104965",
+   "openalex": "W7171175953",
+   "title": "Willful ignorance in the context of antibiotic prescribing",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Alina Schneider",
+    "Miroslav Sirota",
+    "Marina Groß",
+    "Lars Korn",
+    "Elisabeth D. C. Sievert",
+    "Cornelia Betsch",
+    "ROBERT M. BOHM"
+   ],
+   "author_count": 7,
+   "source": "Journal of Experimental Social Psychology",
+   "date": "2026-07-25",
+   "abstract": "Healthcare professionals tend to overprescribe antibiotics despite knowing the risks of antibiotic resistance. This tendency, amplified under diagnostic uncertainty and patient pressure, suggests that mechanisms beyond lack of risk awareness or knowledge sustain overprescription. One such mechanism may be willful ignorance – deliberately avoiding information about the consequences of one’s prescribing decisions. By allowing healthcare professionals to justify immediate antibiotic prescribing that prioritize short-term self-interests over long-term collective benefits, willful ignorance may contribute to persistent overprescribing. Despite its practical relevance, willful ignorance has not yet been investigated in the context of antibiotic prescribing. To test this empirically, we conducted two preregistered online experiments with healthcare professionals from the United States and the United Kingdom. Participants completed an adapted version of the Moral Wiggle Room Task, a behavioral decision-making paradigm designed to investigate willful ignorance. This task compares choices across a full information condition with diagnostic certainty, and a hidden information condition with diagnostic uncertainty that can be voluntarily reduced. In Experiment 1 ( N = 698), healthcare professionals were more likely to prescribe antibiotics immediately in the hidden vs. full information condition, supporting the presence of willful ignorance. In Experiment 2 ( N = 150), making the collective consequences of antibiotic prescribing for antibiotic resistance salient substantially reduced willful ignorance. These results highlight the role of willful ignorance in antibiotic prescribing and point to practical implications: promoting transparent environments and communicating the collective consequences of antibiotic use may help support more appropriate antibiotic prescribing decisions.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.jesp.2026.104965",
+    "landing": "https://doi.org/10.1016/j.jesp.2026.104965",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0022103126000958/pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1073/pnas.2606837123",
+   "doi": "10.1073/pnas.2606837123",
+   "openalex": "W7225644725",
+   "title": "A signal convention in natural chimpanzee communication",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Antoine Valet",
+    "Richard Moore",
+    "Tatiana Bortolato",
+    "Tal Kleinhause G. Gedalyahou",
+    "Aude de Witasse-Thézy",
+    "Cédric Girard‐Buttoz",
+    "Roman Martin Wittig",
+    "Catherine Crockford"
+   ],
+   "author_count": 8,
+   "source": "Proceedings of the National Academy of Sciences",
+   "date": "2026-11-09",
+   "abstract": "Human language relies on conventional signals that are arbitrary, stable, and socially transmitted. Whether other animals exhibit meaning-based communicative conventions is virtually unknown. Using a quasi-experimental design, we investigated this in chimpanzee unvoiced calls (UCs), such as acoustic raspberries, known to show usage variation. We collected audio and contextual data in 91 chimpanzees (0 to 55 y), across eight wild and captive groups that differed in the presence or absence of adult role models. Communities with role models emitted UCs in one dominant context, which remained stable over years and from first utterances in development (1 to 2 y old). In contrast, groups without role models displayed highly variable, unstable UC usage across contexts and years. This contextual variation could not be explained by age or by a shared emotional valence, and individuals could use different UC forms within the same context, suggesting a decoupling between the signal form and usage. Together, these findings provide evidence that chimpanzee UCs meet key criteria for a signal convention: arbitrary signal-usage mappings, social transmission, and stability within communities. These findings demonstrate that conventionalized communication is not a uniquely human feature but can also emerge through social learning mechanisms in other animals' natural communication.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1073/pnas.2606837123",
+    "landing": "https://doi.org/10.1073/pnas.2606837123",
+    "oa": "https://www.pnas.org/doi/pdf/10.1073/pnas.2606837123"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1177/19485506261480179",
+   "doi": "10.1177/19485506261480179",
+   "openalex": "W7214324199",
+   "title": "Disability Representation in Social and Personality Psychology Research: A State-of-the-Art Review",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "William B. Meese",
+    "Jordan Rubin‐McGregor",
+    "Kyle Anderson",
+    "Kathleen R. Bogart",
+    "Brandon L. Boring",
+    "S. Mason Garrison",
+    "Jessica L. McManus",
+    "Ian Moura"
+   ],
+   "author_count": 19,
+   "source": "Social Psychological and Personality Science",
+   "date": "2026-09-25",
+   "abstract": "We conducted a systematic state-of-the-art review examining disability representation of three flagship social and personality psychology journals between 2017 and 2022. First, we examined the 2,343 articles published in that time frame and found that 192 (8.19%) of them used at least one instance of disability-related terminology. Second, we examined patterns of disability-related terminology use and found that these concepts were most often used extraneously (e.g., in parenthetical phrases). Only 3 (0.13%) articles were primarily focused on disability. This is the first systematic investigation to examine how and to what extent social and personality psychology research addresses topics related to disability. These findings highlight a need for substantive change in the representation of disability within social and personality psychology. We close with recommendations for researchers.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1177/19485506261480179",
+    "landing": "https://doi.org/10.1177/19485506261480179",
+    "oa": "https://doi.org/10.1177/19485506261480179"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.1177/01461672261467790",
+   "doi": "10.1177/01461672261467790",
+   "openalex": "W7169671502",
+   "title": "Does Self-Projection Have a Dominant Temporal Direction? In Nine Countries, People Feel More Similar to Their Future Than Past Selves",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Jareef Martuza",
+    "Simen Bø",
+    "Helge Thorbjørnsen",
+    "Hallgeir Sjåstad"
+   ],
+   "author_count": 4,
+   "source": "Personality and Social Psychology Bulletin",
+   "date": "2026-07-17",
+   "abstract": "Do you project your current self—the person you are today—equally across time? Compared to the present, 12 studies (total N = 11,416) reveal that people feel more similar to their future selves than their equidistant past selves. This future-oriented asymmetry in self-projection is directionally consistent across nine countries, with variation in effect size, and holds across different time horizons. Time-asymmetric self-projection covaries with higher levels of emotional connection between present and future selves and lower levels of perceived future self-change. We also provide preliminary causal-chain evidence for perceived self-change as a process by experimentally manipulating self-change beliefs. The future-oriented asymmetry appears to be self-focused, as it does not extend to others. Finally, future-oriented self-projection can lead to miscalibrated expectations: People expect their future selves to be more satisfied with hypothetical decisions made in the present than they currently would be with the same decisions in the past.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1177/01461672261467790",
+    "landing": "https://doi.org/10.1177/01461672261467790",
+    "oa": "https://doi.org/10.31234/osf.io/jp2ks"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1177/19485506261496101",
+   "doi": "10.1177/19485506261496101",
+   "openalex": "W7213487773",
+   "title": "Parents Have Smaller Support Networks but More Close-Knit Relationships Than Childfree and Other Non-Parent Adults",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Olivia Crawford",
+    "Phoebe E. McKenna-Plumley",
+    "Tanja Gerlach"
+   ],
+   "author_count": 3,
+   "source": "Social Psychological and Personality Science",
+   "date": "2026-10-22",
+   "abstract": "Declining fertility rates and growing numbers of adults forgoing parenthood highlight the need to understand how social integration differs across reproductive status groups. Yet most research treats non-parents as a homogeneous group, overlooking differences among the childfree, childless, undecided, ambivalent and not-yet-parents. Using an egocentric network approach, we examined structural and quality-related characteristics of support networks across six reproductive status groups ( N = 797; aged 18–86 years; 62% based in the United Kingdom/United States). Parents had smaller support networks but more close-knit relationships, suggesting a quality-quantity trade-off. Childfree adults showed relatively stable network sizes across age, while not-yet-parents and undecided participants’ networks more closely resembled parents. Age-related patterns hint at midlife as a dynamic period of network change. Our findings highlight the importance of distinguishing between non-parent groups, with implications for social ageing, wellbeing and support interventions, while discrepancies with prior studies raise questions about possible methodological artefacts in network elicitation.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1177/19485506261496101",
+    "landing": "https://doi.org/10.1177/19485506261496101",
+    "oa": "https://doi.org/10.1177/19485506261496101"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1177/19485506261475373",
+   "doi": "10.1177/19485506261475373",
+   "openalex": "W7201888993",
+   "title": "“Once Upon a Time, Far, Far Away”: Psychologically Distal Stories Are Judged as More Suitable to Convey General Messages",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Hadar Ram",
+    "Guy Grinfeld",
+    "Nira Liberman",
+    "Cheryl Jan Wakslak",
+    "Ravit Nussinson"
+   ],
+   "author_count": 5,
+   "source": "Social Psychological and Personality Science",
+   "date": "2026-08-07",
+   "abstract": "Storytelling helps people learn, make sense of the world, and connect with others. But stories and narrative may vary in how effective they are perceived to be at communicating different types of messages. Drawing on research on storytelling, communication, and psychological distance, we predicted that psychologically distant (vs. proximal) narratives would be perceived as more appropriate for conveying general messages. Findings across seven preregistered studies that used diverse tasks and manipulations of distance—including foreign versus local settings (Studies 1–3), large versus small audiences (Study 4), more versus less hypothetical scenarios (Study 5), and temporally proximal versus distal personal documentation (Study 6)—supported this prediction, suggesting that psychological distance signals that a narrative is intended to convey a general, abstract lesson. These findings have implications for how narratives are used in education, interpersonal communication, art, and persuasive messaging.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1177/19485506261475373",
+    "landing": "https://doi.org/10.1177/19485506261475373",
+    "oa": "https://doi.org/10.1177/19485506261475373"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1177/19485506261472146",
+   "doi": "10.1177/19485506261472146",
+   "openalex": "W7202391914",
+   "title": "Harmonies of Taste: Shared Music Preferences and Compatibility in Romantic Relationships",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Julia Vigl",
+    "Felix Lene Ihrig",
+    "Miriam Greif",
+    "Marcel R. Zentner"
+   ],
+   "author_count": 4,
+   "source": "Social Psychological and Personality Science",
+   "date": "2026-08-12",
+   "abstract": "Although partner similarity in demographics, personal values, and personality has been well studied, little is known about partner similarity in aesthetic dispositions. Music preferences offer a particularly promising lens for examining this question because they function as powerful social signals that individuals seem to consider when forming relationships, for example, by showcasing their favorite music on dating apps. Across three studies and a mini meta-analysis, we assessed the profile similarity in couples’ music preferences ( N couples = 309, primarily young adults) using both genre-based and artist-based methods, and compared these similarities with those observed for personal values and Big Five personality traits. Couples consistently demonstrated greater similarity in music preferences than pseudo-couples, and these effects exceeded those observed for values and personality traits. In addition, some analyses indicated small to modest positive associations between music preference similarity and relationship outcomes. These findings provide an initial demonstration of partner similarity in music preferences and its potential implications for relationship quality.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1177/19485506261472146",
+    "landing": "https://doi.org/10.1177/19485506261472146",
+    "oa": "https://doi.org/10.1177/19485506261472146"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/npv9f_v1",
+   "doi": "10.31234/osf.io/npv9f_v1",
+   "openalex": "W7227031564",
+   "title": "Depressive symptoms are associated with weaker evidence accumulation and greater caution during social decision-making",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Jinil Kim",
+    "Yuan-Wei Yao"
+   ],
+   "author_count": 2,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-14",
+   "abstract": "Depression is often characterized by reduced reward sensitivity, slowed responding, and altered social functioning. Prior drift-diffusion modeling studies have linked depression to less efficient accumulation of decision evidence and to greater decision caution in non-social decision-making tasks. However, it remains unclear whether similar process-level alterations extend to social decision-making tasks, such as the ultimatum game, which involves weighing monetary reward against emotional reactions to another player’s offer. To address this question, we applied drift-diffusion models to a publicly available dataset in which 351 adults, grouped by the Center for Epidemiologic Studies Depression Scale (CES-D), responded to offers in the ultimatum game. Participants with elevated depressive symptoms accepted offers at a rate comparable to those with lower symptoms but responded more slowly. In a standard time-stationary diffusion model, the high depressive-symptom group showed weaker evidence accumulation and greater decision caution, indexed by lower drift rate and wider decision thresholds, respectively. In an exploratory time-varying model that allowed different attributes to enter the decision process at different times, the same group differences in drift rate and decision threshold were observed. Additionally, the difference between reward and emotion information was estimated to enter the decision process later in the high depressive-symptom group. These findings suggest that depression-related slowing during social decision-making may arise from weaker evidence accumulation and greater decision caution, which are not apparent from acceptance rates alone.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/npv9f_v1",
+    "landing": "https://doi.org/10.31234/osf.io/npv9f_v1",
+    "oa": "https://doi.org/10.31234/osf.io/npv9f_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/89hge",
+   "doi": "10.31234/osf.io/89hge",
+   "openalex": "W7226401408",
+   "title": "Striking the Limits of the Rich-Get-Richer and the Poor-Get-Richer Hypothesis? Trait Interpersonal Emotion Regulation and its Associations with Instant Messaging Emotional Support and Mental Health in Daily Life",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Karen De Raeymaecker",
+    "Imke Baetens",
+    "Margot Bastin",
+    "Martijn Van Heel"
+   ],
+   "author_count": 4,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-15",
+   "abstract": "Up until now, the role of dispositions in the psychosocial effects of adolescent instant messaging (IM) remains inconclusive. While the straightforward rich-get-richer and poor-get-richer hypotheses do not allow for nuances about the individual-specific (dis)advantages of offline and online interactions, the literature on the dispositional tendencies for interpersonal emotion regulation shows a more complex picture. In this ecological momentary study (one week, 8 assessments/day), we adopted the rich-get-richer and poor-get-richer framework to test the social and psychological effects of IM with regard to the dispositional tendencies for co-rumination, co-dampening, and co-enhancing in 181 Belgian adolescents (n = 181; Mage = 15.04; 63% women). Adolescents with a higher tendency for co-dampening reported lower mean levels of momentary positive affect. Individuals with a clear tendency for co-enhancing experienced, on average, higher momentary IM emotional support. Regarding the tendency for co-rumination, no significant differences were found. Notably, (dis)advantageous social effects did not go together with similar psychological effects. Unexpectedly, IM behaviors (e.g., IM negative social exchange) were, regardless of the studied outcome and the level of analysis, systematically significant. Overall, this study endorses the importance of the abovementioned dispositional tendencies. Yet, their value was more limited than the rich-get-richer and the poor-get-richer hypotheses predicted.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/89hge",
+    "landing": "https://doi.org/10.31234/osf.io/89hge",
+    "oa": "https://doi.org/10.31234/osf.io/89hge"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/pydxw_v5",
+   "doi": "10.31234/osf.io/pydxw_v5",
+   "openalex": "W7231427657",
+   "title": "Cultural Distance between Geographic Regions is associated with Lower Mobility, Weaker Democracy, and Increased Risk of Civil Conflict",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Cindel J. M. White",
+    "Michael Muthukrishna"
+   ],
+   "author_count": 2,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-14",
+   "abstract": "Stable nations require strangers to coordinate and cooperate despite cultural differences. Using the Cultural Fixation Index (CFST) on World Values Survey data (268,992 participants; 95 countries; 2005–2022), we quantify cultural distances between demographic groups within countries, including between regions, ethnicities, religious groups, education levels, and social classes. We test whether within-country cultural distances are associated with national indicators of social mobility, democracy, and civil conflict. A pre-registered multiverse analysis (54,600 model specifications; 100 model families; 6 demographic groupings; 6 outcome measures) shows that only cultural distance between geographic regions is associated robustly with institutional weaknesses, such as higher corruption, weaker democracy, lower social mobility, and greater risk of civil conflict. In contrast, distances between ethnic, religious, and socioeconomic groups show few significant associations with national indicators of governance, mobility, and conflict, and educational distance is often associated with lower corruption and stronger democracies. The results imply that what matters is not diversity per se, but whether culturally distinct groups are geographically segregated.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/pydxw_v5",
+    "landing": "https://doi.org/10.31234/osf.io/pydxw_v5",
+    "oa": "https://doi.org/10.31234/osf.io/pydxw_v5"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/aqvr7_v1",
+   "doi": "10.31234/osf.io/aqvr7_v1",
+   "openalex": "W7226352911",
+   "title": "Building Connection Through Conversation: Linguistic Convergence and Neural Complexity in Dyadic Interaction",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Grace Qiyuan Miao",
+    "Zachary P Rosen",
+    "Agnieszka Pluta",
+    "Matthew D. Lieberman",
+    "Rick Dale",
+    "Yuwei Li"
+   ],
+   "author_count": 6,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-15",
+   "abstract": "Interpersonal connection emerges through conversation. Theories of interpersonal communication hold that conversational partners increasingly align in how they express meaning, build on one another’s contributions, and experience connection. Yet how such alignment unfolds during a conversation, and how it relates to the experience of a “good” interaction, remains largely untested. Seventy dyads of previously unacquainted individuals held naturalistic conversations while dual functional near-infrared spectroscopy (fNIRS) recorded neural activity. We measured semantic alignment using convergence entropy and substantive exchange, the number of adjacent turns in which both partners contributed contentful talk. Contrary to a convergence account, dyads broadened their semantic range over time. Subjective experience was predicted not by semantic alignment but by substantive exchange, particularly in shallow-prompt conversations. Neurally, inter-brain synchrony tracked substantive exchange, whereas semantic alignment was reflected in partners’ matched turn-to-turn neural dynamics. First conversations build connection through reciprocal, substantive exchange, with distinct linguistic and neural signatures.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/aqvr7_v1",
+    "landing": "https://doi.org/10.31234/osf.io/aqvr7_v1",
+    "oa": "https://doi.org/10.31234/osf.io/aqvr7_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1038/s41539-026-00459-x",
+   "doi": "10.1038/s41539-026-00459-x",
+   "openalex": "W7167080247",
+   "title": "Peer-led examination simulation reshapes psychophysiological and emotional state profiles during problem-based medical learning",
+   "category": "educational",
+   "status": "journal article",
+   "authors": [
+    "Morris Gellisch",
+    "T Schäfer"
+   ],
+   "author_count": 2,
+   "source": "npj Science of Learning",
+   "date": "2026-10-24",
+   "abstract": "Repeated problem-based learning (PBL) sessions are intended to sustain active, collaborative, and self-directed learning, yet evidence is mixed as to whether familiar PBL routines consistently maintain an appropriate level of learner activation over time. This repeated-measures study examined whether embedding a peer-led examination simulation into regular PBL reshapes psychophysiological and achievement-emotional state profiles. Forty-two medical students were assessed during resting reference, regular PBL, and PBL with peer-led examination simulation. Heart rate variability (HRV) was quantified using RMSSD, SDNN, pNN50, and LF/HF, alongside anxiety, perceived stress, achievement emotions, motivation, self-rated performance, and post-session appraisal. Both PBL formats reduced HRV relative to rest, indicating autonomic activation during regular PBL itself. Compared with regular PBL, examination simulation produced additional HRV withdrawal, higher anxiety and perceived stress, and lower boredom. Baseline-adjusted mixed models supported effects for RMSSD and SDNN; pNN50 did not survive false-discovery-rate correction, and LF/HF showed no robust effect. Enjoyment, motivation, and self-rated performance did not differ significantly. Students reported greater perceived benefit from and stronger preference for the simulation format. Peer-led examination simulation thus shifted PBL toward a more salient, assessment-like psychophysiological and emotional state profile.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1038/s41539-026-00459-x",
+    "landing": "https://doi.org/10.1038/s41539-026-00459-x",
+    "oa": "https://www.nature.com/articles/s41539-026-00459-x.pdf"
+   },
+   "cites_collection": [
+    "testing-effect"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1111/bjep.70127",
+   "doi": "10.1111/bjep.70127",
+   "openalex": "W7213547729",
+   "title": "Participation in extracurricular activities predicts academic growth and mediates socioeconomic inequalities in primary school",
+   "category": "educational",
+   "status": "journal article",
+   "authors": [
+    "Lys-Andréa Brunet",
+    "Margot Rémeau",
+    "Olivier Houdé",
+    "Grégoire Borst"
+   ],
+   "author_count": 4,
+   "source": "British Journal of Educational Psychology",
+   "date": "2026-09-17",
+   "abstract": "BACKGROUND: Inequalities in achievement related to family socioeconomic status (SES) emerge early and often widen during out-of-school periods, partly due to disparities in access to educational resources such as extracurricular activities (ECA). Yet, the contribution of ECA to achievement trajectories and academic inequalities during primary school remains underexplored. AIMS: The aims of the study are to explore the role of participation in ECA in Grade 1 on (a) intra-individual change in academic achievement between Grade 1 and Grade 5 and, (b) in mediating the association between SES and Grade 5 academic achievement. SAMPLE: We use a nationally representative sample of 14,513 French children. METHODS: Data were collected on SES, academic achievement and participation in three types of ECA (music/dance, library and sports). We used latent change score and mediation analyses. RESULTS: We found that ECA participation in Grade 1 was associated with better academic trajectories, with the effects being strongest for sports and music/dance participation. Family SES predicted participation in music/dance, library and sports activities in Grade 1. Participation in library and music/dance mediated 3.1% of SES's total effect in Grade 5 achievement. Supplementary domain-specific analyses indicated that this mediation was stronger for literacy via library and music/dance participation, whereas sports participation was comparatively more related to numeracy. CONCLUSION: Extracurricular activities (ECA) not only contributes to the academic trajectories in primary school, it also mediates the association between SES and academic achievement. Promoting equitable ECA access may thus represent a lever for reducing educational inequalities.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1111/bjep.70127",
+    "landing": "https://doi.org/10.1111/bjep.70127",
+    "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bjep.70127"
+   },
+   "cites_collection": [
+    "music-training-meta"
+   ],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1111/bjep.70139",
+   "doi": "10.1111/bjep.70139",
+   "openalex": "W7170060757",
+   "title": "Longitudinal attendance trajectories across three academic years in English secondary schools: Putative predictors and associations with emotional difficulties",
+   "category": "educational",
+   "status": "journal article",
+   "authors": [
+    "Christopher Knowles",
+    "Qiqi Cheng",
+    "Emma Thornton",
+    "Neil Humphrey"
+   ],
+   "author_count": 4,
+   "source": "British Journal of Educational Psychology",
+   "date": "2026-11-13",
+   "abstract": "OBJECTIVE: To identify longitudinal attendance trajectories across secondary education, examine factors associated with trajectory class membership and assess associations with emotional difficulties. METHOD: Three years of linked #BeeWell survey and administrative data were analysed for 28,736 pupils aged 12-13 in 2021/2022 across 156 secondary schools in Greater Manchester, England. Piecewise latent growth mixture modelling identified attendance trajectories across nine consecutive terms. Multinomial logistic regression examined putative predictors of class membership across individual, family, school, peer and community domains. Emotional difficulties were modelled as a latent growth process. RESULTS: Consistently High (92.4%), Progressive Decline (5.1%) and Decline and Partial Recovery (2.5%) trajectories emerged. Socio-economic disadvantage was strongly associated with both sub-optimal (persistently absent) trajectories (ORs = 2.94-4.97), with dose-response effects for neighbourhood deprivation. Special educational needs were associated with greater odds while sufficient sleep, school belonging and minoritized ethnic group membership was associated with lower odds of both sub-optimal classes; good physical health was associated with reduced odds of Progressive Decline only. LGBTQ+ identity was not independently associated in fully adjusted models. Pupils following sub-optimal trajectories reported higher emotional difficulties at study outset (d ≈ .34-.41), with no differences in rates of change over time. CONCLUSION: Attendance trajectories are socially patterned and associated with multiple co-occurring vulnerabilities. Emotional difficulties differences existed at outset but did not widen, inferring underlying vulnerability rather than a cumulative process across the observation window. Evidence of partial recovery indicates improvement is possible. Putative predictors tested herein offer promising candidates for research into causal mechanisms.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/bjep.70139",
+    "landing": "https://doi.org/10.1111/bjep.70139",
+    "oa": "https://doi.org/10.1111/bjep.70139"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1111/bjep.70141",
+   "doi": "10.1111/bjep.70141",
+   "openalex": "W7225819377",
+   "title": "Fostering the Sense of Security and Comfort in compulsory education: Emotional anchoring in peer and teacher relationships",
+   "category": "educational",
+   "status": "journal article",
+   "authors": [
+    "Matthias Huber",
+    "Christine Haupt"
+   ],
+   "author_count": 2,
+   "source": "British Journal of Educational Psychology",
+   "date": "2026-11-10",
+   "abstract": "BACKGROUND: The Sense of Security and Comfort (SSC) is a socially constructed emotion characterized by trust, contentment, and inner safety. It is increasingly recognized as a foundational condition for learning, motivation and self-regulation in compulsory education. However, little is known about the configurations through which SSC is actively fostered in everyday school life. AIMS: This study investigates (1) which core domains of school and classroom life characterize contexts that support SSC, and (2) how these domains combine into recurring relational patterns through which SSC is co-constructed. SAMPLE(S): This paper reports a qualitative study in which 40 teachers were purposively selected based on their students' SSC scores from a preceding quantitative survey of the Austrian compulsory school system (1462 students). METHODS: Semi-structured interviews were analysed using content structuring qualitative content analysis. Deductive categories were combined with inductively generated subcategories. A cross-pattern analysis reconstructed recurring constellations across domains to identify relational and pedagogical configurations through which SSC is stabilized or undermined. RESULTS: Six domains were central to fostering SSC: teachers' professionalism and relational practice, peer belonging, students' family background, emotional experiences, learning requirements and structural features of schooling. Four relational patterns emerged, each reflecting the dynamic interplay through which SSC is co-constructed across ecological layers of school life. CONCLUSIONS: SSC arises when peer belonging, relational attunement, structural predictability and developmental grounding converge. Implications include strengthening teachers' socio-emotional competence, aligning school practices with family-based relational resources, and systematically implementing regular social-learning lessons in compulsory education.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1111/bjep.70141",
+    "landing": "https://doi.org/10.1111/bjep.70141",
+    "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bjep.70141"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/wvk6n_v1",
+   "doi": "10.31234/osf.io/wvk6n_v1",
+   "openalex": "W7227031862",
+   "title": "“When AI Can Do the Task, Is Learning Still Worth It and Am I Capable?” Scales for Learning Value and Self-Efficacy in the Context of AI and Links to AI Use and Academic Outcomes",
+   "category": "educational",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Soheil Behdarvandirad",
+    "Maryamsadat Mirpour"
+   ],
+   "author_count": 2,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-14",
+   "abstract": "Generative artificial intelligence (AI) can now perform many academic tasks that students were once required to master, raising the question of whether learners still value learning for themselves and feel capable of learning without relying on AI. Available scales mainly focus on AI as the outcome of learning rather than the context of it. This study developed and validated brief scales measuring Learning Value in the Context of AI (LV-AI, the value of personally learning when associated tasks can be performed by AI) and Learning Self-Efficacy in the Context of AI (LSE-AI, the appraisal of ability to learn and perform academically without relying on AI) and examined their associations with AI use and academic outcomes (effort expenditure, persistence, GPA). Data were collected from 882 undergraduate students in the U.S. with approximately equal traditional-age and adult learners. Exploratory and confirmatory factor analysis supported a correlated two-factor structure. Both scales showed acceptable reliability (ω = .81 and .72), discriminant validity from classical task value and self-efficacy, and measurement invariance across student age type. When classical task value, classical self-efficacy, and AI use were controlled, LV-AI and LSE-AI incrementally predicted effort and persistence, but not GPA. Moreover, although AI use showed a significant negative association with academic effort, an exploratory mediation analysis indicated that this association no longer held when learners' LV-AI and LSE-AI were accounted for, with the indirect path carrying over half of the initial association. This highlights the important role these AI-embedded constructs play in preventing the disengagement tendencies.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/wvk6n_v1",
+    "landing": "https://doi.org/10.31234/osf.io/wvk6n_v1",
+    "oa": "https://doi.org/10.31234/osf.io/wvk6n_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.31234/osf.io/shjmk",
+   "doi": "10.31234/osf.io/shjmk",
+   "openalex": "W7227177657",
+   "title": "Perceived barriers and facilitators to recruitment in global surveillance of movement behaviours in the early years: Findings from the SUNRISE study",
+   "category": "educational",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Hollie Miller",
+    "Andrew Woods",
+    "Kar Hau Chong",
+    "Mark Stephen Tremblay",
+    "Claudia Maddren",
+    "Anthony Okely",
+    "John Reilly",
+    "Farid Bardid"
+   ],
+   "author_count": 8,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-14",
+   "abstract": "Background: Recruitment is often a challenge in health behaviour surveillance studies, especially when working with young children. The International Study of Movement Behaviours in the Early Years (SUNRISE Study) creates a unique opportunity to explore how barriers to recruitment and subsequent recruitment rates vary across countries. The present study aimed to examine global differences in recruitment rates, identify prominent barriers to recruitment, and explore researchers’ perceptions of recruitment practices. Methods: Research teams from 48 countries participating in the SUNRISE Study completed an online survey to examine perceived barriers and facilitators to recruitment of early childhood education and care (ECEC) settings, parents and preschoolers in the SUNRISE study. Descriptive analyses were performed to examine recruitment rates and barriers across countries, and directed content analysis, guided by the socio-ecological model were used to identify researchers’ perceptions of effective facilitators to overcome barriers. Results: Significant differences in recruitment rates and barriers were observed at both the country income and geographical region level for ECEC and parent/child recruitment with European and high-income countries reporting significantly lower recruitment rates. Across countries, the main barrier to ECEC and parent/child recruitment was time commitment concerns and parental concerns regarding accelerometer use, respectively. At the ECEC level, organisational barriers and centre beliefs regarding parent willingness were also identified to be prominent barriers by African & Eastern-Mediterranean, South-East Asia & Western Pacific, and Americas regions. These barriers were also considered prominent by low & lower-middle-income and upper-middle-income countries. Additional barriers to parent/child recruitment were time commitment concerns and lack of interest, as identified by European and high-income countries. Globally, facilitators at intrapersonal, interpersonal, and community level were found to be beneficial in overcoming recruitment barriers. This may involve providing education on the importance of movement behaviours to improve understanding, delivering participants in-person information sessions, and enlisting community organisations and professional networks to aid recruitment. Conclusion: Recruitment for child health surveillance and accelerometery research is inherently complex and may require context-specific approaches to overcome barriers. Our findings provide context-specific recruitment approaches to support the design and implementation of future global surveillance recruitment strategies, and to help ensure greater representativeness in global health research.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/shjmk",
+    "landing": "https://doi.org/10.31234/osf.io/shjmk",
+    "oa": "https://doi.org/10.31234/osf.io/shjmk"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-16"
   }
  ]
 }
