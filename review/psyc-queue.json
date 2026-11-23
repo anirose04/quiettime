@@ -446,7 +446,7 @@
    ],
    "author_count": 2,
    "source": "Open Mind",
-   "date": "2026-09-28",
+   "date": "2026-11-01",
    "abstract": "Contextual predictability shapes how we choose and encode words in production. The effects of a word’s predictability given preceding or past context are generally well-understood in both production and comprehension, but studies of naturalistic production have also revealed a poorly understood yet robust backward predictability effect of a word given only its future context, which may be linked to future planning. Across two studies of naturalistic speech, we revisit backward predictability using improved operationalizations, introducing Conditional Pointwise Mutual Information (conditional PMI), a conceptually motivated information-theoretic measure that quantifies the information shared between a word and the future sequence under the constraints imposed by the past context. Study 1 shows that this measure reproduces predictability effects of future context on phonetic reduction while remaining non-redundant with backward predictability. Study 2 moves from reduction to word choice, examining substitution errors within a novel generative framework that models lexical and contextual influences to predict the identity of the word that surfaces as an error. Within this framework, we find that past-conditioned predictability increases likelihood of erroneous selection, whereas future-conditioned predictability reduces it. In predicting error identity, conditional PMI emerges as the strongest contextual predictor, subsuming backward predictability. Together, these findings illuminate how past and future context shape word choice and encoding, linking contextual predictability to mechanisms of incremental planning in sentence production.",
    "abstract_license": "cc-by",
    "links": {
@@ -661,7 +661,8 @@
     "oa": "https://doi.org/10.1073/pnas.2531771123"
    },
    "cites_collection": [
-    "infants-helpers"
+    "infants-helpers",
+    "infants-replication"
    ],
    "first_seen": "2026-11-16"
   },
@@ -1085,7 +1086,7 @@
    "links": {
     "doi": "https://doi.org/10.1111/bjep.70139",
     "landing": "https://doi.org/10.1111/bjep.70139",
-    "oa": "https://doi.org/10.1111/bjep.70139"
+    "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bjep.70139"
    },
    "cites_collection": [],
    "first_seen": "2026-11-16"
@@ -1167,6 +1168,784 @@
    },
    "cites_collection": [],
    "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.1073/pnas.2534118123",
+   "doi": "10.1073/pnas.2534118123",
+   "openalex": "W7234628464",
+   "title": "Automating inequality? Gender bias in AI-mediated labor markets",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Kenza Elass",
+    "Germain Gauthier",
+    "Debora Nozza",
+    "Paola Antonia Profeta"
+   ],
+   "author_count": 4,
+   "source": "Proceedings of the National Academy of Sciences",
+   "date": "2026-11-16",
+   "abstract": "Generative AI is rapidly entering labor markets, with large language models (LLMs) now used to help write CVs and evaluate applicants. We study the risks this creates in a series of audit experiments in which applicant gender is randomly assigned while all other information is held constant. We find that LLMs generate gender-stereotypical CVs and exhibit gender bias in screening scores and wage recommendations. Screening scores track occupational gender segregation, penalizing women in male-dominated occupations and favoring them in female-dominated ones. Wage recommendations track occupational gender wage gaps when gender is explicit in the prompt, though this gradient weakens under name-based gender signaling and is sensitive to the LLMs being used. These disparities arise through two channels: evaluation bias, when identical CV content is evaluated differently by gender, and generation bias, when gendered content produced by the model affects later evaluation. Because the same systems shape both CV content and its subsequent assessment, these channels can reinforce one another. Taken together, our findings identify measurable risks of algorithmic amplification in AI-mediated job search.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1073/pnas.2534118123",
+    "landing": "https://doi.org/10.1073/pnas.2534118123",
+    "oa": "https://doi.org/10.1073/pnas.2534118123"
+   },
+   "cites_collection": [
+    "hungry-judges"
+   ],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.354",
+   "doi": "10.1162/opmi.a.354",
+   "openalex": "W7163207533",
+   "title": "Impact of Education and Music Training on the Development of Abstract Thinking in the First Years of Schooling",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Théo Morfoisse",
+    "Séverine Becuwe-Desmidt",
+    "Marie Palu",
+    "Cassandra Potier Watkins",
+    "Ghislaine Dehaene‐Lambertz",
+    "Stanislas Dehaene"
+   ],
+   "author_count": 6,
+   "source": "Open Mind",
+   "date": "2026-05-29",
+   "abstract": "Plato's Republic, Einstein's Theory of relativity, Vivaldi's Four Seasons are all remarkable examples of humans' unique ability to create and manipulate complex abstract structures, whether in language, mathematics, or music. Yet the mechanisms by which children develop such abstract thinking, and the role of education and structured experiences such as musical practice in shaping these abilities remains unclear. To explore these questions, we conducted cross-sectional behavioral experiments with 528 children aged 4 to 8, spanning four educational grades, half of whom participated in a violin training program, from age four. Two experiments examined how children encode, process, and compress auditory sequences and visual patterns, while a third examined their sensitivity to geometric regularities. Our results reveal the emergence of symbolic reasoning as early as the start of formal schooling, with deeper abstraction as a function of grade. By first grade, children encoded complex auditory sequences within a Language of Thought (LoT) similar to adults. Additionally, when confronted with quadrilaterals, children showed increasing sensitivity to geometric regularities, suggesting a developmental transition from perceptual to symbolic reasoning. However, we did not observe significant impact of musical practice on abstraction abilities across any of the domains tested. We discuss whether and how the impact of education and extracurricular activities such as music could be enhanced.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.354",
+    "landing": "https://doi.org/10.1162/opmi.a.354",
+    "oa": "https://doi.org/10.1162/opmi.a.354"
+   },
+   "cites_collection": [
+    "music-training-meta"
+   ],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1186/s41235-026-00722-0",
+   "doi": "10.1186/s41235-026-00722-0",
+   "openalex": "W7140724920",
+   "title": "Get the unbalance right: asymmetric transfer effects in cognitive offloading",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Irene Florean",
+    "Marta Stragà",
+    "Timo Mäntylä",
+    "Fabio Del Missier"
+   ],
+   "author_count": 4,
+   "source": "Cognitive Research Principles and Implications",
+   "date": "2026-03-26",
+   "abstract": "Research has shown that cognitive offloading improves immediate performance in perception, short-term memory, and prospective memory, but also has negative side effects, such as poorer memory for offloaded information. However, the transfer-related consequences of cognitive offloading on subsequent performance are still largely unknown. In two experiments, we investigated these consequences in a planning task in which participants were asked to find the shortest route connecting locations on a map, given some constraints on the order of visit. Transfer designs were used to assess the effects of training with or without the opportunity to offload cognition on subsequent planning performance when this opportunity was removed or offered. In Experiment 1, participants were either allowed to use the pen while planning on the map and spontaneously devise offloading strategies or they were prevented from doing so. In Experiment 2, visual aids supporting the offloading strategies observed in Experiment 1 were embedded into the maps in some conditions and not in others. The results showed that the negative effect of offloading removal exceeded the positive effect of its introduction, supporting the hypothesis that the transition from a simpler and more intuitive visual planning strategy to a more demanding incremental planning strategy entails higher strategy switching costs and challenges reconfiguration processes more than the reverse transition. More generally, the results show that the opportunity to offload cognition in complex tasks can affect the strategies used by participants and this can have cognitive consequences for the subsequent adoption of different strategies when environmental conditions change.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1186/s41235-026-00722-0",
+    "landing": "https://doi.org/10.1186/s41235-026-00722-0",
+    "oa": "https://link.springer.com/content/pdf/10.1186/s41235-026-00722-0.pdf"
+   },
+   "cites_collection": [
+    "nature-science-replications"
+   ],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1038/s41562-026-02627-w",
+   "doi": "10.1038/s41562-026-02627-w",
+   "openalex": "W4413327383",
+   "title": "Causal role of human hippocampus in relational structure learning and inference",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Deng Pan",
+    "Simone D’Ambrogio",
+    "Naomi Kingston",
+    "Miruna Rascu",
+    "Pranav Sankhe",
+    "Shuyi Luo",
+    "Miriam C. Klein-Flügge",
+    "Ali Mahmoodi"
+   ],
+   "author_count": 9,
+   "source": "Nature Human Behaviour",
+   "date": "2026-11-16",
+   "abstract": "When meeting new individuals or known individuals in new circumstances, we intuitively map out their relationships-not merely through direct experience, but by inferring new connections on the basis of prior relational knowledge. How such relational knowledge is represented and used in the brain remains a long-standing question in cognitive neuroscience. Here, using a behavioural task and computational modelling, we show that participants (N = 36) leveraged existing knowledge of relational structures to infer new relationships, facilitating adaptation in changing environments. Whole-brain neuroimaging identified consistent representations of relational structure in the hippocampus. To investigate the causal link between hippocampal representations and inference, we used neural network simulations to predict the behavioural effects of disrupting such representations. Consistent with this prediction, transcranial ultrasound stimulation of the human hippocampus (N = 20), transiently modulating its activity, disrupted structure-based inference (P < 0.001, Cohen's d = -0.89, 95% confidence interval -1.41 to -0.36), providing empirical evidence for a causal role of hippocampus in relational-structure learning and structure-based inference.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1038/s41562-026-02627-w",
+    "landing": "https://doi.org/10.1038/s41562-026-02627-w",
+    "oa": "https://www.nature.com/articles/s41562-026-02627-w.pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1186/s41235-026-00761-7",
+   "doi": "10.1186/s41235-026-00761-7",
+   "openalex": "W7222650313",
+   "title": "Susceptibility to misinformation in witnesses with symptoms of posttraumatic stress disorder, depression, and trauma exposure",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Lily C. Erner",
+    "Prerika R. Sharma",
+    "Laura Jobson",
+    "Kimberley A. Wade"
+   ],
+   "author_count": 4,
+   "source": "Cognitive Research Principles and Implications",
+   "date": "2026-10-16",
+   "abstract": "Within the general population, approximately 6% of people will have posttraumatic stress disorder (PTSD) and 15% will have depression at one point in their life, yet little is known about how symptoms of PTSD and depression affect people’s ability to accurately report details of a witnessed traumatic event. Studies exploring the relationship between psychopathology and eyewitness memory have primarily focussed on memory distortions that arise from internal cognitive processes (i.e. spreading activation). We examined the relationship between psychopathology and memory distortions resulting from external suggestion (i.e. misinformation). A total of 327 community participants completed measures of PTSD symptoms, depression symptoms, and exposure to traumatic events before viewing a film depicting a graphic car accident and being exposed to misinformation. Participants then completed cued recall and recognition memory tests. While higher PTSD symptomology was associated with poorer overall memory performance, the association between PTSD symptomology and the misinformation effect was not significant. Previous trauma exposure was also not significantly associated with the misinformation effect. However, for participants who reported no prior exposure to a transportation accident, the misinformation effect decreased as depression symptom scores increased. By contrast, for participants who reported prior exposure to a transportation accident, the misinformation effect remained stable across depression symptom scores. These results advance theory on psychopathology and memory distortions by revealing that prevailing frameworks (e.g. associative activation theory) may need further refining to better account for the complex associations between psychopathology and misinformation susceptibility. The results have practical implications for clinical and forensic settings.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1186/s41235-026-00761-7",
+    "landing": "https://doi.org/10.1186/s41235-026-00761-7",
+    "oa": "https://doi.org/10.1186/s41235-026-00761-7"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.389",
+   "doi": "10.1162/opmi.a.389",
+   "openalex": "W7128214914",
+   "title": "Approximating Cognitive Representations Using Space",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "John Robert Starr",
+    "Ashlyn Winship",
+    "Marten van Schijndel"
+   ],
+   "author_count": 3,
+   "source": "Open Mind",
+   "date": "2026-10-03",
+   "abstract": "In everyday life, people intuitively use space to make meaningful distinctions between objects. In this paper, we demonstrate how geometric, spatial representations can capture a wide variety of cognitive phenomena. To conduct these experiments, we developed GRIS (Generating Representations In Space), an advancement of prior spatial-arrangement paradigms. In GRIS experiments, participants manipulate a set of objects (text, audio, images) and place them on canvases. Following an introduction to the paradigm, we present three studies which demonstrate how experiments in the GRIS paradigm can both a) reveal nuanced insights about human and computational representations, and b) capture low-level behavioral data of spatial representations as they are constructed.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.389",
+    "landing": "https://doi.org/10.1162/opmi.a.389",
+    "oa": "https://doi.org/10.1162/opmi.a.389"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1016/j.cognition.2026.106776",
+   "doi": "10.1016/j.cognition.2026.106776",
+   "openalex": "W7211843308",
+   "title": "Event-general concepts guide semantic generalizations during verb learning cross-linguistically",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Sarah Hye-yeon Lee",
+    "Anna Papafragou"
+   ],
+   "author_count": 2,
+   "source": "Cognition",
+   "date": "2026-11-18",
+   "abstract": "Languages vary in how they map the conceptual components of events onto verbs. For example, some languages, such as English, often encode the manner of spontaneous motion in verbs (e.g., run), while others, such as Spanish, make greater use of verbs that encode the path of motion (e.g., enter). Such verb lexicalization biases are known to be malleable for spontaneous-motion verbs in English. In the present study, we probed the scope and malleability of such biases cross-linguistically. We found that both English-speaking and Spanish-speaking learners can learn new verb lexicalization biases from a few exposures and extend them to novel verb meanings within the same semantic class - in both previously documented and new domains (spontaneous motion - Experiment 1; caused motion - Experiment 2). Furthermore, speakers of both languages could extend verb biases across semantic classes (from spontaneous motion to caused motion - Experiment 1; and from caused motion to spontaneous motion - Experiment 2). These findings indicate that verb lexicalization biases are flexible higher-order semantic generalizations that draw from conceptual dimensions that cross-cut specific event types and support verb learning across languages.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106776",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106776",
+    "oa": "https://doi.org/10.1016/j.cognition.2026.106776"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1016/j.cognition.2026.106777",
+   "doi": "10.1016/j.cognition.2026.106777",
+   "openalex": "W7163558571",
+   "title": "Mind the cueing design: Order effects mask benefits of congruency pre-cues",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Chris Nuno",
+    "Máté Gyurkovics",
+    "Julie M. Bugg"
+   ],
+   "author_count": 3,
+   "source": "Cognition",
+   "date": "2026-11-20",
+   "abstract": "Evidence that individuals proactively adjust cognitive control in response to pre-cues signaling upcoming distraction has been surprisingly sparse, raising questions about the limits of volitional control. The present study tested whether this pattern reflects genuine constraints in proactive control engagement or methodological limitations of standard pre-cueing designs. Across two pre-registered experiments, we examined the role of cueing order (i.e., whether participants started with informative or uninformative pre-cue blocks) in the commonly used between-block design and evaluated an alternative within-block design in which informative and uninformative pre-cues were randomly intermixed. In Experiment 1, the standard approach of collapsing cueing order conditions yielded null pre-cue benefits for the between-block comparison, mirroring what is often observed in the literature. However, when considering cueing order, benefits emerged when informative cues were encountered first (cued-first group) but not when they appeared second (uncued-first group). In contrast, the within-block comparison produced reliable pre-cue benefits regardless of cueing order. Experiment 2 replicated the within-block pre-cue benefit using a fully intermixed design without the cueing order manipulation. Together, these findings indicate that sparse evidence for pre-cue benefits may partly reflect design-related constraints rather than limits in proactive control. Why pre-cue benefits depend on cueing order remains an open question, but the present findings reveal that the intermixed cueing design offers a more sensitive and reliable method for detecting cue-based control adjustments-with important implications for prominent theories of cognitive control.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106777",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106777",
+    "oa": "https://doi.org/10.1016/j.cognition.2026.106777"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1016/j.cognition.2026.106774",
+   "doi": "10.1016/j.cognition.2026.106774",
+   "openalex": "W7225696224",
+   "title": "Heterogeneity in holistic face processing disruptions in developmental prosopagnosia",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Angus F. Chapman",
+    "Lauren Clare Bell",
+    "Bradley Duchaine",
+    "Tirta Susilo"
+   ],
+   "author_count": 4,
+   "source": "Cognition",
+   "date": "2026-11-11",
+   "abstract": "Developmental prosopagnosia (DP) is a striking disorder characterised by lifelong deficits in face recognition. Research into the nature of DP has broad implications for understanding interrelated theoretical issues in vision, neural organisation, and development. One long-standing but unresolved question is whether holistic face processing, the integration of individual face features into a unified whole, is compromised in DP. Here, we test a large sample of DPs (N = 113), using the three signature effects of holistic processing: the inversion, composite, and part-whole effects. This approach allows us to characterise the extent and pattern of holistic reductions across multiple effects within the same sample and to assess relationships between them. We found that holistic processing is reduced across all three effects in DP. The magnitude of reductions varied across the different effects; however, follow-up analyses indicated that reductions in the composite effect were slightly less robust. We found little evidence linking these reductions to DP severity, though limited reliability in the holistic measures may constrain these conclusions. While we observed reductions in holistic processing at the group level, few individual DPs met the thresholds for impairment. Our findings suggest that DP is associated with weaker holistic effects, but do not support the notion that impairments in holistic processing are necessary for DP.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106774",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106774",
+    "oa": "https://doi.org/10.1016/j.cognition.2026.106774"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1186/s41235-026-00757-3",
+   "doi": "10.1186/s41235-026-00757-3",
+   "openalex": "W7223105960",
+   "title": "The interplay between verbal and visual information: how repetition and photos influence belief",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Jae Kwon",
+    "Lisa K. Fazio"
+   ],
+   "author_count": 2,
+   "source": "Cognitive Research Principles and Implications",
+   "date": "2026-10-21",
+   "abstract": "Repetition increases belief for both true and false statements. This illusory truth effect is pervasive, occurring for general facts (e.g., trivia), political news headlines, and health related claims. The effect is often attributed to the fluency account, in which repetition increases processing fluency, and this ease of processing is used as a cue for truth. Photos can also influence belief through a similar underlying mechanism. Presenting statements with semantically related and unrelated photos increases and decreases belief, respectively. The primary goal of the current study is to investigate whether the two effects interact. That is, does the addition of related and unrelated photos amplify or reduce the effect of repetition on perceived truth, respectively. In Experiment 1, participants (N = 151) rated the truth of trivia statements across three photo conditions (related, unrelated, none). In Experiment 2, participants (N = 201) rated the truth of political headlines across two photo conditions (related, none). In Experiment 3, participants (total N = 604) rated the truth of trivia statements across two photo conditions (related, none) and two stimulus sets, either with or without repetition. Overall, repetition increased belief, the photos did not influence belief, and there was not an interaction effect. The results suggest that when two different factors operating under a similar mechanism are at play in belief formation, the dominant effect (e.g., repetition) may overshadow the weaker effect (e.g., presence of photo). Even without the masking effect of repetition, we find that the effect of photos on belief is weak.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1186/s41235-026-00757-3",
+    "landing": "https://doi.org/10.1186/s41235-026-00757-3",
+    "oa": "https://doi.org/10.1186/s41235-026-00757-3"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1162/opmi.a.394",
+   "doi": "10.1162/opmi.a.394",
+   "openalex": "W7213562118",
+   "title": "Kinematics of Negative Headshake in Seven Sign Languages",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Киммельман Вадим Игоревич",
+    "Anastasia Bauer",
+    "Carl Börstell",
+    "Jan Bulla",
+    "Allah Bux Sargano",
+    "Laurence Crettenand",
+    "Lorena Figueiredo",
+    "Anna Kuder"
+   ],
+   "author_count": 12,
+   "source": "Open Mind",
+   "date": "2026-10-03",
+   "abstract": "In sign languages, negative sentences are often accompanied by nonmanual markers of negation, including headshake. In some sign languages, nonmanual markers alone can express negation, without the presence of a manual negative sign. While there has been considerable research on the typology of negation in sign languages in terms of syntactic structure and co-occurrence patterns of manual and nonmanual markers, very little research has been done on kinematic properties of negative headshake and their relation to linguistic features. In this exploratory study, we analyzed kinematics of negative headshake in seven sign languages-Brazilian Sign Language, Dutch Sign Language, German Sign Language, Kata Kolok, Norwegian Sign Language, Polish Sign Language and Russian Sign Language-using naturalistic corpus data (mainly free conversations). We used manual annotation of headshakes to analyze duration, and the computer vision tool 3DDFA_v2 to analyze amplitude and velocity. We considered whether headshake kinematics differs across languages, and whether it is affected by the presence of a manual negative sign and/or by spreading of the headshake across multiple signs. In addition, we compared three zones falling under the headshake: pre-negative sign, negative sign, and post-negative sign. We found that duration of headshakes varies cross-linguistically and is affected by spreading. For amplitude and maximum velocity, we found that spreading headshakes are kinematically stronger than non-spreading headshakes, but the presence of a manual negative sign does not significantly affect these kinematic measures. For zones within headshake, we found that, in general, the negative sign zone is kinematically weakest contrary to some previous findings for Dutch Sign Language, but that there is cross-linguistic variation in how the zones affect the kinematic measures. The study presents the first ever description of headshake kinematics in naturalistic data from several sign languages, and provides a first step towards typological research into kinematics of nonmanual markers.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1162/opmi.a.394",
+    "landing": "https://doi.org/10.1162/opmi.a.394",
+    "oa": "https://direct.mit.edu/opmi/article-pdf/doi/10.1162/OPMI.a.394/2629050/opmi.a.394.pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1016/j.cognition.2026.106778",
+   "doi": "10.1016/j.cognition.2026.106778",
+   "openalex": "W7133545154",
+   "title": "Exploring cognitive and emotional predictors of adaptive information search",
+   "category": "cognitive",
+   "status": "journal article",
+   "authors": [
+    "Lara Abel",
+    "Florian Ellsaesser",
+    "Alberto Feduzi",
+    "Jonathan D. Nelson"
+   ],
+   "author_count": 4,
+   "source": "Cognition",
+   "date": "2026-11-16",
+   "abstract": "Adaptive information search often requires balancing competing cognitive goals. In selecting an information search strategy, individuals may face a trade-off between the speed and efficiency of information acquisition. Evidence suggests that individual differences explain variability in how people trade-off deliberation time and accuracy when making decisions. However, less is known about how individuals might differ in how they balance search speed and efficiency in information-rich environments that require sequential information sampling and flexible goal coordination. In our exploratory study, N = 127 participants played a novel variant of the code-breaking game Mastermind in three conditions: in the speed condition, participants were incentivized for rapid game completion; in the efficiency condition for using few queries; and in the mixed condition for both. We assessed individual differences in numeracy, working memory, state and trait emotion, personality and thinking styles in a pretest. Our results suggest that both numeracy and working memory predict information search behaviour across these conditions. Higher numeracy and working memory scores were associated with improved performance and more effective information search strategies across conditions, particularly under time pressure. Emotional predictors showed smaller and condition-dependent effects. State emotional dominance was negatively associated with performance in the mixed condition, suggesting a modulating role of emotional dominance in the coordination of competing demands. State emotional valence was negatively associated with performance under the speed incentive, potentially reflecting a relationship between emotional valence and time-sensitive goal-directed behaviour. Our exploratory findings stress the relevance of considering individual differences in research on adaptive information search.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.cognition.2026.106778",
+    "landing": "https://doi.org/10.1016/j.cognition.2026.106778",
+    "oa": "https://doi.org/10.1016/j.cognition.2026.106778"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/cgjqt",
+   "doi": "10.31234/osf.io/cgjqt",
+   "openalex": "W7237799782",
+   "title": "Cognitive changes after Covid-19 infection in the UK Biobank dataset",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Josefína Weinerová",
+    "Andrew Reid",
+    "Denis Schluppeck",
+    "Roni Tibon"
+   ],
+   "author_count": 4,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-22",
+   "abstract": "SARS-CoV-2, the virus responsible for the Covid-19 pandemic, has been shown to have an impact on cognitive function, but the specific areas affected remain unclear. In this preregistered study, we present findings on the effects of Covid-19 on cognition using UK Biobank data. Cognitive changes in participants who recovered from Covid-19 (N=1085, 51-82 years) were compared to those of control participants tested before the pandemic and after the pandemic outbreak (pandemic control group, N=1011, 51-82 years) and to those of a second control group that underwent both testing sessions before the pandemic (pre-pandemic control group, N= 2360, 49-82 years). In accordance with our predictions, we found an effect of Covid-19 on associative memory, such that participants who underwent Covid-19 infection showed a decrease in performance compared to both control groups, conceptually replicating our previous results obtained with another dataset (Weinerova et al., 2025). Contrary to our predictions, however, we did not find an effect of Covid-19 on executive function, problem solving and language. This study provides valuable insights into the nature of cognitive changes after Covid-19 infection which may inform public health professionals and policy makers.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/cgjqt",
+    "landing": "https://doi.org/10.31234/osf.io/cgjqt",
+    "oa": "https://doi.org/10.31234/osf.io/cgjqt"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/wq8rv",
+   "doi": "10.31234/osf.io/wq8rv",
+   "openalex": "W7237702161",
+   "title": "A Simple Introduction to the Effects of Measurement Error and Omitted Interactions in the Context of Linear Regression",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Aljoscha Rimpler",
+    "Henk A. L. Kiers",
+    "Don van Ravenzwaaij"
+   ],
+   "author_count": 3,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-22",
+   "abstract": "Many technical texts exist on the potential problems of measurement error (i.e., variables are measured imperfectly) and the inclusion of interaction effects in linear regression. Such resources are typically rife with techniques that may or may not solve the situation (e.g, mean-centering) depending on the presence or absence of certain conditions (e.g., multicollinearity). Understanding such texts can be daunting to applied researchers, especially as visualizations of the potential effects of these are typically lacking. We provide a Shiny app to help users better understand and anticipate such situations. Based on user-specified input, the app allows users to compare a model that includes only linear effects to a model that additionally includes an interaction effect when such an interaction exists. It allows comparisons of the effects on regression weights, their bias and variance at different evaluation points, confidence regions for regression surfaces, model fit, and model differentiability. This information should ultimately help researchers to understand the problem at hand and align their substantive research objectives with their modeling choices better. Thus, the app is a useful tool towards both learning about and teaching about potential pitfalls of simple linear regression and is aimed at applied researchers in the social sciences.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/wq8rv",
+    "landing": "https://doi.org/10.31234/osf.io/wq8rv",
+    "oa": "https://doi.org/10.31234/osf.io/wq8rv"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/9kaxv",
+   "doi": "10.31234/osf.io/9kaxv",
+   "openalex": "W7237528276",
+   "title": "Hierarchical knowledge and skills undermine payoff-biased social learning",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Nanda Ramo Jafarian",
+    "Björn Lindström",
+    "Ingmar Visser",
+    "Annemie Ploeger",
+    "Pieter van den Berg",
+    "Lucas Molleman"
+   ],
+   "author_count": 6,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-23",
+   "abstract": "Acquiring skills and knowledge (“traits”) through social learning is central to human development and cultural evolution. Yet it remains unclear how individuals can effectively learn from others when traits form hierarchies, with advanced traits building on more basic ones. We present a model showing that trait hierarchies favour “proximal social learning” where individuals copy others who are only slightly more knowledgeable. In contrast, payoff bias - often assumed to be universally advantageous - performs poorly because it directs learners toward advanced traits they lack the basics for. Our experiments demonstrate that people indeed shift to proximal social learning when conditions favour it. Our results challenge core assumptions of mainstream cultural evolution theory and highlight that trait hierarchies are a key factor shaping human social learning.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/9kaxv",
+    "landing": "https://doi.org/10.31234/osf.io/9kaxv",
+    "oa": "https://doi.org/10.31234/osf.io/9kaxv"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/eus6d_v1",
+   "doi": "10.31234/osf.io/eus6d_v1",
+   "openalex": "W7237972746",
+   "title": "The cortical representation of materials and their properties",
+   "category": "cognitive",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Hua-Chun Sun",
+    "Martin N. Hebart",
+    "Filipp Schmidt",
+    "Roland W. Fleming"
+   ],
+   "author_count": 4,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-22",
+   "abstract": "Perceiving materials like metal, wood or soil is essential for many everyday tasks, yet we still understand little about how materials are represented in the brain. Here we report the most comprehensive mapping of neural representations of materials and their properties to date. In an event-related fMRI design over multiple sessions, six participants viewed every image in the STUFF dataset—which includes 200 different material categories—14 times each, yielding precise estimates of cortical responses. We compared these responses with 36 ‘core dimensions’ of material perception derived from >1.8 million perceptual similarity judgments on the same image set. This revealed ‘cortical feature maps’ of activity associated with each dimension. Most maps spanned large swaths of cortex, indicating a highly distributed and multiplexed representation. Multidimensional scaling revealed systematic relationships between the maps, with >95% of the variance between maps accounted for by just six axes. Despite this, for 35 of the 36 core dimensions, feature values could be decoded from brain activity patterns, and in pairwise comparisons, material categories could be decoded with 88.9% accuracy. Together our findings reveal a highly distributed multidimensional material representation that supports the read-out of both properties and categories of materials.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/eus6d_v1",
+    "landing": "https://doi.org/10.31234/osf.io/eus6d_v1",
+    "oa": "https://doi.org/10.31234/osf.io/eus6d_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1037/pspp0000600",
+   "doi": "10.1037/pspp0000600",
+   "openalex": "W4412961618",
+   "title": "Speaking of gender: Language genderedness and its association with gender differences in personality across 48 languages.",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Roxana Hofmann",
+    "René Mõttus"
+   ],
+   "author_count": 2,
+   "source": "Journal of Personality and Social Psychology",
+   "date": "2026-09-01",
+   "abstract": "Previous studies have suggested that personality assessments can be influenced by the language people speak. Therefore, gendered ways of thinking, feeling and behaving may be associated with gendered structures encoded in different languages. Here, we study the association be-tween gender differences in personality traits as measured by the IPIP-NEO (n = 755,307; rep-resenting 48 languages from 122 countries, with English being the language of assessment and therefore held constant) and the genderedness of languages as rated by experts, estimated by word embedding models on large-scale text corpora from movie subtitles and Wikipedia, and rated by large language models such as ChatGPT, Gemini and DeepSeek. Consistent across all measures of language genderedness, more gendered languages were associated with stronger gender differences in personality traits compared to less gendered languages (r = 0.51 to 0.59), suggesting that language might influence people’s self-concept in terms of their gender.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1037/pspp0000600",
+    "landing": "https://doi.org/10.1037/pspp0000600",
+    "oa": "https://files.osf.io/v1/resources/r8tx6_v3/providers/osfstorage/687b99c8a9e11d7b878e88a9?action=download&direct&version=2"
+   },
+   "cites_collection": [
+    "russian-blues"
+   ],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1016/j.jesp.2026.104995",
+   "doi": "10.1016/j.jesp.2026.104995",
+   "openalex": "W7212065657",
+   "title": "When does perspective-taking predict coalition success? The interplay of propensity, accuracy, and social predictability",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Anabela Cantiani",
+    "Ilja van Beest",
+    "Thorsten M. Erle"
+   ],
+   "author_count": 3,
+   "source": "Journal of Experimental Social Psychology",
+   "date": "2026-09-10",
+   "abstract": "Theories of coalition formation assume that coalition outcomes are determined by static features of the game (e.g., players' resources), because these features are thought to elicit universal allocation norms that allow players to anticipate each other's demands. Yet the same structural features can carry different social meanings depending on what players want, expect, and consider fair. Perspective-taking helps players navigate this social information, but its importance may depend on how predictable the social context is. We examined whether perspective-taking predicts coalition success more strongly when allocation norms are difficult to anticipate, than when norms are clear. We tested this hypothesis in two experiments using a real-time three-person coalition paradigm, in which we manipulated the predictability of allocation norms ( High-Predictable vs. Low-Predictable ). In Experiment 1 ( N = 851), perspective-taking predicted greater inclusion and higher payoffs only in the Low-Predictable condition. In Experiment 2 ( N = 1206, preregistered), we replicated the main effect of perspective-taking across conditions, but not its moderation by norm predictability. Exploratory analyses distinguishing the propensity to take perspective from the accuracy of doing so found that in the Low-Predictable condition propensity translated into coalition success only when paired with accurate inference of partners' norms; in the High-Predictable condition, propensity predicted success independently of accuracy. These findings showed that socio-cognitive processes play a relevant role in coalition formation, and that accuracy adds value beyond propensity only when allocation norms are less predictable.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1016/j.jesp.2026.104995",
+    "landing": "https://doi.org/10.1016/j.jesp.2026.104995",
+    "oa": "https://www.sciencedirect.com/science/article/pii/S0022103126001253/pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1098/rsos.261328",
+   "doi": "10.1098/rsos.261328",
+   "openalex": "W7235140530",
+   "title": "‘Not letting them set the music’: a qualitative exploration of coping strategies for suicidal thoughts in an online support community",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Lauro Estivalete Marchionatti",
+    "Luisa Wagner",
+    "Anna Paula Couto de Souza Abdon",
+    "Camila Barcellos",
+    "Eduardo Virtuoso",
+    "Kailaine Eduarda Da Rosa",
+    "Rafael Ramos Amaral",
+    "Matheus Dalazen Foletto"
+   ],
+   "author_count": 9,
+   "source": "Royal Society Open Science",
+   "date": "2026-11-04",
+   "abstract": "Interventions for suicidal ideation often focus on mitigating behaviours rather than addressing underlying cognitive processes. This study aims to explore coping mechanisms described by individuals reporting lived experiences with suicidal thoughts. We collected spontaneous narratives from non-identified users on a Reddit support community (r/depression). Data were extracted with an automated Python script scrapping threads related to suicidal ideation. We identified posts reporting first-hand experiences on coping and managing suicidal thoughts, which were explored with codebook thematic analysis. Analysis revealed a spectrum of attitudes towards suicidal thoughts, ranging from resistance to acceptance. Suicidal thoughts are a distressing experience leading to significant worry, and overemphasizing possible meanings or actively suppressing thoughts paradoxically increases their strength. Coping strategies included distraction, seeking social support and reframing thoughts. In particular, understanding and accepting thoughts may downsize their relevance. Validation emerged as a crucial factor in empowering individuals to regain control over their experiences. People struggling with suicidal thoughts may benefit from acceptance-oriented strategies and validation support. Engaging with suicidal ideation not solely as a risk but as a lived experience can open new avenues for research and care.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1098/rsos.261328",
+    "landing": "https://doi.org/10.1098/rsos.261328",
+    "oa": "https://royalsocietypublishing.org/rsos/article-pdf/doi/10.1098/rsos.261328/6177878/rsos.261328.pdf"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1098/rsos.261976",
+   "doi": "10.1098/rsos.261976",
+   "openalex": "W7203747225",
+   "title": "Dominance hierarchies are structured similarly in females and males across primate groups",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Lucas Spicher",
+    "Élise Huchard",
+    "Dieter Lukas"
+   ],
+   "author_count": 3,
+   "source": "Royal Society Open Science",
+   "date": "2026-11-04",
+   "abstract": "Classic socioecological theory predicts that males and females experience different sources and mechanisms of social competition. Whether these differences translate into sex‑specific structural properties of dominance hierarchies remains unclear. Here, we compiled 156 dominance interaction matrices from 80 studies and extracted three commonly used metrics-hierarchy steepness, linearity and the directional consistency-to investigate the structural characteristics of male and female dominance hierarchies across primates. All three metrics were strongly affected by methodological and demographic variables. Steepness increased with the number of recorded interactions and group size, linearity decreased as matrices became sparser, and directional consistency declined with increasing numbers of interactions. The metrics covaried: groups with steeper hierarchies also exhibit more linear and more directionally consistent relationships. We found no sex differences in steepness, linearity or directional consistency. These results suggest that current metrics primarily reflect variation in the sampling effort and the rate of interaction and that, at a basic level, agonistic interactions are similar among female and male primates. Our findings highlight the need for alternative measures of potential power asymmetries that are less confounded by sampling effort and demographic variation to better understand how competition and conflict are structured across societies.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1098/rsos.261976",
+    "landing": "https://doi.org/10.1098/rsos.261976",
+    "oa": "https://doi.org/10.1098/rsos.261976"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1177/01461672261472608",
+   "doi": "10.1177/01461672261472608",
+   "openalex": "W7202307704",
+   "title": "Maybe I Can’t Cook, but It Doesn’t Mean I Don’t Care: Moral Framing and Private Criticism of Meat Consumption Leads to Psychological Defensiveness",
+   "category": "social",
+   "status": "journal article",
+   "authors": [
+    "Isaac Chung",
+    "Pascale Sophie Russell",
+    "Erica G. Hepper"
+   ],
+   "author_count": 3,
+   "source": "Personality and Social Psychology Bulletin",
+   "date": "2026-08-12",
+   "abstract": "Meat consumption contributes to climate change and has become a moralized issue. People may face moral criticism for meat consumption. Building on the central role of morality in person evaluation, this research tested the hypotheses that moral (vs. competence) and public (vs. private) criticism received online would elicit greater defensiveness among meat-eaters. Study 1 ( N = 307) supported the hypothesis that moral criticism heightened defensive responses (e.g. sensitivity, derogation, and avoidance). Study 2 ( N = 316) showed, unexpectedly, that private criticism led to greater defensiveness, potentially due to its “personal” nature. Further analysis revealed that the effects of moral framing and private criticism were mediated by perceived moral devaluation. Defensive responses were also generally stronger among individuals higher in narcissistic rivalry. In addition, perceived moral devaluation predicted lower intention to reduce meat consumption. Public messaging aimed at reducing meat consumption should avoid moral framing and personal-sounding negative feedback to minimize defensive responses.",
+   "abstract_license": "cc-by-nc",
+   "links": {
+    "doi": "https://doi.org/10.1177/01461672261472608",
+    "landing": "https://doi.org/10.1177/01461672261472608",
+    "oa": "https://doi.org/10.1177/01461672261472608"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/zhysx",
+   "doi": "10.31234/osf.io/zhysx",
+   "openalex": "W7237042423",
+   "title": "What Matters Most in Addiction Recovery? Personal Recovery Priorities in Context",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Lucas Serrano‐Pastor",
+    "Alfredo Zarco-Alpuente",
+    "Sylvia Georgieva",
+    "Paula Samper García",
+    "José-Antonio Giménez-Costa"
+   ],
+   "author_count": 5,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-20",
+   "abstract": "Introduction: Recovery-oriented care requires understanding what people themselves consider important in recovery. This study examined personal recovery priorities and their associations with recovery-related and contextual characteristics among adults in addiction recovery.Methods: A cross-sectional national survey included 1,598 adults in recovery. Personal recovery priorities were assessed across seven CHIME-DP dimensions using the Personal Recovery Importance Scale. Sociodemographic characteristics, substance-use, recovery history, psychosocial conditions and recovery capital were assessed using the Life in Recovery survey. Group differences and hierarchical regression were examined.Results: All seven recovery dimensions were rated highly important (M = 8.52-9.14). Women attributed greater importance than men to all dimensions, while older adults rated Empowerment and Difficulties higher than emerging adults. Differences across recovery stages showed no consistent linear pattern. Greater barriers in recovery were associated with higher importance ratings across several dimensions, while greater satisfaction with social and living conditions, fewer problematic substances and fewer relapses were also recurrently associated with higher ratings, indicating that greater importance was linked to indicators of both vulnerability and stability. Growth in strengths was associated with Hope, while reductions in barriers were associated with Meaning in Life and Practical Support.Discussion and conclusion: Recovery priorities reflected different combinations of vulnerability, stability and recovery experience rather than a uniform progression across recovery stages. The findings support the relevance of the CHIME-DP dimensions to addiction recovery and suggest that recovery goals should be identified collaboratively. Routine assessment of personal recovery priorities alongside recovery capital and psychosocial circumstances may support more person-centred recovery planning.Keywords: substance use disorders; recovery; patient-centered care; quality of life; Recovery-Oriented Care",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/zhysx",
+    "landing": "https://doi.org/10.31234/osf.io/zhysx",
+    "oa": "https://doi.org/10.31234/osf.io/zhysx"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/d8mjs",
+   "doi": "10.31234/osf.io/d8mjs",
+   "openalex": "W7237868709",
+   "title": "Recovery Capital, Structural Barriers, and Wellbeing Among Adults in Addiction Recovery: Findings from the Life in Recovery Survey in Spain",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Lucas Serrano‐Pastor",
+    "Sylvia Georgieva",
+    "Alfredo Zarco-Alpuente",
+    "Ângela Maria Teixeira Leite",
+    "Paula Samper García",
+    "José-Antonio Giménez-Costa"
+   ],
+   "author_count": 6,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-22",
+   "abstract": "Understanding how personal, social, and structural conditions shape recovery capital is important for explaining differences in addiction recovery and wellbeing. This study examined strengths and barriers during active addiction and recovery and their associations with addiction complexity, recovery trajectories, social and structural conditions, perceived change, and wellbeing. A cross-sectional national survey included 1,598 adults in recovery in Spain who completed the Spanish-adapted Life in Recovery survey and measures of social and living conditions, quality of life, and harmony in life. Analyses included paired t tests, correlations, group comparisons, and hierarchical regression models. Participants retrospectively reported substantially more strengths (mean difference = 4.23, d = 1.03) and fewer barriers (mean difference = -4.74, d = 1.33) in recovery than during active addiction. Strength growth and barrier reduction were modestly associated (r = -.29), supporting their interpretation as related but distinct dimensions of recovery capital. Higher strengths in recovery were associated with more consolidated self-identified recovery stages, earlier problem identification and recovery initiation, use of multiple recovery pathways, and greater satisfaction with social and living conditions (R² = .128). Barriers were more strongly patterned by structural conditions, including employment, housing, and perceived economic situation (R² = .070). Higher strengths, fewer current barriers, and greater perceived barrier reduction were associated with better quality of life (R² = .092) and harmony in life (R² = .097), while women reported lower wellbeing after adjustment. The findings support a contextual and multidimensional understanding of recovery capital and highlight the importance of strengthening personal and social resources while addressing persistent material and structural barriers in recovery-oriented care.Keywords: Addiction Recovery; Recovery Capital; Structural Barriers; Wellbeing; Life in Recovery; Recovery-Oriented Care.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/d8mjs",
+    "landing": "https://doi.org/10.31234/osf.io/d8mjs",
+    "oa": "https://doi.org/10.31234/osf.io/d8mjs"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/25sbx_v1",
+   "doi": "10.31234/osf.io/25sbx_v1",
+   "openalex": "W7237669699",
+   "title": "A review of perceived social traits in AI-generated hyperrealistic human faces",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Dalia Israel",
+    "Genevieve L. Quek",
+    "Manuel Varlet",
+    "Tijl Grootswagers"
+   ],
+   "author_count": 4,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-23",
+   "abstract": "Advances in generative artificial intelligence (AI) produce synthetic human faces that are difficult to distinguish from photographs of real people. Because social impressions from faces form rapidly and can influence consequential judgements, the growing realism of AI-generated faces raises questions about how these faces are socially perceived. This review synthesises evidence from 10 empirical studies examining whether AI-generated faces are evaluated differently from real faces and what may account for these differences. Across the reviewed studies, AI-generated faces receive more favourable social evaluations than real faces, including higher ratings of trustworthiness and attractiveness, while familiarity also emerges as a component of their perception. These patterns are consistent with established face-perception research showing that faces perceived as more typical tend to receive more favourable social evaluations. AI-generated faces may disproportionately reflect such characteristics, including greater averageness or typicality. However, appearance alone does not determine these judgements: disclosure, labelling, and beliefs about artificiality can weaken or alter otherwise favourable impressions. Overall, social responses to AI-generated faces appear to reflect an interaction between perceptual characteristics and beliefs about origin. The central challenge is no longer only whether AI-generated faces can pass as human, but how people who do not exist can shape real social judgements.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/25sbx_v1",
+    "landing": "https://doi.org/10.31234/osf.io/25sbx_v1",
+    "oa": "https://doi.org/10.31234/osf.io/25sbx_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/648f2",
+   "doi": "10.31234/osf.io/648f2",
+   "openalex": "W7237775702",
+   "title": "Structural Equation Modeling with Word-Embedding for Text-Based Measurement",
+   "category": "social",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Artur Pokropek",
+    "Hubert Plisiecki",
+    "Maria Flakus",
+    "Adam Waszkowski",
+    "Kinga Małyska",
+    "Tomasz Żółtak"
+   ],
+   "author_count": 6,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-22",
+   "abstract": "In recent years, advances in natural language processing have led researchers to increasingly usetext-based data to study various psychological and social phenomena. This usually goes withoutan explicit measurement model or evaluation of the psychometric properties of text-basedindicators. We introduce SEM-WE, which fits measurement and structural models to correlationmatrices that are based on word embeddings derived from texts under study. Each construct isrepresented by several indicator words or phrases. The centered cosine matrix provides the inputfor estimating loadings, residuals, model fit statistics, reliability indicators, and parametersdescribing relations between constructs. We use a synthetic corpus, a survey study that combinesboth textual and Likert-type questions, and real-life posts from X in a multi-study validationexercise. Using simulated persona attitudes, self-ratings, and human coding as benchmarks, wecompare six approaches: dictionary stance counts, embedding centroids based on positiveindicators alone, embedding centroids contrasting positive and negative indicators, annotations bya local language model, annotations by a frontier language model, and SEM-WE. SEM-WEreproduces benchmark signs in these examples and their ordering at least as well as other methods,matching or outperforming most competitors under the reported configurations. Dictionary andcentroid results vary more across reported configurations, while large language models performwell in the synthetic and survey studies; however, at much higher computational cost.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/648f2",
+    "landing": "https://doi.org/10.31234/osf.io/648f2",
+    "oa": "https://doi.org/10.31234/osf.io/648f2"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1038/s41539-026-00450-6",
+   "doi": "10.1038/s41539-026-00450-6",
+   "openalex": "W7204480253",
+   "title": "Mixing problems increases performance of all students but especially of low-achieving ones in college calculus",
+   "category": "educational",
+   "status": "journal article",
+   "authors": [
+    "Steve Bennoun",
+    "Veronica X. Yan",
+    "Alice Xu"
+   ],
+   "author_count": 3,
+   "source": "npj Science of Learning",
+   "date": "2026-08-28",
+   "abstract": "College mathematics courses often act as gatekeepers to studies in science, technology, engineering, and mathematics (STEM). Increasing student performance in these courses is highly important to meet STEM workforce demand. We investigated whether interleaved and spaced homework sets, where problems on different topics are mixed across multiple assignments, increase students’ grades on exams compared to traditional blocked homework sets where problems are grouped by topics. Using a quasi-experimental design, students in two sections of a large ( N = 585) undergraduate calculus course completed either interleaved or blocked homework sets. Interleaved homework improved final exam performance for all students while disproportionately benefiting students with a below or slightly-above average initial performance. Our results indicate that interleaving was particularly beneficial for underrepresented minority and first-generation students. A change in homework structure can be a promising way to both help all students improve their performance while also reducing equity gaps in university mathematics courses.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1038/s41539-026-00450-6",
+    "landing": "https://doi.org/10.1038/s41539-026-00450-6",
+    "oa": "https://www.nature.com/articles/s41539-026-00450-6_reference.pdf"
+   },
+   "cites_collection": [
+    "interleaving-rct"
+   ],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1080/00220973.2026.2730118",
+   "doi": "10.1080/00220973.2026.2730118",
+   "openalex": "W4409064040",
+   "title": "Does Socially Desirable Responding Change After an Intervention? Implications for Estimating Treatment Effects",
+   "category": "educational",
+   "status": "journal article",
+   "authors": [
+    "James G. Soland",
+    "Joshua B. Gilbert"
+   ],
+   "author_count": 2,
+   "source": "The Journal of Experimental Education",
+   "date": "2026-10-07",
+   "abstract": "Survey measures are common in intervention research, but may suffer from biases such as socially desirable responding (SDR). While previous work demonstrates how unaddressed SDR can affect study results in observational contexts, the degree to which SDR may affect treatment effect estimates from randomized controlled trials (RCTs) is less studied. To shed light on this issue, we examine empirical data from 9 RCTs from education, psychology, and health fields and compare estimated treatment effects from models that do and do not account for SDR. Results show that SDR is generally balanced between experimental groups at baseline, the degree of pre-post SDR shift varies substantially across studies, and with two exceptions, estimated treatment effects were mostly unaffected by simultaneous adjustment for SDR. We complement our empirical results with a simulation study to determine the degree of SDR necessary to bias treatment effects and find that severe SDR can bias treatment effects when not accounted for in the model. However, models accounting for SDR are more complex and produce estimates that are slightly downwardly biased despite matching the data-generating model. We conclude with a discussion of recommendations for researchers using survey instruments as outcomes in RCTs.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.1080/00220973.2026.2730118",
+    "landing": "https://doi.org/10.1080/00220973.2026.2730118",
+    "oa": "https://doi.org/10.31234/osf.io/ujx4n_v1"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/qs7tv",
+   "doi": "10.31234/osf.io/qs7tv",
+   "openalex": "W7237083223",
+   "title": "From Mindfulness-based to Breathwork-based Stress Reduction: Towards a standardised framework in breathwork",
+   "category": "educational",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Guy W. Fincham",
+    "Evgenii Pashnin",
+    "Joel Alan Patchitt",
+    "Edward Caddye",
+    "Evan Lewis-Healey",
+    "Jocelyn C Rose",
+    "Amy Amla Kartar",
+    "Lealahni Woulfe"
+   ],
+   "author_count": 9,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-20",
+   "abstract": "Much like meditation, breathwork is an umbrella term for a vast school of practices that affect (neuro)physiology and phenomenology. Recently, breathwork has moved rapidly from Yoga and wellness studios into offices and mobile apps, and emerging data suggest it can reduce stress and improve quality of life. Yet practices, durations (‘doses’), settings and facilitators differ widely, making comparison difficult. Moreover, no widely adopted, secular, graded framework offers the general population a full breath toolkit. Safety is also unpredictable, especially when faster-paced breathwork is taught without rigorous screening, expert instruction and integration. Before Mindfulness-based Stress Reduction (MBSR) emerged in 1979, Western meditation faced unregulated, fragmented and predominantly spiritual practice. What changed was not a new technique but an eight-week, secular, manualised and uniform structure that could be repeatedly tested and scaled; trial evidence followed the framework, not the reverse. We argue breathwork now requires such a moment to flourish into a scalable and accessible intervention. We clarify the model of MBSR and propose an adapted new framework, Breathwork-based Stress Reduction (BBSR), which parallels MBSR’s weekly core (macro)practices with breathwork equivalents, alongside brief micropractices and integration into daily life. BBSR is grounded in the modulation of the autonomic nervous system, progressing from foundational resting breathing to slow-paced practices, movement, retentions and faster-paced breathing (think: sitting, walking, running, sprinting). Breathwork zones (BWZs) rise progressively (e.g., BWZ-1; noticing, BWZ-2; physiological sigh, BWZ-3; retention, BWZ-4; conscious connected breathing), supported by rigorous screening and skilled instructors. If necessary, all participants are invited to soften their experience, prioritising safety, tolerability and agency. Participants finish by building their own individualised toolkit. As MBSR is regarded as the ‘gold standard’ for meditation interventions in the West, BBSR should aim to become the gold standard of structured breathwork. In sum: breathwork now needs its MBSR moment.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/qs7tv",
+    "landing": "https://doi.org/10.31234/osf.io/qs7tv",
+    "oa": "https://doi.org/10.31234/osf.io/qs7tv"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.31234/osf.io/r2x76",
+   "doi": "10.31234/osf.io/r2x76",
+   "openalex": "W7237203054",
+   "title": "Tales from the CREP: A Report on Varied Implementations of the Collaborative Replications and Education Project",
+   "category": "educational",
+   "status": "preprint (not peer reviewed)",
+   "authors": [
+    "Jared G. Branch",
+    "Jordan Wagge",
+    "Mark John Brandt",
+    "Mona Ibrahim",
+    "Alannah Shelby Rivers",
+    "Lisa Willoughby",
+    "Amanda Mae Woodward",
+    "Carole L. Yue"
+   ],
+   "author_count": 8,
+   "source": "PsyArXiv (OSF Preprints)",
+   "date": "2026-11-20",
+   "abstract": "Introduction: In response to the replication crisis, there is a need for large-scale collaborative replications. Students are well-positioned to contribute to this literature through classroom replications.Statement of the Problem: Teaching open science practices and engaging students in the replication process is difficult for instructors who have no prior training.Literature Review: We review literature detailing why instructors choose not to implement replications in the classroom. The Collaborative Replications and Education Project (CREP) provides a template for such efforts, carried out by students under the guidance of an instructor knowledgeable in open science practices. We discuss the outcomes from a series of instructor workshops aimed at teaching instructors of psychology how to implement CREP within classrooms of varying demographics.Teaching Implications: Five instructors – ranging from private, primarily undergraduate institutes to large, public R1s – discuss their experiences, challenges, and recommendations for including CREP replications in classroom settings.Conclusion: The outcomes for students, and lessons learned for instructors, should provide first-time instructors with a guide map for including such efforts within their own classrooms.",
+   "abstract_license": "cc-by",
+   "links": {
+    "doi": "https://doi.org/10.31234/osf.io/r2x76",
+    "landing": "https://doi.org/10.31234/osf.io/r2x76",
+    "oa": "https://doi.org/10.31234/osf.io/r2x76"
+   },
+   "cites_collection": [],
+   "first_seen": "2026-11-23"
   }
  ]
 }

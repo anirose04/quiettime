@@ -4,7 +4,7 @@
  "window_days": 365,
  "about": "Every item here was read before publication: the title and abstract, checked against the paper's Crossref record. The full papers were not read unless a decision in review/decisions.json says so. abstract is the authors' own text under an open licence.",
  "counts": {
-  "items": 28
+  "items": 27
  },
  "items": [
   {
@@ -221,25 +221,6 @@
    "links": {
     "doi": "https://doi.org/10.1017/mdh.2026.10059",
     "landing": "https://doi.org/10.1017/mdh.2026.10059"
-   },
-   "first_seen": "2026-11-08"
-  },
-  {
-   "id": "doi:10.1017/mdh.2025.10042",
-   "doi": "10.1017/mdh.2025.10042",
-   "title": "Habit, medicine, and society in 18th-century Britain",
-   "category": "ideas",
-   "authors": [
-    "Alexander Wragge‐Morley"
-   ],
-   "author_count": 1,
-   "source": "Medical History",
-   "date": "2025-11-17",
-   "abstract": "This article examines the place of habit in the medical thought and practices of 18th-century Britain. Scholars, including Steven Shapin and Phil Withington, have shown that habit was important to the broadly humoral understandings of health, disease, and regimen that dominated in Europe for much of the early modern period. In this article, I offer the first sustained attempt to understand the role of habit in the medical thought of 18th-century Britain, focusing on the influential Scottish physician William Cullen. For the first time engaging with all of Cullen's work on habit, including his correspondence, pathological lectures, and clinical lectures, I show that medics of the 18th century developed a new understanding of habit, linked to changing ideas about the nervous system. Increasingly, they emphasised the role that habit could play in causing the periodical return of bodily functions, even when there appeared to be no plausible physical cause. In so doing, medics engaged with one of the key debates of the 18th century - the contested notion that human nature itself might be contingent on social and environmental conditions. For them, habit provided the means by which society could quite literally change the body. These ideas come through clearly in the striking suggestion - hitherto unnoticed - that menstruation was the product of habit, arising not from nature but from culture. Discussions of menstruation reveal the political stakes of habit, with links to highly contested debates about the role that bodies of different genders might play in society.",
-   "abstract_license": "cc-by",
-   "links": {
-    "doi": "https://doi.org/10.1017/mdh.2025.10042",
-    "landing": "https://doi.org/10.1017/mdh.2025.10042"
    },
    "first_seen": "2026-11-08"
   },
@@ -550,5 +531,5 @@
    "first_seen": "2026-11-08"
   }
  ],
- "last_refreshed": "2026-11-16T17:00:53.667Z"
+ "last_refreshed": "2026-11-23T19:15:31.446Z"
 }

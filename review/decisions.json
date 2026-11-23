@@ -736,13 +736,6 @@
    "date": "2026-11-09",
    "reader": "Claude"
   },
-  "doi:10.1080/00220973.2026.2730118": {
-   "decision": "reject",
-   "reason": "methods paper; licence could not be confirmed",
-   "fingerprint": "95593de79972de6c",
-   "date": "2026-11-09",
-   "reader": "Claude"
-  },
   "doi:10.1007/s10648-026-10202-y": {
    "decision": "reject",
    "reason": "theory review, not a finding",
