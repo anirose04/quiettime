@@ -146,12 +146,19 @@
       const beside = [...play.children].filter(el => el !== stage && getComputedStyle(el).flexBasis !== '100%')
         .reduce((w, el) => w + el.offsetWidth + parseFloat(cs.columnGap || 0), 0);
       const maxW = Math.max(200, play.clientWidth - beside);
-      const maxH = Math.max(380, innerHeight - 110);
+      // the toolbar, the basket and the fruit order underneath all fit in the window together
+      const fmEl = document.getElementById('fm'), guide = fmEl.querySelector('.fm-guide');
+      const above = play.getBoundingClientRect().top - fmEl.getBoundingClientRect().top;
+      const below = guide ? guide.offsetHeight + parseFloat(getComputedStyle(guide).marginTop || 0) : 0;
+      const maxH = Math.max(300, innerHeight - above - below - 28);
       const scale = Math.min(maxW / view.w, maxH / view.h);
       const cssW = Math.floor(view.w * scale), cssH = Math.floor(view.h * scale);
       if (canvas.width !== Math.round(cssW * dpr) || canvas.height !== Math.round(cssH * dpr)) {
         canvas.width = Math.round(cssW * dpr); canvas.height = Math.round(cssH * dpr);
         canvas.style.width = cssW + 'px'; canvas.style.height = cssH + 'px';
+        // in classic the next box lines up with the rim of the basket, not the empty sky above it
+        const side = play.querySelector('.fm-side');
+        if (side) side.style.marginTop = endless || getComputedStyle(side).flexBasis === '100%' ? '' :Math.round(-G.VIEW_TOP * scale) + 'px';
         if (map) { map.style.height = Math.round(cssH * .8) + 'px'; map.height = Math.round(cssH * .8 * dpr); map.width = Math.round(52 * dpr); }
       }
       const dt = Math.min(.1, (now - last) / 1000); last = now;
@@ -169,8 +176,8 @@
     requestAnimationFrame(frame);
     // bring the playing area to the top of the window so the big basket fits; the title is just above
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      const v = document.querySelector('.page .view');
-      if (v) scrollTo({ top: v.getBoundingClientRect().top + scrollY - 8, behavior: 'instant' });
+      const v = document.getElementById('fm');
+      if (v) scrollTo({ top: v.getBoundingClientRect().top + scrollY - 10, behavior: 'instant' });
     }));
   }
 
