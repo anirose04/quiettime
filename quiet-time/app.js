@@ -2,7 +2,7 @@ const $=s=>document.querySelector(s), app=$('#app');const storage={get(k){try{re
 const sites={murdoku:'https://murdoku.com/',nyt:'https://www.nytimes.com/crosswords',murdle:'https://murdle.com/','little-daily':'https://thelittledaily.com/'};
 // timer-only activities: done away from the screen, timed by the quiet session itself
 const timerPages={'mary-oliver':'mary oliver time','stretching':'stretching time','coloring':'coloring time'};
-const sessionChoices=[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['tumble','tumble'],['garden','data garden'],['history','the history paper'],['psyc','the psyc paper'],['write','just write'],...Object.entries(timerPages)];
+const sessionChoices=[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['fruitmerge','fruitmerge'],['dominoes','dominoes'],['tumble','tumble'],['garden','data garden'],['history','the history paper'],['psyc','the psyc paper'],['write','just write'],...Object.entries(timerPages)];
 let quiet=storage.get('quiet-session');
 function activeQuiet(){if(!quiet)return false;if(quiet.pausedLeft!=null)return true;if(Date.now()>=quiet.until){if(timerPages[quiet.page])storage.set('timer-done',quiet.page);quiet=null;storage.set('quiet-session',null);return false}return true}
 function sessionRemaining(){if(!activeQuiet())return '';let secs=Math.ceil((quiet.pausedLeft??quiet.until-Date.now())/1000);return Math.floor(secs/60)+':'+String(secs%60).padStart(2,'0')}
@@ -14,7 +14,7 @@ function attachSessionControls(){let start=$('#startSession');if(start)start.onc
 function requestEarlyEnd(){if(!activeQuiet())return;const existing=$('#quietExitDialog');if(existing){existing.remove();return}const mask=document.createElement('div');mask.id='quietExitDialog';mask.className='session-modal';mask.innerHTML=`<div class="session-dialog" role="dialog" aria-modal="true" aria-labelledby="sessionDialogTitle"><h2 id="sessionDialogTitle">leave this quiet moment?</h2><p>you can leave at any time, with a brief pause before switching.</p><p id="exitCountdown" aria-live="polite">you can end the session in 8 seconds.</p><div class="controls"><button class="pill" id="stayQuiet">stay here</button><button class="primary" id="confirmQuietExit" disabled>finish early</button></div></div>`;document.body.append(mask);$('#stayQuiet').onclick=()=>mask.remove();const until=Date.now()+8000;function step(){if(!mask.isConnected)return;let remaining=Math.ceil((until-Date.now())/1000),button=$('#confirmQuietExit');if(remaining<=0){$('#exitCountdown').textContent='you can leave whenever you choose.';button.disabled=false}else{$('#exitCountdown').textContent=`you can end the session in ${remaining} seconds.`;setTimeout(step,200)}}step();$('#confirmQuietExit').onclick=()=>{quiet=null;storage.set('quiet-session',null);mask.remove();go('home')};}
 // the homepage collection: [heading, [[id, name, kind]]]; kind sets the card colour
 const collection=[
- ['games',[['sudoku','sudoku','games'],['minesweeper','minesweeper','games'],['solitaire','solitaire','games'],['murdoku','murdoku','games'],['nyt','nyt games','games'],['murdle','murdle','games'],['little-daily','the little daily','games'],['tumble','tumble','games']]],
+ ['games',[['sudoku','sudoku','games'],['minesweeper','minesweeper','games'],['solitaire','solitaire','games'],['fruitmerge','fruitmerge','games'],['dominoes','dominoes','games'],['murdoku','murdoku','games'],['nyt','nyt games','games'],['murdle','murdle','games'],['little-daily','the little daily','games'],['tumble','tumble','games']]],
  ['words',[['write','just write','writing']]],
  ['explore',[['garden','data garden','learning'],['history','the history paper','reading'],['psyc','the psyc paper','reading']]],
  ['away from the screen',[['mary-oliver','mary oliver time','timer'],['stretching','stretching time','timer'],['coloring','coloring time','timer']]]
@@ -25,6 +25,8 @@ const icons={
  sudoku:`<rect x="8" y="8" width="32" height="32" rx="4"/><path d="M18.7 8v32M29.3 8v32M8 18.7h32M8 29.3h32"/>`,
  minesweeper:`<circle cx="24" cy="24" r="9"/><path d="M24 8v5M24 35v5M8 24h5M35 24h5M12.7 12.7l3.5 3.5M31.8 31.8l3.5 3.5M12.7 35.3l3.5-3.5M31.8 16.2l3.5-3.5"/>`,
  solitaire:`<rect x="7" y="12" width="20" height="28" rx="3" transform="rotate(-10 17 26)"/><rect x="21" y="9" width="20" height="28" rx="3"/><path d="M31 18l3.5 5-3.5 5-3.5-5z" class="solid"/>`,
+ fruitmerge:`<circle cx="18" cy="31" r="10"/><circle cx="33" cy="34" r="7"/><circle cx="27" cy="17" r="5"/><path d="M27 12c0-3 1-5 3-6"/><path d="M30 7c3-1 6 0 7 2-3 1-6 0-7-2z" class="solid"/><path d="M6 42h36"/>`,
+ dominoes:`<rect x="5" y="8" width="26" height="13" rx="3"/><path d="M18 8v13"/><circle cx="11.5" cy="14.5" r="1.6" class="solid"/><circle cx="22" cy="11.8" r="1.4" class="solid"/><circle cx="27" cy="17.2" r="1.4" class="solid"/><rect x="29" y="18" width="13" height="26" rx="3"/><path d="M29 31h13"/><circle cx="35.5" cy="24.5" r="1.6" class="solid"/><circle cx="32.8" cy="35" r="1.4" class="solid"/><circle cx="38.2" cy="35" r="1.4" class="solid"/><circle cx="32.8" cy="40" r="1.4" class="solid"/><circle cx="38.2" cy="40" r="1.4" class="solid"/>`,
  murdoku:`<path d="M7 7h24v24H7zM15 7v24M23 7v24M7 15h24M7 23h24"/><circle cx="33" cy="33" r="6"/><path d="M37.5 37.5l4.5 4.5"/>`,
  nyt:`<rect x="8" y="8" width="32" height="32" rx="3"/><path d="M16 8v32M24 8v32M32 8v32M8 16h32M8 24h32M8 32h32"/><path d="M16 8h8v8h-8zM32 24h8v8h-8zM8 32h8v8H8z" class="solid"/>`,
  murdle:`<circle cx="24" cy="24" r="16"/><circle cx="24" cy="20" r="4"/><path d="M22 23.5l-2 8.5h8l-2-8.5"/>`,
@@ -47,6 +49,8 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
  else if(page==='sudoku')drawSudoku();
  else if(page==='solitaire')drawSolitaire();
  else if(page==='minesweeper')drawMinesweeper();
+ else if(page==='fruitmerge')drawFruitmerge();
+ else if(page==='dominoes')drawDominoes();
  else if(page==='tumble')drawTumble();
  else if(page==='garden')drawGarden();
  else if(page==='history')drawHistory();
