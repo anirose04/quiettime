@@ -1,7 +1,7 @@
 /* quiet time — fruitmerge: fruit definitions and illustrations.
    The tier order, sizes, colours, shapes and faces all live here, so a fruit can be retuned or
    redrawn without touching the physics or the game rules. r is the physics radius in world units
-   (the basket is 460 wide); sizes run from 19 to 79 so neighbouring fruit feel close in size.
+   (the basket is 600 wide); sizes run from 19 to 79 so neighbouring fruit feel close in size.
    Style: fruit first. Flat pastel fills, a moderately thin outline in a darker shade of each
    fruit's own colour, one soft highlight, simple botanical details, and a small face (dot eyes,
    or closed smiling eyes on a few) that grows with the fruit. Every SVG is a 100 × 100 box whose

@@ -282,8 +282,7 @@ function drawTumble() {
       <button class="pill" data-tumble="left" type="button" aria-label="move left">◀</button>
       <button class="pill" data-tumble="jump" type="button" aria-label="jump">jump</button>
       <button class="pill" data-tumble="right" type="button" aria-label="move right">▶</button>
-    </div>
-    <p class="muted tumble-help">← → or a d to move, space or ↑ to jump (hold it to jump farther). walk onto a wall and the tunnel turns with you.</p>`);
+    </div>`);
   tumbleReset(saved.level, 'ready');
   $('#tumbleLevel').onchange = e => tumbleReset(+e.target.value, 'ready');
   $('#tumbleRestart').onclick = () => tumbleReset(tumble.level.n, 'ready');

@@ -530,3 +530,44 @@ body.home-page .shell{width:min(780px,calc(100% - 32px))}
   .fm-side{flex:1 1 100%}
   .fm-guide-list{justify-content:flex-start}
 }
+
+/* fruitmerge: a big basket with the next fruit (and, in endless, the stack map) right beside it */
+.fm-play{justify-content:center;gap:14px}
+.fm-stage{flex:0 0 auto}
+.fm-side{flex:0 0 72px;gap:10px}
+.fm-next{padding:5px 6px 3px}
+.fm-next-art{width:40px;height:40px}
+.fm-look{flex:0 0 54px}
+.fm-look canvas{margin-top:0}
+@media (max-width:760px){.fm-stage{flex:0 0 auto}}
+
+/* sudoku: controls in a toolbar above the game (like fruitmerge), a board sized to the window,
+   and a big number / colour pad right beside it */
+.sdk-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--qt-on-green-rule);margin-bottom:18px}
+.sudoku-wrap{gap:28px;align-items:flex-start;justify-content:center}
+.sudoku-board{width:min(100%,calc(100vh - 130px),660px)}
+.cell{font-size:clamp(1rem,3.2vh,1.9rem)}
+.side{width:auto;gap:12px}
+.numgrid{grid-template-columns:repeat(3,clamp(60px,9vh,84px));gap:10px}
+.numgrid button{min-height:0;aspect-ratio:1;font-size:clamp(1.3rem,3vh,1.8rem)}
+.color-pad .cdot{width:46%;min-width:24px}
+@media(max-width:650px){
+  .side{width:100%}
+  .numgrid{grid-template-columns:repeat(9,minmax(0,1fr));gap:5px}
+  .numgrid button{font-size:1.15rem}
+  .color-pad .cdot{width:70%;min-width:0}
+}
+
+/* sudoku: new puzzle sits apart, at the right end of the toolbar */
+.sdk-bar #new{margin-left:auto}
+
+/* one toolbar format for every game: controls on the left, a small tally after them, and the
+   new-game button on its own at the right, all above a fine rule */
+.ms-toolbar,.sol-bar,.dm-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--qt-on-green-rule);margin:0 0 18px}
+#msNew,#newSol,#dmNew{margin-left:auto}
+.ms-flags,.sol-tally{margin-left:4px;font-family:var(--qt-type);font-size:.85rem;color:#f1eedfb3;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ms-flags span{color:var(--qt-on-green)}
+/* minesweeper: the board sits in the middle of the page */
+.ms-board-scroll{display:block;text-align:center}
+.ms-board{margin:0 auto;text-align:left}
+.ms-message{text-align:center;min-height:1.4em}

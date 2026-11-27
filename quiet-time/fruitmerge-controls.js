@@ -1,5 +1,5 @@
 /* quiet time — fruitmerge: controls.
-   mouse: move to aim, click to drop. keyboard: ← → aim, space drops, p pauses,
+   mouse: move to aim, click to drop. keyboard: ← → aim, space drops,
    ↑ ↓ / page up / page down look around the endless pile, home returns to the top.
    touch: one finger aims and lifting it drops; two fingers look around without dropping.
    wheel and the stack map only move the camera; they never drop fruit. While looking
@@ -117,7 +117,7 @@
       if (e.repeat) return;
       if (G.inspecting(s)) G.returnToTop(s);
       else if (G.drop(s)) api.dropped();
-    } else if (e.key === 'p' || e.key === 'P') { api.togglePause(); }
+    }
     else if (s.mode === 'endless' && (e.key === 'ArrowUp' || e.key === 'PageUp')) { e.preventDefault(); G.pan(s, e.key === 'PageUp' ? -G.VIEW_H * .8 : -60); }
     else if (s.mode === 'endless' && (e.key === 'ArrowDown' || e.key === 'PageDown')) { e.preventDefault(); G.pan(s, e.key === 'PageDown' ? G.VIEW_H * .8 : 60); }
     else if (s.mode === 'endless' && e.key === 'Home') { e.preventDefault(); G.returnToTop(s); }

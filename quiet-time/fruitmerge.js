@@ -37,11 +37,6 @@
     fmStates[fmMode] = G.create(fmMode);
     saveNow(); hud(true);
   }
-  function togglePause() {
-    const s = current();
-    if (s.over) return;
-    s.paused = !s.paused; dirty = true; hud();
-  }
   function setMode(mode) {
     if (mode === fmMode) return;
     saveNow();
@@ -66,24 +61,16 @@
       box.dataset.tier = s.next;
       box.title = 'next: ' + F.FRUITS[s.next].name;
     }
-    const pause = document.getElementById('fmPause');
-    pause.textContent = s.paused ? 'resume' : 'pause';
-    pause.disabled = s.over;
     const overlay = document.getElementById('fmOverlay');
-    const want = s.over ? 'over' : s.paused ? 'paused' : '';
+    const want = s.over ? 'over' : '';
     if (overlay.dataset.kind !== want) {
       overlay.dataset.kind = want;
       overlay.hidden = !want;
       if (want === 'over') {
         overlay.innerHTML = `<div class="fm-card"><p class="fm-card-title">the basket is full</p><p>score ${s.score}</p><button class="primary" id="fmAgain" type="button">play again</button></div>`;
         overlay.querySelector('#fmAgain').onclick = restart;
-      } else if (want === 'paused') {
-        overlay.innerHTML = `<div class="fm-card"><p class="fm-card-title">paused</p><button class="primary" id="fmResume" type="button">resume</button></div>`;
-        overlay.querySelector('#fmResume').onclick = togglePause;
       } else overlay.innerHTML = '';
     }
-    const look = document.getElementById('fmLookTop');
-    if (look) look.classList.toggle('active', !s.follow);
   }
 
   function drawFruitmerge() {
@@ -100,7 +87,6 @@
           </div>
           <p class="fm-tally" aria-live="off">score <span id="fmScore">0</span>${endless ? ` · cleared <span id="fmCleared">0</span>` : ''}</p>
           <div class="fm-actions">
-            <button class="pill" id="fmPause" type="button">pause</button>
             <button class="pill" id="fmRestart" type="button">restart</button>
           </div>
         </div>
@@ -111,26 +97,19 @@
               <div class="fm-overlay" id="fmOverlay" hidden></div>
             </div>
           </div>
-          ${endless ? `<div class="fm-look" aria-label="look around the pile">
-            <canvas id="fmMap" width="52" height="300" aria-label="stack map: drag to look up and down the pile"></canvas>
-            <button class="pill fm-look-btn" id="fmLookUp" type="button" aria-label="look up">up</button>
-            <button class="pill fm-look-btn" id="fmLookDown" type="button" aria-label="look down">down</button>
-            <button class="pill fm-look-btn" id="fmLookTop" type="button" aria-label="back to the drop zone">top</button>
-          </div>` : ''}
           <aside class="fm-side">
             <div class="fm-next" aria-live="polite"><span class="fm-label">next</span><div class="fm-next-art" id="fmNextArt"></div></div>
-            <p class="fm-help fm-help-mouse">move to aim · click or space to drop</p>
-            <p class="fm-help fm-help-touch">touch to aim · lift to drop</p>
           </aside>
+          ${endless ? `<div class="fm-look" aria-label="look around the pile">
+            <canvas id="fmMap" width="52" height="300" aria-label="stack map: drag to look up and down the pile"></canvas>
+          </div>` : ''}
         </div>
         <section class="fm-guide" aria-label="fruit order, smallest to largest">
           <ol class="fm-guide-list">${F.FRUITS.map((f, i) => `<li><span class="fm-guide-pic" style="--s:${Math.round(24 + f.r * .42)}px">${fruitArt(i, 'fm-guide-art')}</span><span class="fm-guide-name">${f.name}</span></li>`).join('')}</ol>
-          <p class="fm-guide-note">two alike make the next one${endless ? ' · two coconuts clear away' : ''}</p>
         </section>
       </div>`);
 
     document.querySelectorAll('[data-fm-mode]').forEach(b => b.onclick = () => setMode(b.dataset.fmMode));
-    document.getElementById('fmPause').onclick = togglePause;
     document.getElementById('fmRestart').onclick = () => {
       const g = current();
       if (g.over || g.drops === 0) { restart(); return; }
@@ -141,17 +120,12 @@
     const api = {
       state: current,
       dropped: () => { dirty = true; hud(); },
-      togglePause,
       mapInfo: () => mapInfo
     };
     root.FMControls.attach(canvas, api);
     root.FMControls.setKeyboardTarget(api);
     if (endless) {
       root.FMControls.attachMap(document.getElementById('fmMap'), api);
-      const step = 220;
-      document.getElementById('fmLookUp').onclick = () => G.pan(current(), -step);
-      document.getElementById('fmLookDown').onclick = () => G.pan(current(), step);
-      document.getElementById('fmLookTop').onclick = () => G.returnToTop(current());
     }
     hud(true);
 
@@ -166,14 +140,19 @@
       const stage = document.getElementById('fmStage');
       const view = root.FMRender.viewSize();
       const dpr = Math.min(2, root.devicePixelRatio || 1);
-      const top = stage.getBoundingClientRect().top + scrollY;
-      const maxH = Math.max(380, innerHeight - top - 24);
-      const scale = Math.min(stage.clientWidth / view.w, maxH / view.h);
+      // the basket takes the window's height (the page scrolls the game into view when it opens);
+      // the next box and stack map sit right beside it, so the width left over is what it can use
+      const play = stage.parentElement, cs = getComputedStyle(play);
+      const beside = [...play.children].filter(el => el !== stage && getComputedStyle(el).flexBasis !== '100%')
+        .reduce((w, el) => w + el.offsetWidth + parseFloat(cs.columnGap || 0), 0);
+      const maxW = Math.max(200, play.clientWidth - beside);
+      const maxH = Math.max(380, innerHeight - 110);
+      const scale = Math.min(maxW / view.w, maxH / view.h);
       const cssW = Math.floor(view.w * scale), cssH = Math.floor(view.h * scale);
       if (canvas.width !== Math.round(cssW * dpr) || canvas.height !== Math.round(cssH * dpr)) {
         canvas.width = Math.round(cssW * dpr); canvas.height = Math.round(cssH * dpr);
         canvas.style.width = cssW + 'px'; canvas.style.height = cssH + 'px';
-        if (map) { map.style.height = Math.max(160, cssH - 150) + 'px'; map.height = Math.round(Math.max(160, cssH - 150) * dpr); map.width = Math.round(52 * dpr); }
+        if (map) { map.style.height = Math.round(cssH * .8) + 'px'; map.height = Math.round(cssH * .8 * dpr); map.width = Math.round(52 * dpr); }
       }
       const dt = Math.min(.1, (now - last) / 1000); last = now;
       acc += dt;
@@ -188,6 +167,11 @@
       requestAnimationFrame(frame);
     };
     requestAnimationFrame(frame);
+    // bring the playing area to the top of the window so the big basket fits; the title is just above
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const v = document.querySelector('.page .view');
+      if (v) scrollTo({ top: v.getBoundingClientRect().top + scrollY - 8, behavior: 'instant' });
+    }));
   }
 
   // leaving the page or hiding the app saves straight away

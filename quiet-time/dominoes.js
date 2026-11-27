@@ -403,27 +403,13 @@
     layout('dominoes', '', `
       <div class="dm" id="dm">
         <div class="dm-bar">
-          <label class="dm-level-label">difficulty
-            <select class="pill" id="dmLevel">${P.LEVEL_ORDER.map(l => `<option value="${l}">${l}</option>`).join('')}</select>
-          </label>
-          <button class="pill" id="dmNew" type="button">new puzzle</button>
-          <button class="pill" id="dmCheck" type="button">check</button>
-          <span class="dm-history"><button class="pill" id="dmUndo" type="button" aria-label="undo">undo</button></span>
+          <select class="pill" id="dmLevel" aria-label="difficulty">${P.LEVEL_ORDER.map(l => `<option value="${l}">${l}</option>`).join('')}</select>
+          <button class="pill" id="dmUndo" type="button">undo</button>
           <button class="pill" id="dmReset" type="button">reset</button>
+          <button class="pill" id="dmCheck" type="button">check</button>
+          <button class="pill" id="dmNew" type="button">new puzzle</button>
         </div>
         <div id="dmHost"></div>
-        <details class="dm-help"><summary>how to play</summary>
-          <p>cover every cell with the dominoes from the tray, using all of them. each half adds its number to the region it sits in, and every region must keep its rule:</p>
-          <ul>
-            <li><strong>8</strong> the numbers add up to exactly 8</li>
-            <li><strong>=</strong> every number is the same</li>
-            <li><strong>≠</strong> every number is different</li>
-            <li><strong>&gt;4</strong> the numbers add up to more than 4 · <strong>&lt;3</strong> less than 3</li>
-            <li>plain cream cells have no rule</li>
-          </ul>
-          <p class="dm-help-mouse">drag a domino onto the board, or click one and then a cell. click a chosen domino again (or press r) to turn it; f flips it; drag it off the board (or press delete) to take it back. arrow keys slide a chosen domino.</p>
-          <p class="dm-help-touch">drag a domino onto the board, or tap one and then a cell. tap a chosen domino again to turn it (keep tapping to flip it too). drag it off the board to take it back.</p>
-        </details>
       </div>`);
     document.getElementById('dmLevel').onchange = e => setLevel(e.target.value);
     document.getElementById('dmNew').onclick = () => {
