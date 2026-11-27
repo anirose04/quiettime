@@ -3,7 +3,7 @@ const sites={murdoku:'https://murdoku.com/',nyt:'https://www.nytimes.com/crosswo
 // the homepage contents: [section, [[id, name]]]
 const collection=[
  ['games',[['sudoku','sudoku'],['minesweeper','minesweeper'],['solitaire','solitaire'],['fruitmerge','fruitmerge'],['dominoes','dominoes'],['tumble','tumble'],['murdoku','murdoku'],['nyt','nyt games'],['murdle','murdle'],['little-daily','the little daily']]],
- ['explore',[['garden','data garden'],['history','the history paper'],['psyc','the psyc paper']]]
+ ['explore',[['garden','data garden'],['history','the history paper']]]
 ];
 const names=Object.fromEntries(collection.flatMap(([,items])=>items.map(([id,n])=>[id,n])));
 const sectionOf=Object.fromEntries(collection.flatMap(([sec,items])=>items.map(([id])=>[id,sec])));
@@ -19,7 +19,6 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
  else if(page==='tumble')drawTumble();
  else if(page==='garden')drawGarden();
  else if(page==='history')drawHistory();
- else if(page==='psyc')drawPsyc();
  else if(sites[page])external(page);
  else home();
  scrollTo({top:0,behavior:'instant'});
