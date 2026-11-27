@@ -165,6 +165,13 @@ const H_CONTEXT = {
   reference: 'the surrounding facts come from the reference works below, not original research.',
   text: 'this rests mostly on the text itself, which shows what the writer said, not that it happened.'
 };
+// says plainly what the bigger picture rests on: scholarship, or reference works and archives
+function histWiderNote(d) {
+  const keys = [...new Set(d.wider.join(' ').match(/\[\[(\w+)/g).map(m => m.slice(2)))];
+  const scholarly = keys.every(k => /scholarly/.test(histSource(d, k)?.type || ''));
+  return scholarly ? 'the bigger picture was checked against scholarly sources.'
+    : 'the bigger picture comes from reference works and archives, not original research.';
+}
 function histDrawStory(d) {
   const refs = [], issue = histIssue(d);
   const cite = text => String(text).replace(/\[\[(\w+)(?:\|([^\]]+))?\]\]/g, (m, key, loc) => {
@@ -178,6 +185,8 @@ function histDrawStory(d) {
   const verified = issue ? issue.bookshelf.verified : 'checked word for word against the linked text.';
   const xSource = issue ? issue.bookshelf.cite[0] : x.source;
   const xCite = cite(`[[${xSource}|${x.locator}]]`);
+  // the bigger picture is cited after the period text, before the source list is built
+  const wider = d.wider ? `<section class="d-wider" aria-label="the bigger picture"><p class="d-text-label">the bigger picture</p>${d.wider.map(p => `<p class="d-para">${cite(p)}</p>`).join('')}</section>` : '';
   const refList = refs.map(k => { const s = histSource(d, k); return `<li id="hsrc-${k}"><span class="h-src-type">${H_ESC(s.type)}</span> ${s.cite} ${hLink(s.url, 'link ↗')}</li>`; }).join('');
   layout('', '', `<div class="h-paper d-paper d-story">
     ${histTrailBar()}
@@ -189,7 +198,8 @@ function histDrawStory(d) {
         <p class="d-text-label">from the period</p>
         <blockquote class="h-excerpt">${x.text}<footer>— ${H_ESC(x.by)}, <em>${H_ESC(x.work)}</em>, ${H_ESC(x.written)}${x.translator ? `, trans. ${H_ESC(x.translator)}` : ''} ${xCite}</footer></blockquote>
       </figure>
-      <p class="d-evidence">the text: ${H_ESC(verified)} ${H_ESC(H_CONTEXT[d.context])}</p>
+      ${wider}
+      <p class="d-evidence">the text: ${H_ESC(verified)} ${H_ESC(H_CONTEXT[d.context])}${d.wider ? ' ' + H_ESC(histWiderNote(d)) : ''}</p>
       <div class="d-extra">
         ${issue ? `<details><summary>the longer issue</summary><div class="d-detail">${histLongIssue(issue)}</div></details>` : ''}
         <details><summary>sources</summary><ol class="d-refs">${refList}</ol></details>

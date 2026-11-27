@@ -216,6 +216,7 @@ canvas.r-plot{display:block;width:100%;max-width:720px;height:auto;border-radius
 .d-text-label{font-size:.76rem;letter-spacing:.05em;color:var(--tint);margin:0 0 5px;text-transform:lowercase}
 .d-text .h-excerpt{margin:0;font-size:.98rem}
 .d-text .h-excerpt footer{text-transform:none}
+.d-wider{margin:22px 0 4px;padding-top:12px;border-top:1px solid var(--qt-rule,#293b2933)}
 .d-paper .h-masthead .h-mast-title{margin-bottom:14px}
 .d-paper button{font-family:inherit;color:inherit}
 .d-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 16px;border-bottom:1px solid var(--ink);padding-bottom:12px;text-transform:lowercase}

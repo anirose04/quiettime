@@ -37,6 +37,15 @@ for (const d of D) {
   const cites = [...d.story.join(' ').matchAll(/\[\[(\w+)(?:\|[^\]]+)?\]\]/g)].map(m => m[1]);
   if (!cites.length) w('no inline citations');
   for (const c of cites) if (!src(c)) w(`citation to unknown source ${c}`);
+  // the bigger picture: optional, but every paragraph must be sourced
+  if (d.wider !== undefined) {
+    if (!Array.isArray(d.wider) || !d.wider.length) w('wider must be a non-empty list of paragraphs');
+    else for (const [i, p] of d.wider.entries()) {
+      const wc = [...p.matchAll(/\[\[(\w+)(?:\|[^\]]+)?\]\]/g)].map(m => m[1]);
+      if (!wc.length) w(`bigger picture paragraph ${i + 1} has no citation`);
+      for (const c of wc) if (!src(c)) w(`bigger picture cites unknown source ${c}`);
+    }
+  }
   if (d.links.length < 2 || d.links.length > 3) w(`has ${d.links.length} links; want 2–3`);
   if (new Set(d.links.map(l => l[0])).size !== d.links.length) w('duplicate link');
   for (const [to, rel, why] of d.links) {
