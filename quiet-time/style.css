@@ -571,3 +571,7 @@ body.home-page .shell{width:min(780px,calc(100% - 32px))}
 .ms-board-scroll{display:block;text-align:center}
 .ms-board{margin:0 auto;text-align:left}
 .ms-message{text-align:center;min-height:1.4em}
+
+/* the contents page dateline: today's date, small, at the top right above the nameplate */
+.mast-date{margin:-8px 0 8px;text-align:right;font-family:var(--qt-type);font-size:.82rem;letter-spacing:.04em;color:var(--qt-ink-soft)}
+@media(max-width:650px){.mast-date{text-align:center;margin-top:-4px}}

@@ -26,12 +26,14 @@ function render(page=(location.hash.slice(1).split('?')[0]||'home')){
 }
 // the same masthead heads the contents page and every activity page
 function masthead(tag='p'){return `<header class="masthead"><${tag} class="mast-title"><a href="#home" class="mast-link">ani’s quiet time</a></${tag}></header>`}
+// the contents page's masthead: the title is just the nameplate (no link), with today's date above it, newspaper style
+function homeMasthead(){const today=new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}).toLowerCase();return `<p class="mast-date"><time datetime="${new Date().toISOString().slice(0,10)}">${today}</time></p><header class="masthead"><h1 class="mast-title">ani’s quiet time</h1></header>`}
 function home(){
  document.body.classList.add('home-page');
  // a contents page: section headings, then each activity with a dotted leader to its number
  let n=0;
  const entry=(id,name)=>{n++;const inner=`<span class="toc-name">${name}</span><span class="toc-leader" aria-hidden="true"></span><span class="toc-num" aria-hidden="true">${n}</span>`;return `<li>${sites[id]?`<a class="toc-entry" href="${sites[id]}" target="_blank" rel="noopener noreferrer">${inner}</a>`:`<button class="toc-entry" data-page="${id}" type="button">${inner}</button>`}</li>`};
- app.innerHTML=`<div class="contents">${masthead('h1')}${collection.map(([heading,items])=>`<section class="toc-section"><h2 class="toc-heading">${heading}</h2><ol class="toc-list">${items.map(([id,name])=>entry(id,name)).join('')}</ol></section>`).join('')}</div>`;
+ app.innerHTML=`<div class="contents">${homeMasthead()}${collection.map(([heading,items])=>`<section class="toc-section"><h2 class="toc-heading">${heading}</h2><ol class="toc-list">${items.map(([id,name])=>entry(id,name)).join('')}</ol></section>`).join('')}</div>`;
  app.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>go(b.dataset.page));
 }
 // an activity page: masthead, a small contents link with the section name, the title, then the
