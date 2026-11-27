@@ -4,7 +4,7 @@
    the endless drop height and camera, and turning a game into plain data and back. */
 (function (root) {
   const { FRUITS, MAX_TIER, randomTier } = root.FMFruits;
-  const W = 420;                 // basket width in world units
+  const W = 460;                 // basket width in world units
   const FLOOR = 600;             // basket floor; the classic basket runs from y = 0 down to here
   const LINE = 46;               // classic overflow line
   const DROP_Y = -66;            // where the current fruit waits in classic (and at the start of endless)

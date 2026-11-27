@@ -23,8 +23,8 @@
   function confirmBox(title, text, yes, onYes) {
     if (document.getElementById('fmConfirm')) return;
     const mask = document.createElement('div');
-    mask.id = 'fmConfirm'; mask.className = 'session-modal';
-    mask.innerHTML = `<div class="session-dialog fm-dialog" role="dialog" aria-modal="true" aria-labelledby="fmConfirmTitle"><h2 id="fmConfirmTitle">${title}</h2><p>${text}</p><div class="controls"><button class="pill" id="fmNo" type="button">keep playing</button><button class="primary" id="fmYes" type="button">${yes}</button></div></div>`;
+    mask.id = 'fmConfirm'; mask.className = 'qt-modal';
+    mask.innerHTML = `<div class="qt-dialog fm-dialog" role="dialog" aria-modal="true" aria-labelledby="fmConfirmTitle"><h2 id="fmConfirmTitle">${title}</h2><p>${text}</p><div class="controls"><button class="pill" id="fmNo" type="button">keep playing</button><button class="primary" id="fmYes" type="button">${yes}</button></div></div>`;
     document.body.append(mask);
     const close = () => mask.remove();
     mask.querySelector('#fmNo').onclick = close;
@@ -98,6 +98,7 @@
             <button class="pill ${!endless ? 'active' : ''}" data-fm-mode="classic" role="tab" aria-selected="${!endless}" type="button">classic</button>
             <button class="pill ${endless ? 'active' : ''}" data-fm-mode="endless" role="tab" aria-selected="${endless}" type="button">endless</button>
           </div>
+          <p class="fm-tally" aria-live="off">score <span id="fmScore">0</span>${endless ? ` · cleared <span id="fmCleared">0</span>` : ''}</p>
           <div class="fm-actions">
             <button class="pill" id="fmPause" type="button">pause</button>
             <button class="pill" id="fmRestart" type="button">restart</button>
@@ -118,18 +119,14 @@
           </div>` : ''}
           <aside class="fm-side">
             <div class="fm-next" aria-live="polite"><span class="fm-label">next</span><div class="fm-next-art" id="fmNextArt"></div></div>
-            <div class="fm-stats">
-              <div class="fm-stat"><span class="fm-label">score</span><strong id="fmScore">0</strong></div>
-              ${endless ? `<div class="fm-stat"><span class="fm-label">fruits cleared</span><strong id="fmCleared">0</strong></div>` : ''}
-            </div>
-            <details class="fm-guide"><summary>fruit guide</summary>
-              <ol class="fm-guide-list">${F.FRUITS.map((f, i) => `<li>${fruitArt(i, 'fm-guide-art')}<span>${f.name}</span></li>`).join('')}</ol>
-              <p class="fm-guide-note">${endless ? 'two coconuts that meet clear away.' : 'coconut is the biggest fruit.'}</p>
-            </details>
             <p class="fm-help fm-help-mouse">move to aim · click or space to drop${endless ? ' · scroll or the map to look around' : ''}</p>
             <p class="fm-help fm-help-touch">touch to aim · lift to drop${endless ? ' · two fingers or the map to look around' : ''}</p>
           </aside>
         </div>
+        <section class="fm-guide" aria-label="fruit order, smallest to largest">
+          <ol class="fm-guide-list">${F.FRUITS.map((f, i) => `<li><span class="fm-guide-pic" style="--s:${Math.round(24 + f.r * .42)}px">${fruitArt(i, 'fm-guide-art')}</span><span class="fm-guide-name">${f.name}</span></li>`).join('')}</ol>
+          <p class="fm-guide-note">two alike make the next one${endless ? ' · two coconuts clear away' : ''}</p>
+        </section>
       </div>`);
 
     document.querySelectorAll('[data-fm-mode]').forEach(b => b.onclick = () => setMode(b.dataset.fmMode));

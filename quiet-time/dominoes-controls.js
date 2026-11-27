@@ -4,7 +4,7 @@
    it again turns it. With a domino selected, tap an empty cell to put it there.
    keyboard: tab to a domino, enter selects; r turns, f flips, delete returns it to the tray;
    arrows move a placed domino (or the placement cursor for a tray domino) and enter places it;
-   escape lets go; ⌘/ctrl-z undoes, shift-⌘/ctrl-z or ctrl-y redoes. */
+   escape lets go; ⌘/ctrl-z undoes. */
 (function (root) {
   const DRAG_START = 6;   // pixels before a press becomes a drag
 
@@ -80,17 +80,16 @@
     const offY = view.dir === 'h' ? S / 2 : (press.half + .5) * S;
     press.ghost.style.transform = `translate(${e.clientX - offX}px, ${e.clientY - offY}px)`;
     const t = api.targetAt(press.piece, press.half, e.clientX, e.clientY);
-    api.preview(t ? { cells: [t.c1, t.c2], ok: t.ok } : null);
+    api.preview(t && t.c1 !== t.c2 ? { cells: [t.c1, t.c2], ok: t.ok } : null);
   }
 
   // keyboard: one listener for the app, active only while the dominoes board is on screen
   let api = null;
   function setKeyboardTarget(a) { api = a; }
   document.addEventListener('keydown', e => {
-    if (!api || !document.getElementById('dmBoard') || e.target.closest?.('select,input,textarea') || document.querySelector('.session-modal')) return;
+    if (!api || !document.getElementById('dmBoard') || e.target.closest?.('select,input,textarea') || document.querySelector('.qt-modal')) return;
     const mod = e.metaKey || e.ctrlKey;
-    if (mod && (e.key === 'z' || e.key === 'Z')) { e.preventDefault(); e.shiftKey ? api.redo() : api.undo(); return; }
-    if (mod && (e.key === 'y' || e.key === 'Y')) { e.preventDefault(); api.redo(); return; }
+    if (mod && !e.shiftKey && (e.key === 'z' || e.key === 'Z')) { e.preventDefault(); api.undo(); return; }
     if (mod || e.altKey) return;
     const arrows = { ArrowUp: [-1, 0], ArrowDown: [1, 0], ArrowLeft: [0, -1], ArrowRight: [0, 1] };
     const enter = e.key === 'Enter' || e.key === ' ';

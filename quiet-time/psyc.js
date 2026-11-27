@@ -53,7 +53,7 @@ async function drawPsyc() {
   if (!psycFeedTried) {
     layout('', '', '<div class="h-paper d-paper"><p class="h-small">unfolding the paper…</p></div>');
     await psycLoadFeed();
-    if (location.hash.startsWith('#psyc')) render('psyc'); // a full render keeps the quiet-session panel in place
+    if (location.hash.startsWith('#psyc')) render('psyc'); // a full render keeps the page masthead
     return;
   }
   if (q === 'saved') return psycDrawSaved();
@@ -67,7 +67,7 @@ async function drawPsyc() {
   }
   psycDrawFeed();
 }
-// outside links never reach past a quiet session; inline citations open the reference list
+// inline citations open the reference list
 function psycGuard(root) {
   root.addEventListener('click', e => {
     const ref = e.target.closest('[data-ref],[data-src]');
@@ -77,8 +77,6 @@ function psycGuard(root) {
       if (t) { let p = t.closest('details'); while (p) { p.open = true; p = p.parentElement.closest('details'); } t.scrollIntoView({ behavior: 'smooth', block: 'center' }); t.classList.remove('flash'); void t.offsetWidth; t.classList.add('flash'); }
       return;
     }
-    const a = e.target.closest('a[target="_blank"]');
-    if (a && activeQuiet()) { e.preventDefault(); requestEarlyEnd(); }
   });
 }
 const pLink = (href, text, cls = '') => `<a ${cls ? `class="${cls}" ` : ''}href="${P_ESC(href)}" target="_blank" rel="noopener noreferrer">${text}</a>`;

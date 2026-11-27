@@ -1,6 +1,6 @@
 /* quiet time — dominoes: the page.
-   Holds the game for each difficulty, applies moves (with undo and redo), checks the board
-   against the rules, gives hints, and asks the worker for new puzzles. No timers or scores. */
+   Holds the game for each difficulty, applies moves (with undo), checks the board against the
+   rules, and asks the worker for new puzzles. No timers or scores. */
 (function (root) {
   const P = root.DMPuzzles, V = root.DMValidate, R = root.DMRender;
   let dm = null;          // { level, byLevel, ready }
@@ -120,7 +120,9 @@
     if (!t || !t.ok || game().solved) return false;
     const v = view(piece);
     remember();
-    put(piece, t.c1, t.c2, v.first, v.second);
+    // first value goes on the top/left cell, whichever way round the spot runs
+    const lo = Math.min(t.c1, t.c2), hi = Math.max(t.c1, t.c2);
+    put(piece, lo, hi, v.first, v.second);
     ui.sel = piece; ui.cursor = null;
     changed();
     return true;
@@ -183,21 +185,11 @@
   function undo() {
     const g = game();
     if (!g.history.length) return;
-    g.future.push(snapshot());
     restoreSnap(g.history.pop());
     ui.sel = null; ui.cursor = null;
     changed('undone.');
   }
-  function redo() {
-    const g = game();
-    if (!g.future.length) return;
-    g.history.push(snapshot());
-    restoreSnap(g.future.pop());
-    ui.sel = null; ui.cursor = null;
-    changed('redone.');
-  }
-
-  // ---- taps, cursor, keyboard nudges ----
+  // ---- taps, cursor, keyboard slides ----
   function tapPiece(piece) {
     if (game().solved) return;
     if (ui.sel === piece) { rotate(); return; }
@@ -222,7 +214,7 @@
       const cs = cellsFor(v.dir, half, cell);
       if (cs && fits(ui.sel, cs[0], cs[1])) { placeAt(ui.sel, { c1: cs[0], c2: cs[1], ok: true }); return; }
     }
-    ui.note = 'it doesn’t fit there that way round. try turning it.'; render();
+    ui.note = 'it doesn’t fit there that way round. tap it to turn it.'; render();
   }
   function tapTray() {
     if (ui.sel != null && placementOf(ui.sel)) toTray(ui.sel);
@@ -231,21 +223,38 @@
   function deselect() { ui.sel = null; ui.cursor = null; ui.note = ''; render(); }
 
   // where a dragged domino would land under the pointer (null when off the board)
+  // where a dragged domino would land: the nearest open spot, the way round it is held, within about
+  // a cell and a half of where it is let go, so it never needs to be lined up exactly.
+  // null = dropped well off the board.
   function targetAt(piece, half, x, y) {
     const board = document.getElementById('dmBoard');
     if (!board) return null;
-    const p = game().puzzle, r = board.getBoundingClientRect();
-    const g = R.geometry(p, ui.S);
-    const col = Math.floor((x - r.left - g.pad) / ui.S), row = Math.floor((y - r.top - g.pad) / ui.S);
-    if (col < 0 || row < 0 || col >= p.cols || row >= p.rows) return null;
-    const cell = row * p.cols + col;
-    if (!P.index(p).onBoard.has(cell)) return null;
-    const cs = cellsFor(view(piece).dir, half, cell);
-    if (!cs) return { c1: cell, c2: cell, ok: false };
-    return { c1: cs[0], c2: cs[1], ok: fits(piece, cs[0], cs[1]) };
+    const p = game().puzzle, r = board.getBoundingClientRect(), S = ui.S;
+    const g = R.geometry(p, S), dir = view(piece).dir;
+    // the centre of the held domino, in board-cell units
+    const hx = (x - r.left - g.pad) / S + (dir === 'h' ? (half === 0 ? .5 : -.5) : 0);
+    const hy = (y - r.top - g.pad) / S + (dir === 'v' ? (half === 0 ? .5 : -.5) : 0);
+    if (hx < -.6 || hy < -.6 || hx > p.cols + .6 || hy > p.rows + .6) return null;
+    // the nearest open spot, kept the way round it is being held
+    const step = dir === 'h' ? 1 : p.cols;
+    let best = null, bestD = Infinity;
+    for (const c of p.cells) {
+      const row = Math.floor(c / p.cols), col = c % p.cols;
+      if (dir === 'h' && col === p.cols - 1) continue;
+      const cx = col + (dir === 'h' ? 1 : .5), cy = row + (dir === 'v' ? 1 : .5);
+      const dist = Math.hypot(cx - hx, cy - hy);
+      if (dist < bestD && fits(piece, c, c + step)) { best = c; bestD = dist; }
+    }
+    if (best !== null && bestD <= 1.5) return { c1: best, c2: best + step, ok: true };
+    // nothing open close by: show where it is, in rose, and let it go back
+    const col = Math.max(0, Math.min(p.cols - 1, Math.floor(hx - (dir === 'h' ? .5 : 0)))), row = Math.max(0, Math.min(p.rows - 1, Math.floor(hy - (dir === 'v' ? .5 : 0))));
+    const c = row * p.cols + col, onBoard = P.index(p).onBoard;
+    const other = c + step;
+    if (!onBoard.has(c) || !onBoard.has(other) || (dir === 'h' && col === p.cols - 1)) return { c1: c, c2: c, ok: false };
+    return { c1: c, c2: other, ok: false };
   }
 
-  function nudge(dr, dc) {
+  function slide(dr, dc) {
     const g = game(), p = g.puzzle, piece = ui.sel;
     if (piece == null || g.solved) return;
     const pl = placementOf(piece);
@@ -278,7 +287,7 @@
     next?.focus();
   }
 
-  // ---- check and hints ----
+  // ---- check ----
   function check() {
     const g = game(), ev = V.evaluate(g.puzzle, g.placements);
     if (ev.solved) { ui.note = ''; render(); return; }
@@ -290,41 +299,12 @@
       : left ? `everything so far fits · ${left} ${left === 1 ? 'cell' : 'cells'} to go.` : 'every cell is covered, but something still needs a look.';
     render();
   }
-  function hint(kind) {
-    const g = game();
-    if (g.solved) return;
-    const a = V.analyse(g.puzzle, g.placements);
-    if (a.kind === 'done') { ui.note = 'nothing left to hint.'; render(); return; }
-    if (a.kind === 'wrong') {
-      ui.marks = { wrong: new Set(a.placements.map(pl => pl.piece)) };
-      ui.note = a.placements.length === 1
-        ? (a.alone ? 'the highlighted domino can’t be part of any solution where it is.' : 'the highlighted domino doesn’t fit with the others already placed.')
-        : 'the highlighted dominoes don’t fit together with the rest.';
-      render(); return;
-    }
-    const t = a.target;
-    if (kind === 'nudge') {
-      const ri = V.regionFor(g.puzzle, t);
-      if (ri < 0) { ui.marks = { cells: new Set([t.c1, t.c2]) }; ui.note = 'have a look around the highlighted cells.'; }
-      else { ui.marks = { focus: new Set([ri]) }; ui.note = `have a look at the highlighted region: ${P.describe(g.puzzle.regions[ri])}.`; }
-      render(); return;
-    }
-    const piece = V.pieceFor(g.puzzle, t, g.placements);
-    if (piece < 0) { ui.note = 'nothing left to hint.'; render(); return; }
-    remember();
-    put(piece, t.c1, t.c2, t.v1, t.v2);
-    ui.sel = null;
-    ui.marks = { revealed: piece };
-    ui.keepMarks = true;
-    changed(a.certain ? 'this one has to go here.' : 'this fits one of the possible solutions (there is more than one).');
-  }
-
-  // ---- confirm dialog (same look as the quiet-session pause) ----
+  // ---- confirm dialog ----
   function confirmBox(title, text, yes, onYes) {
     if (document.getElementById('dmConfirm')) return;
     const mask = document.createElement('div');
-    mask.id = 'dmConfirm'; mask.className = 'session-modal';
-    mask.innerHTML = `<div class="session-dialog" role="dialog" aria-modal="true" aria-labelledby="dmConfirmTitle"><h2 id="dmConfirmTitle">${title}</h2><p>${text}</p><div class="controls"><button class="pill" id="dmNo" type="button">keep this one</button><button class="primary" id="dmYes" type="button">${yes}</button></div></div>`;
+    mask.id = 'dmConfirm'; mask.className = 'qt-modal';
+    mask.innerHTML = `<div class="qt-dialog" role="dialog" aria-modal="true" aria-labelledby="dmConfirmTitle"><h2 id="dmConfirmTitle">${title}</h2><p>${text}</p><div class="controls"><button class="pill" id="dmNo" type="button">keep this one</button><button class="primary" id="dmYes" type="button">${yes}</button></div></div>`;
     document.body.append(mask);
     const close = () => mask.remove();
     mask.querySelector('#dmNo').onclick = close;
@@ -350,7 +330,7 @@
 
   function dominoButton(piece, where, style = '') {
     const v = view(piece);
-    const cls = ['dm-domino', `dm-${v.dir}`, ui.sel === piece ? 'selected' : '', ui.marks.wrong?.has(piece) ? 'wrong' : '', ui.marks.revealed === piece ? 'revealed' : ''].join(' ');
+    const cls = ['dm-domino', `dm-${v.dir}`, ui.sel === piece ? 'selected' : ''].join(' ');
     const label = `domino ${v.first} and ${v.second}${where === 'board' ? ', on the board' : ', in the tray'}${ui.sel === piece ? ', selected' : ''}`;
     return `<button class="${cls}" type="button" data-piece="${piece}" data-where="${where}" style="${style}" aria-label="${label}" aria-pressed="${ui.sel === piece}">${R.dominoSVG(v.first, v.second, v.dir)}</button>`;
   }
@@ -397,19 +377,11 @@
         </div>
         <div class="dm-tray-col">
           <div class="dm-tray" id="dmTray" aria-label="tray">${trayPieces || (g.solved ? '' : '<p class="dm-empty">all dominoes are on the board.</p>')}</div>
-          <div class="dm-piece-tools" aria-label="selected domino">
-            <button class="pill" id="dmRotate" type="button">rotate</button>
-            <button class="pill" id="dmFlip" type="button">flip</button>
-            <button class="pill" id="dmBack" type="button">to tray</button>
-          </div>
           <p class="dm-note" id="dmNote" aria-live="polite">${ui.note}</p>
           ${g.solved ? `<div class="dm-done" role="status"><p class="dm-done-title">solved</p><p>every region is content.</p><button class="primary" id="dmNextPuzzle" type="button">new puzzle</button></div>` : ''}
           <p class="dm-id">puzzle ${p.id}${p.unique ? '' : ' · more than one answer'}</p>
         </div>
       </div>`;
-    document.getElementById('dmRotate').onclick = rotate;
-    document.getElementById('dmFlip').onclick = flip;
-    document.getElementById('dmBack').onclick = removeSelected;
     const next = document.getElementById('dmNextPuzzle');
     if (next) next.onclick = () => newPuzzle(dm.level);
     updateButtons();
@@ -421,15 +393,8 @@
     const set = (id, on) => { const b = document.getElementById(id); if (b) b.disabled = !on; };
     const busy = ui.loading || !g;
     set('dmUndo', !busy && g.history.length > 0 && !g.solved);
-    set('dmRedo', !busy && g.future.length > 0 && !g.solved);
     set('dmReset', !busy && g.placements.length > 0 && !g.solved);
     set('dmCheck', !busy && !g.solved);
-    set('dmNudge', !busy && !g.solved);
-    set('dmReveal', !busy && !g.solved);
-    const selected = !busy && ui.sel != null && !g.solved;
-    set('dmRotate', selected);
-    set('dmFlip', selected);
-    set('dmBack', selected && !!placementOf(ui.sel));
   }
 
   function drawDominoes() {
@@ -443,8 +408,7 @@
           </label>
           <button class="pill" id="dmNew" type="button">new puzzle</button>
           <button class="pill" id="dmCheck" type="button">check</button>
-          <span class="dm-hints"><button class="pill" id="dmNudge" type="button">nudge</button><button class="pill" id="dmReveal" type="button">reveal</button></span>
-          <span class="dm-history"><button class="pill" id="dmUndo" type="button" aria-label="undo">undo</button><button class="pill" id="dmRedo" type="button" aria-label="redo">redo</button></span>
+          <span class="dm-history"><button class="pill" id="dmUndo" type="button" aria-label="undo">undo</button></span>
           <button class="pill" id="dmReset" type="button">reset</button>
         </div>
         <div id="dmHost"></div>
@@ -457,9 +421,8 @@
             <li><strong>&gt;4</strong> the numbers add up to more than 4 · <strong>&lt;3</strong> less than 3</li>
             <li>plain cream cells have no rule</li>
           </ul>
-          <p class="dm-help-mouse">drag a domino onto the board, or click one and then a cell. click a chosen domino again (or press r) to turn it; f flips it; drag it off the board, or press delete, to take it back. arrow keys slide a chosen domino.</p>
-          <p class="dm-help-touch">drag a domino onto the board, or tap one and then a cell. tap a chosen domino again to turn it, or use rotate and flip. drag it back to the tray to take it off.</p>
-          <p>nudge points you at a useful region; reveal places one domino that belongs where it goes. neither costs anything.</p>
+          <p class="dm-help-mouse">drag a domino onto the board, or click one and then a cell. click a chosen domino again (or press r) to turn it; f flips it; drag it off the board (or press delete) to take it back. arrow keys slide a chosen domino.</p>
+          <p class="dm-help-touch">drag a domino onto the board, or tap one and then a cell. tap a chosen domino again to turn it (keep tapping to flip it too). drag it off the board to take it back.</p>
         </details>
       </div>`);
     document.getElementById('dmLevel').onchange = e => setLevel(e.target.value);
@@ -468,18 +431,15 @@
       else newPuzzle(dm.level);
     };
     document.getElementById('dmCheck').onclick = check;
-    document.getElementById('dmNudge').onclick = () => hint('nudge');
-    document.getElementById('dmReveal').onclick = () => hint('reveal');
     document.getElementById('dmUndo').onclick = undo;
-    document.getElementById('dmRedo').onclick = redo;
     document.getElementById('dmReset').onclick = () => confirmBox('take every domino off?', 'the board will be cleared. undo can bring it back.', 'reset', () => {
       remember(); game().placements = []; ui.sel = null; changed('the board is clear.');
     });
     const api = {
       view, cellSize: () => ui.S, targetAt, placeAt, toTray, tapPiece, tapCell, tapTray,
       preview: pv => { const same = JSON.stringify(pv) === JSON.stringify(ui.preview); ui.preview = pv; if (!same) redrawBoardOnly(); },
-      refresh: render, selection: () => ui.sel, rotate, flip, removeSelected, deselect, undo, redo,
-      nudge, cursorActive, placeAtCursor, focusNext
+      refresh: render, selection: () => ui.sel, rotate, flip, removeSelected, deselect, undo,
+      slide, cursorActive, placeAtCursor, focusNext
     };
     root.DMControls.attach(document.getElementById('dm'), api);
     root.DMControls.setKeyboardTarget(api);
@@ -510,5 +470,5 @@
   addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { if (document.getElementById('dmHost') && !document.querySelector('.dm-ghost')) render(); }, 120); });
 
   root.drawDominoes = drawDominoes;
-  root.DMPage = { state: () => dm, ui: () => ui, game, newPuzzle, hint, check, undo, redo, rotate, flip, tapPiece, tapCell, toTray, placeAt, setLevel };
+  root.DMPage = { state: () => dm, ui: () => ui, game, newPuzzle, check, undo, rotate, flip, tapPiece, tapCell, toTray, placeAt, setLevel };
 })(window);

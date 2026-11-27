@@ -103,7 +103,7 @@
     const limit = opts.limit ?? 2, nodeLimit = opts.nodeLimit ?? 200000;
     const st = makeState(p);
     const out = { solutions: [], complete: true, nodes: 0, guesses: 0, branchWork: 0 };
-    // pre-placed dominoes (the player's, for hints): they must agree with the rules and the set
+    // pre-placed dominoes: they must agree with the rules and the set
     for (const f of opts.fixed || []) {
       const lo = Math.min(f.v1, f.v2), hi = Math.max(f.v1, f.v2);
       const k = st.kinds.findIndex(K => K.lo === lo && K.hi === hi && K.left > 0);

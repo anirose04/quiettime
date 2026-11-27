@@ -107,7 +107,7 @@
   function setKeyboardTarget(a) { api = a; }
   const inField = e => e.target.closest?.('select,input,textarea');
   document.addEventListener('keydown', e => {
-    if (!api || !document.getElementById('fmCanvas') || inField(e) || document.querySelector('.session-modal')) return;
+    if (!api || !document.getElementById('fmCanvas') || inField(e) || document.querySelector('.qt-modal')) return;
     const s = api.state();
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') { keys.left = true; e.preventDefault(); if (!e.repeat) nudge(s, -1); }
     else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') { keys.right = true; e.preventDefault(); if (!e.repeat) nudge(s, 1); }

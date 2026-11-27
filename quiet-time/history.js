@@ -41,7 +41,7 @@ async function drawHistory() {
     } catch { /* the bundled stories are enough on their own */ }
     if (!Array.isArray(histFeed?.items)) histFeed = null;
     else histFeed.items = histFeed.items.filter(p => p.title && p.abstract && H_CATS[p.category]);
-    if (location.hash.startsWith('#history')) render('history'); // a full render keeps the quiet-session panel
+    if (location.hash.startsWith('#history')) render('history'); // a full render keeps the page masthead
     return;
   }
   const q = location.hash.split('?')[1] || '';
@@ -56,7 +56,7 @@ async function drawHistory() {
   }
   histDrawFeed();
 }
-// outside links never reach past a quiet session; inline citations open the source list
+// inline citations open the source list
 function histGuard(root) {
   root.addEventListener('click', e => {
     const ref = e.target.closest('[data-hsrc]');
@@ -66,8 +66,6 @@ function histGuard(root) {
       if (t) { let p = t.closest('details'); while (p) { p.open = true; p = p.parentElement.closest('details'); } t.scrollIntoView({ behavior: 'smooth', block: 'center' }); t.classList.remove('flash'); void t.offsetWidth; t.classList.add('flash'); }
       return;
     }
-    const a = e.target.closest('a[target="_blank"]');
-    if (a && activeQuiet()) { e.preventDefault(); requestEarlyEnd(); }
   });
 }
 function histWire(root) {
