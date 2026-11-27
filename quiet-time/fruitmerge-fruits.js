@@ -1,116 +1,144 @@
 /* quiet time — fruitmerge: fruit definitions and illustrations.
-   The tier order, sizes, colours and shapes all live here, so a fruit can be retuned or redrawn
-   without touching the physics or the game rules.
-   r is the physics radius in world units (the basket is 460 units wide).
-
-   The art is a sticker-style set: one bold ink outline, flat colour, a single soft highlight, and the
-   same little face on every fruit (big sparkly eyes, tiny brows, an open smile, pink cheeks).
-   Each illustration is an SVG on a 100 × 100 box. The fruit's body stays inside the collision
-   circle (radius BODY_R around (50, BODY_Y)); only stems and leaves poke out above it. */
+   The tier order, sizes, colours, shapes and faces all live here, so a fruit can be retuned or
+   redrawn without touching the physics or the game rules. r is the physics radius in world units
+   (the basket is 460 wide); sizes run from 19 to 79 so neighbouring fruit feel close in size.
+   Style: fruit first. Flat pastel fills, a moderately thin outline in a darker shade of each
+   fruit's own colour, one soft highlight, simple botanical details, and a small face (dot eyes,
+   or closed smiling eyes on a few) that grows with the fruit. Every SVG is a 100 × 100 box whose
+   body stays inside the collision circle (centre 50,55, radius 38); only stems and leaves rise
+   above it. */
 (function (root) {
   const BODY_R = 38, BODY_Y = 55;
-  const INK = '#3a2e2b', CHEEK = '#f6a0ae', TONGUE = '#f2828f';
-  const LEAF = '#8fcf7c', STEM = '#9a6f4c';
-
+  const FACE = '#3b2c2a';
   const FRUITS = [
-    { id: 'blueberry', name: 'blueberry', r: 15, points: 1, base: '#8fa8ea', shape: 'round', face: 1.55, faceY: 2, brows: false },
-    { id: 'cherry', name: 'cherry', r: 20, points: 3, base: '#f27f93', shape: 'cherry', face: 1.4, faceY: 4, brows: false },
-    { id: 'strawberry', name: 'strawberry', r: 26, points: 6, base: '#f6857c', shape: 'strawberry', face: 1.25, faceY: -1, brows: false },
-    { id: 'plum', name: 'plum', r: 32, points: 10, base: '#b99ce6', shape: 'round', face: 1.15, faceY: 2, brows: true },
-    { id: 'tangerine', name: 'tangerine', r: 39, points: 15, base: '#ffb066', shape: 'round', face: 1.08, faceY: 2, brows: true },
-    { id: 'apple', name: 'apple', r: 47, points: 21, base: '#f4746c', shape: 'apple', face: 1.02, faceY: 3, brows: true },
-    { id: 'peach', name: 'peach', r: 55, points: 28, base: '#ffbe9c', shape: 'peach', face: 1, faceY: 3, brows: true },
-    { id: 'pear', name: 'pear', r: 63, points: 36, base: '#cde67e', shape: 'pear', face: .96, faceY: 9, brows: true },
-    { id: 'watermelon', name: 'watermelon', r: 74, points: 45, base: '#8fd27e', shape: 'round', face: .96, faceY: 2, brows: true },
-    { id: 'coconut', name: 'coconut', r: 86, points: 55, base: '#b2825a', shape: 'round', face: .96, faceY: 2, brows: true }
+    { id: 'blueberry', name: 'blueberry', r: 19, points: 1, base: '#8a9fe0', edge: '#5668ad', face: 1.35 },
+    { id: 'cherry', name: 'cherry', r: 24, points: 3, base: '#ef6f7c', edge: '#b8444f', face: 1.3 },
+    { id: 'strawberry', name: 'strawberry', r: 29, points: 6, base: '#f47474', edge: '#c24b4f', face: 1.3 },
+    { id: 'plum', name: 'plum', r: 35, points: 10, base: '#ad8ad9', edge: '#7c5dab', face: 1.32 },
+    { id: 'tangerine', name: 'tangerine', r: 41, points: 15, base: '#ffab5c', edge: '#d47e2f', face: 1.36 },
+    { id: 'apple', name: 'apple', r: 48, points: 21, base: '#f06a63', edge: '#b9423e', face: 1.42 },
+    { id: 'peach', name: 'peach', r: 55, points: 28, base: '#ffbf98', edge: '#d98a68', face: 1.48 },
+    { id: 'pear', name: 'pear', r: 62, points: 36, base: '#d7e37a', edge: '#9caa3f', face: 1.5 },
+    { id: 'watermelon', name: 'watermelon', r: 70, points: 45, base: '#7cc46e', edge: '#3f8443', face: 1.58 },
+    { id: 'coconut', name: 'coconut', r: 79, points: 55, base: '#b07c54', edge: '#6f4a2e', face: 1.66 }
   ];
-  // only the five smallest fruits are ever handed to the player; weights favour the little ones
   const SPAWN_WEIGHTS = [30, 26, 20, 14, 10];
+  const LEAF = '#86c46f', LEAF_EDGE = '#4f8a43', STEM = '#7a573a';
 
-  // body outlines, all inside the collision circle (centre 50,55, radius 38)
-  const SHAPES = {
-    round: 'M50 18A37 37 0 1 1 49.99 18Z',
-    cherry: 'M50 31C43 21 15 24 15 52C15 76 32 92 50 92C68 92 85 76 85 52C85 24 57 21 50 31Z',
-    strawberry: 'M50 23C71 21 87 32 86 50C85 70 66 91 50 92C34 91 15 70 14 50C13 32 29 21 50 23Z',
-    apple: 'M50 31C56 22 83 21 86 47C89 70 71 92 59 91C55 90.5 53 89 50 89C47 89 45 90.5 41 91C29 92 11 70 14 47C17 21 44 22 50 31Z',
-    peach: 'M50 20C57 27 87 28 87 56C87 77 70 92 50 92C30 92 13 77 13 56C13 28 43 27 50 20Z',
-    pear: 'M50 21C61 21 65 31 65 40C65 48 84 57 84 72C84 85 69 92 50 92C31 92 16 85 16 72C16 57 35 48 35 40C35 31 39 21 50 21Z'
+  // body silhouettes, each inside the collision circle
+  const BODY = {
+    blueberry: '<circle cx="50" cy="56" r="35.5"/>',
+    cherry: '<path d="M50 33C38 25 17 33 16 57C15 77 31 91 50 91C69 91 85 77 84 57C83 33 62 25 50 33Z"/>',
+    strawberry: '<path d="M50 24C71 22 87 33 86 50C85 70 66 90 50 92C34 90 15 70 14 50C13 33 29 22 50 24Z"/>',
+    plum: '<ellipse cx="50" cy="56" rx="32.5" ry="36"/>',
+    tangerine: '<ellipse cx="50" cy="58" rx="37" ry="32"/>',
+    apple: '<path d="M50 31C56 22 83 21 86 47C89 70 71 92 59 91C55 90.5 53 89 50 89C47 89 45 90.5 41 91C29 92 11 70 14 47C17 21 44 22 50 31Z"/>',
+    peach: '<path d="M50 21C57 27 87 29 87 57C87 78 70 92 50 92C30 92 13 78 13 57C13 29 43 27 50 21Z"/>',
+    pear: '<path d="M50 22.8C57.8 22.8 61.7 28.7 62.7 37.5C63.6 47.2 71.5 52.1 76.3 60.9C80.7 69.6 77.3 84.2 64.6 89.1C57.8 91.1 42.2 91.1 35.4 89.1C22.7 84.2 19.3 69.6 23.7 60.9C28.6 52.1 36.4 47.2 37.3 37.5C38.3 28.7 42.2 22.8 50 22.8Z"/>',
+    watermelon: '<circle cx="50" cy="55" r="36.5"/>',
+    coconut: '<circle cx="50" cy="55" r="36.5"/>'
   };
 
-  // a few flat details per fruit: `under` sits inside the body (clipped), `over` sits on top of it
-  const leaf = (x, y, angle, s = 1) =>
-    `<g transform="translate(${x} ${y}) rotate(${angle}) scale(${s})"><path d="M0 0C5-9 17-11 25-5C18 4 7 6 0 0Z" fill="${LEAF}"/><path d="M3-1C9-3 15-4 20-4" fill="none" stroke-width="1.6"/></g>`;
-  const stem = d => `<path d="${d}" fill="none" stroke="${INK}" stroke-width="7" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${STEM}" stroke-width="3.2" stroke-linecap="round"/>`;
-  const DETAILS = {
-    blueberry: () => ({
-      over: `<path d="M50 14l3 5.5 6 .8-4.4 4.2 1.1 6-5.7-2.9-5.7 2.9 1.1-6-4.4-4.2 6-.8z" fill="#5f74bd"/>`
+  const stem = (d, w = 2.6) => `<path d="${d}" fill="none" stroke="${STEM}" stroke-width="${w}" stroke-linecap="round"/>`;
+  const leaf = (x, y, a, s = 1) => `<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})"><path d="M0 0C5-8 16-10 23-5C17 3 7 5 0 0Z" fill="${LEAF}" stroke="${LEAF_EDGE}" stroke-width="1.6" stroke-linejoin="round"/><path d="M3-1C9-3 14-4 18-4" fill="none" stroke="${LEAF_EDGE}" stroke-width="1.1" stroke-linecap="round"/></g>`;
+
+  // inside = clipped to the body; top = drawn over the outline
+  const DETAIL = {
+    blueberry: f => ({
+      // the calyx: a little five-pointed crown opening at the top
+      inside: `<g transform="translate(50 27)"><path d="M0-7L2.2-2.6 7-2.2 3.4 1 4.6 6 0 3.4-4.6 6-3.4 1-7-2.2-2.2-2.6Z" fill="#4f5f9e" stroke="${f.edge}" stroke-width="1" stroke-linejoin="round"/><circle r="1.6" fill="#3d4a80"/></g>` +
+        `<circle cx="66" cy="40" r="7" fill="#fff" opacity=".18"/>`
     }),
-    cherry: () => ({ over: stem('M50 30C51 20 56 11 64 6') + leaf(62, 9, -20, .7) }),
-    strawberry: () => ({
-      under: [[34, 46], [50, 42], [66, 46], [28, 60], [72, 60], [38, 80], [62, 80], [50, 86]]
-        .map(([x, y]) => `<path d="M${x} ${y - 1.6}v3.2" stroke="#fff1d6" stroke-width="2.6" stroke-linecap="round"/>`).join(''),
-      over: `<path d="M50 30C44 32 34 31 28 26C34 24 39 23 42 23C38 19 37 16 38 13C43 15 47 18 50 22C53 18 57 15 62 13C63 16 62 19 58 23C61 23 66 24 72 26C66 31 56 32 50 30Z" fill="${LEAF}"/>`
+    cherry: f => ({
+      inside: `<path d="M44 34Q50 38 56 34" fill="none" stroke="${f.edge}" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>`,
+      top: stem('M50 34C50 24 54 13 63 5', 2.2)
     }),
-    plum: () => ({
-      under: `<path d="M53 18C47 32 47 46 51 58" fill="none" stroke="#9378c9" stroke-width="2.6" stroke-linecap="round"/>`,
-      over: stem('M51 19C51 14 52 10 55 7')
+    strawberry: f => ({
+      inside: [[33, 46], [50, 43], [67, 46], [26, 58], [42, 57], [58, 57], [74, 58], [34, 70], [50, 70], [66, 70], [42, 82], [58, 82]]
+        .map(([x, y]) => `<path d="M${x} ${y - 2.2}q1.6 2.4 0 4.4q-1.6-2 0-4.4z" fill="#ffe38c"/>`).join(''),
+      top: `<path d="M50 31C45 33 35 33 28 28C33 26 38 25 41 25C37 21 35 18 36 14C41 16 46 19 50 23C54 19 59 16 64 14C65 18 63 21 59 25C62 25 67 26 72 28C65 33 55 33 50 31Z" fill="${LEAF}" stroke="${LEAF_EDGE}" stroke-width="1.5" stroke-linejoin="round"/>` + stem('M50 24V17', 2.4)
     }),
-    tangerine: () => ({
-      under: [[63, 30], [70, 36], [58, 26]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.4" fill="#e0893e"/>`).join(''),
-      over: stem('M50 19V12') + leaf(51, 14, -25, .85)
+    plum: f => ({
+      inside: `<path d="M51 22C57 28 61 35 62 44" fill="none" stroke="${f.edge}" stroke-width="2" stroke-linecap="round" opacity=".75"/>`,
+      top: stem('M51 21C51 16 52 12 55 9', 2.4)
     }),
-    apple: () => ({ over: stem('M50 30C50 22 51 16 54 11') + leaf(53, 15, -30, .9) }),
-    peach: () => ({
-      under: `<path d="M50 23C44 38 44 54 48 66" fill="none" stroke="#ef9a77" stroke-width="2.8" stroke-linecap="round"/>`,
-      over: leaf(50, 21, -155, .9)
+    tangerine: f => ({
+      inside: [[38, 34], [46, 31], [56, 31], [64, 35], [30, 44], [72, 46], [26, 60], [76, 62], [34, 80], [66, 80]]
+        .map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1" fill="${f.edge}" opacity=".45"/>`).join(''),
+      top: `<circle cx="50" cy="27" r="2.2" fill="#6e9a48" stroke="${LEAF_EDGE}" stroke-width="1"/>` + leaf(51, 25, -28, .75)
     }),
-    pear: () => ({ over: stem('M50 21C50 16 51 12 54 8') + leaf(53, 12, -25, .75) }),
-    watermelon: () => ({
-      under: [-26, -9, 9, 26].map(dx =>
-        `<path d="M${50 + dx} 16l${-4 - dx * .1} 9 ${6} 9 ${-6} 9 ${6} 9 ${-6} 9 ${6} 9 ${-6} 9 ${4 + dx * .1} 9" fill="none" stroke="#5aa25a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>`).join(''),
-      over: stem('M50 18V13')
+    apple: f => ({
+      inside: `<path d="M44 29Q50 34 56 29" fill="none" stroke="${f.edge}" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>`,
+      top: stem('M50 31C50 23 51 17 54 12') + leaf(53, 16, -30, .85)
     }),
-    coconut: () => ({
-      under: `<ellipse cx="50" cy="66" rx="25" ry="20" fill="#c99b72"/>`,
-      // a few soft husk fibres on top instead of the shell's three holes (which read as extra eyes)
-      under2: [[40, 27, -20], [50, 24, 0], [60, 27, 20], [33, 34, -35], [67, 34, 35]]
-        .map(([x, y, a]) => `<path transform="translate(${x} ${y}) rotate(${a})" d="M-3 0q3-3 6 0" fill="none" stroke="#8c6040" stroke-width="2" stroke-linecap="round"/>`).join('')
-    })
+    peach: f => ({
+      inside: `<path d="M51 23C57 29 61 37 62 46" fill="none" stroke="${f.edge}" stroke-width="2.2" stroke-linecap="round" opacity=".85"/>`,
+      top: leaf(50, 22, -150, .85)
+    }),
+    pear: f => ({
+      inside: [[32, 80], [68, 80], [74, 70]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r=".8" fill="${f.edge}" opacity=".4"/>`).join(''),
+      top: stem('M50 24C50 18 51 13 54 9') + leaf(53, 13, -22, .65)
+    }),
+    watermelon: f => ({
+      inside: [-28, -14, 0, 14, 28].map(dx =>
+        `<path d="M${50 + dx * .6} 15C${50 + dx * 1.15 - 4} 30 ${50 + dx * 1.15 + 4} 45 ${50 + dx * 1.2} 55S${50 + dx * 1.15 - 4} 80 ${50 + dx * .6} 95" fill="none" stroke="#3f8f45" stroke-width="5" stroke-linecap="round"/>`).join(''),
+      top: `<circle cx="50" cy="19.5" r="2" fill="${STEM}"/>`
+    }),
+    coconut: f => {
+      // a smooth shell with fine dark grain, and the coconut's three markings at the top
+      const marks = `<g fill="#6b4529"><ellipse cx="50" cy="25" rx="2.4" ry="2.8"/><ellipse cx="44" cy="32" rx="2.4" ry="2.8"/><ellipse cx="56" cy="32" rx="2.4" ry="2.8"/></g>`;
+      return { inside: coconutGrain() + marks };
+    }
   };
 
-  // the shared face: drawn around (50, 61) and scaled up a little on the small fruits
+  // fine, curvy grain lines placed by hand so they look natural rather than even: different lengths,
+  // spacing, lean and weight, like real husk fibres. Each follows the round shell (a meridian whose
+  // position drifts a little from start to end) and none crosses the face or the three markings.
+  function coconutGrain() {
+    const R = 35, cx = 50, cy = 55;
+    // [position at start, position at end (-1 left edge … 1 right edge), from y, to y, opacity, width]
+    const strokes = [
+      [-.93, -.86, 31, 79, .55, .8], [-.79, -.71, 25, 57, .7, .9], [-.69, -.63, 64, 88, .5, .8],
+      [-.56, -.49, 33, 49, .7, .7], [-.45, -.39, 75, 90, .6, .9], [-.31, -.35, 39, 46, .45, .7],
+      [-.17, -.11, 73, 86, .65, .8], [.04, .1, 77, 91, .5, .7], [.21, .17, 36, 47, .55, .8],
+      [.27, .35, 72, 84, .7, .9], [.47, .57, 28, 50, .65, .8], [.59, .67, 70, 89, .7, .9],
+      [.73, .81, 35, 72, .6, .8], [.88, .91, 45, 83, .5, .7]
+    ];
+    return strokes.map(([k0, k1, y0, y1, op, sw]) => {
+      let d = '';
+      for (let y = y0; y <= y1 + .01; y += 2) {
+        const t = (y - y0) / (y1 - y0), k = k0 + (k1 - k0) * t;
+        const w = Math.sqrt(Math.max(0, 1 - ((y - cy) / R) ** 2));
+        d += (d ? 'L' : 'M') + (cx + k * R * w).toFixed(2) + ' ' + y.toFixed(2);
+      }
+      return `<path d="${d}" fill="none" stroke="#7f5434" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" opacity="${op}"/>`;
+    }).join('');
+  }
+
+  // tiny dot eyes with a pinprick highlight and a small mouth, a little below the middle of the fruit
+  const FACE_Y = { cherry: 61, strawberry: 56, tangerine: 60, peach: 59, pear: 65 };
+  const SMILEY = new Set(['cherry', 'plum', 'peach', 'watermelon']);
   function face(f) {
-    const cy = 61 + (f.faceY || 0), s = f.face || 1;
-    const eye = x => `<circle cx="${x}" cy="${cy - 3}" r="7.1" fill="${INK}"/>` +
-      `<circle cx="${x + 2.3}" cy="${cy - 5.7}" r="2.8" fill="#fff"/><circle cx="${x - 2.5}" cy="${cy - .3}" r="1.15" fill="#fff"/>`;
-    const brow = x => `<path d="M${x - 4.5} ${cy - 14}Q${x} ${cy - 17.5} ${x + 4.5} ${cy - 14}" fill="none" stroke="${INK}" stroke-width="2.2" stroke-linecap="round"/>`;
-    const my = cy + 5;
-    const mouth = `<path d="M44.6 ${my}Q50 ${my + 1.6} 55.4 ${my}Q55 ${my + 8.6} 50 ${my + 8.6}Q45 ${my + 8.6} 44.6 ${my}Z" fill="${INK}" stroke="${INK}" stroke-width="1.4" stroke-linejoin="round"/>` +
-      `<path d="M46.6 ${my + 6.2}Q50 ${my + 3.4} 53.4 ${my + 6.2}Q52 ${my + 7.8} 50 ${my + 7.8}Q48 ${my + 7.8} 46.6 ${my + 6.2}Z" fill="${TONGUE}"/>`;
-    const cheek = x => `<ellipse cx="${x}" cy="${my + 1}" rx="5" ry="3.3" fill="${CHEEK}"/>`;
-    return `<g transform="translate(50 ${cy}) scale(${s}) translate(-50 ${-cy})">` +
-      cheek(33) + cheek(67) + eye(39.5) + eye(60.5) + (f.brows ? brow(39.5) + brow(60.5) : '') + mouth + `</g>`;
+    const cy = FACE_Y[f.id] ?? 58, s = f.face;
+    // most fruit have dot eyes; a few have the closed, smiling ^ ^ eyes
+    const eye = SMILEY.has(f.id)
+      ? x => `<path d="M${x - 2.8} ${cy + 1}Q${x} ${cy - 2.6} ${x + 2.8} ${cy + 1}" fill="none" stroke="${FACE}" stroke-width="1.6" stroke-linecap="round"/>`
+      : x => `<circle cx="${x}" cy="${cy}" r="2.5" fill="${FACE}"/><circle cx="${x + .8}" cy="${cy - .9}" r=".75" fill="#fff"/>`;
+    const mouth = `<path d="M47.6 ${cy + 3.4}Q50 ${cy + 5.6} 52.4 ${cy + 3.4}" fill="none" stroke="${FACE}" stroke-width="1.5" stroke-linecap="round"/>`;
+    return `<g transform="translate(50 ${cy}) scale(${s}) translate(-50 ${-cy})">${eye(42.5)}${eye(57.5)}${mouth}</g>`;
   }
 
   let uid = 0;
-  // the whole illustration for one tier as an SVG string
   function svg(tier, attrs = '') {
-    const f = FRUITS[tier];
-    const id = 'fm' + (uid++).toString(36);
-    const d = (DETAILS[f.id] || (() => ({})))();
-    const body = SHAPES[f.shape] || SHAPES.round;
-    // the outline weight shrinks gently on bigger fruit so lines look alike across the basket
-    const sw = Math.max(2.3, Math.min(5.4, 3.4 * Math.sqrt(39 / f.r)));
+    const f = FRUITS[tier], id = 'fc' + (uid++).toString(36);
+    const d = DETAIL[f.id](f), body = BODY[f.id];
+    const sw = Math.max(1.5, Math.min(3.2, 2.2 * Math.sqrt(39 / f.r)));
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" ${attrs}>` +
-      `<defs><clipPath id="${id}"><path d="${body}"/></clipPath></defs>` +
-      `<g stroke="${INK}" stroke-width="${sw}" stroke-linejoin="round" stroke-linecap="round">` +
-      `<path d="${body}" fill="${f.base}" stroke="none"/>` +
-      `<g clip-path="url(#${id})" stroke="none">${d.under || ''}${d.under2 || ''}` +
-      // one soft highlight, high on the left
-      `<path d="M27 40C28 31 34 25 41 23" fill="none" stroke="#fff" stroke-width="4.2" stroke-linecap="round" opacity=".55"/></g>` +
-      `<path d="${body}" fill="none"/>` +
-      `<g stroke-width="${Math.max(2.2, sw * .8)}">${d.over || ''}</g>` +
-      `</g>` + face(f) + `</svg>`;
+      `<defs><clipPath id="${id}">${body}</clipPath></defs>` +
+      `<g fill="${f.base}">${body}</g>` +
+      `<g clip-path="url(#${id})">${d.inside || ''}<path d="M26 44C27 35 33 28 41 25" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" opacity=".45"/></g>` +
+      `<g fill="none" stroke="${f.edge}" stroke-width="${sw}" stroke-linejoin="round">${body}</g>` +
+      (d.top || '') + face(f) + `</svg>`;
   }
 
   function randomTier(rand = Math.random) {
@@ -119,6 +147,5 @@
     for (let i = 0; i < SPAWN_WEIGHTS.length; i++) { x -= SPAWN_WEIGHTS[i]; if (x < 0) return i; }
     return 0;
   }
-
   root.FMFruits = { FRUITS, BODY_R, BODY_Y, SPAWN_WEIGHTS, svg, randomTier, MAX_TIER: FRUITS.length - 1 };
 })(typeof window !== 'undefined' ? window : globalThis);
