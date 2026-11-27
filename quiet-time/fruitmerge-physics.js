@@ -14,6 +14,7 @@
       width: o.width, floor: o.floor, gravity: o.gravity ?? 1500,
       substeps: o.substeps ?? 12,
       restitution: .18, bounceMin: 160,       // only real impacts bounce; resting fruit never does
+      depenetration: 220,                     // the most two touching fruit may fly apart beyond a real bounce
       staticFriction: .55, friction: .4,
       maxSpeed: 2600, bodies: [], onContacts: null
     };
@@ -29,7 +30,7 @@
     const b = {
       id: o.id, tier: o.tier, x: o.x, y: o.y, vx: o.vx || 0, vy: o.vy || 0, a: o.a || 0, w: o.w || 0,
       r: o.r, targetR: o.targetR ?? o.r, grow: o.grow || 0, dead: false,
-      landed: !!o.landed, born: o.born || 0, popT: o.popT ?? -9,
+      landed: !!o.landed, born: o.born || 0, popT: o.popT ?? -9, soft: o.soft || 0,
       px: o.x, py: o.y, pa: o.a || 0
     };
     // born mid-substep (a merge): give it a matching previous position so it keeps its velocity
@@ -86,14 +87,21 @@
     return (b ? b.vx * c.nx + b.vy * c.ny : 0) - (a.vx * c.nx + a.vy * c.ny);
   }
 
+  const isSoft = b => b.soft > 0 || b.r < b.targetR;
+
   function solveContact(world, c) {
     geometry(world, c);
-    if (c.pen <= 0) return;
+    let pen = c.pen;
+    if (pen <= 0) return;
     c.touching = true;
+    // a freshly merged (or still growing) fruit makes room gently: a small fruit caught in the crevice
+    // it appeared over is eased aside over a few frames instead of being squeezed out like a seed
+    const soft = isSoft(c.a) || (c.b && isSoft(c.b));
+    if (soft) pen = Math.min(pen, world.depenetration * world.h + pen * .04);
     const a = c.a, b = c.b, nx = c.nx, ny = c.ny;
     const wA = a.inv, wB = b ? b.inv : 0;
-    // 1. push apart
-    const dn = c.pen / (wA + wB);
+    // 1. push apart, fully, so fruit never stay overlapped
+    const dn = pen / (wA + wB);
     a.x -= nx * dn * wA; a.y -= ny * dn * wA;
     if (b) { b.x += nx * dn * wB; b.y += ny * dn * wB; }
     // 2. friction: undo (some of) the sliding of the two touching surfaces during this substep
@@ -108,6 +116,7 @@
     if (b) { b.x += tx * lt * wB; b.y += ty * lt * wB; b.a -= b.invI * b.r * lt; }
   }
 
+  // the safety net that keeps every fruit in the basket
   function clampInside(world, b) {
     if (!(Number.isFinite(b.x) && Number.isFinite(b.y))) { b.x = world.width / 2; b.y = world.floor - b.r; b.vx = b.vy = b.w = 0; b.px = b.x; b.py = b.y; }
     if (b.x < b.r) b.x = b.r;
@@ -119,6 +128,7 @@
     let bs = world.bodies;
     for (const b of bs) {
       if (b.r < b.targetR) { b.r = Math.min(b.targetR, b.r + b.grow * h); setMass(b); }
+      if (b.soft > 0) b.soft -= h;
       b.vy += world.gravity * h;
       b.px = b.x; b.py = b.y; b.pa = b.a;
       b.x += b.vx * h; b.y += b.vy * h; b.a += b.w * h;
@@ -129,7 +139,9 @@
       contacts = contacts.filter(c => !c.a.dead && !(c.b && c.b.dead));
       bs = world.bodies;
     }
-    for (const c of contacts) { geometry(world, c); c.vn = normalVel(c); c.touching = false; }
+    for (const c of contacts) {
+      geometry(world, c); c.vn = normalVel(c); c.touching = false;
+    }
     for (const c of contacts) solveContact(world, c);
     const max = world.maxSpeed, damp = 1 - .04 * h, angDamp = 1 - .6 * h;
     for (const b of bs) {
@@ -139,12 +151,19 @@
       const sp = Math.hypot(b.vx, b.vy);
       if (sp > max) { b.vx *= max / sp; b.vy *= max / sp; }
     }
-    // a gentle bounce for real impacts only
+    // settle how fast each touching pair separates: a gentle bounce for real impacts only, and never
+    // faster than that bounce plus a slow drift. Untangling an overlap (a merge spawning a bigger fruit,
+    // a fruit growing, a pile settling) moves fruit apart but must not fling them across the basket
     for (const c of contacts) {
-      if (!c.touching || c.vn > -world.bounceMin) continue;
+      if (!c.touching) continue;
       const a = c.a, b = c.b, wA = a.inv, wB = b ? b.inv : 0;
-      const vn = normalVel(c), target = -world.restitution * c.vn;
-      if (vn >= target) continue;
+      const vn = normalVel(c);
+      const bounce = c.vn < -world.bounceMin ? -world.restitution * c.vn : 0;
+      const most = bounce + world.depenetration;
+      let target = vn;
+      if (vn < bounce && bounce > 0) target = bounce;
+      else if (vn > most) target = most;
+      if (target === vn) continue;
       const j = (target - vn) / (wA + wB);
       a.vx -= c.nx * j * wA; a.vy -= c.ny * j * wA;
       if (b) { b.vx += c.nx * j * wB; b.vy += c.ny * j * wB; }

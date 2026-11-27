@@ -119,8 +119,8 @@
           </div>` : ''}
           <aside class="fm-side">
             <div class="fm-next" aria-live="polite"><span class="fm-label">next</span><div class="fm-next-art" id="fmNextArt"></div></div>
-            <p class="fm-help fm-help-mouse">move to aim · click or space to drop${endless ? ' · scroll or the map to look around' : ''}</p>
-            <p class="fm-help fm-help-touch">touch to aim · lift to drop${endless ? ' · two fingers or the map to look around' : ''}</p>
+            <p class="fm-help fm-help-mouse">move to aim · click or space to drop</p>
+            <p class="fm-help fm-help-touch">touch to aim · lift to drop</p>
           </aside>
         </div>
         <section class="fm-guide" aria-label="fruit order, smallest to largest">

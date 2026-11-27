@@ -53,7 +53,7 @@
     root.FMPhysics.addBody(s.world, {
       id: s.nextId++, tier, x: (a.x + b.x) / 2, y: (a.y + b.y) / 2,
       vx: (a.vx + b.vx) / 2, vy: (a.vy + b.vy) / 2, a: (a.a + b.a) / 2, w: 0,
-      r: startR, targetR: f.r, grow: (f.r - startR) / .14, landed: true, born: s.time, popT: s.time
+      r: startR, targetR: f.r, grow: (f.r - startR) / .14, landed: true, born: s.time, popT: s.time, soft: .35
     });
     s.score += f.points;
     s.merges++;
