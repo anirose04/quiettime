@@ -1,6 +1,6 @@
 /* quiet time — fruitmerge: game state and rules.
    Owns the world for one mode (classic or endless): dropping, the current and next fruit,
-   merges and chain reactions, coconut clearing (endless only), the classic overflow rule,
+   merges and chain reactions, clearing two of the biggest fruit (endless only), the classic overflow rule,
    the endless drop height and camera, and turning a game into plain data and back. */
 (function (root) {
   const { FRUITS, MAX_TIER, randomTier } = root.FMFruits;
@@ -13,7 +13,7 @@
   const ENDLESS_GAP = 175;       // endless: the waiting fruit sits this far above the highest settled fruit
   const COOLDOWN = .5;           // a short breath between drops
   const OVER_GRACE = 2.4;        // classic: seconds the settled pile may stay above the line
-  const CLEAR_POINTS = 100;      // endless: two coconuts meeting
+  const CLEAR_POINTS = 100;      // endless: two of the biggest fruit (dragon fruit) meeting
 
   function create(mode, rand = Math.random) {
     const s = {
@@ -41,8 +41,8 @@
       a.landed = b.landed = true;
       if (a.dead || b.dead || a.tier !== b.tier) continue;
       if (a.tier < MAX_TIER) merge(s, a, b);
-      else if (s.mode === 'endless') clearCoconuts(s, a, b);
-      // classic: two coconuts simply rest against each other
+      else if (s.mode === 'endless') clearBiggest(s, a, b);
+      // classic: two dragon fruit simply rest against each other
     }
   }
 
@@ -60,7 +60,7 @@
     s.effects.push({ type: 'ring', x: (a.x + b.x) / 2, y: (a.y + b.y) / 2, r: f.r, t0: s.time, tier });
   }
 
-  function clearCoconuts(s, a, b) {
+  function clearBiggest(s, a, b) {
     a.dead = b.dead = true;
     s.cleared += 2;
     s.score += CLEAR_POINTS;

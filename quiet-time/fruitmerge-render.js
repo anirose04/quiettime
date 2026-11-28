@@ -1,16 +1,18 @@
 /* quiet time — fruitmerge: drawing.
-   The SVG illustrations are rasterised once per size into small offscreen canvases, then
-   stamped onto the board each frame with the fruit's position and spin. */
+   The fruit pictures are scaled once per size into small offscreen canvases, then stamped onto
+   the board each frame with the fruit's position and spin. If a picture can't load, the
+   code-drawn SVG version of that fruit is used instead. */
 (function (root) {
   const { FRUITS, BODY_R, BODY_Y, svg } = root.FMFruits;
   const G = root.FMGame;
   const PAD = 16;                          // world units of margin on each side of the basket
   const CREAM = '#f5eedb', CREAM_DEEP = '#ebe1c6', RIM = '#cbbd98', SAGE = '#8ea283', ROSE = '#c98494';
 
-  const images = FRUITS.map((_, t) => {
+  const images = FRUITS.map((f, t) => {
     const img = new Image();
     img.decoding = 'async';
-    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg(t));
+    img.onerror = () => { img.onerror = null; img.dataset.svg = '1'; cache.delete(t); img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg(t)); };
+    img.src = f.img;
     return img;
   });
   const cache = new Map();
@@ -20,9 +22,19 @@
     const want = Math.max(8, Math.ceil(px));
     const hit = cache.get(tier);
     if (hit && hit.px >= want * .9 && hit.px <= want * 1.25) return hit.canvas;
+    // big pictures are halved step by step so a small sprite stays smooth instead of jagged
+    let src = img, size = img.naturalWidth;
+    while (size / 2 >= want * 1.5) {
+      const half = document.createElement('canvas');
+      half.width = half.height = Math.round(size / 2);
+      const hx = half.getContext('2d'); hx.imageSmoothingQuality = 'high';
+      hx.drawImage(src, 0, 0, half.width, half.height);
+      src = half; size = half.width;
+    }
     const c = document.createElement('canvas');
     c.width = c.height = want;
-    c.getContext('2d').drawImage(img, 0, 0, want, want);
+    const cx = c.getContext('2d'); cx.imageSmoothingQuality = 'high';
+    cx.drawImage(src, 0, 0, want, want);
     cache.set(tier, { px: want, canvas: c });
     return c;
   }
@@ -31,13 +43,18 @@
 
   function fruit(ctx, tier, x, y, r, angle, k, alpha = 1, scale = 1) {
     // k = screen pixels per world unit (already includes devicePixelRatio)
-    const box = r / BODY_R * 100 * k * scale;
-    const spr = sprite(tier, (FRUITS[tier].r / BODY_R) * 100 * k);
+    // the drawn body (outline included) just fills the collision circle, so touching fruit look touching
+    const usingSvg = images[tier].dataset.svg === '1';
+    const [artR, artX, artY] = (usingSvg ? FRUITS[tier].art : FRUITS[tier].pic) || [BODY_R, 50, BODY_Y];
+    // exactly the collision circle, so two fruit only look touching when they are (the SVG's outline sits half outside its path)
+    const fill = 100 / (artR + (usingSvg ? 1 : 0));
+    const box = r * fill * k * scale;
+    const spr = sprite(tier, FRUITS[tier].r * fill * k);
     ctx.save();
     ctx.globalAlpha = alpha;
     ctx.translate(x, y);
     ctx.rotate(angle);
-    if (spr) ctx.drawImage(spr, -box * .5, -box * BODY_Y / 100, box, box);
+    if (spr) ctx.drawImage(spr, -box * artX / 100, -box * artY / 100, box, box);
     else { ctx.fillStyle = FRUITS[tier].base; ctx.beginPath(); ctx.arc(0, 0, r * k * scale, 0, Math.PI * 2); ctx.fill(); }
     ctx.restore();
   }
@@ -128,7 +145,7 @@
       fruit(ctx, b.tier, sx(b.x), yy, b.r, b.a, k, 1, pop);
     }
 
-    // soft effects: a ring when fruit merge, a fade and a few motes when two coconuts clear
+    // soft effects: a ring when fruit merge, a fade and a few motes when the two biggest fruit clear
     for (const e of s.effects) {
       const p = (s.time - e.t0);
       if (e.type === 'ring' && p < .45) {
@@ -156,25 +173,49 @@
     }
   }
 
-  // the stack map for endless: the whole pile squeezed into a narrow strip, with the view marked
+  // the stack map for endless: a slim slider for the whole basket, floor at the bottom and the drop zone
+  // at the top. A soft fill shows how high the pile reaches, small marks match the height marks on the
+  // basket walls, and the box with grip lines is the part on screen; drag it to look around
+  function rrect(ctx, x, y, w, h, r) {
+    r = Math.min(r, w / 2, h / 2);
+    ctx.beginPath();
+    ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+  }
   function drawMap(ctx, s) {
-    const w = ctx.canvas.width, h = ctx.canvas.height;
+    const w = ctx.canvas.width, h = ctx.canvas.height, u = w / 52;
     ctx.clearRect(0, 0, w, h);
     const { minTop } = G.camRange(s);
-    const worldTop = Math.min(minTop, s.camTop) - 20, worldBottom = G.FLOOR + 10;
-    const k = Math.min(h / (worldBottom - worldTop), (w - 8) / G.W);
-    const ox = (w - G.W * k) / 2;
-    const my = y => h - (worldBottom - y) * k;
-    ctx.fillStyle = '#f5eedb22';
-    ctx.fillRect(ox, my(worldTop), G.W * k, (worldBottom - worldTop) * k);
-    for (const b of s.world.bodies) {
-      ctx.fillStyle = FRUITS[b.tier].base;
-      ctx.beginPath(); ctx.arc(ox + b.x * k, my(b.y), Math.max(1.2, b.r * k), 0, Math.PI * 2); ctx.fill();
+    const worldTop = minTop - 10, worldBottom = G.FLOOR + 10;
+    const ky = h / (worldBottom - worldTop);
+    const my = y => (y - worldTop) * ky;
+    // the pile
+    const py = Math.max(0, my(Math.min(G.FLOOR, s.pileTop)));
+    if (py < h) {
+      ctx.fillStyle = '#f5eedb21';
+      rrect(ctx, 7 * u, py, w - 14 * u, my(G.FLOOR) - py, 5 * u); ctx.fill();
+      ctx.strokeStyle = '#f5eedb59'; ctx.lineWidth = 1.2 * u; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(10 * u, py); ctx.lineTo(w - 10 * u, py); ctx.stroke();
     }
-    ctx.strokeStyle = '#f5eedb'; ctx.lineWidth = 2;
-    const vy0 = my(s.camTop), vy1 = my(s.camTop + G.VIEW_H);
-    ctx.strokeRect(1, Math.max(1, vy0), w - 2, Math.min(h - 1, vy1) - Math.max(1, vy0));
-    return { worldTop, worldBottom, k, toWorld: py => worldBottom - (h - py) / k };
+    // height marks, as on the basket walls
+    ctx.strokeStyle = '#f5eedb3d'; ctx.lineWidth = 1.2 * u; ctx.lineCap = 'round';
+    ctx.fillStyle = '#f5eedb66'; ctx.font = `${8.5 * u}px 'Courier Prime', monospace`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    for (let m = 200; G.FLOOR - m > worldTop + 8; m += 200) {
+      const yy = my(G.FLOOR - m);
+      ctx.beginPath(); ctx.moveTo(2 * u, yy); ctx.lineTo(6 * u, yy); ctx.moveTo(w - 2 * u, yy); ctx.lineTo(w - 6 * u, yy); ctx.stroke();
+      if (h / (worldBottom - worldTop) * 200 > 22 * u) ctx.fillText(String(m / 100), w / 2, yy);
+    }
+    // the view: a box you can grab
+    const vy0 = Math.max(1.5 * u, my(s.camTop)), vy1 = Math.min(h - 1.5 * u, my(s.camTop + G.VIEW_H));
+    ctx.fillStyle = '#f5eedb1c';
+    rrect(ctx, 2.5 * u, vy0, w - 5 * u, vy1 - vy0, 6 * u); ctx.fill();
+    ctx.strokeStyle = '#f5eedbcc'; ctx.lineWidth = 1.6 * u; ctx.stroke();
+    const mid = (vy0 + vy1) / 2;
+    ctx.strokeStyle = '#f5eedbb3'; ctx.lineWidth = 1.4 * u;
+    ctx.beginPath();
+    for (const d of [-4, 0, 4]) { ctx.moveTo(w / 2 - 7 * u, mid + d * u); ctx.lineTo(w / 2 + 7 * u, mid + d * u); }
+    ctx.stroke();
+    return { worldTop, worldBottom, ky, viewTop: vy0, viewBottom: vy1, toWorld: py => worldTop + py / ky };
   }
 
   root.FMRender = { PAD, draw, drawMap, viewSize, images };

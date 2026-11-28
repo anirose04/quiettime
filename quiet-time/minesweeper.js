@@ -7,6 +7,7 @@ const MS_LEVELS = {
 let ms = null;
 let msPressTimer = null;
 let msLongPress = null;
+let msFlagMode = false;   // with flag mode on, a plain click or tap places or removes a flag
 
 function msNewGame(level = 'gentle') {
   const preset = MS_LEVELS[level] || MS_LEVELS.gentle;
@@ -129,6 +130,7 @@ function drawMinesweeper() {
       <select class="pill" id="msLevel" aria-label="difficulty">
         ${Object.entries(MS_LEVELS).map(([id, p]) => `<option value="${id}">${p.title}</option>`).join('')}
       </select>
+      <button class="pill${msFlagMode ? ' active' : ''}" id="msFlagMode" type="button" aria-pressed="${msFlagMode}">⚑ flag ${msFlagMode ? 'on' : 'off'}</button>
       <span class="ms-flags" id="msMinesLeft" aria-live="polite"></span>
       <button class="pill" id="msNew" type="button">new puzzle</button>
     </div>
@@ -150,6 +152,13 @@ function drawMinesweeper() {
     if (inProgress()) qtConfirm('start a new puzzle?', 'this board will be cleared.', 'new puzzle', go);
     else go();
   };
+  $('#msFlagMode').onclick = e => {
+    msFlagMode = !msFlagMode;
+    const b = e.currentTarget;
+    b.classList.toggle('active', msFlagMode);
+    b.setAttribute('aria-pressed', msFlagMode);
+    b.textContent = `⚑ flag ${msFlagMode ? 'on' : 'off'}`;
+  };
   const board = $('#msBoard');
   board.addEventListener('click', e => {
     const tile = e.target.closest('[data-ms]');
@@ -159,7 +168,9 @@ function drawMinesweeper() {
       msLongPress = null;
       return;
     }
-    msReveal(index);
+    // flag mode: covered squares get flagged; opened numbers still chord
+    if (msFlagMode && !ms.board[index]?.revealed) msToggleFlag(index);
+    else msReveal(index);
   });
   board.addEventListener('contextmenu', e => {
     const tile = e.target.closest('[data-ms]');

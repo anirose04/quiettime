@@ -331,7 +331,8 @@ canvas.r-plot{display:block;width:100%;max-width:720px;height:auto;border-radius
 .fm-help-touch{display:none}
 @media (hover:none),(pointer:coarse){.fm-help-mouse{display:none}.fm-help-touch{display:block}}
 .fm-look{flex:0 0 58px;display:flex;flex-direction:column;align-items:center;gap:6px}
-.fm-look canvas{width:52px;border-radius:10px;background:#1f3122;border:1px solid #f4eedb33;touch-action:none;cursor:ns-resize}
+.fm-look canvas{width:52px;border-radius:10px;background:#1f3122;border:1px solid #f4eedb33;touch-action:none;cursor:grab}
+.fm-look canvas:active{cursor:grabbing}
 .fm-look-btn{width:58px;min-height:40px;padding:6px 4px}
 @media (max-width:760px){
   .fm-play{flex-wrap:wrap;gap:10px}

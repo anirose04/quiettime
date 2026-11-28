@@ -1,7 +1,7 @@
 /* quiet time — fruitmerge: fruit definitions and illustrations.
    The tier order, sizes, colours, shapes and faces all live here, so a fruit can be retuned or
    redrawn without touching the physics or the game rules. r is the physics radius in world units
-   (the basket is 600 wide); sizes run from 19 to 79 so neighbouring fruit feel close in size.
+   (the basket is 600 wide); sizes run from 19 to 81 so neighbouring fruit feel close in size.
    Style: fruit first. Flat pastel fills, a moderately thin outline in a darker shade of each
    fruit's own colour, one soft highlight, simple botanical details, and a small face (dot eyes,
    or closed smiling eyes on a few) that grows with the fruit. Every SVG is a 100 × 100 box whose
@@ -10,18 +10,33 @@
 (function (root) {
   const BODY_R = 38, BODY_Y = 55;
   const FACE = '#3b2c2a';
+  // art = [area-equivalent radius, centre x, centre y] of the drawn body, measured from the SVG, so the
+  // renderer can scale and centre each drawing to fill its collision circle (stems and leaves don't count)
   const FRUITS = [
-    { id: 'blueberry', name: 'blueberry', r: 19, points: 1, base: '#8a9fe0', edge: '#5668ad', face: 1.35 },
-    { id: 'cherry', name: 'cherry', r: 24, points: 3, base: '#ef6f7c', edge: '#b8444f', face: 1.3 },
-    { id: 'strawberry', name: 'strawberry', r: 29, points: 6, base: '#f47474', edge: '#c24b4f', face: 1.3 },
-    { id: 'plum', name: 'plum', r: 35, points: 10, base: '#ad8ad9', edge: '#7c5dab', face: 1.32 },
-    { id: 'tangerine', name: 'tangerine', r: 41, points: 15, base: '#ffab5c', edge: '#d47e2f', face: 1.36 },
-    { id: 'apple', name: 'apple', r: 48, points: 21, base: '#f06a63', edge: '#b9423e', face: 1.42 },
-    { id: 'peach', name: 'peach', r: 55, points: 28, base: '#ffbf98', edge: '#d98a68', face: 1.48 },
-    { id: 'pear', name: 'pear', r: 62, points: 36, base: '#d7e37a', edge: '#9caa3f', face: 1.5 },
-    { id: 'watermelon', name: 'watermelon', r: 70, points: 45, base: '#7cc46e', edge: '#3f8443', face: 1.58 },
-    { id: 'coconut', name: 'coconut', r: 79, points: 55, base: '#b07c54', edge: '#6f4a2e', face: 1.66 }
+    { id: 'blueberry', name: 'blueberry', r: 19, points: 1, base: '#8a9fe0', edge: '#5668ad', face: 1.35, art: [35.5, 49.88, 55.88] },
+    { id: 'cherry', name: 'cherry', r: 24, points: 3, base: '#ef6f7c', edge: '#b8444f', face: 1.3, art: [32.9, 49.87, 59.39] },
+    { id: 'strawberry', name: 'strawberry', r: 29, points: 6, base: '#f47474', edge: '#c24b4f', face: 1.3, art: [34.64, 49.88, 54.81] },
+    { id: 'plum', name: 'plum', r: 34, points: 10, base: '#ad8ad9', edge: '#7c5dab', face: 1.32, art: [34.2, 49.88, 55.88] },
+    { id: 'tangerine', name: 'tangerine', r: 39, points: 15, base: '#ffab5c', edge: '#d47e2f', face: 1.36, art: [34.41, 49.88, 57.88] },
+    { id: 'apple', name: 'apple', r: 45, points: 21, base: '#f06a63', edge: '#b9423e', face: 1.42, art: [35.57, 49.88, 56.71] },
+    { id: 'peach', name: 'peach', r: 51, points: 28, base: '#ffbf98', edge: '#d98a68', face: 1.48, art: [35.56, 49.88, 57.87] },
+    { id: 'pear', name: 'pear', r: 57, points: 36, base: '#d7e37a', edge: '#9caa3f', face: 1.5, art: [29.18, 49.87, 62.19] },
+    { id: 'watermelon', name: 'watermelon', r: 63, points: 45, base: '#7cc46e', edge: '#3f8443', face: 1.58, art: [36.5, 49.88, 54.88] },
+    { id: 'coconut', name: 'coconut', r: 69, points: 55, base: '#b07c54', edge: '#6f4a2e', face: 1.66, art: [36.5, 49.88, 54.88] },
+    { id: 'pineapple', name: 'pineapple', r: 75, points: 66, base: '#f5cd5b', edge: '#c39328', face: 1.74, art: [34.13, 49.88, 57.49] },
+    { id: 'dragonfruit', name: 'dragon fruit', r: 81, points: 78, base: '#ef6a9c', edge: '#b23d6c', face: 1.8, blush: '#c93d72', art: [34.65, 49.87, 56.58] }
   ];
+  // the illustrated fruit: one transparent PNG per fruit in assets/fruit (sized to the largest it is ever
+  // drawn). pic = [radius, centre x, centre y] of the round body as a share of the image width (×100),
+  // fitted to the outline while ignoring stems, leaves and crowns, so the body fills the collision circle.
+  // The code-drawn SVG fruit below stay as a fallback if a picture can't load.
+  const PIC = {
+    blueberry: [36.59, 49.93, 50.1], cherry: [35.38, 49.69, 47.71], strawberry: [36.14, 49.82, 44.58],
+    plum: [37.41, 49.99, 49.49], tangerine: [36.42, 49.92, 49.58], apple: [36.58, 49.94, 47.45],
+    peach: [36.28, 50.06, 50.25], pear: [35.79, 49.98, 56.39], watermelon: [36.85, 49.9, 50.29],
+    coconut: [36.84, 49.88, 49.97], pineapple: [37.05, 49.83, 48.38], dragonfruit: [37.84, 50.91, 51.77]
+  };
+  FRUITS.forEach((f, i) => { f.img = `assets/fruit/${String(i + 1).padStart(2, '0')}-${f.id}.png`; f.pic = PIC[f.id]; });
   const SPAWN_WEIGHTS = [30, 26, 20, 14, 10];
   const LEAF = '#86c46f', LEAF_EDGE = '#4f8a43', STEM = '#7a573a';
 
@@ -34,9 +49,11 @@
     tangerine: '<ellipse cx="50" cy="58" rx="37" ry="32"/>',
     apple: '<path d="M50 31C56 22 83 21 86 47C89 70 71 92 59 91C55 90.5 53 89 50 89C47 89 45 90.5 41 91C29 92 11 70 14 47C17 21 44 22 50 31Z"/>',
     peach: '<path d="M50 21C57 27 87 29 87 57C87 78 70 92 50 92C30 92 13 78 13 57C13 29 43 27 50 21Z"/>',
-    pear: '<path d="M50 22.8C57.8 22.8 61.7 28.7 62.7 37.5C63.6 47.2 71.5 52.1 76.3 60.9C80.7 69.6 77.3 84.2 64.6 89.1C57.8 91.1 42.2 91.1 35.4 89.1C22.7 84.2 19.3 69.6 23.7 60.9C28.6 52.1 36.4 47.2 37.3 37.5C38.3 28.7 42.2 22.8 50 22.8Z"/>',
+    pear: '<path d="M50 22.8C57.8 22.8 61.7 28.7 62.7 37.5C63.6 47.2 71.5 52.1 76.3 60.9C82.5 72 75 92.5 50 92.5C25 92.5 17.5 72 23.7 60.9C28.6 52.1 36.4 47.2 37.3 37.5C38.3 28.7 42.2 22.8 50 22.8Z"/>',
     watermelon: '<circle cx="50" cy="55" r="36.5"/>',
-    coconut: '<circle cx="50" cy="55" r="36.5"/>'
+    coconut: '<circle cx="50" cy="55" r="36.5"/>',
+    pineapple: '<path d="M50 23C70 23 83 38 83 58C83 79 69 92 50 92C31 92 17 79 17 58C17 38 30 23 50 23Z"/>',
+    dragonfruit: '<path d="M50 19C66 19 81.5 36 82.5 57C83.5 79 69 92.5 50 92.5C31 92.5 16.5 79 17.5 57C18.5 36 34 19 50 19Z"/>'
   };
 
   const stem = (d, w = 2.6) => `<path d="${d}" fill="none" stroke="${STEM}" stroke-width="${w}" stroke-linecap="round"/>`;
@@ -88,6 +105,39 @@
       // a smooth shell with fine dark grain, and the coconut's three markings at the top
       const marks = `<g fill="#6b4529"><ellipse cx="50" cy="25" rx="2.4" ry="2.8"/><ellipse cx="44" cy="32" rx="2.4" ry="2.8"/><ellipse cx="56" cy="32" rx="2.4" ry="2.8"/></g>`;
       return { inside: coconutGrain() + marks };
+    },
+    pineapple: f => ({
+      // criss-cross segments with a little dot in each diamond, and a spiky crown of leaves
+      inside: [-36, -24, -12, 0, 12, 24, 36].map(o => `<path d="M${50 + o - 30} 20L${50 + o + 30} 96M${50 + o + 30} 20L${50 + o - 30} 96" stroke="${f.edge}" stroke-width="1.3" opacity=".5"/>`).join('') +
+        [[50, 34], [38, 42], [62, 42], [28, 54], [72, 54], [30, 76], [70, 76], [42, 86], [58, 86]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.2" fill="${f.edge}" opacity=".55"/>`).join(''),
+      top: `<g fill="${LEAF}" stroke="${LEAF_EDGE}" stroke-width="1.5" stroke-linejoin="round">` +
+        `<path d="M41 26C35 20 30 15 27 10C34 12 40 16 45 22Z"/><path d="M59 26C65 20 70 15 73 10C66 12 60 16 55 22Z"/>` +
+        `<path d="M45 25C42 17 41 10 42 3C47 8 50 15 50 22Z"/><path d="M55 25C58 17 59 10 58 3C53 8 50 15 50 22Z"/>` +
+        `<path d="M47 25C47 16 49 8 50 1C52 8 53 16 53 25Z"/></g>`
+    }),
+    dragonfruit: f => {
+      // a plump little dragon fruit: a few soft, curved leaves (bracts) grow out of the skin and point mostly
+      // up, placed unevenly so it never reads as a flower or a sun. Each leaf is skin-pink where it leaves the
+      // fruit and green at the tip, and has no line across its base, so it grows out of the body instead of
+      // sitting on its edge. Three small ones on the front give it some roundness.
+      const bract = (x, y, rot, len, w, bend) => {
+        const id = 'db' + (uid++).toString(36);
+        // the tip is a small rounded curl rather than a point
+        const tl = w * .13;
+        const left = `M${-w} 0C${-w * .95} ${-len * .45} ${bend * .4 - w * .35} ${-len * .8} ${bend - tl} ${-len + tl}Q${bend} ${-len - tl * .6} ${bend + tl} ${-len + tl * .9}`;
+        const right = `C${bend * .5 + w * .3} ${-len * .7} ${w * .9} ${-len * .35} ${w} 0`;
+        const shape = left + right + `Q0 ${w * .5} ${-w} 0Z`;
+        return `<g transform="translate(${x} ${y}) rotate(${rot})"><clipPath id="${id}"><path d="${shape}"/></clipPath>` +
+          `<path d="${shape}" fill="${f.base}"/>` +
+          `<g clip-path="url(#${id})"><ellipse cx="${bend * .8}" cy="${-len * 1.05}" rx="${w * 1.5}" ry="${len * .56}" fill="${LEAF}"/></g>` +
+          `<path d="${left}${right}" fill="none" stroke="${f.edge}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+      };
+      return {
+        inside: bract(36, 40, -6, 12, 5.4, -2) + bract(30, 89, -14, 12, 5.6, -2) + bract(69, 88, 16, 11, 5.4, 2),
+        top: bract(26, 46, -24, 18, 7.5, -3.5) + bract(22, 72, -30, 15, 7, -3) +
+          bract(76, 54, 26, 17, 7.2, 3.5) + bract(77, 79, 34, 12.5, 6.2, 3) +
+          bract(45, 23, -10, 16.5, 7, -3) + bract(58, 25, 16, 12, 6, 2.5)
+      };
     }
   };
 
@@ -116,7 +166,7 @@
   }
 
   // tiny dot eyes with a pinprick highlight and a small mouth, a little below the middle of the fruit
-  const FACE_Y = { cherry: 61, strawberry: 56, tangerine: 60, peach: 59, pear: 65 };
+  const FACE_Y = { cherry: 61, strawberry: 56, tangerine: 60, peach: 59, pear: 65, pineapple: 60, dragonfruit: 61 };
   const SMILEY = new Set(['cherry', 'plum', 'peach', 'watermelon']);
   function face(f) {
     const cy = FACE_Y[f.id] ?? 58, s = f.face;
@@ -125,7 +175,8 @@
       ? x => `<path d="M${x - 2.8} ${cy + 1}Q${x} ${cy - 2.6} ${x + 2.8} ${cy + 1}" fill="none" stroke="${FACE}" stroke-width="1.6" stroke-linecap="round"/>`
       : x => `<circle cx="${x}" cy="${cy}" r="2.5" fill="${FACE}"/><circle cx="${x + .8}" cy="${cy - .9}" r=".75" fill="#fff"/>`;
     const mouth = `<path d="M47.6 ${cy + 3.4}Q50 ${cy + 5.6} 52.4 ${cy + 3.4}" fill="none" stroke="${FACE}" stroke-width="1.5" stroke-linecap="round"/>`;
-    return `<g transform="translate(50 ${cy}) scale(${s}) translate(-50 ${-cy})">${eye(42.5)}${eye(57.5)}${mouth}</g>`;
+    const blush = f.blush ? `<ellipse cx="38.5" cy="${cy + 3.6}" rx="3.2" ry="1.8" fill="${f.blush}" opacity=".55"/><ellipse cx="61.5" cy="${cy + 3.6}" rx="3.2" ry="1.8" fill="${f.blush}" opacity=".55"/>` : '';
+    return `<g transform="translate(50 ${cy}) scale(${s}) translate(-50 ${-cy})">${blush}${eye(42.5)}${eye(57.5)}${mouth}</g>`;
   }
 
   let uid = 0;
@@ -135,7 +186,7 @@
     const sw = Math.max(1.5, Math.min(3.2, 2.2 * Math.sqrt(39 / f.r)));
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" ${attrs}>` +
       `<defs><clipPath id="${id}">${body}</clipPath></defs>` +
-      `<g fill="${f.base}">${body}</g>` +
+      (d.back || '') + `<g fill="${f.base}">${body}</g>` +
       `<g clip-path="url(#${id})">${d.inside || ''}<path d="M26 44C27 35 33 28 41 25" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" opacity=".45"/></g>` +
       `<g fill="none" stroke="${f.edge}" stroke-width="${sw}" stroke-linejoin="round">${body}</g>` +
       (d.top || '') + face(f) + `</svg>`;
@@ -147,5 +198,7 @@
     for (let i = 0; i < SPAWN_WEIGHTS.length; i++) { x -= SPAWN_WEIGHTS[i]; if (x < 0) return i; }
     return 0;
   }
-  root.FMFruits = { FRUITS, BODY_R, BODY_Y, SPAWN_WEIGHTS, svg, randomTier, MAX_TIER: FRUITS.length - 1 };
+  // the picture as an <img> for the page (the fruit order and the next box)
+  const pic = (tier, attrs = '') => `<img src="${FRUITS[tier].img}" alt="${FRUITS[tier].name}" draggable="false" ${attrs}>`;
+  root.FMFruits = { FRUITS, BODY_R, BODY_Y, SPAWN_WEIGHTS, svg, pic, randomTier, MAX_TIER: FRUITS.length - 1 };
 })(typeof window !== 'undefined' ? window : globalThis);

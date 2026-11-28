@@ -84,20 +84,29 @@
     canvas.addEventListener('contextmenu', e => e.preventDefault());
   }
 
-  // the stack map: press and drag anywhere on it to move the view there
+  // the stack map: grab the box and drag it to move the view; pressing elsewhere on the map jumps there
   function attachMap(mapCanvas, api) {
-    let dragging = false;
-    const go = e => {
+    let grab = null;   // world units between the pointer and the top of the view while dragging
+    const at = e => {
+      const r = mapCanvas.getBoundingClientRect();
+      return (e.clientY - r.top) / r.height * mapCanvas.height;
+    };
+    const move = e => {
+      const s = api.state(), info = api.mapInfo();
+      if (!info || grab === null) return;
+      G.pan(s, info.toWorld(at(e)) - grab - s.camTop);
+    };
+    mapCanvas.addEventListener('pointerdown', e => {
       const s = api.state(), info = api.mapInfo();
       if (!info) return;
-      const r = mapCanvas.getBoundingClientRect();
-      const py = (e.clientY - r.top) / r.height * mapCanvas.height;
-      const centre = info.toWorld(py);
-      G.pan(s, centre - G.VIEW_H / 2 - s.camTop);
-    };
-    mapCanvas.addEventListener('pointerdown', e => { e.preventDefault(); dragging = true; capture(mapCanvas, e.pointerId); go(e); });
-    mapCanvas.addEventListener('pointermove', e => { if (dragging) { e.preventDefault(); go(e); } });
-    const end = () => { dragging = false; };
+      e.preventDefault();
+      capture(mapCanvas, e.pointerId);
+      const py = at(e);
+      grab = py >= info.viewTop && py <= info.viewBottom ? info.toWorld(py) - s.camTop : G.VIEW_H / 2;
+      move(e);
+    });
+    mapCanvas.addEventListener('pointermove', e => { if (grab !== null) { e.preventDefault(); move(e); } });
+    const end = () => { grab = null; };
     mapCanvas.addEventListener('pointerup', end);
     mapCanvas.addEventListener('pointercancel', end);
   }

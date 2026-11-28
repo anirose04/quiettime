@@ -18,7 +18,7 @@
     lastSave = performance.now(); dirty = false;
   }
 
-  const fruitArt = (tier, cls = '') => F.svg(tier, `class="fm-art ${cls}" role="img" aria-label="${F.FRUITS[tier].name}"`);
+  const fruitArt = (tier, cls = '') => F.pic(tier, `class="fm-art ${cls}"`);
 
   function confirmBox(title, text, yes, onYes) {
     if (document.getElementById('fmConfirm')) return;
@@ -159,7 +159,7 @@
         // in classic the next box lines up with the rim of the basket, not the empty sky above it
         const side = play.querySelector('.fm-side');
         if (side) side.style.marginTop = endless || getComputedStyle(side).flexBasis === '100%' ? '' :Math.round(-G.VIEW_TOP * scale) + 'px';
-        if (map) { map.style.height = Math.round(cssH * .8) + 'px'; map.height = Math.round(cssH * .8 * dpr); map.width = Math.round(52 * dpr); }
+        if (map) { map.style.height = cssH + 'px'; map.height = Math.round(cssH * dpr); map.width = Math.round(52 * dpr); }
       }
       const dt = Math.min(.1, (now - last) / 1000); last = now;
       acc += dt;

@@ -8,14 +8,15 @@
    things actually moved and adds a gentle bounce. Deep piles stay calm this way, and the final
    clamp keeps every fruit inside the walls. */
 (function (root) {
-  const TOUCH = .75;
+  const TOUCH = 2;            // fruit this close count as touching, so two alike resting side by side still merge
   function createWorld(o) {
     return {
       width: o.width, floor: o.floor, gravity: o.gravity ?? 1500,
       substeps: o.substeps ?? 12,
       restitution: .18, bounceMin: 160,       // only real impacts bounce; resting fruit never does
       depenetration: 220,                     // the most two touching fruit may fly apart beyond a real bounce
-      staticFriction: .55, friction: .4,
+      staticFriction: .3, friction: .2,      // low enough that fruit slide down into gaps instead of perching
+      rolling: 9,                             // rolling resistance: resting fruit stop turning instead of spinning in place
       maxSpeed: 2600, bodies: [], onContacts: null
     };
   }
@@ -94,6 +95,7 @@
     let pen = c.pen;
     if (pen <= 0) return;
     c.touching = true;
+    c.a.touch = true; if (c.b) c.b.touch = true;
     // a freshly merged (or still growing) fruit makes room gently: a small fruit caught in the crevice
     // it appeared over is eased aside over a few frames instead of being squeezed out like a seed
     const soft = isSoft(c.a) || (c.b && isSoft(c.b));
@@ -130,7 +132,7 @@
       if (b.r < b.targetR) { b.r = Math.min(b.targetR, b.r + b.grow * h); setMass(b); }
       if (b.soft > 0) b.soft -= h;
       b.vy += world.gravity * h;
-      b.px = b.x; b.py = b.y; b.pa = b.a;
+      b.px = b.x; b.py = b.y; b.pa = b.a; b.touch = false;
       b.x += b.vx * h; b.y += b.vy * h; b.a += b.w * h;
     }
     let contacts = findContacts(world);
@@ -148,6 +150,9 @@
       if (b.dead) continue;
       clampInside(world, b);
       b.vx = (b.x - b.px) / h * damp; b.vy = (b.y - b.py) / h * damp; b.w = (b.a - b.pa) / h * angDamp;
+      // a fruit pressed against something loses its spin quickly; one in the air keeps it
+      if (b.touch) b.w *= Math.max(0, 1 - world.rolling * h);
+      if (b.w > 8) b.w = 8; else if (b.w < -8) b.w = -8;
       const sp = Math.hypot(b.vx, b.vy);
       if (sp > max) { b.vx *= max / sp; b.vy *= max / sp; }
     }
